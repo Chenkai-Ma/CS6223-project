@@ -1,0 +1,9 @@
+1. The output of statistics.mean should always be a numeric (float, Fraction, or Decimal) value, given that the input is a sequence or iterable of numeric data.
+   
+2. Given a constant sequence or iterable (all elements are the same), the output of statistics.mean should be equal to any element of that sequence or iterable.
+
+3. If the data includes negative and positive values such that their total sum is zero, for example, [-3, -2, 2, 3], the output of the function must be 0.
+   
+4. For a list with a single element, the mean should be equal to that element itself.
+   
+5. The mean of the reverse of a sequence or an iterable should be the same as the mean of the original sequence or iterable.

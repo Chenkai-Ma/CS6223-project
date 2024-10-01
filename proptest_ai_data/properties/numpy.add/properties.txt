@@ -1,0 +1,9 @@
+1. The shape of the output array should be the same as the common broadcasted shape of the input arrays. This property is independent on the input arguments' values and depends on their shapes.
+
+2. The dtype of the output array should be compatible with the dtypes of the input arrays according to the numpy type-casting rules. This property depends on the dtypes of the input arguments.
+
+3. If the 'out' argument is used, the function should not create any new arrays, but store the results in the provided 'out' array. This property can be checked by verifying that the memory location of 'out' array remains the same before and after the function call.
+
+4. If 'where' argument is provided, the result in 'out' array should be set to the ufunc result only at the locations where the condition is True. At locations where the condition is False, the 'out' array should retain its original value. This property depends on the 'where' input argument.
+
+5. The result of the numpy.add function should match the result of the equivalent Python operation x1 + x2. This property can be used to verify the correctness of the numpy.add implementation and is dependent on the input arguments 'x1' and 'x2'.

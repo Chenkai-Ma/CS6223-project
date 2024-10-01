@@ -1,0 +1,5 @@
+1. The output of the function is always a bytes object. This property is independent of input arguments.
+2. Changing the input level value within its valid range (-1 to 9) changes the level of compression but not the type of data returned. This property depends on the level input.
+3. Adjustment of the wbits input within its valid range (-15 to +31) affects the size of the historical buffer and whether a header and trailer are included in the output. This property depends on the wbits input.
+4. The function raises an error exception when some kind of error happens. This property is dependent on whether the inputs meet the expected specifications or if there are any internal issues with the function.
+5. Since zlib.compress is a data compression function, the output bytes object should always be smaller in size than the input data or at least equal in case of Z_NO_COMPRESSION(i.e., level 0). This property is dependent on the size of the input data and the level input.

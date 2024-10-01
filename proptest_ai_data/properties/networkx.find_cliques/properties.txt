@@ -1,0 +1,9 @@
+1. Uniqueness: The output of the function is an iterator of maximal cliques, each of which is a list of nodes. All the cliques should be unique; there should be no duplicate list of nodes in the output.
+
+2. Inclusiveness: If the 'nodes' parameter is provided and it forms a clique, then the output should include at least one clique that contain these nodes. A maximal clique that contains the given nodes must be present in the output.
+
+3. Size: A maximal clique is the largest complete subgraph containing a node. Therefore, for each node, the size of any clique containing that node should not be larger than the size of the maximal clique containing the node.
+
+4. Completeness: Maximal cliques are complete subgraphs. This means that every two nodes in a clique are adjacent to each other. As such, the output cliques from the function should also be complete.
+
+5. Error Handling: If 'nodes' parameter is given and doesn't form a clique in the graph, the function should raise a ValueError. Correct error handling is a key property of the function.

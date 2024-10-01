@@ -1,0 +1,5 @@
+1. The output should be a datetime.datetime object.
+2. The output's ordinal number (obtained through toordinal() method) should always be equal to the ordinal input.
+3. The output's hour, minute, second, and microsecond properties should all be 0 as the documentation states.
+4. The output's tzinfo property should always be None as the method does not deal with timezone information.
+5. The output should be within the valid date range in the Gregorian calendar. In other words, datetime.MINYEAR <= output.year <= datetime.MAXYEAR.

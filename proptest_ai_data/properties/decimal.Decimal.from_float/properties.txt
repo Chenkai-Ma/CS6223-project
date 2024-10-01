@@ -1,0 +1,5 @@
+1. The output is always of type Decimal, regardless of the valid input given.
+2. If the input is a positive floating point or integer, the resulting Decimal representation would also be positive. 
+3. Conversely, if the input is a negative floating point or integer, the resulting Decimal representation would be negative.
+4. For special float cases: the method should return `Decimal('NaN')` if the input is `float('nan')`, `Decimal('Infinity')` for `float('inf')`, and `Decimal('-Infinity')` for `float('-inf')`.
+5. The method should throw a TypeError when input is of a non-float or non-integer type. For instance, strings, lists, and dictionaries should all raise a TypeError.

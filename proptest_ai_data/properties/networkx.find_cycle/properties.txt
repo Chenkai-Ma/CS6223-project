@@ -1,0 +1,9 @@
+1. Cycle Existence: If the function does not raise an exception, it must return a non-empty list of directed edges. The list can also be viewed as a path in the graph.
+
+2. Cycle Structure: The returned list of directed edges must form a cycle in the graph. If we start at the first node of the first edge and follow the edges, we must end up at the starting node.
+
+3. Traversal Direction: If the orientation argument is set to 'original', 'reverse', or 'ignore', the last element of each edge tuple in the return list should indicate the direction of traversal ('forward' or 'reverse').
+
+4. Return Value Type: The function must return a list of tuples. Each tuple represents a directed edge. For graphs, it should have two elements (u, v), for multigraphs, it should have three elements (u, v, key), and if the orientation is not None, the tuple should be extended to include the direction of traversal.
+
+5. Exception: The function should raise a NetworkXNoCycle exception if no cycle is found in the graph.

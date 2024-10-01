@@ -1,0 +1,2 @@
+Model,Approach,Property Mutation Score, Total Mutants
+claude-3-opus-20240229,Single Stage0.5802047781569966293claude-3-opus-20240229,Two Stage0.5968992248062015258gemini-1.5-pro-latest-final,Single Stage0.4357142857142857140gemini-1.5-pro-latest-final,Two Stage0.6270491803278688244gpt-4-final,Single Stage0.79775280898876489gpt-4-final,Two Stage0.51875480

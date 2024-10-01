@@ -1,0 +1,9 @@
+1. **Type of Output**: The method `total_seconds()` should always return a floating point value which represents the total number of seconds in the duration. 
+
+2. **Positive Output**: The returned total seconds using `total_seconds()` from a timedelta object should always be positive or zero. It should not return a negative number, as timedelta represents durations, which can't be negative according to Python's `datetime` library. 
+
+3. **Accuracy**: The method should return the accurate total number of seconds for durations less than 270 years. A property test can add timedelta objects and compare the sum's total seconds with the sum of the total seconds of each individual timedelta object.
+
+4. **Zero Value**: If the timedelta has zero duration(i.e. `timedelta(0)`), `total_seconds()` should return 0.0 value.
+
+5. **Idempotence**: Invoking `total_seconds()` on the same timedelta object multiple times should yield the same result each time, as long as the timedelta object is not altered in between.

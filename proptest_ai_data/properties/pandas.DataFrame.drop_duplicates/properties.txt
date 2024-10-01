@@ -1,0 +1,9 @@
+1. Length of the DataFrame: The length of the DataFrame after using the drop_duplicates() function should be less than or equal to the length of the initial DataFrame.
+
+2. Uniqueness: If you apply drop_duplicates() using default parameters on the DataFrame output, the resulting DataFrame should be identical to the input DataFrame as it should have no duplicates.
+
+3. Subset specificity: The uniqueness of rows after using the drop_duplicates() function with a subset parameter should be dependent on the selected columns in the subset, not on all columns.
+
+4. Preservation of the first or last occurrence: When using the keep parameter with 'first' or 'last', the function should always preserve the first or last occurrence of the duplicates respectively.
+
+5. Index continuity: If ignore_index is set to True, the resulting DataFrame should have a continuous integer index starting from 0 to n-1, where n is the length of the DataFrame.

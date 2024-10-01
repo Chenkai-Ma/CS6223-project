@@ -1,0 +1,9 @@
+1. Encrypt-Decrypt Property: When we encrypt some data using the 'encrypt' method and then decrypt the same encrypted data using the 'decrypt' method with the same key, we should get back the original data.
+
+2. Key Integrity Property: Encryption and decryption must always use the same key. If a different key is used, the 'InvalidToken' exception should be raised.
+
+3. Exception Handling Property: When we pass non-bytes data to 'encrypt', it should raise a 'TypeError' exception as specified in the documentation. The same holds true for 'decrypt' i.e., if the function is provided with non-bytes data or str type for 'token', it should raise a 'TypeError'.
+
+4. Time-To-Live Property: For 'decrypt' function, if a 'ttl' (Time To Live) parameter is specified, and the encrypted message's age exceeds this 'ttl', the function should raise a 'InvalidToken' exception. 
+
+5. URL Safety Property: The output of the 'encrypt' method or encrypted token should be URL-safe base64-encoded, so if a URL safety test is applied to the result, it should pass. On the other hand, the decrypted output should not be URL-safe encoded.

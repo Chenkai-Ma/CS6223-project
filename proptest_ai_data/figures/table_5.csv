@@ -1,0 +1,7 @@
+Model,Approach,Property Coverage
+gpt-4-final,Single Stage,0.07
+gpt-4-final,Two Stage,0.205
+claude-3-opus-20240229,Single Stage,0.09
+claude-3-opus-20240229,Two Stage,0.13
+gemini-1.5-pro-latest-final,Single Stage,0.055
+gemini-1.5-pro-latest-final,Two Stage,0.12

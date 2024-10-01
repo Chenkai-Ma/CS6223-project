@@ -1,0 +1,9 @@
+1. Degree Type: The output degree value(s) should always be integers. This is because the degree of a node in a graph is the number of edges tied to that node (either incoming or outgoing) - which can only be an integer.
+
+2. Output Length: In cases where the function is used without specifying any node ('nbunch' argument is None), the degree function's output should equal to the total number of nodes in the graph G.
+
+3. Degree Range: The returned degree value of any node should be in the range of [0, n-1], with n being the total number of nodes in the graph G. This property also assumes that the graph doesn't contain any self-loop (an edge that directly connects a node to itself).
+
+4. Degree of a single node: If a single node is sent as the argument, the function should return an integer rather than a dictionary, indicating the degree of the specified node in graph G.
+
+5. Weighted Degree: If the 'weight' parameter is set to some attribute (like 'length' for edge lengths), the returned degree should account for these weights. In this scenario, the calculated degree can be a float number. This property assumes that the graph G is a weighted one.

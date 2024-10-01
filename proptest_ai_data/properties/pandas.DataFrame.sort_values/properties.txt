@@ -1,0 +1,9 @@
+1. Sorted Data: After the execution of the sort_values method, the output DataFrame should be properly sorted on the specified 'by' column/columns. We can check this property by comparing each element in the sorted column with the next element to ensure the ordering is correct, based on specified ascending or descending order.
+
+2. NaN Position: If there are any NaN values in the column or columns we are sorting, they should be located according to the 'na_position' parameter. If 'first', all NaN should be on top, if 'last' (default), all NaN should be located at the end of the DataFrame.
+
+3. Inplace Modification: If the 'inplace' parameter is set to True, the original DataFrame should be modified and the function should return None. If 'inplace' is False, the original DataFrame should remain unchanged and the function should return a new sorted DataFrame. 
+
+4. DataFrame Structure: After sorting, the DataFrame structure should not be changed, meaning it should have the same set of columns and rows. The only thing that could be different is the indexing if the 'ignore_index' parameter is set to True.
+
+5. Sorting with key: If 'key' function is provided, it should apply to the values before sorting. The output should reflect this sorting rule. It can be tested by comparing the result of applying the key function to the original DataFrame directly and then sort, to make sure they are the same as using it in the sort_values method.

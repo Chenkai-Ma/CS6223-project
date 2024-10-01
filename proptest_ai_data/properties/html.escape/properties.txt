@@ -1,0 +1,9 @@
+1. The output should not contain any '&', '<' or '>' characters unless they are part of an HTML-safe sequence. This holds regardless of the input string 's' or the truth value of the 'quote' argument.
+   
+2. If the 'quote' argument is set to True (default), then the output should not contain any naked quotation marks (either single ' or double ") - they should all be part of an HTML-safe sequence. This property can depend on the 'quote' argument but not the input string 's'.
+
+3. If the 'quote' argument is set to False, then the output may contain naked single ' and double " quotation marks. This property can depend on the 'quote' argument but not the input string 's'.
+
+4. All other characters in the input string 's' that are not &, <, >, " or ' should remain the same in the output of the html.escape function. This property depends on the input string 's' but not the 'quote' argument.
+
+5. If the input string 's' is an empty string, the output should also be an empty string. This property depends on the input string 's' but not the 'quote' argument.

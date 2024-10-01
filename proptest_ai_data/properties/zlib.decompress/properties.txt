@@ -1,0 +1,9 @@
+1. The output should always be a bytes object. Regardless of the input parameters, as long as no errors occur, zlib.decompress should return a bytes object containing the decompressed data.
+
+2. The output size will not exceed the size of the input data. If we are decompressing data, the output cannot be larger than the input originally was. 
+
+3. The function should throw an error if the inputs are not in the correct format or values. This could involve inputs where the data is not byte data or wbits is outside of the defined range.
+
+4. When a suitable wbits is chosen, the decompressed data should return to its original form before compression. That is, assuming the data was previously compressed using zlib, performing the zlib.decompress function with the proper wbits parameter should retrieve the original data.
+
+5. bufsize should control the initial size of the output buffer. If the decompressed data's size exceeds bufsize, the size of the buffer should be increased automatically. Thus, the bufsize does not limit the size of the decompressed data.

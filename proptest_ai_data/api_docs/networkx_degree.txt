@@ -1,0 +1,2 @@
+degree(G, nbunch=None, weight=None)[source]
+Returns a degree view of single node or of nbunch of nodes. If nbunch is omitted, then return degrees of all nodes.

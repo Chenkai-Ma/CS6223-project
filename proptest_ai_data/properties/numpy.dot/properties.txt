@@ -1,0 +1,9 @@
+1. Output Type: The first property to check is the type of the returned result. Depending on the inputs, the output could be a scalar or an ndarray. Therefore, the test should assert that the return type is either a numpy scalar type (like numpy.float64, numpy.complex_, etc. depending on the type of elements in 'a' and 'b') when both 'a' and 'b' are scalars or 1-D arrays, and numpy.ndarray when 'a' or 'b' are multi-dimensional.
+
+2. Shape Conformity: If 'a' and 'b' are multi-dimensional arrays, the test should assert that the last dimension of 'a' should be the same size as the second-to-last dimension of 'b', otherwise a ValueError is raised. If 'a' and 'b' conform to this, the output array should have a shape that is a combination of the input shapes.
+
+3. Operation Check: The next property to check is if the function is performing the correct operation. The operation for numpy.dot changes depending on the dimensions of the input arrays 'a' and 'b', the test should assert that the correct operation (Dot product, Matrix multiplication or multiplication) is performed based on the dimensions of the input.
+
+4. Scalar-auto Broadcasting: If either 'a' or 'b' is 0-D (scalar), numpy.dot is equivalent to multiplication. So, scalar value should be able to broadcast while doing the multiplication with other arrays of any dimensions.
+
+5. Non-commutative: The dot product or the matrix multiplication is not commutative, meaning dot(a, b) != dot(b, a). This property can be tested unless both 'a' and 'b' are 1-D arrays or 0-D(scalar).

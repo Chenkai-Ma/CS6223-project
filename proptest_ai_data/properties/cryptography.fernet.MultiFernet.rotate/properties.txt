@@ -1,0 +1,9 @@
+1. The `rotate` method should always return a byte string (Fernet token) when the input is a valid token and it should be URL-safe base64 encoded. This property helps in ensuring that the format of the output remains valid irrespective of the input.
+
+2. If the input to the `rotate` method is any type other than byte or string, it should raise `TypeError`.
+
+3. If the token is invalid in any way, the `rotate` method should raise a `cryptography.fernet.InvalidToken` exception. This can be used to ensure that the function is properly validating the input token.
+
+4. If the token is rotated with a newly added key at the front of the key list, decryption of this newly rotated token with the same MultiFernet instance should always be successful and return the original message. This property ensures the correctness of the rotation and decryption process.
+
+5. After rotating a token, the original timestamp of the token should be preserved. This is important to maintain the integrity and tracking of tokens over time without losing important metadata. To test this, one could decrypt the rotated token and compare the time of its creation with the original token's time.

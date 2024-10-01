@@ -1,0 +1,9 @@
+1. The output of zlib.adler32 is always an integer - The function should always return a value that can pass the Python built-in `isinstance(<result>, int)` test, and is within the range of an unsigned 32 bit integer.
+
+2. The output should change when the input data changes - If the function is provided with different data inputs in two separate calls, the results of these two calls should not be the same (assuming no additional value is provided). This is the main property of checksum algorithms: they dramatically change output even on minimal input change.
+
+3. Repeated calls with the same data and value parameters should yield the same result - If we call the function multiple times with the same parameters, it should produce the same output each time as the calculation is deterministic.
+
+4. If no value is provided, the checksum should start with a default value of 1 - In this test, we will need to know the expected output when the checksum starts at 1 and ensure that this matches the output of zlib.adler32 when called without a value argument.
+
+5. When the value parameter is provided, it should be used as the initial value of the checksum - This can be tested by running the function twice: once with no value argument, and once with a provided value. The output when a value is provided should be different from when no value is given, unless the value given is the default value (1).

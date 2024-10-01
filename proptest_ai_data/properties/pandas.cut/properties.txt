@@ -1,0 +1,9 @@
+1. Output must be as prescribed by the 'labels' parameter. If labels parameter is None, the output should be of Categorical dtype if the input is not a Series or pandas.cut should return a Series for Series input. If labels = False, the output should be an ndarray of integers. If labels is array-like, the output should be Categorical for non-Series inputs and Series for Series inputs.
+
+2. In cases where the right parameter is True (which is default), the rightmost edge should be included in the bins. If right=False, the rightmost edge should not be included.
+
+3. If parameter retbins is set to be True, the function must return the bins (either computed or specified). The type of bins would be ndarray for scalar or sequence bins or IntervalIndex for an IntervalIndex bins.
+
+4. If duplicates='raise', then an error should be raised if bin edges are not unique.
+
+5. The output must take into account the 'ordered' parameter. If True, the outputted categorical will be ordered. If False, the outputted categorical will be unordered (but labeling must be provided). Furthermore, when binning, the precision should maintain the number of decimal places as defined in `precision`. 
