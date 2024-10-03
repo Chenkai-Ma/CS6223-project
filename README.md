@@ -2,6 +2,12 @@
 
 ## Tentative Schedule
 
+Suggested deadline to finish coding: **8 Nov**
+
+Deadline to finish this project: **15 Nov**
+
+Tentative page length: 5 or 6 pages.
+
 ### Tasks
 
 |Name|Code|Paper|Other|
