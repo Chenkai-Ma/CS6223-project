@@ -15,7 +15,7 @@ Tentative page length: 5 or 6 pages.
 |Name|Code|Paper|Other|
 |----|----|----|----|
 |mck|Evaluation/post-processing|||
-|zx|LLM prompting (in both methods and)|||
+|zx|LLM prompting (in both methods and computing property coverage)|||
 
 
 ## Related Material
