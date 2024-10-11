@@ -14,8 +14,8 @@ Tentative page length: 5 or 6 pages.
 
 |Name|Code|Paper|Other|
 |----|----|----|----|
-|mck|Evaluation/post-processing|||
-|zx|LLM prompting (in both methods and computing property coverage)|||
+|mck|Evaluation/post-processing|code-related parts and common no-code parts||
+|zx|LLM prompting (in both methods and computing property coverage)|code-related parts and common no-code parts||
 
 
 ## Related Material
@@ -41,8 +41,13 @@ Tentative page length: 5 or 6 pages.
 
 ## Ideas for the project
 
+### General
+
+- **[11 Oct]** Follow the file structure and naming conventions of the origianl project, e.g., each test function should start with "test_", and each PTB python file should be named "ptb_*.py".
+
 ### Method
 
+- **[11 Oct]** Use the same properties to generate original PTBs (e.g., in double-stage prompting) and property mutants to prevent mismatches.
 - A simple baseline: for [`prompts.py`](proptest_ai_data/prompts.py), replace API docs with API source code. (expect improvement from better models)
 - Leverage [ghostwriting](https://hypothesis.readthedocs.io/en/latest/ghostwriter.html#) of Hypothesis, e.g., let it ghostwrite test first, then llm refine.
 - Vary the number of properties, instead of keeping it no more than 5.
@@ -50,10 +55,11 @@ Tentative page length: 5 or 6 pages.
 
 ### Evaluating PTBs
 
+- **[11 Oct]** Property coverage: Instead of generating property mutants from original API, then substitude original PTB to get mutated PTB, we may **directly prompt LLM to generate mutated test functions from original test functions (along with their properties).** This helps to solve some intricacies of constructing mutated PTB (see your notes), simplifies the workflow, and could also be **one contribution**. Mutated test functions should be filtered for soundness, and aim for assertion errors.
 - Improve current metrics, especially property coverage.
 - Add other metrics.
 
 ### Experiment Setup
 
 - Baselines: [ghostwriting](https://hypothesis.readthedocs.io/en/latest/ghostwriter.html#) of Hypothesis, PTB from API docs (as mentioned in the paper)
-- API to test: could use the ones from the paper or else.
+- API to test: start with **self-contained APIs** in the original paper. If there are too few of them, we will find **self-contained APIs** from other places.
