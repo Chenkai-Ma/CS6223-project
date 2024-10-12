@@ -1,0 +1,9 @@
+1. The output variance should always be a non-negative number, as variance cannot be negative due to the squaring of differences from the mean.
+
+2. If the input data consists of identical values, the output variance should be zero, indicating no variability in the data.
+
+3. The output variance should change in a predictable manner when the input data is modified, such as adding or removing values, particularly when those values are far from the mean.
+
+4. If the mean of the input data is provided as the second argument, the output variance should remain consistent with the variance calculated using the automatically computed mean, provided that the correct mean is used.
+
+5. The output variance should be larger when the spread of the input data increases, and smaller when the spread decreases, reflecting the relationship between data dispersion and variance.
