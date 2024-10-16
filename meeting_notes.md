@@ -7,5 +7,5 @@
 ## Suggestions
 
 - **API**: It seems it is rather impractical to find fully self-contained codes. And it is reasonable to assume LLMs know how to call some basic python functions. So we may **use source codes to complement/enhance documents instead of using source codes independently**. In this case, we expect the source code to have some basic logic, and should be rather simple/short (which leads to 6+11=**17** original APIs, enough for this project.). One potential advantage of this approach is that API docs are often written in the API source codes as comments.
-- Experiment: Include a case study to compare our method to CAT.
+- Experiment: Include a case study to compare our method to the original method.
 - Writing: I will start writing no later than 24 Oct.
