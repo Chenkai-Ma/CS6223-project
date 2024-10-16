@@ -2,13 +2,10 @@
 
 ## Progress
 
-- Evaluating soundness and validity: basically done. Identifying sound and valid PTBs is done manually.
-- Evaluating property coverage: a prototype is tested, but there are several issues pending.
-- An updated requirementx.txt
+- API [(Google doc)](https://docs.google.com/spreadsheets/d/1ho1ij9dSY98MuzCt7yKXHBuz76prcS5Z1I_kI3RQznE/edit?gid=0#gid=0): 6 out of the 40 are (mostly) self-contained. I managed to find 8 more that are (rather) self-contained.
 
 ## Suggestions
 
-- Follow the file structure and naming conventions of the origianl project.
-- Writing: each person writes about the part he implements. As for the rest, do together.
-- Property coverage: Instead of generating property mutants from original API, then substitude original PTB to get mutated PTB, we may **directly prompt LLM to generate mutated test functions from original test functions (along with their properties).** This helps to solve some intricacies of constructing mutated PTB (see your notes), simplifies the workflow, and could also be **one contribution**. Mutated test functions should be filtered for soundness, and aim for assertion errors.
-- Use the same properties to generate original PTBs (e.g., in double-stage prompting) and property mutants to prevent mismatches.
+- **API**: It seems it is rather impractical to find fully self-contained codes. And it is reasonable to assume LLMs know how to call some basic python functions. So we may **use source codes to complement/enhance documents instead of using source codes independently**. In this case, we expect the source code to have some basic logic, and should be rather simple/short (which leads to 6+11=**17** original APIs, enough for this project.). One potential advantage of this approach is that API docs are often written in the API source codes as comments.
+- Experiment: Include a case study to compare our method to CAT.
+- Writing: I will start writing no later than 24 Oct.
