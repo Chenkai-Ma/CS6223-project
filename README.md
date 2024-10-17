@@ -46,7 +46,7 @@ Tentative page length: 5 or 6 pages.
 
 ### Method
 
-- **[17 Oct]** Source code for API: Finding fully self-contained codes is rather impractical, and it is reasonable to assume LLMs know how to call some basic python functions. So we may **prioritize "doc + code" (code is used to complement or enhance doc) over "code" (it may perform poorly), and compare "doc + code" mainly to "doc".** One practical advantage of this approach is that API docs are often written in the API source codes as comments, which makes it easier to construct prompts.
+- **[17 Oct]** Source code for API: Finding fully self-contained codes is rather impractical, and it is reasonable to assume LLMs know how to call some basic python functions. So we may **prioritize "doc + code" (code is used to complement or enhance doc) over "code alone" (it may perform poorly), and compare "doc + code" mainly to "doc alone".** One practical advantage of "doc + code" is that API docs are often written in the API source codes as comments, which makes it easier to construct prompts.
 - **[11 Oct]** Use the same properties to generate original PBTs (e.g., in double-stage prompting) and property mutants to prevent mismatches.
 - A simple baseline: for [`prompts.py`](proptest_ai_data/prompts.py), replace API docs with API source code. (expect improvement from better models)
 - Leverage [ghostwriting](https://hypothesis.readthedocs.io/en/latest/ghostwriter.html#) of Hypothesis, e.g., let it ghostwrite test first, then llm refine.
@@ -63,4 +63,3 @@ Tentative page length: 5 or 6 pages.
 
 - Baselines: [ghostwriting](https://hypothesis.readthedocs.io/en/latest/ghostwriter.html#) of Hypothesis, PTB from API docs (as mentioned in the paper)
 - **[17 Oct]** API to test [(Google doc)](https://docs.google.com/spreadsheets/d/1ho1ij9dSY98MuzCt7yKXHBuz76prcS5Z1I_kI3RQznE/edit?gid=0#gid=0): 30 in total (17 original + 13 new). The source code for each API should be at least moderately self-contained, i.e., have some basic logic, and should be rather simple/short.
-
