@@ -1,0 +1,20 @@
+timedelta.total_seconds()
+Return the total number of seconds contained in the duration. Equivalent to td / timedelta(seconds=1). For interval units other than seconds, use the division form directly (e.g. td / timedelta(microseconds=1)).
+
+Note that for very large time intervals (greater than 270 years on most platforms) this method will lose microsecond accuracy.
+
+Added in version 3.2.
+
+Examples of usage: timedelta
+An additional example of normalization:
+
+>>>
+# Components of another_year add up to exactly 365 days
+from datetime import timedelta
+year = timedelta(days=365)
+another_year = timedelta(weeks=40, days=84, hours=23,
+                         minutes=50, seconds=600)
+year == another_year
+True
+year.total_seconds()
+31536000.0
