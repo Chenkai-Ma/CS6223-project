@@ -62,4 +62,4 @@ Tentative page length: 5 or 6 pages.
 ### Experiment Setup
 
 - Baselines: [ghostwriting](https://hypothesis.readthedocs.io/en/latest/ghostwriter.html#) of Hypothesis, PTB from API docs (as mentioned in the paper)
-- **[17 Oct]** API to test [(Google doc)](https://docs.google.com/spreadsheets/d/1ho1ij9dSY98MuzCt7yKXHBuz76prcS5Z1I_kI3RQznE/edit?gid=0#gid=0): 30 in total (17 original + 13 new). The source code for each API should be at least moderately self-contained, i.e., have some basic logic, and should be rather simple/short.
+- **[17 Oct]** API to test [(Google doc)](https://docs.google.com/spreadsheets/d/1ho1ij9dSY98MuzCt7yKXHBuz76prcS5Z1I_kI3RQznE/edit?gid=0#gid=0): 30 in total (16 original + 14 new). The source code for each API should be at least moderately self-contained, i.e., have some basic logic, and should be rather simple/short.
