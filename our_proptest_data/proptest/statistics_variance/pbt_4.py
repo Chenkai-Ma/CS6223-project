@@ -1,28 +1,43 @@
 from hypothesis import given, strategies as st
-import statistics
+from statistics import variance, StatisticsError
 
 @given(st.lists(st.floats(), min_size=2))
-def test_statistics_variance_property(data):
-    # Property 1: Variance should be non-negative
-    var = statistics.variance(data)
-    assert var >= 0
+def test_output_non_negative_property(data):
+    result = variance(data)
+    assert result >= 0
 
-    # Property 2: Identical values should result in zero variance
-    if all(x == data[0] for x in data):
-        assert statistics.variance(data) == 0
+@given(st.lists(st.floats(), min_size=2))
+def test_identical_values_zero_variance_property(data):
+    if len(set(data)) == 1:  # All values are identical
+        result = variance(data)
+        assert result == 0
 
-    # Property 3: Adding a value far from the mean should increase variance
-    original_variance = statistics.variance(data)
-    modified_data = data + [max(data) + 1000]  # Adding a value far from the mean
-    modified_variance = statistics.variance(modified_data)
-    assert modified_variance >= original_variance  # Variance should not decrease
+@given(st.lists(st.floats(), min_size=2))
+def test_increased_spread_increases_variance_property(data):
+    if len(data) > 0:
+        mean_original = sum(data) / len(data)
+        spread_original = max(data) - min(data)
+        
+        # Increase spread by adding a constant
+        increased_data = [x + spread_original for x in data]
+        result_original = variance(data)
+        result_increased = variance(increased_data)
+        
+        assert result_increased >= result_original
 
-    # Property 4: Providing the correct mean should yield the same variance
-    mean_value = statistics.mean(data)
-    assert statistics.variance(data, mean_value) == var
+@given(st.lists(st.floats(), min_size=2), st.floats())
+def test_constant_addition_invariance_property(data, constant):
+    adjusted_data = [x + constant for x in data]
+    result_original = variance(data)
+    result_adjusted = variance(adjusted_data)
+    
+    assert result_original == result_adjusted
 
-    # Property 5: Increasing spread should increase variance
-    wide_data = data + [min(data) - 1000]  # Adding a value far below the mean
-    wide_variance = statistics.variance(wide_data)
-    assert wide_variance >= var  # Variance should not decrease
+@given(st.lists(st.floats(), min_size=2))
+def test_mean_passed_as_xbar_property(data):
+    mean_value = sum(data) / len(data)
+    result_default = variance(data)
+    result_with_xbar = variance(data, mean_value)
+    
+    assert result_default == result_with_xbar
 # End program

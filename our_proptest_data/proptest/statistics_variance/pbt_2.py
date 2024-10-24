@@ -1,29 +1,38 @@
 from hypothesis import given, strategies as st
 import statistics
-import numpy as np
 
-@given(st.lists(st.floats(), min_size=2))
-def test_statistics_variance_property(data):
-    # Property 1: Variance should be non-negative
-    var = statistics.variance(data)
-    assert var >= 0
+@given(st.lists(st.floats(min_value=-1e6, max_value=1e6), min_size=2))
+def test_variance_non_negative_property(data):
+    result = statistics.variance(data)
+    assert result >= 0
 
-    # Property 2: If all values are the same, variance should be zero
-    if all(x == data[0] for x in data):
-        assert statistics.variance(data) == 0
+@given(st.lists(st.floats(min_value=-1e6, max_value=1e6), min_size=2))
+def test_variance_identical_values_property(data):
+    if len(set(data)) == 1:  # All values are identical
+        result = statistics.variance(data)
+        assert result == 0
 
-    # Property 3: Variance should change predictably with modifications
-    original_variance = statistics.variance(data)
-    modified_data = data + [max(data) + 1000]  # Adding a far value
-    modified_variance = statistics.variance(modified_data)
-    assert modified_variance >= original_variance  # Should increase with spread
+@given(st.lists(st.floats(min_value=-1e6, max_value=1e6), min_size=2))
+def test_variance_increases_with_spread_property(data):
+    if len(set(data)) > 1:
+        mean_original = statistics.mean(data)
+        data_spread = data + [mean_original + 10]  # Increase spread
+        result_original = statistics.variance(data)
+        result_spread = statistics.variance(data_spread)
+        assert result_spread >= result_original
 
-    # Property 4: Consistency of variance with provided mean
-    mean_value = np.mean(data)
-    assert statistics.variance(data, mean_value) == original_variance
+@given(st.lists(st.floats(min_value=-1e6, max_value=1e6), min_size=2),
+               st.floats(min_value=-1e6, max_value=1e6))
+def test_variance_constant_addition_property(data, constant):
+    data_with_constant = [x + constant for x in data]
+    result_original = statistics.variance(data)
+    result_with_constant = statistics.variance(data_with_constant)
+    assert result_original == result_with_constant
 
-    # Property 5: Variance should reflect increased spread
-    wider_data = data + [max(data) + 1000, min(data) - 1000]  # Adding far values
-    wider_variance = statistics.variance(wider_data)
-    assert wider_variance > original_variance  # Should increase due to added spread
+@given(st.lists(st.floats(min_value=-1e6, max_value=1e6), min_size=2))
+def test_variance_consistency_with_mean_property(data):
+    mean_value = statistics.mean(data)
+    variance_default = statistics.variance(data)
+    variance_with_mean = statistics.variance(data, mean_value)
+    assert variance_default == variance_with_mean
 # End program

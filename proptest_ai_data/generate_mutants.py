@@ -6,6 +6,7 @@ import json
 from typing import Union
 from prompts import *
 from tqdm import tqdm
+from datetime import datetime
 
 def jsonlines_dump(fname: str, data: Union[dict, list]):
     try:
@@ -37,6 +38,7 @@ def main(args):
         key = args.key
 
     client = OpenAI(api_key=key)
+    dt_string = datetime.now().strftime("%m-%d-%H:%M")
 
     # read the input file
     all_data = jsonlines_load(args.input_path)
@@ -52,17 +54,20 @@ def main(args):
 
     for i in progress_bar:
 
-        system_prompt = SYSTEM_PROMPT
+        system_prompt = MUTANT_SYSTEM_PROMPT
         function_name = eval_data[i]['function_name']
         output_path = f'{args.output_dir}/{function_name}.jsonl'
 
         all_properties = eval_data[i]['properties'][0].split('\n\n')
+        all_pbts = eval_data[i]['pbt'][0].strip().split('\n\n')
+        assert len(all_properties) == len(all_pbts)-1, f'Error: properties and pbt mismatch for {function_name}'
         
         for idx, prop in enumerate(all_properties):
             
             prop = prop[3:].strip()
+            pbt = all_pbts[idx+1].strip()
 
-            question = MUTANTS_PROMPT.format(function_name=eval_data[i]['function_name'], api_documentation=eval_data[i]['api_doc'], prop=prop)
+            question = MUTANTS_TEST_FUNCTION_PROMPT.format(function_name=eval_data[i]['function_name'], api_documentation=eval_data[i]['api_doc'], prop=prop, pbt=pbt)
 
             messages = [
                 {"role": "system", "content": system_prompt},
@@ -86,12 +91,13 @@ def main(args):
                 print('model name: ', response.model)
                 print('\nquestion:\n', question)
                 print('\ncontent:\n', response_text)
-                print('\nOne example: \n', response_text[0])
+                print('\nOne response example: \n', response_text[0])
 
             to_save_data = {
             'function_name': eval_data[i]['function_name'],
             'mutants': response_text,
             'property': prop,
+            'pbt': pbt,
             'properties': eval_data[i]['properties'],
             }
             jsonlines_dump(output_path, to_save_data)
@@ -114,8 +120,8 @@ def main(args):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--input_path', type=str, default='../our_proptest_data/output/property_1_2.jsonl')
-    parser.add_argument('--output_dir', type=str, default='../our_proptest_data/output/mutants')
+    parser.add_argument('--input_path', type=str, default='../our_proptest_data/output_jsonl/pbt/pbt_0_1.jsonl')
+    parser.add_argument('--output_dir', type=str, default='../our_proptest_data/output_jsonl/mutants')
     parser.add_argument('--start', type=int, default=0)
     parser.add_argument('--end', type=int, default=40)
     parser.add_argument('--mode', type=str, default='properties', help='properties, pbt or mutants')

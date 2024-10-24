@@ -6,6 +6,7 @@ import json
 from typing import Union
 from prompts import *
 from tqdm import tqdm
+from datetime import datetime
 
 def jsonlines_dump(fname: str, data: Union[dict, list]):
     try:
@@ -38,6 +39,8 @@ def main(args):
 
     client = OpenAI(api_key=key)
 
+    dt_string = datetime.now().strftime("%m-%d-%H:%M")
+
     # read the input file
     all_data = jsonlines_load(args.input_path)
 
@@ -51,11 +54,9 @@ def main(args):
     progress_bar = tqdm(range(len(eval_data)))
 
     if args.mode == 'properties':
-        output_path = f'{args.output_dir}/property_{args.start}_{args.end}.jsonl'
+        output_path = f'{args.output_dir}/property/property_{args.start}_{args.end}.jsonl'
     elif args.mode == 'pbt':
-        output_path = f'{args.output_dir}/pbt_{args.start}_{args.end}.jsonl'
-    elif args.mode == 'mutants':
-        output_path = f'{args.output_dir}/mutants_{args.start}_{args.end}.jsonl'
+        output_path = f'{args.output_dir}/pbt/pbt_{args.start}_{args.end}.jsonl'
     else:
         logging.error('Invalid mode. Please choose from properties, pbt or mutants.')
         return 0
@@ -82,10 +83,6 @@ def main(args):
                 {"role": "assistant", "content": assistant_props},
                 {"role": "user", "content": question}
             ]
-        elif args.mode == 'mutants':            
-            question = MUTANTS_PROMPT.format(function_name=eval_data[i]['function_name'], api_documentation=eval_data[i]['api_doc'])
-            logging.error('Mutants mode not implemented yet.')
-            return 0
 
         response = client.chat.completions.create(
             model=args.model,
@@ -104,7 +101,7 @@ def main(args):
             print('model name: ', response.model)
             print('\nquestion:\n', question)
             print('\ncontent:\n', response_text)
-            print('\nOne example: \n', response_text[0])
+            print('\nOne response example: \n', response_text[0])
 
         if args.mode == 'properties':
             to_save_data = {
@@ -119,9 +116,6 @@ def main(args):
                 'api_doc': eval_data[i]['api_doc'],
                 'properties': eval_data[i]['properties'],
             }
-        elif args.mode == 'mutants':
-            logging.error('Mutants mode not implemented yet.')
-            return 0
 
         jsonlines_dump(output_path, to_save_data)
     
@@ -143,11 +137,11 @@ def main(args):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--input_path', type=str, default='../our_proptest_data/api_docs.jsonl')
-    parser.add_argument('--output_dir', type=str, default='../our_proptest_data/output')
+    parser.add_argument('--input_path', type=str, default='../our_proptest_data/output_jsonl/property_0_1.jsonl')
+    parser.add_argument('--output_dir', type=str, default='../our_proptest_data/output_jsonl')
     parser.add_argument('--start', type=int, default=0)
     parser.add_argument('--end', type=int, default=40)
-    parser.add_argument('--mode', type=str, default='properties', help='properties, pbt or mutants')
+    parser.add_argument('--mode', type=str, default='properties', help='properties or pbt')
     parser.add_argument('--model', type=str, default='gpt-4o-mini')
     parser.add_argument('--temperature', type=float, default=0.7)
     parser.add_argument('--seed', type=int, default=0)

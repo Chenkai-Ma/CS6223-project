@@ -1,11 +1,10 @@
 SYSTEM_PROMPT = "You are a world class Python programmer."
 
+MUTANT_SYSTEM_PROMPT = """You are a world class Python programmer. You will be given API documentation and a property for a function. A Python property-based test suite for testing the given property will also be provided.
+You need to write a new test function that violates the given property."""
+
 # SYSTEM_PROMPT_PROP = """You are a world class Python programmer. You will be given API documentation for a function. 
 # You need to extract a list of properties used for property-based testing. Only write the properties in natural language. Do NOT write any tests."""
-
-# SYSTEM_RPOMPT_MUTANTS = """"""
-
-# SYSTEM_PROMPT_PBT = """"""
 
 # === Two stage prompting, stage 1: generate properties ===
 PROPERTIES_PROMPT = """
@@ -26,7 +25,40 @@ Output in the following format:
 Do NOT write any tests. Only write this list of five properties in natural language.
 """
 
-MUTANTS_PROMPT = """You will be given API documentation for a function. A property of the function will also be provided.
+# === We use the following code to generate mutants for test functions ===
+MUTANTS_TEST_FUNCTION_PROMPT = """Here is the detail of the task:
+
+Please review the following API documentation for "{function_name}".
+--------------------------- API Documentation ---------------------------
+{api_documentation}
+-------------------------------------------------------------------------
+
+Here is a property of the {function_name} that we would like to test in a property-based test.
+--------------------------- Property ---------------------------
+{prop}
+-------------------------------------------------------------------------
+
+Here is the propert-based test suite for the property.
+--------------------------- Property-based Test Suite ---------------------------
+{pbt}
+-------------------------------------------------------------------------
+
+Write a new test function that violates the given property.
+*Strictly* follow the output format below.
+
+--------------------------- Output Format ---------------------------
+```python
+from hypothesis import given, strategies as st
+
+@given(st.data())
+def test_violation_of_{function_name}_property():
+  (...)
+# End program
+```
+"""
+
+# === !! The authors use the following prompt, but we don't use it in our code !!===
+_MUTANTS_PROMPT = """You will be given API documentation for a function. A property of the function will also be provided.
 You need to write buggy version of the function that violates the property. The function should have the same function signature as the original function.
 Here is the details of the task:
 
@@ -54,12 +86,14 @@ def buggy_2(...):
 ```
 """
 
+
+
 # === Two stage prompting, stage 2: generate PBT ===
 PBT_PROPERTIES_PROMPT = """
-Now, write a Python property-based test suite using the library Hypothesis testing the properties you described.
+Now, write a Python property-based test suite using the library Hypothesis testing the properties you described. Each property should have a separate test function. So if you have five properties, you should have five test functions.
 In your generation strategy, be aware of very large inputs and overflows.
 Import all the necessary modules for the test.
-*Strictly* follow the output format described below when writing each test.
+Strictly follow the output format described below when writing each test. For each test function name, use the following format: test_function_name_property.
 
 --------------------------- Output Format ---------------------------
 ```python
@@ -88,7 +122,7 @@ def test_draw_sequentially(data):
 """
 
 # === Single stage prompting ===
-PBT_PROMPT_TEMPLATE = """
+_PBT_PROMPT_TEMPLATE = """
 Please review the following API documentation for {function_name}.
 --------------------------- API Documentation ---------------------------
 {api_documentation}

@@ -1,35 +1,37 @@
 from hypothesis import given, strategies as st
-from statistics import variance, StatisticsError
+import statistics
 
 @given(st.lists(st.floats(), min_size=2))
-def test_statistics_variance_non_negative(data):
-    result = variance(data)
+def test_output_non_negative_property(data):
+    result = statistics.variance(data)
     assert result >= 0
 
 @given(st.lists(st.floats(), min_size=2))
-def test_statistics_variance_identical_values(data):
+def test_identical_values_zero_variance_property(data):
     if len(set(data)) == 1:  # All values are identical
-        result = variance(data)
+        result = statistics.variance(data)
         assert result == 0
 
 @given(st.lists(st.floats(), min_size=2))
-def test_statistics_variance_predictable_modification(data):
-    original_variance = variance(data)
-    modified_data = data + [1000.0]  # Add a large outlier
-    modified_variance = variance(modified_data)
-    assert modified_variance >= original_variance  # Variance should increase
+def test_increased_spread_increases_variance_property(data):
+    if len(data) > 1:
+        mean_before = statistics.mean(data)
+        increased_data = [value + 100 for value in data]  # Increase spread
+        variance_before = statistics.variance(data)
+        variance_after = statistics.variance(increased_data)
+        assert variance_after >= variance_before
+
+@given(st.lists(st.floats(), min_size=2), st.floats())
+def test_constant_addition_invariance_property(data, constant):
+    modified_data = [value + constant for value in data]
+    variance_original = statistics.variance(data)
+    variance_modified = statistics.variance(modified_data)
+    assert variance_original == variance_modified
 
 @given(st.lists(st.floats(), min_size=2))
-def test_statistics_variance_mean_argument(data):
-    mean_value = sum(data) / len(data)
-    result_with_mean = variance(data, mean_value)
-    result_without_mean = variance(data)
-    assert result_with_mean == result_without_mean  # Both should be equal
-
-@given(st.lists(st.floats(), min_size=2))
-def test_statistics_variance_spread(data):
-    original_variance = variance(data)
-    spread_data = data + [original_variance * 10]  # Increase spread
-    spread_variance = variance(spread_data)
-    assert spread_variance >= original_variance  # Variance should increase with spread
+def test_mean_argument_consistency_property(data):
+    calculated_mean = statistics.mean(data)
+    variance_default = statistics.variance(data)
+    variance_with_mean = statistics.variance(data, calculated_mean)
+    assert variance_default == variance_with_mean
 # End program
