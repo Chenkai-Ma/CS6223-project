@@ -48,18 +48,11 @@ Tentative page length: 5 or 6 pages.
 
 - **[17 Oct]** Source code for API: Finding fully self-contained codes is rather impractical, and it is reasonable to assume LLMs know how to call some basic python functions. So we may **prioritize "doc + code" (code is used to complement or enhance doc) over "code alone" (it may perform poorly), and compare "doc + code" mainly to "doc alone".** One practical advantage of "doc + code" is that API docs are often written in the API source codes as comments, which makes it easier to construct prompts.
 - **[11 Oct]** Use the same properties to generate original PBTs (e.g., in double-stage prompting) and property mutants to prevent mismatches.
-- A simple baseline: for [`prompts.py`](proptest_ai_data/prompts.py), replace API docs with API source code. (expect improvement from better models)
-- Leverage [ghostwriting](https://hypothesis.readthedocs.io/en/latest/ghostwriter.html#) of Hypothesis, e.g., let it ghostwrite test first, then llm refine.
-- Vary the number of properties, instead of keeping it no more than 5.
-- [`prompts.py`](proptest_ai_data/prompts.py) has two prompts about output format, which seems messy.
 
 ### Evaluating PTBs
 
 - **[11 Oct]** Property coverage: Instead of generating property mutants from original API, then substitude original PTB to get mutated PTB, we may **directly prompt LLM to generate mutated test functions from original test functions (along with their properties).** This helps to solve some intricacies of constructing mutated PTB (see your notes), simplifies the workflow, and could also be **one contribution**. Mutated test functions should be filtered for soundness, and aim for assertion errors.
-- Improve current metrics, especially property coverage.
-- Add other metrics.
 
 ### Experiment Setup
 
-- Baselines: [ghostwriting](https://hypothesis.readthedocs.io/en/latest/ghostwriter.html#) of Hypothesis, PTB from API docs (as mentioned in the paper)
-- **[17 Oct]** API to test [(Google doc)](https://docs.google.com/spreadsheets/d/1ho1ij9dSY98MuzCt7yKXHBuz76prcS5Z1I_kI3RQznE/edit?gid=0#gid=0): 30 in total (16 original + 14 new). The source code for each API should be at least moderately self-contained, i.e., have some basic logic, and should be rather simple/short.
+- **[17 Oct]** API to test [(Google doc)](https://docs.google.com/spreadsheets/d/1ho1ij9dSY98MuzCt7yKXHBuz76prcS5Z1I_kI3RQznE/edit?gid=0#gid=0): 30 in total (16 original + 14 new). The source code for each API should be at least moderately self-contained, i.e., have some basic logic, and should be rather simple/short. Docs are stored in folder "api_docs" as .txt files and named according to the url of the API, e.g. "[datetime.date.isocalendar](https://docs.python.org/3/library/datetime.html#datetime.date.isocalendar)" (this naming is a little different from the original paper), while the content are directly copied from the urls. Codes are stored in folder "api_codes" as .py files and named similarly, and the content are just the one function for the API (no other stuff like imports). Specifically, for each code, I removed the docstring because it is similar to the docs, and we want to separate codes from docs; I also slightly adjusted some identation; 
