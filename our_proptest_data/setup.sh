@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# this file has to be run from the root directory of the project
 # register setting profile, and load sound_valid.
 python conftest.py
 

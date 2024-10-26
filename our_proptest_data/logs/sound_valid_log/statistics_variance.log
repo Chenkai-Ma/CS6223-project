@@ -1,0 +1,55 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+proptest/statistics_variance/pbt_1.py F.FFF                              [ 20%]
+proptest/statistics_variance/pbt_2.py ..FFF                              [ 40%]
+proptest/statistics_variance/pbt_3.py F.FFF                              [ 60%]
+proptest/statistics_variance/pbt_4.py F.FFF                              [ 80%]
+proptest/statistics_variance/pbt_5.py FFFFF                              [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics_variance/pbt_1.py:5: exceptiongroup.ExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics_variance/pbt_1.py:16: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics_variance/pbt_1.py:23: exceptiongroup.ExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics_variance/pbt_1.py:30: exceptiongroup.ExceptionGroup: Hypothesis found 4 distinct failures. (4 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics_variance/pbt_2.py:22: assert 69.33333333333333 >= 72.0
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics_variance/pbt_2.py:30: assert 0.5 == 0.49999999999999994
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics_variance/pbt_2.py:37: assert 0.3333333333333333 == 0.33333333333333337
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics_variance/pbt_3.py:5: exceptiongroup.ExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics_variance/pbt_3.py:16: exceptiongroup.ExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics_variance/pbt_3.py:25: exceptiongroup.ExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics_variance/pbt_3.py:32: exceptiongroup.ExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics_variance/pbt_4.py:5: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics_variance/pbt_4.py:16: exceptiongroup.ExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics_variance/pbt_4.py:29: exceptiongroup.ExceptionGroup: Hypothesis found 4 distinct failures. (4 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics_variance/pbt_4.py:37: exceptiongroup.ExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)
+/usr/lib/python3.10/numbers.py:291: OverflowError: integer division result too large for a float
+/usr/lib/python3.10/statistics.py:709: OverflowError: cannot convert Infinity to integer ratio
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics_variance/pbt_5.py:19: exceptiongroup.ExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics_variance/pbt_5.py:27: exceptiongroup.ExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics_variance/pbt_5.py:35: exceptiongroup.ExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)
+=========================== short test summary info ============================
+FAILED proptest/statistics_variance/pbt_1.py::test_output_non_negative_property
+FAILED proptest/statistics_variance/pbt_1.py::test_increased_spread_increases_variance_property
+FAILED proptest/statistics_variance/pbt_1.py::test_add_constant_invariance_property
+FAILED proptest/statistics_variance/pbt_1.py::test_mean_provided_variance_consistency_property
+FAILED proptest/statistics_variance/pbt_2.py::test_variance_increases_with_spread_property
+FAILED proptest/statistics_variance/pbt_2.py::test_variance_constant_addition_property
+FAILED proptest/statistics_variance/pbt_2.py::test_variance_consistency_with_mean_property
+FAILED proptest/statistics_variance/pbt_3.py::test_output_non_negative_property
+FAILED proptest/statistics_variance/pbt_3.py::test_increased_spread_increases_variance_property
+FAILED proptest/statistics_variance/pbt_3.py::test_constant_addition_invariance_property
+FAILED proptest/statistics_variance/pbt_3.py::test_mean_argument_consistency_property
+FAILED proptest/statistics_variance/pbt_4.py::test_output_non_negative_property
+FAILED proptest/statistics_variance/pbt_4.py::test_increased_spread_increases_variance_property
+FAILED proptest/statistics_variance/pbt_4.py::test_constant_addition_invariance_property
+FAILED proptest/statistics_variance/pbt_4.py::test_mean_passed_as_xbar_property
+FAILED proptest/statistics_variance/pbt_5.py::test_statistics_variance_non_negative_property
+FAILED proptest/statistics_variance/pbt_5.py::test_statistics_variance_identical_values_property
+FAILED proptest/statistics_variance/pbt_5.py::test_statistics_variance_increase_with_spread_property
+FAILED proptest/statistics_variance/pbt_5.py::test_statistics_variance_invariance_addition_property
+FAILED proptest/statistics_variance/pbt_5.py::test_statistics_variance_consistency_with_xbar_property
+======================== 20 failed, 5 passed in 16.66s =========================
