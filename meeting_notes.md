@@ -1,4 +1,4 @@
-# Meeting Notes - [2024/10/24]
+# Meeting Notes
 
 ## Reminders
 
@@ -13,7 +13,7 @@ For each API method:
 - [@mck] For each property, find one corresponding test function (entire PBTs are unnecessary) that are sound and valid. If multiple such test functions exist, choose one randomly.
 - [@zx] For each pair of (test function, property), prompt LLM to generate 5 mutated test functions ("property mutant"). Essentially, a property mutant is the original test function + few lines of codes that manipulate the output from API method (while keep other things intact).
 - [@mck] Test these property mutants, only aim for assertion errors (this means filtering invalid ones with run-time errors)
-- [@zx] Compute property mutation score and property coverage.
+- [@mck] Compute property mutation score and property coverage.
 
 
 ## Progress
