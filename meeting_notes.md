@@ -3,7 +3,6 @@
 ## Reminders
 
 - Full-scale experiment: it takes two rounds. In the first round, zx generates PBTs and mck filter sound and valid PBTs; in the second round, zx generates mutated test functions from test functions in sound and valid PBTs and mck computes property coverage.
-- RQ3 ("docs + codes" vs. "codes only"): details TBD.
 - The code (artifact) of this project will also be graded.
 
 ### Property Coverage Workflow
@@ -53,3 +52,17 @@ def test_output_non_negative_property(data):
 | ----------- | ----------- |
 | property 1: non-negative | `test_variance_non_negative_property()` from [cs6223/our_proptest_data/proptest/statistics_variance/pbt_2.py](our_proptest_data/proptest/statistics_variance/pbt_2.py)  |
 | property 2: identical values | `test_variance_identical_values_property()` from [cs6223/our_proptest_data/proptest/statistics_variance/pbt_2.py](our_proptest_data/proptest/statistics_variance/pbt_2.py)  |
+
+-  tentative timeline：本次meet讨论，下次（约7 Nov）之前解决，再下次（约14 Nov）之前做完这一步的full-scale experiment。
+
+### Sound and Valid
+
+- Is the prompitng method finalized? If so, we can do full-scale experiment to generate PBTs (prefreably after this discussion and before 7 Nov).
+
+### RQ3: "docs + codes" vs. "codes only"
+
+- Details? 选择一部分API，然后比较两种方法的sound, valid, property coverage?
+
+### Writing
+
+- 在21 Nov之前完成draft（之后最多小改）如何？
