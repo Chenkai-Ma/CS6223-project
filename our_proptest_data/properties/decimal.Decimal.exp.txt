@@ -1,0 +1,9 @@
+1. The output of the exponential function for any input \( x \) should always be a positive decimal number, as \( e^x \) is positive for all real numbers \( x \).
+
+2. The output should be equal to 1 when the input is 0, since \( e^0 = 1 \).
+
+3. The output should be strictly increasing; that is, if \( x_1 < x_2 \), then \( e^{x_1} < e^{x_2} \) for any real numbers \( x_1 \) and \( x_2 \).
+
+4. The output should approach 0 as the input approaches negative infinity, reflecting the behavior that \( e^x \) approaches 0 as \( x \) becomes very negative.
+
+5. The output should grow without bound as the input approaches positive infinity, meaning that \( e^x \) should tend to infinity as \( x \) increases indefinitely.

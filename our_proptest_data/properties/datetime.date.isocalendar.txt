@@ -1,0 +1,9 @@
+1. The year component of the result must be equal to the Gregorian year of the date if the date falls within the first week of the ISO year (i.e., the week containing the first Thursday of the year).
+
+2. The week component of the result must be between 1 and 53, inclusive, as the ISO calendar can have either 52 or 53 weeks in a year.
+
+3. The weekday component of the result must be between 1 and 7, inclusive, where 1 represents Monday and 7 represents Sunday.
+
+4. For dates in the last week of December, the year component of the result may differ from the Gregorian year if that week belongs to the first week of the following ISO year.
+
+5. The combination of year, week, and weekday must represent a valid date according to the ISO calendar system, ensuring the week starts on a Monday and ends on a Sunday.

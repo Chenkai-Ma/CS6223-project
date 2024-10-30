@@ -1,0 +1,9 @@
+1. The output cliques must be subsets of the nodes present in the input graph \( G \).
+
+2. Each clique in the output must contain at least one node if the input graph \( G \) is non-empty.
+
+3. The output cliques must be maximal, meaning that no additional nodes from the graph \( G \) can be added to any clique without losing the property of being a complete subgraph.
+
+4. If a list of nodes is provided as input, every clique returned in the output must include all of those nodes.
+
+5. The output must not contain duplicate cliques; each maximal clique should be unique in the result.

@@ -1,0 +1,9 @@
+1. The output pair (n, d) must consist of two integers, where n is the numerator and d is the denominator.
+
+2. The denominator d must always be positive, regardless of the input Decimal value.
+
+3. The fraction represented by the output pair (n, d) must be in lowest terms, meaning that the greatest common divisor (GCD) of n and d must be 1.
+
+4. If the input Decimal is a finite number, the output pair (n, d) must represent the exact value of the Decimal as a fraction.
+
+5. The function must raise an OverflowError if the input Decimal is an infinity and a ValueError if the input is NaN (not a number).

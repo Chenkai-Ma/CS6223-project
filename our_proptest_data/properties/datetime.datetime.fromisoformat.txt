@@ -1,0 +1,9 @@
+1. The output datetime object should always represent a valid point in time, meaning it should not raise any exceptions for valid ISO 8601 formatted input strings.
+
+2. The year, month, and day attributes of the output datetime object should correspond directly to the values parsed from the input date_string, reflecting accurate date representation.
+
+3. If the input date_string includes time information, the hour, minute, second, and microsecond attributes of the output datetime object should match the values specified in the input string.
+
+4. If the input date_string contains a time zone offset, the output datetime object should have the correct `tzinfo` attribute set, accurately reflecting the specified time zone.
+
+5. The output datetime object should default to midnight (00:00:00) for the time portion if the input date_string does not include any time information.

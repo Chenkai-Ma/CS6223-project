@@ -1,0 +1,5 @@
+1. The output string should not contain any of the characters &, <, or > if they are present in the input string.
+2. If the `quote` parameter is set to `True`, the output string should also not contain the characters " or ' if they are present in the input string.
+3. The length of the output string should be greater than or equal to the length of the input string when any characters are escaped.
+4. The output string should be a valid HTML string, meaning it should not contain any unescaped special characters that could disrupt HTML rendering.
+5. The output should remain unchanged if the input string does not contain any characters that require escaping.

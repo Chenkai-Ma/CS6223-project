@@ -1,0 +1,9 @@
+1. Shifting a positive integer to the left by a non-negative integer results in a number that is greater than or equal to the original number, assuming no overflow occurs.
+
+2. Shifting a positive integer to the right by a positive integer results in a number that is less than or equal to the original number, assuming the shift does not exceed the number of digits in the integer.
+
+3. Shifting a negative integer to the left by a non-negative integer results in a number that is less than or equal to the original number, assuming no overflow occurs.
+
+4. Shifting a negative integer to the right by a positive integer results in a number that is greater than or equal to the original number, assuming the shift does not exceed the number of digits in the integer.
+
+5. The output of the shift operation should always have the same sign and exponent as the first operand, regardless of the shifting amount.

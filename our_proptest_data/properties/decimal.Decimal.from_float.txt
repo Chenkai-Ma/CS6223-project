@@ -1,0 +1,5 @@
+1. The output is an instance of the `Decimal` class regardless of the input being a float or an int.
+2. The output accurately represents the nearest decimal value to the input float, ensuring that the precision of the float is preserved as closely as possible.
+3. The output correctly handles special float values, such as returning 'NaN' for input `float('nan')`, 'Infinity' for `float('inf')`, and '-Infinity' for `float('-inf')`.
+4. The output is not equal to the decimal representation of the input float when the float cannot be exactly represented in binary, demonstrating that the output may contain more precision than the input.
+5. The output remains consistent across multiple calls with the same float input, ensuring that the function is deterministic.

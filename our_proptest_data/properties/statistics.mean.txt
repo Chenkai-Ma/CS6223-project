@@ -1,0 +1,9 @@
+1. The mean of a non-empty dataset must always be a number (integer, float, Fraction, or Decimal) and cannot be NaN or infinite.
+
+2. The mean of a dataset containing identical values must equal that value (e.g., mean([5, 5, 5]) should return 5).
+
+3. The mean of a dataset that includes negative numbers must still yield a valid number, which could be negative or positive, depending on the values in the dataset.
+
+4. The mean of an empty dataset must raise a StatisticsError, ensuring that the function properly handles edge cases.
+
+5. The mean of a dataset must be within the range of the minimum and maximum values of that dataset (i.e., mean(data) should be ≥ min(data) and ≤ max(data)).

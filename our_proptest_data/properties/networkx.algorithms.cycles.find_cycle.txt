@@ -1,0 +1,9 @@
+1. If a cycle is found, the output list of edges must contain at least one edge, indicating the presence of a cyclic path.
+
+2. The edges in the output must form a valid cycle, meaning the last node of the last edge must connect back to the first node of the first edge.
+
+3. For directed graphs, if the orientation is set to 'original', the output edges must respect the original direction of the edges in the graph.
+
+4. If the orientation is set to 'ignore', the output edges must not respect the direction of the edges, and the traversal should treat all edges as undirected.
+
+5. The output must include directional information (either 'forward' or 'reverse') for each edge if the orientation is specified as 'original', 'reverse', or 'ignore'.

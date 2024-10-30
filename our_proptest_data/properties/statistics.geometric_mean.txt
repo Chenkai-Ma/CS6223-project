@@ -1,0 +1,9 @@
+1. The output should be a positive float value, as the geometric mean is only defined for positive numbers and cannot be zero or negative.
+
+2. The output should be less than or equal to the maximum value of the input dataset, since the geometric mean cannot exceed the largest number in the dataset.
+
+3. The output should be greater than or equal to the minimum value of the input dataset, as the geometric mean is always at least as large as the smallest positive number in the dataset.
+
+4. If the input dataset contains only one positive number, the output should equal that number, reflecting the property that the geometric mean of a single value is the value itself.
+
+5. The output should be invariant under the order of the input values, meaning that changing the order of the input data should not affect the result of the geometric mean calculation.

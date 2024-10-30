@@ -1,0 +1,9 @@
+1. The output correlation coefficient must always be a floating-point number between -1 and +1, inclusive.
+
+2. If both input lists are identical (and not constant), the output correlation coefficient must be 1.0, indicating a perfect positive correlation.
+
+3. If one of the input lists is constant (e.g., all elements are the same), the function should raise a StatisticsError.
+
+4. If the method is set to 'ranked', the output correlation coefficient must reflect the strength of a monotonic relationship, and it should be equal to 1.0 if the ranks of the two inputs are perfectly aligned.
+
+5. The output correlation coefficient must remain consistent (i.e., produce the same value) for the same pair of input lists across multiple calls, regardless of any additional factors.

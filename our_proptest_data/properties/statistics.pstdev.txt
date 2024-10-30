@@ -1,0 +1,5 @@
+1. The output of the function is always a non-negative number, as standard deviation cannot be negative.
+2. If the input data is a constant list (all elements are the same), the output should be zero, indicating no variability.
+3. The output should increase if the variability of the input data increases (i.e., if the range of the input data expands).
+4. The output should remain the same if the input list is modified by adding or removing elements that do not change the overall variance (e.g., adding a constant value to all elements).
+5. The output should be equal to the square root of the output from the `pvariance()` function when the same input data is provided.

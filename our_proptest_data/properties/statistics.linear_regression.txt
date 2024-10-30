@@ -1,0 +1,5 @@
+1. The slope must be a finite number (not NaN or infinite) when both input lists have valid values and are not constant.
+2. The intercept must be a finite number (not NaN or infinite) when both input lists have valid values and are not constant.
+3. If the `proportional` parameter is set to `True`, the intercept must always equal 0.0 regardless of the input values.
+4. The slope should change in a predictable manner when the input values are altered while maintaining their relationship (e.g., scaling the x values should proportionally scale the slope).
+5. The function should raise a StatisticsError if the input lists are of unequal lengths or if the independent variable x is constant.

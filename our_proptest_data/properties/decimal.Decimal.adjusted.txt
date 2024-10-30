@@ -1,0 +1,9 @@
+1. The adjusted exponent is always greater than or equal to the minimum exponent of the Decimal object, ensuring that it reflects the position of the most significant digit correctly.
+
+2. The adjusted exponent is always less than or equal to the maximum exponent of the Decimal object, confirming that it does not exceed the limits of the coefficient's representation.
+
+3. For any Decimal object with a value of zero, the adjusted exponent should consistently return a specific value (typically negative infinity), indicating that there are no significant digits.
+
+4. The adjusted exponent should be equal to the number of digits in the coefficient minus one, ensuring that it accurately represents the position of the most significant digit in relation to the decimal point.
+
+5. The adjusted exponent should be invariant under different representations of the same numerical value (e.g., Decimal('0.001') and Decimal('1e-3') should yield the same adjusted value), demonstrating consistency across various forms of input.

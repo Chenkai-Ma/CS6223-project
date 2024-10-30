@@ -1,0 +1,9 @@
+1. The output dictionary must have the same number of entries as the number of nodes in the graph \( G \).
+
+2. Each node in the output dictionary must be assigned a color value of either 0 or 1.
+
+3. Nodes that are directly connected by an edge in the graph \( G \) must have different color values in the output dictionary.
+
+4. If the input graph \( G \) is bipartite, the output dictionary must represent a valid bipartite coloring, meaning there should be no edges connecting nodes of the same color.
+
+5. If the input graph \( G \) is not bipartite, the function must raise a `NetworkXError` exception, indicating that the graph cannot be two-colored.

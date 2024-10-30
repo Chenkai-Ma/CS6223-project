@@ -1,0 +1,5 @@
+1. The output of the function is always an integer between 0 and 6, inclusive.
+2. The output for a date representing a Monday is always 0.
+3. The output for a date representing a Sunday is always 6.
+4. The output for a date representing the same day of the week (e.g., all Mondays) is consistent regardless of the month or year.
+5. The output for a date that is one week apart (i.e., adding or subtracting 7 days) remains the same.

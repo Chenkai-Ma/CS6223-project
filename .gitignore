@@ -12,3 +12,4 @@ __pycache__/
 openai_key.txt
 
 our_proptest_data/.hypothesis/
+_other_files

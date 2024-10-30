@@ -1,0 +1,9 @@
+1. The output datetime object's year, month, and day must match the year, month, and day of the input date object.
+
+2. The output datetime object's hour, minute, second, and microsecond must match the corresponding properties of the input time object.
+
+3. If the tzinfo argument is not provided, the tzinfo attribute of the output datetime object must be equal to the tzinfo attribute of the input time object.
+
+4. If the input date argument is a datetime object, the output must retain the date components of that datetime object, disregarding any time components or tzinfo attributes from it.
+
+5. The output datetime object must be timezone-aware if the tzinfo argument is provided, otherwise it must be timezone-naive if the input time object is timezone-naive.

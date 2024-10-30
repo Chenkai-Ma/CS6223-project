@@ -1,0 +1,9 @@
+1. The norm of a vector is always non-negative, and it is zero if and only if the vector is the zero vector.
+
+2. The norm of a matrix is non-negative, and it is zero if and only if the matrix is the zero matrix.
+
+3. The Frobenius norm of a matrix should be equal to the 2-norm of the matrix when calculated on a flattened version of the matrix.
+
+4. The result of the norm function should be invariant under scalar multiplication of the input (i.e., scaling the input by a constant should scale the norm by the absolute value of that constant).
+
+5. The norm computed along a specific axis should be consistent with the properties of norms, such that the overall norm of the array should equal the computed norms when aggregated appropriately along the specified axes.

@@ -1,0 +1,9 @@
+1. The output dictionary should contain an entry for each node specified in the `nodes` parameter (or all nodes in the graph if `nodes` is not provided), with the node as the key.
+
+2. The average degree values in the output dictionary should be non-negative numbers, as degrees cannot be negative.
+
+3. For undirected graphs, the average neighbor degree should be symmetric, meaning that the average neighbor degree of node A should equal that of node B if A and B are neighbors.
+
+4. If the graph is directed and the source is set to "in", the average neighbor degree for nodes with no predecessors should be zero.
+
+5. The average neighbor degree should be consistent when called multiple times with the same parameters, returning the same results for the same graph structure and parameters.

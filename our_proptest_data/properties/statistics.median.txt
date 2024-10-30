@@ -1,0 +1,9 @@
+1. The median of a non-empty list of numbers should always be a number (either an integer or a float).
+
+2. If the input list has an odd number of elements, the median should be equal to the middle element when the list is sorted.
+
+3. If the input list has an even number of elements, the median should be the average of the two middle elements when the list is sorted.
+
+4. The median should remain unchanged if the input list is sorted in ascending or descending order.
+
+5. The median should raise a StatisticsError when the input list is empty.

@@ -1,0 +1,9 @@
+1. The total number of elements in the output array must equal the product of the dimensions specified in `new_shape`, regardless of the input array's size.
+
+2. If the `new_shape` specifies a size larger than the original array, the output array should contain repeated copies of the original array's elements, filling the additional space as necessary.
+
+3. The output array must maintain the same data type as the input array.
+
+4. The output array should be filled with elements in C-order, meaning that the elements are filled row-wise from the original array.
+
+5. If the `new_shape` specifies a size smaller than the original array, the output array should contain only the first elements of the original array, truncated to fit the new size.

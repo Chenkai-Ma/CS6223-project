@@ -1,0 +1,9 @@
+1. The output DataFrame should be sorted in the specified order based on the values of the specified columns or index levels, maintaining the relative order of rows with equal values (if using a stable sorting algorithm).
+
+2. Rows containing NaN values in the sorted column(s) should be positioned according to the `na_position` parameter, either at the beginning or the end of the output DataFrame.
+
+3. If `inplace=True`, the original DataFrame should be modified directly, and the function should return None, while if `inplace=False`, the original DataFrame should remain unchanged, and a new sorted DataFrame should be returned.
+
+4. The output DataFrame should retain all original columns and their respective data types, regardless of the sorting operation performed.
+
+5. When sorting by multiple columns, the output should reflect the hierarchical sort order defined by the list of columns, where the first column in the list takes precedence over subsequent columns for sorting.

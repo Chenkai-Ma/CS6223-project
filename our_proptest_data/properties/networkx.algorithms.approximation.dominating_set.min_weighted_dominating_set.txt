@@ -1,0 +1,9 @@
+1. The output is a subset of the nodes in the input graph \( G \).
+
+2. The output set is a dominating set, meaning that every node in the graph \( G \) is either included in the output set or is adjacent to at least one node in the output set.
+
+3. If the weight attribute is provided, the sum of the weights of the nodes in the output set does not exceed \( \log(w(V)) \times w(V^*) \), where \( w(V) \) is the total weight of all nodes in \( G \) and \( w(V^*) \) is the weight of the minimum weight dominating set.
+
+4. If no weight attribute is specified, the output set still qualifies as a dominating set, and the sum of the weights is equal to the number of nodes in the output set, as each node is assumed to have a weight of one.
+
+5. The function raises a `NetworkXNotImplemented` exception if the input graph \( G \) is directed, indicating that the output is only valid for undirected graphs.
