@@ -1,0 +1,94 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 15 items / 2 errors
+
+proptest/numpy.linalg.norm/pbt_2.py ...F.                                [ 33%]
+proptest/numpy.linalg.norm/pbt_3.py .F.F.                                [ 66%]
+proptest/numpy.linalg.norm/pbt_4.py F.FFF                                [100%]
+
+==================================== ERRORS ====================================
+_____________ ERROR collecting proptest/numpy.linalg.norm/pbt_1.py _____________
+../../.venv/lib/python3.10/site-packages/_pytest/python.py:493: in importtestmodule
+    mod = import_path(
+../../.venv/lib/python3.10/site-packages/_pytest/pathlib.py:582: in import_path
+    importlib.import_module(module_name)
+/usr/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1050: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1027: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1006: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:688: in _load_unlocked
+    ???
+../../.venv/lib/python3.10/site-packages/_pytest/assertion/rewrite.py:175: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+../../.venv/lib/python3.10/site-packages/_pytest/assertion/rewrite.py:357: in _rewrite_test
+    co = compile(tree, strfn, "exec", dont_inherit=True)
+E     File "/home/james/projects/cs6223/our_proptest_data/proptest/numpy.linalg.norm/pbt_1.py", line 13
+E       @given(st.lists(st.lists(st.floats(allow_nan=False, allow_infinity=False)), min_size=1, min_size=1))
+E                                                                                               ^^^^^^^^^^
+E   SyntaxError: keyword argument repeated: min_size
+_____________ ERROR collecting proptest/numpy.linalg.norm/pbt_5.py _____________
+../../.venv/lib/python3.10/site-packages/_pytest/python.py:493: in importtestmodule
+    mod = import_path(
+../../.venv/lib/python3.10/site-packages/_pytest/pathlib.py:582: in import_path
+    importlib.import_module(module_name)
+/usr/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1050: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1027: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1006: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:688: in _load_unlocked
+    ???
+../../.venv/lib/python3.10/site-packages/_pytest/assertion/rewrite.py:175: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+../../.venv/lib/python3.10/site-packages/_pytest/assertion/rewrite.py:357: in _rewrite_test
+    co = compile(tree, strfn, "exec", dont_inherit=True)
+E     File "/home/james/projects/cs6223/our_proptest_data/proptest/numpy.linalg.norm/pbt_5.py", line 12
+E       @given(st.lists(st.lists(st.floats(allow_nan=False, allow_infinity=False)), min_size=1, min_size=1))
+E                                                                                               ^^^^^^^^^^
+E   SyntaxError: keyword argument repeated: min_size
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/proptest/numpy.linalg.norm/pbt_2.py:32: assert False
+/home/james/projects/cs6223/our_proptest_data/proptest/numpy.linalg.norm/pbt_3.py:14: ValueError: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (2,) + inhomogeneous part.
+/home/james/projects/cs6223/our_proptest_data/proptest/numpy.linalg.norm/pbt_3.py:32: assert False
+/home/james/projects/cs6223/our_proptest_data/proptest/numpy.linalg.norm/pbt_4.py:8: assert nan >= 0
+/home/james/projects/cs6223/our_proptest_data/proptest/numpy.linalg.norm/pbt_4.py:24: assert False
+/home/james/projects/cs6223/our_proptest_data/proptest/numpy.linalg.norm/pbt_4.py:29: assert False
+/home/james/projects/cs6223/our_proptest_data/proptest/numpy.linalg.norm/pbt_4.py:32: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+=============================== warnings summary ===============================
+proptest/numpy.linalg.norm/pbt_2.py::test_norm_scaling_property
+  /home/james/projects/cs6223/our_proptest_data/proptest/numpy.linalg.norm/pbt_2.py:32: RuntimeWarning: invalid value encountered in scalar multiply
+    assert np.isclose(scaled_norm_value, abs(scalar) * norm_value)
+
+proptest/numpy.linalg.norm/pbt_3.py::test_scalar_multiplication_property
+  /home/james/projects/cs6223/our_proptest_data/proptest/numpy.linalg.norm/pbt_3.py:32: RuntimeWarning: invalid value encountered in scalar multiply
+    assert np.isclose(scaled_norm_value, abs(scalar) * norm_value)
+
+proptest/numpy.linalg.norm/pbt_4.py::test_scaling_property
+  /home/james/projects/cs6223/our_proptest_data/proptest/numpy.linalg.norm/pbt_4.py:29: RuntimeWarning: invalid value encountered in scalar multiply
+    assert np.isclose(LA.norm(scaled_data), abs(scalar) * LA.norm(data))
+
+proptest/numpy.linalg.norm/pbt_4.py::test_axis_norms_property
+  /home/james/projects/.venv/lib/python3.10/site-packages/numpy/linalg/linalg.py:2541: RuntimeWarning: overflow encountered in multiply
+    s = (x.conj() * x).real
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED proptest/numpy.linalg.norm/pbt_2.py::test_norm_scaling_property - asse...
+FAILED proptest/numpy.linalg.norm/pbt_3.py::test_zero_matrix_norm_property - ...
+FAILED proptest/numpy.linalg.norm/pbt_3.py::test_scalar_multiplication_property
+FAILED proptest/numpy.linalg.norm/pbt_4.py::test_vector_non_negativity_property
+FAILED proptest/numpy.linalg.norm/pbt_4.py::test_frobenius_equals_flattened_2norm_property
+FAILED proptest/numpy.linalg.norm/pbt_4.py::test_scaling_property - assert False
+FAILED proptest/numpy.linalg.norm/pbt_4.py::test_axis_norms_property - except...
+ERROR proptest/numpy.linalg.norm/pbt_1.py
+ERROR proptest/numpy.linalg.norm/pbt_5.py
+============== 7 failed, 8 passed, 4 warnings, 2 errors in 2.43s ===============

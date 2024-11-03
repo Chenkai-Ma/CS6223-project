@@ -1,0 +1,22 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 15 items / 2 errors
+
+proptest/datetime.datetime.combine/pbt_2.py ..F..                        [ 33%]
+proptest/datetime.datetime.combine/pbt_4.py .....                        [ 66%]
+proptest/datetime.datetime.combine/pbt_5.py .....                        [100%]
+
+==================================== ERRORS ====================================
+_________ ERROR collecting proptest/datetime.datetime.combine/pbt_1.py _________
+E   AttributeError: module 'hypothesis.strategies' has no attribute 'tzinfo'
+_________ ERROR collecting proptest/datetime.datetime.combine/pbt_3.py _________
+E   TypeError: times() got an unexpected keyword argument 'tzinfo'
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/proptest/datetime.datetime.combine/pbt_2.py:21: TypeError: tzinfo argument must be None or of a tzinfo subclass, not type 'datetime.time'
+=========================== short test summary info ============================
+FAILED proptest/datetime.datetime.combine/pbt_2.py::test_datetime_combine_tzinfo_property
+ERROR proptest/datetime.datetime.combine/pbt_1.py - AttributeError: module 'h...
+ERROR proptest/datetime.datetime.combine/pbt_3.py - TypeError: times() got an...
+==================== 1 failed, 14 passed, 2 errors in 1.17s ====================

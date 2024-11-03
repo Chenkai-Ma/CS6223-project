@@ -1,0 +1,59 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+proptest/statistics.correlation/pbt_1.py FFFFF                           [ 20%]
+proptest/statistics.correlation/pbt_2.py FF.FF                           [ 40%]
+proptest/statistics.correlation/pbt_3.py FFFFF                           [ 60%]
+proptest/statistics.correlation/pbt_4.py FF.FF                           [ 80%]
+proptest/statistics.correlation/pbt_5.py FFFF.                           [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.correlation/pbt_1.py:6: hypothesis.errors.InvalidArgument: Too many positional arguments for test_statistics_correlation_output_range() were passed to @given - expected at most 0 arguments, but got 1 (lists(floats(), min_size=2, unique=True).filter(lambda x: len(set(x)) > 1),)
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.correlation/pbt_1.py:13: hypothesis.errors.InvalidArgument: Too many positional arguments for test_statistics_correlation_identical_inputs() were passed to @given - expected at most 0 arguments, but got 1 (lists(floats(), min_size=2, unique=True),)
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.correlation/pbt_1.py:19: hypothesis.errors.InvalidArgument: Too many positional arguments for test_statistics_correlation_constant_input() were passed to @given - expected at most 0 arguments, but got 1 (lists(floats(), min_size=2).map(lambda x: [x[0]] * len(x)),)
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.correlation/pbt_1.py:28: hypothesis.errors.InvalidArgument: Too many positional arguments for test_statistics_correlation_ranked_perfect_alignment() were passed to @given - expected at most 0 arguments, but got 1 (lists(floats(), min_size=2, unique=True).filter(lambda x: len(set(x)) > 1),)
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.correlation/pbt_1.py:35: hypothesis.errors.InvalidArgument: Too many positional arguments for test_statistics_correlation_consistency() were passed to @given - expected at most 0 arguments, but got 1 (lists(floats(), min_size=2, unique=True),)
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.correlation/pbt_2.py:5: exceptiongroup.ExceptionGroup: Hypothesis found 9 distinct failures. (9 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.correlation/pbt_2.py:11: exceptiongroup.ExceptionGroup: Hypothesis found 5 distinct failures. (5 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.correlation/pbt_2.py:27: TypeError: correlation() got an unexpected keyword argument 'method'
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.correlation/pbt_2.py:32: exceptiongroup.ExceptionGroup: Hypothesis found 10 distinct failures. (10 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.correlation/pbt_3.py:5: exceptiongroup.ExceptionGroup: Hypothesis found 10 distinct failures. (10 sub-exceptions)
+/usr/lib/python3.10/statistics.py:919: statistics.StatisticsError: at least one of the inputs is constant
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.correlation/pbt_3.py:17: NameError: name 'pytest' is not defined
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.correlation/pbt_3.py:23: TypeError: correlation() got an unexpected keyword argument 'method'
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.correlation/pbt_3.py:27: exceptiongroup.ExceptionGroup: Hypothesis found 9 distinct failures. (9 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.correlation/pbt_4.py:5: exceptiongroup.ExceptionGroup: Hypothesis found 4 distinct failures. (4 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.correlation/pbt_4.py:10: exceptiongroup.ExceptionGroup: Hypothesis found 4 distinct failures. (4 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.correlation/pbt_4.py:27: TypeError: correlation() got an unexpected keyword argument 'method'
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.correlation/pbt_4.py:31: exceptiongroup.ExceptionGroup: Hypothesis found 4 distinct failures. (4 sub-exceptions)
+/usr/lib/python3.10/statistics.py:919: statistics.StatisticsError: at least one of the inputs is constant
+/usr/lib/python3.10/statistics.py:919: statistics.StatisticsError: at least one of the inputs is constant
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.correlation/pbt_5.py:16: NameError: name 'pytest' is not defined
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.correlation/pbt_5.py:21: TypeError: correlation() got an unexpected keyword argument 'method'
+=========================== short test summary info ============================
+FAILED proptest/statistics.correlation/pbt_1.py::test_statistics_correlation_output_range
+FAILED proptest/statistics.correlation/pbt_1.py::test_statistics_correlation_identical_inputs
+FAILED proptest/statistics.correlation/pbt_1.py::test_statistics_correlation_constant_input
+FAILED proptest/statistics.correlation/pbt_1.py::test_statistics_correlation_ranked_perfect_alignment
+FAILED proptest/statistics.correlation/pbt_1.py::test_statistics_correlation_consistency
+FAILED proptest/statistics.correlation/pbt_2.py::test_output_within_bounds_property
+FAILED proptest/statistics.correlation/pbt_2.py::test_identical_lists_property
+FAILED proptest/statistics.correlation/pbt_2.py::test_ranked_monotonic_relationship_property
+FAILED proptest/statistics.correlation/pbt_2.py::test_consistency_of_output_property
+FAILED proptest/statistics.correlation/pbt_3.py::test_statistics_correlation_output_range_property
+FAILED proptest/statistics.correlation/pbt_3.py::test_statistics_correlation_identical_inputs_property
+FAILED proptest/statistics.correlation/pbt_3.py::test_statistics_correlation_constant_input_property
+FAILED proptest/statistics.correlation/pbt_3.py::test_statistics_correlation_ranked_perfectly_aligned_property
+FAILED proptest/statistics.correlation/pbt_3.py::test_statistics_correlation_consistency_property
+FAILED proptest/statistics.correlation/pbt_4.py::test_statistics_correlation_output_range_property
+FAILED proptest/statistics.correlation/pbt_4.py::test_statistics_correlation_identical_inputs_property
+FAILED proptest/statistics.correlation/pbt_4.py::test_statistics_correlation_ranked_perfect_property
+FAILED proptest/statistics.correlation/pbt_4.py::test_statistics_correlation_consistency_property
+FAILED proptest/statistics.correlation/pbt_5.py::test_statistics_correlation_output_range_property
+FAILED proptest/statistics.correlation/pbt_5.py::test_statistics_correlation_identical_lists_property
+FAILED proptest/statistics.correlation/pbt_5.py::test_statistics_correlation_constant_list_property
+FAILED proptest/statistics.correlation/pbt_5.py::test_statistics_correlation_ranked_monotonic_property
+=================== 22 failed, 3 passed in 155.65s (0:02:35) ===================

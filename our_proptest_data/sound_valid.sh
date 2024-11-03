@@ -11,7 +11,9 @@ skip_list=("cryptography.fernet.Fernet.encrypt"
 "decimal.Decimal.quantize"
 "numpy.add"
 "pandas.cut"
-"pandas.merge")
+"pandas.merge"
+"_old_statistics_variance"
+"statistics_variance")
 
 for API in "${APIs[@]}"
 do

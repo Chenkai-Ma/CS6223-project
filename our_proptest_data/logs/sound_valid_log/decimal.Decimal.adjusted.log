@@ -1,0 +1,38 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 20 items / 1 error
+
+proptest/decimal.Decimal.adjusted/pbt_2.py ...F.                         [ 25%]
+proptest/decimal.Decimal.adjusted/pbt_3.py .FFF.                         [ 50%]
+proptest/decimal.Decimal.adjusted/pbt_4.py FFFF.                         [ 75%]
+proptest/decimal.Decimal.adjusted/pbt_5.py ..FF.                         [100%]
+
+==================================== ERRORS ====================================
+_________ ERROR collecting proptest/decimal.Decimal.adjusted/pbt_1.py __________
+E   TypeError: decimals() got an unexpected keyword argument 'allow_infinite'
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/proptest/decimal.Decimal.adjusted/pbt_2.py:21: AssertionError: assert -1 == (1 - 1)
+/home/james/projects/cs6223/our_proptest_data/proptest/decimal.Decimal.adjusted/pbt_3.py:12: AssertionError: assert -1 <= -2
+/home/james/projects/cs6223/our_proptest_data/proptest/decimal.Decimal.adjusted/pbt_3.py:17: AssertionError: assert 0 == Decimal('-Infinity')
+/home/james/projects/cs6223/our_proptest_data/proptest/decimal.Decimal.adjusted/pbt_3.py:24: assert -100 == (1 - 1)
+/home/james/projects/cs6223/our_proptest_data/proptest/decimal.Decimal.adjusted/pbt_4.py:8: TypeError: '>=' not supported between instances of 'int' and 'str'
+/home/james/projects/cs6223/our_proptest_data/proptest/decimal.Decimal.adjusted/pbt_4.py:16: TypeError: can only concatenate str (not "int") to str
+/home/james/projects/cs6223/our_proptest_data/proptest/decimal.Decimal.adjusted/pbt_4.py:21: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/proptest/decimal.Decimal.adjusted/pbt_4.py:30: assert 0 == (0 - 1)
+/home/james/projects/cs6223/our_proptest_data/proptest/decimal.Decimal.adjusted/pbt_5.py:19: AssertionError: assert 0 == -inf
+/home/james/projects/cs6223/our_proptest_data/proptest/decimal.Decimal.adjusted/pbt_5.py:26: assert -1 == (1 - 1)
+=========================== short test summary info ============================
+FAILED proptest/decimal.Decimal.adjusted/pbt_2.py::test_adjusted_exponent_digit_count_property
+FAILED proptest/decimal.Decimal.adjusted/pbt_3.py::test_adjusted_exponent_max_property
+FAILED proptest/decimal.Decimal.adjusted/pbt_3.py::test_adjusted_exponent_zero_property
+FAILED proptest/decimal.Decimal.adjusted/pbt_3.py::test_adjusted_exponent_digit_count_property
+FAILED proptest/decimal.Decimal.adjusted/pbt_4.py::test_adjusted_exponent_minimum_property
+FAILED proptest/decimal.Decimal.adjusted/pbt_4.py::test_adjusted_exponent_maximum_property
+FAILED proptest/decimal.Decimal.adjusted/pbt_4.py::test_adjusted_exponent_zero_property
+FAILED proptest/decimal.Decimal.adjusted/pbt_4.py::test_adjusted_exponent_digit_count_property
+FAILED proptest/decimal.Decimal.adjusted/pbt_5.py::test_adjusted_exponent_zero_property
+FAILED proptest/decimal.Decimal.adjusted/pbt_5.py::test_adjusted_exponent_digit_count_property
+ERROR proptest/decimal.Decimal.adjusted/pbt_1.py - TypeError: decimals() got ...
+==================== 10 failed, 10 passed, 1 error in 2.00s ====================

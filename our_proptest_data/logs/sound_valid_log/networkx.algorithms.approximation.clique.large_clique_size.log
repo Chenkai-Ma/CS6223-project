@@ -1,0 +1,42 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_1.py F [  4%]
+FFFF                                                                     [ 20%]
+proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_2.py F [ 24%]
+FFFF                                                                     [ 40%]
+proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_3.py . [ 44%]
+....                                                                     [ 60%]
+proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_4.py . [ 64%]
+....                                                                     [ 80%]
+proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_5.py . [ 84%]
+...F                                                                     [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_1.py:7: hypothesis.errors.InvalidArgument: Too many positional arguments for test_large_clique_size_non_negative() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_1.py:13: hypothesis.errors.InvalidArgument: Too many positional arguments for test_large_clique_size_does_not_exceed_node_count() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_1.py:20: hypothesis.errors.InvalidArgument: Too many positional arguments for test_large_clique_size_empty_graph() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_1.py:26: hypothesis.errors.InvalidArgument: Too many positional arguments for test_large_clique_size_bounded_by_max_degree() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_1.py:33: hypothesis.errors.InvalidArgument: Too many positional arguments for test_large_clique_size_disconnected_graph() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_2.py:7: hypothesis.errors.InvalidArgument: Too many positional arguments for test_large_clique_size_non_negative() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_2.py:16: hypothesis.errors.InvalidArgument: Too many positional arguments for test_large_clique_size_within_node_count() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_2.py:23: hypothesis.errors.InvalidArgument: Too many positional arguments for test_large_clique_size_empty_graph() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_2.py:29: hypothesis.errors.InvalidArgument: Too many positional arguments for test_large_clique_size_bounded_by_max_degree() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_2.py:37: hypothesis.errors.InvalidArgument: Too many positional arguments for test_large_clique_size_connected_components() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/.venv/lib/python3.10/site-packages/hypothesis/strategies/_internal/strategies.py:844: TypeError: connected_watts_strogatz_graph() missing 2 required positional arguments: 'k' and 'p'
+=========================== short test summary info ============================
+FAILED proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_1.py::test_large_clique_size_non_negative
+FAILED proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_1.py::test_large_clique_size_does_not_exceed_node_count
+FAILED proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_1.py::test_large_clique_size_empty_graph
+FAILED proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_1.py::test_large_clique_size_bounded_by_max_degree
+FAILED proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_1.py::test_large_clique_size_disconnected_graph
+FAILED proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_2.py::test_large_clique_size_non_negative
+FAILED proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_2.py::test_large_clique_size_within_node_count
+FAILED proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_2.py::test_large_clique_size_empty_graph
+FAILED proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_2.py::test_large_clique_size_bounded_by_max_degree
+FAILED proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_2.py::test_large_clique_size_connected_components
+FAILED proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_5.py::test_large_clique_size_disconnected_components
+======================== 11 failed, 14 passed in 0.30s =========================

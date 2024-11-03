@@ -1,0 +1,90 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 15 items / 2 errors
+
+proptest/statistics.linear_regression/pbt_1.py FFFF.                     [ 33%]
+proptest/statistics.linear_regression/pbt_2.py FFFF.                     [ 66%]
+proptest/statistics.linear_regression/pbt_5.py FFFF.                     [100%]
+
+==================================== ERRORS ====================================
+_______ ERROR collecting proptest/statistics.linear_regression/pbt_3.py ________
+../../.venv/lib/python3.10/site-packages/_pytest/python.py:493: in importtestmodule
+    mod = import_path(
+../../.venv/lib/python3.10/site-packages/_pytest/pathlib.py:582: in import_path
+    importlib.import_module(module_name)
+/usr/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1050: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1027: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1006: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:688: in _load_unlocked
+    ???
+../../.venv/lib/python3.10/site-packages/_pytest/assertion/rewrite.py:175: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+../../.venv/lib/python3.10/site-packages/_pytest/assertion/rewrite.py:355: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+/usr/lib/python3.10/ast.py:50: in parse
+    return compile(source, filename, mode, flags,
+E     File "/home/james/projects/cs6223/our_proptest_data/proptest/statistics.linear_regression/pbt_3.py", line 6
+E       st.lists(st.floats(min_value=-1e10, max_value=1e10), min_size=2, max_size=10)))
+E                                                                                     ^
+E   SyntaxError: unmatched ')'
+_______ ERROR collecting proptest/statistics.linear_regression/pbt_4.py ________
+../../.venv/lib/python3.10/site-packages/_pytest/python.py:493: in importtestmodule
+    mod = import_path(
+../../.venv/lib/python3.10/site-packages/_pytest/pathlib.py:582: in import_path
+    importlib.import_module(module_name)
+/usr/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1050: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1027: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1006: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:688: in _load_unlocked
+    ???
+../../.venv/lib/python3.10/site-packages/_pytest/assertion/rewrite.py:175: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+../../.venv/lib/python3.10/site-packages/_pytest/assertion/rewrite.py:355: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+/usr/lib/python3.10/ast.py:50: in parse
+    return compile(source, filename, mode, flags,
+E     File "/home/james/projects/cs6223/our_proptest_data/proptest/statistics.linear_regression/pbt_4.py", line 5
+E       st.lists(st.floats(min_value=-1e6, max_value=1e6), min_size=2, unique=True)))
+E                                                                                   ^
+E   SyntaxError: unmatched ')'
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.linear_regression/pbt_1.py:6: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.linear_regression/pbt_1.py:13: exceptiongroup.ExceptionGroup: Hypothesis found 5 distinct failures. (5 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.linear_regression/pbt_1.py:23: TypeError: linear_regression() got an unexpected keyword argument 'proportional'
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.linear_regression/pbt_1.py:27: exceptiongroup.ExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.linear_regression/pbt_2.py:6: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.linear_regression/pbt_2.py:12: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.linear_regression/pbt_2.py:20: TypeError: linear_regression() got an unexpected keyword argument 'proportional'
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.linear_regression/pbt_2.py:24: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/usr/lib/python3.10/statistics.py:958: OverflowError: intermediate overflow in fsum
+/usr/lib/python3.10/statistics.py:958: OverflowError: intermediate overflow in fsum
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.linear_regression/pbt_5.py:23: TypeError: linear_regression() got an unexpected keyword argument 'proportional'
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.linear_regression/pbt_5.py:27: exceptiongroup.ExceptionGroup: Hypothesis found 4 distinct failures. (4 sub-exceptions)
+=========================== short test summary info ============================
+FAILED proptest/statistics.linear_regression/pbt_1.py::test_slope_is_finite_property
+FAILED proptest/statistics.linear_regression/pbt_1.py::test_intercept_is_finite_property
+FAILED proptest/statistics.linear_regression/pbt_1.py::test_intercept_zero_when_proportional_property
+FAILED proptest/statistics.linear_regression/pbt_1.py::test_slope_changes_predictably_property
+FAILED proptest/statistics.linear_regression/pbt_2.py::test_slope_is_finite_property
+FAILED proptest/statistics.linear_regression/pbt_2.py::test_intercept_is_finite_property
+FAILED proptest/statistics.linear_regression/pbt_2.py::test_intercept_zero_when_proportional_property
+FAILED proptest/statistics.linear_regression/pbt_2.py::test_slope_predictable_change_property
+FAILED proptest/statistics.linear_regression/pbt_5.py::test_slope_is_finite_property
+FAILED proptest/statistics.linear_regression/pbt_5.py::test_intercept_is_finite_property
+FAILED proptest/statistics.linear_regression/pbt_5.py::test_intercept_zero_when_proportional_property
+FAILED proptest/statistics.linear_regression/pbt_5.py::test_slope_changes_with_scaling_property
+ERROR proptest/statistics.linear_regression/pbt_3.py
+ERROR proptest/statistics.linear_regression/pbt_4.py
+=================== 12 failed, 3 passed, 2 errors in 36.90s ====================

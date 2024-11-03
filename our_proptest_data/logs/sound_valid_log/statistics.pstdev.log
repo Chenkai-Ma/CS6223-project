@@ -1,0 +1,47 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+proptest/statistics.pstdev/pbt_1.py FF.FF                                [ 20%]
+proptest/statistics.pstdev/pbt_2.py F....                                [ 40%]
+proptest/statistics.pstdev/pbt_3.py F.FFF                                [ 60%]
+proptest/statistics.pstdev/pbt_4.py FFFFF                                [ 80%]
+proptest/statistics.pstdev/pbt_5.py F..F.                                [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.pstdev/pbt_1.py:5: exceptiongroup.ExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.pstdev/pbt_1.py:10: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.pstdev/pbt_1.py:23: exceptiongroup.ExceptionGroup: Hypothesis found 4 distinct failures. (4 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.pstdev/pbt_1.py:30: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/usr/lib/python3.10/numbers.py:291: OverflowError: integer division result too large for a float
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.pstdev/pbt_3.py:5: exceptiongroup.ExceptionGroup: Hypothesis found 4 distinct failures. (4 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.pstdev/pbt_3.py:17: exceptiongroup.ExceptionGroup: Hypothesis found 4 distinct failures. (4 sub-exceptions)
+/usr/lib/python3.10/statistics.py:709: OverflowError: cannot convert Infinity to integer ratio
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.pstdev/pbt_3.py:33: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.pstdev/pbt_4.py:6: hypothesis.errors.InvalidArgument: Too many positional arguments for test_statistics_pstdev_non_negative() were passed to @given - expected at most 0 arguments, but got 1 (lists(floats(), max_size=1000),)
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.pstdev/pbt_4.py:12: hypothesis.errors.InvalidArgument: Too many positional arguments for test_statistics_pstdev_constant_list() were passed to @given - expected at most 0 arguments, but got 1 (lists(floats(), min_size=1, max_size=1000),)
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.pstdev/pbt_4.py:19: hypothesis.errors.InvalidArgument: Too many positional arguments for test_statistics_pstdev_variability_increases() were passed to @given - expected at most 0 arguments, but got 1 (lists(floats(), min_size=2, max_size=1000),)
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.pstdev/pbt_4.py:30: hypothesis.errors.InvalidArgument: Too many positional arguments for test_statistics_pstdev_same_variance() were passed to @given - expected at most 0 arguments, but got 2 (lists(floats(), min_size=1, max_size=1000), floats())
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.pstdev/pbt_4.py:41: hypothesis.errors.InvalidArgument: Too many positional arguments for test_statistics_pstdev_equivalence_with_pvariance() were passed to @given - expected at most 0 arguments, but got 1 (lists(floats(), min_size=1, max_size=1000),)
+/usr/lib/python3.10/numbers.py:291: OverflowError: integer division result too large for a float
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.pstdev/pbt_5.py:23: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+=========================== short test summary info ============================
+FAILED proptest/statistics.pstdev/pbt_1.py::test_statistics_pstdev_non_negative_property
+FAILED proptest/statistics.pstdev/pbt_1.py::test_statistics_pstdev_constant_list_property
+FAILED proptest/statistics.pstdev/pbt_1.py::test_statistics_pstdev_no_change_with_constant_addition_property
+FAILED proptest/statistics.pstdev/pbt_1.py::test_statistics_pstdev_square_root_of_variance_property
+FAILED proptest/statistics.pstdev/pbt_2.py::test_statistics_pstdev_non_negative_property
+FAILED proptest/statistics.pstdev/pbt_3.py::test_statistics_pstdev_non_negative_property
+FAILED proptest/statistics.pstdev/pbt_3.py::test_statistics_pstdev_increasing_variability_property
+FAILED proptest/statistics.pstdev/pbt_3.py::test_statistics_pstdev_constant_shift_property
+FAILED proptest/statistics.pstdev/pbt_3.py::test_statistics_pstdev_equivalence_with_pvariance_property
+FAILED proptest/statistics.pstdev/pbt_4.py::test_statistics_pstdev_non_negative
+FAILED proptest/statistics.pstdev/pbt_4.py::test_statistics_pstdev_constant_list
+FAILED proptest/statistics.pstdev/pbt_4.py::test_statistics_pstdev_variability_increases
+FAILED proptest/statistics.pstdev/pbt_4.py::test_statistics_pstdev_same_variance
+FAILED proptest/statistics.pstdev/pbt_4.py::test_statistics_pstdev_equivalence_with_pvariance
+FAILED proptest/statistics.pstdev/pbt_5.py::test_statistics_pstdev_non_negative_property
+FAILED proptest/statistics.pstdev/pbt_5.py::test_statistics_pstdev_modify_variance_property
+========================= 16 failed, 9 passed in 3.60s =========================

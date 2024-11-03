@@ -1,0 +1,40 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_1.py . [  4%]
+....                                                                     [ 20%]
+proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_2.py . [ 24%]
+...F                                                                     [ 40%]
+proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_3.py F [ 44%]
+FF.F                                                                     [ 60%]
+proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_4.py . [ 64%]
+.FF.                                                                     [ 80%]
+proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_5.py F [ 84%]
+.FF.                                                                     [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/.venv/lib/python3.10/site-packages/networkx/algorithms/assortativity/neighbor_degree.py:121: networkx.exception.NetworkXError: source and target arguments are only supported for directed graphs
+/home/james/projects/.venv/lib/python3.10/site-packages/hypothesis/internal/conjecture/datatree.py:1124: hypothesis.errors.FlakyReplay: Inconsistent results from replaying a test case!
+/home/james/projects/cs6223/our_proptest_data/proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_3.py:17: TypeError: gnp_random_graph() missing 1 required positional argument: 'p'
+/home/james/projects/cs6223/our_proptest_data/proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_3.py:26: TypeError: gnp_random_graph() missing 1 required positional argument: 'p'
+/home/james/projects/cs6223/our_proptest_data/proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_3.py:46: TypeError: gnp_random_graph() missing 1 required positional argument: 'p'
+/home/james/projects/cs6223/our_proptest_data/proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_4.py:24: assert 2.0 == 1.0
+/home/james/projects/.venv/lib/python3.10/site-packages/networkx/convert.py:176: networkx.exception.NetworkXError: Input is not a known data type for conversion.
+/home/james/projects/cs6223/our_proptest_data/proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_5.py:10: assert 1 in {}
+/home/james/projects/cs6223/our_proptest_data/proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_5.py:25: assert 2.0 == 1.0
+/home/james/projects/.venv/lib/python3.10/site-packages/networkx/convert.py:176: networkx.exception.NetworkXError: Input is not a known data type for conversion.
+=========================== short test summary info ============================
+FAILED proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_2.py::test_consistent_output_property
+FAILED proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_3.py::test_output_contains_all_nodes_property
+FAILED proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_3.py::test_average_degree_non_negative_property
+FAILED proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_3.py::test_average_degree_symmetry_property
+FAILED proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_3.py::test_consistency_of_results_property
+FAILED proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_4.py::test_average_neighbor_degree_symmetric_property
+FAILED proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_4.py::test_no_predecessors_zero_average_degree_property
+FAILED proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_5.py::test_output_contains_entry_for_each_specified_node
+FAILED proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_5.py::test_average_neighbor_degree_is_symmetric_for_undirected
+FAILED proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_5.py::test_zero_average_neighbor_degree_for_no_predecessors
+======================== 10 failed, 15 passed in 0.98s =========================

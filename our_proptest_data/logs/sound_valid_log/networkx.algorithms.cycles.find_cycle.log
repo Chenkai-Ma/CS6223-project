@@ -1,0 +1,26 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 20 items / 1 error
+
+proptest/networkx.algorithms.cycles.find_cycle/pbt_1.py .....            [ 25%]
+proptest/networkx.algorithms.cycles.find_cycle/pbt_2.py .....            [ 50%]
+proptest/networkx.algorithms.cycles.find_cycle/pbt_3.py ..FF.            [ 75%]
+proptest/networkx.algorithms.cycles.find_cycle/pbt_5.py ..FF.            [100%]
+
+==================================== ERRORS ====================================
+___ ERROR collecting proptest/networkx.algorithms.cycles.find_cycle/pbt_4.py ___
+E   AttributeError: 'LazyStrategy' object has no attribute 'distinct'
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/proptest/networkx.algorithms.cycles.find_cycle/pbt_3.py:29: ValueError: too many values to unpack (expected 2)
+/home/james/projects/cs6223/our_proptest_data/proptest/networkx.algorithms.cycles.find_cycle/pbt_3.py:40: ValueError: too many values to unpack (expected 2)
+/home/james/projects/cs6223/our_proptest_data/proptest/networkx.algorithms.cycles.find_cycle/pbt_5.py:30: ValueError: too many values to unpack (expected 2)
+/home/james/projects/cs6223/our_proptest_data/proptest/networkx.algorithms.cycles.find_cycle/pbt_5.py:40: ValueError: too many values to unpack (expected 2)
+=========================== short test summary info ============================
+FAILED proptest/networkx.algorithms.cycles.find_cycle/pbt_3.py::test_cycle_original_orientation_property
+FAILED proptest/networkx.algorithms.cycles.find_cycle/pbt_3.py::test_cycle_ignore_orientation_property
+FAILED proptest/networkx.algorithms.cycles.find_cycle/pbt_5.py::test_original_orientation_property
+FAILED proptest/networkx.algorithms.cycles.find_cycle/pbt_5.py::test_ignore_orientation_property
+ERROR proptest/networkx.algorithms.cycles.find_cycle/pbt_4.py - AttributeErro...
+==================== 4 failed, 16 passed, 1 error in 0.94s =====================

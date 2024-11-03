@@ -1,0 +1,77 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 24 items
+
+proptest/networkx.algorithms.approximation.clustering_coefficient.average_clustering/pbt_1.py F [  4%]
+FFFF                                                                     [ 20%]
+proptest/networkx.algorithms.approximation.clustering_coefficient.average_clustering/pbt_2.py F [ 25%]
+..F.                                                                     [ 41%]
+proptest/networkx.algorithms.approximation.clustering_coefficient.average_clustering/pbt_3.py F [ 45%]
+F.F                                                                      [ 58%]
+proptest/networkx.algorithms.approximation.clustering_coefficient.average_clustering/pbt_4.py F [ 62%]
+F.FF                                                                     [ 79%]
+proptest/networkx.algorithms.approximation.clustering_coefficient.average_clustering/pbt_5.py F [ 83%]
+FFFF                                                                     [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/proptest/networkx.algorithms.approximation.clustering_coefficient.average_clustering/pbt_1.py:7: hypothesis.errors.InvalidArgument: Too many positional arguments for test_average_clustering_coefficient_range_property() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/proptest/networkx.algorithms.approximation.clustering_coefficient.average_clustering/pbt_1.py:13: hypothesis.errors.InvalidArgument: Too many positional arguments for test_average_clustering_no_edges_property() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/proptest/networkx.algorithms.approximation.clustering_coefficient.average_clustering/pbt_1.py:19: hypothesis.errors.InvalidArgument: Too many positional arguments for test_average_clustering_consistency_property() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/proptest/networkx.algorithms.approximation.clustering_coefficient.average_clustering/pbt_1.py:26: hypothesis.errors.InvalidArgument: Too many positional arguments for test_average_clustering_empty_graph_property() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/proptest/networkx.algorithms.approximation.clustering_coefficient.average_clustering/pbt_1.py:32: hypothesis.errors.InvalidArgument: Too many positional arguments for test_average_clustering_edge_addition_property() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/.venv/lib/python3.10/site-packages/networkx/algorithms/approximation/clustering_coefficient.py:60: IndexError: list index out of range
+/home/james/projects/.venv/lib/python3.10/site-packages/networkx/algorithms/approximation/clustering_coefficient.py:60: IndexError: list index out of range
+/home/james/projects/cs6223/our_proptest_data/proptest/networkx.algorithms.approximation.clustering_coefficient.average_clustering/pbt_3.py:6: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/proptest/networkx.algorithms.approximation.clustering_coefficient.average_clustering/pbt_3.py:26: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/.venv/lib/python3.10/site-packages/networkx/algorithms/approximation/clustering_coefficient.py:66: ZeroDivisionError: division by zero
+/home/james/projects/.venv/lib/python3.10/site-packages/networkx/algorithms/approximation/clustering_coefficient.py:60: IndexError: list index out of range
+/home/james/projects/.venv/lib/python3.10/site-packages/networkx/algorithms/approximation/clustering_coefficient.py:60: IndexError: list index out of range
+/home/james/projects/.venv/lib/python3.10/site-packages/networkx/algorithms/approximation/clustering_coefficient.py:60: IndexError: list index out of range
+/home/james/projects/cs6223/our_proptest_data/proptest/networkx.algorithms.approximation.clustering_coefficient.average_clustering/pbt_4.py:47: assert 0.33 <= 0.305
+/home/james/projects/cs6223/our_proptest_data/proptest/networkx.algorithms.approximation.clustering_coefficient.average_clustering/pbt_5.py:7: hypothesis.errors.InvalidArgument: Too many positional arguments for test_average_clustering_coefficient_range_property() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/proptest/networkx.algorithms.approximation.clustering_coefficient.average_clustering/pbt_5.py:13: hypothesis.errors.InvalidArgument: Too many positional arguments for test_average_clustering_coefficient_empty_graph_property() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/proptest/networkx.algorithms.approximation.clustering_coefficient.average_clustering/pbt_5.py:19: hypothesis.errors.InvalidArgument: Too many positional arguments for test_average_clustering_coefficient_consistency_property() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/proptest/networkx.algorithms.approximation.clustering_coefficient.average_clustering/pbt_5.py:26: hypothesis.errors.InvalidArgument: Too many positional arguments for test_average_clustering_coefficient_no_edges_property() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/proptest/networkx.algorithms.approximation.clustering_coefficient.average_clustering/pbt_5.py:34: hypothesis.errors.InvalidArgument: Too many positional arguments for test_average_clustering_coefficient_structure_property() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+=============================== warnings summary ===============================
+proptest/networkx.algorithms.approximation.clustering_coefficient.average_clustering/pbt_2.py::test_average_clustering_coefficient_float_range_property
+  /usr/lib/python3.10/contextlib.py:142: HypothesisDeprecationWarning: Do not use the `random` module inside strategies; instead consider  `st.randoms()`, `st.sampled_from()`, etc.  Draw 1: from one_of(builds(gnp_random_graph, integers(min_value=0, max_value=100), floats(min_value=0, max_value=1)), builds(complete_graph, integers(min_value=1, max_value=10)), builds(empty_graph, integers(min_value=0, max_value=10)))
+    next(self.gen)
+
+proptest/networkx.algorithms.approximation.clustering_coefficient.average_clustering/pbt_2.py::test_average_clustering_coefficient_consistency_property
+  /usr/lib/python3.10/contextlib.py:142: HypothesisDeprecationWarning: Do not use the `random` module inside strategies; instead consider  `st.randoms()`, `st.sampled_from()`, etc.  Draw 1: from builds(gnp_random_graph, integers(min_value=1, max_value=100), floats(min_value=0, max_value=1))
+    next(self.gen)
+
+proptest/networkx.algorithms.approximation.clustering_coefficient.average_clustering/pbt_4.py::test_average_clustering_output_range_property
+  /usr/lib/python3.10/contextlib.py:142: HypothesisDeprecationWarning: Do not use the `random` module inside strategies; instead consider  `st.randoms()`, `st.sampled_from()`, etc.  Draw 1: from builds(gnp_random_graph, integers(min_value=0, max_value=100), floats(min_value=0.0, max_value=1.0))
+    next(self.gen)
+
+proptest/networkx.algorithms.approximation.clustering_coefficient.average_clustering/pbt_4.py::test_average_clustering_consistency_property
+proptest/networkx.algorithms.approximation.clustering_coefficient.average_clustering/pbt_4.py::test_average_clustering_structure_variation_property
+  /usr/lib/python3.10/contextlib.py:142: HypothesisDeprecationWarning: Do not use the `random` module inside strategies; instead consider  `st.randoms()`, `st.sampled_from()`, etc.  Draw 1: from builds(gnp_random_graph, integers(min_value=5, max_value=20), floats(min_value=0.0, max_value=1.0))
+    next(self.gen)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED proptest/networkx.algorithms.approximation.clustering_coefficient.average_clustering/pbt_1.py::test_average_clustering_coefficient_range_property
+FAILED proptest/networkx.algorithms.approximation.clustering_coefficient.average_clustering/pbt_1.py::test_average_clustering_no_edges_property
+FAILED proptest/networkx.algorithms.approximation.clustering_coefficient.average_clustering/pbt_1.py::test_average_clustering_consistency_property
+FAILED proptest/networkx.algorithms.approximation.clustering_coefficient.average_clustering/pbt_1.py::test_average_clustering_empty_graph_property
+FAILED proptest/networkx.algorithms.approximation.clustering_coefficient.average_clustering/pbt_1.py::test_average_clustering_edge_addition_property
+FAILED proptest/networkx.algorithms.approximation.clustering_coefficient.average_clustering/pbt_2.py::test_average_clustering_coefficient_float_range_property
+FAILED proptest/networkx.algorithms.approximation.clustering_coefficient.average_clustering/pbt_2.py::test_average_clustering_coefficient_empty_graph_property
+FAILED proptest/networkx.algorithms.approximation.clustering_coefficient.average_clustering/pbt_3.py::test_average_clustering_output_range_property
+FAILED proptest/networkx.algorithms.approximation.clustering_coefficient.average_clustering/pbt_3.py::test_average_clustering_empty_graph_property
+FAILED proptest/networkx.algorithms.approximation.clustering_coefficient.average_clustering/pbt_3.py::test_average_clustering_edge_addition_property
+FAILED proptest/networkx.algorithms.approximation.clustering_coefficient.average_clustering/pbt_4.py::test_average_clustering_output_range_property
+FAILED proptest/networkx.algorithms.approximation.clustering_coefficient.average_clustering/pbt_4.py::test_average_clustering_no_edges_property
+FAILED proptest/networkx.algorithms.approximation.clustering_coefficient.average_clustering/pbt_4.py::test_average_clustering_empty_graph_property
+FAILED proptest/networkx.algorithms.approximation.clustering_coefficient.average_clustering/pbt_4.py::test_average_clustering_structure_variation_property
+FAILED proptest/networkx.algorithms.approximation.clustering_coefficient.average_clustering/pbt_5.py::test_average_clustering_coefficient_range_property
+FAILED proptest/networkx.algorithms.approximation.clustering_coefficient.average_clustering/pbt_5.py::test_average_clustering_coefficient_empty_graph_property
+FAILED proptest/networkx.algorithms.approximation.clustering_coefficient.average_clustering/pbt_5.py::test_average_clustering_coefficient_consistency_property
+FAILED proptest/networkx.algorithms.approximation.clustering_coefficient.average_clustering/pbt_5.py::test_average_clustering_coefficient_no_edges_property
+FAILED proptest/networkx.algorithms.approximation.clustering_coefficient.average_clustering/pbt_5.py::test_average_clustering_coefficient_structure_property
+=================== 19 failed, 5 passed, 5 warnings in 5.45s ===================

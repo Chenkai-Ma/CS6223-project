@@ -1,0 +1,31 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+proptest/html.escape/pbt_1.py ...F.                                      [ 20%]
+proptest/html.escape/pbt_2.py F....                                      [ 40%]
+proptest/html.escape/pbt_3.py F....                                      [ 60%]
+proptest/html.escape/pbt_4.py F.FFF                                      [ 80%]
+proptest/html.escape/pbt_5.py F....                                      [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/proptest/html.escape/pbt_1.py:27: assert False
+/home/james/projects/cs6223/our_proptest_data/proptest/html.escape/pbt_2.py:7: AssertionError: assert '&' not in '&#x27;'
+/home/james/projects/cs6223/our_proptest_data/proptest/html.escape/pbt_3.py:7: AssertionError: assert '&' not in '&lt;'
+/home/james/projects/cs6223/our_proptest_data/proptest/html.escape/pbt_4.py:7: AssertionError: assert '&' not in '&lt;'
+/home/james/projects/cs6223/our_proptest_data/proptest/html.escape/pbt_4.py:23: assert 6 == 1
+/home/james/projects/cs6223/our_proptest_data/proptest/html.escape/pbt_4.py:29: assert not True
+/home/james/projects/cs6223/our_proptest_data/proptest/html.escape/pbt_4.py:35: assert '&#x27;' == "'"
+/home/james/projects/cs6223/our_proptest_data/proptest/html.escape/pbt_5.py:7: AssertionError: assert '&' not in '&lt;'
+=========================== short test summary info ============================
+FAILED proptest/html.escape/pbt_1.py::test_output_is_valid_html_property - as...
+FAILED proptest/html.escape/pbt_2.py::test_output_should_not_contain_special_characters_property
+FAILED proptest/html.escape/pbt_3.py::test_output_should_not_contain_ampersand_property
+FAILED proptest/html.escape/pbt_4.py::test_output_should_not_contain_escaped_characters_property
+FAILED proptest/html.escape/pbt_4.py::test_output_length_should_be_greater_than_or_equal_to_input_length_when_escaping_property
+FAILED proptest/html.escape/pbt_4.py::test_output_should_be_valid_html_property
+FAILED proptest/html.escape/pbt_4.py::test_output_should_remain_unchanged_when_no_special_characters_property
+FAILED proptest/html.escape/pbt_5.py::test_output_should_not_contain_ampersand_property
+========================= 8 failed, 17 passed in 0.44s =========================

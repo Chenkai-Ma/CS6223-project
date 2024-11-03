@@ -1,0 +1,19 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+proptest/statistics.mean/pbt_1.py .....                                  [ 20%]
+proptest/statistics.mean/pbt_2.py .....                                  [ 40%]
+proptest/statistics.mean/pbt_3.py ...F.                                  [ 60%]
+proptest/statistics.mean/pbt_4.py .....                                  [ 80%]
+proptest/statistics.mean/pbt_5.py ...F.                                  [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.mean/pbt_3.py:24: hypothesis.errors.InvalidArgument: given must be called with at least one argument
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.mean/pbt_5.py:24: NameError: name 'pytest' is not defined
+=========================== short test summary info ============================
+FAILED proptest/statistics.mean/pbt_3.py::test_mean_empty_dataset_property - ...
+FAILED proptest/statistics.mean/pbt_5.py::test_mean_empty_data_raises_property
+========================= 2 failed, 23 passed in 0.40s =========================

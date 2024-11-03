@@ -1,0 +1,35 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+proptest/statistics.median/pbt_1.py ...F.                                [ 20%]
+proptest/statistics.median/pbt_2.py ...F.                                [ 40%]
+proptest/statistics.median/pbt_3.py ...F.                                [ 60%]
+proptest/statistics.median/pbt_4.py FFFFF                                [ 80%]
+proptest/statistics.median/pbt_5.py ...FF                                [100%]
+
+=================================== FAILURES ===================================
+/usr/lib/python3.10/statistics.py:452: statistics.StatisticsError: no median for empty data
+/usr/lib/python3.10/statistics.py:452: statistics.StatisticsError: no median for empty data
+/usr/lib/python3.10/statistics.py:452: statistics.StatisticsError: no median for empty data
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.median/pbt_4.py:6: hypothesis.errors.InvalidArgument: Too many positional arguments for test_median_non_empty_output() were passed to @given - expected at most 0 arguments, but got 1 (lists(floats(allow_nan=False, allow_infinity=False), min_size=1),)
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.median/pbt_4.py:12: hypothesis.errors.InvalidArgument: Too many positional arguments for test_median_odd_length() were passed to @given - expected at most 0 arguments, but got 1 (lists(floats(allow_nan=False, allow_infinity=False), min_size=1),)
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.median/pbt_4.py:20: hypothesis.errors.InvalidArgument: Too many positional arguments for test_median_even_length() were passed to @given - expected at most 0 arguments, but got 1 (lists(floats(allow_nan=False, allow_infinity=False), min_size=2),)
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.median/pbt_4.py:28: hypothesis.errors.InvalidArgument: Too many positional arguments for test_median_sorted_output() were passed to @given - expected at most 0 arguments, but got 1 (lists(floats(allow_nan=False, allow_infinity=False), min_size=1),)
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.median/pbt_4.py:36: hypothesis.errors.InvalidArgument: given must be called with at least one argument
+/usr/lib/python3.10/statistics.py:452: statistics.StatisticsError: no median for empty data
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.median/pbt_5.py:40: NameError: name 'StatisticsError' is not defined
+=========================== short test summary info ============================
+FAILED proptest/statistics.median/pbt_1.py::test_median_sorted_property - sta...
+FAILED proptest/statistics.median/pbt_2.py::test_median_sorted_input_is_same_property
+FAILED proptest/statistics.median/pbt_3.py::test_median_sorted_output_is_same
+FAILED proptest/statistics.median/pbt_4.py::test_median_non_empty_output - hy...
+FAILED proptest/statistics.median/pbt_4.py::test_median_odd_length - hypothes...
+FAILED proptest/statistics.median/pbt_4.py::test_median_even_length - hypothe...
+FAILED proptest/statistics.median/pbt_4.py::test_median_sorted_output - hypot...
+FAILED proptest/statistics.median/pbt_4.py::test_median_empty_input - hypothe...
+FAILED proptest/statistics.median/pbt_5.py::test_median_sorted_property - sta...
+FAILED proptest/statistics.median/pbt_5.py::test_median_empty_list_property
+======================== 10 failed, 15 passed in 0.34s =========================

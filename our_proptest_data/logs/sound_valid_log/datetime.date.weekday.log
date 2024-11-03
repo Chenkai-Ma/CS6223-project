@@ -1,0 +1,25 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+proptest/datetime.date.weekday/pbt_1.py ...F.                            [ 20%]
+proptest/datetime.date.weekday/pbt_2.py .....                            [ 40%]
+proptest/datetime.date.weekday/pbt_3.py .....                            [ 60%]
+proptest/datetime.date.weekday/pbt_4.py ...F.                            [ 80%]
+proptest/datetime.date.weekday/pbt_5.py .....                            [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/.venv/lib/python3.10/site-packages/hypothesis/strategies/_internal/strategies.py:319: hypothesis.errors.HypothesisException: Using example() inside a test function is a bad idea. Instead consider using hypothesis.strategies.data() to draw more examples during testing. See https://hypothesis.readthedocs.io/en/latest/data.html#drawing-interactively-in-tests for more details.
+/home/james/projects/cs6223/our_proptest_data/proptest/datetime.date.weekday/pbt_4.py:22: assert False
+=============================== warnings summary ===============================
+proptest/datetime.date.weekday/pbt_1.py::test_same_day_of_week_is_consistent_property
+  /home/james/projects/cs6223/our_proptest_data/proptest/datetime.date.weekday/pbt_1.py:23: NonInteractiveExampleWarning: The `.example()` method is good for exploring strategies, but should only be used interactively.  We recommend using `@given` for tests - it performs better, saves and replays failures to avoid flakiness, and reports minimal examples. (strategy: integers(min_value=0, max_value=10))
+    same_day_date = date + datetime.timedelta(days=(7 * st.integers(min_value=0, max_value=10).example()))
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED proptest/datetime.date.weekday/pbt_1.py::test_same_day_of_week_is_consistent_property
+FAILED proptest/datetime.date.weekday/pbt_4.py::test_same_day_of_week_is_consistent_property
+=================== 2 failed, 23 passed, 1 warning in 0.66s ====================

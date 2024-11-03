@@ -1,0 +1,49 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+proptest/statistics.geometric_mean/pbt_1.py .FFF.                        [ 20%]
+proptest/statistics.geometric_mean/pbt_2.py .FFF.                        [ 40%]
+proptest/statistics.geometric_mean/pbt_3.py .FFF.                        [ 60%]
+proptest/statistics.geometric_mean/pbt_4.py FFFFF                        [ 80%]
+proptest/statistics.geometric_mean/pbt_5.py .FFF.                        [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.geometric_mean/pbt_1.py:12: assert 0.12500000000000003 <= 0.125
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.geometric_mean/pbt_1.py:17: assert 62.99999999999999 >= 63.0
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.geometric_mean/pbt_1.py:22: assert 3.0000000000000004 == 3.0
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.geometric_mean/pbt_2.py:12: assert 0.12500000000000003 <= 0.125
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.geometric_mean/pbt_2.py:17: assert 43.99999999999999 >= 44.0
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.geometric_mean/pbt_2.py:22: assert 3.0000000000000004 == 3.0
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.geometric_mean/pbt_3.py:12: assert 0.12500000000000003 <= 0.125
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.geometric_mean/pbt_3.py:17: assert 43.99999999999999 >= 44.0
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.geometric_mean/pbt_3.py:22: assert 0.12500000000000003 == 0.125
+/usr/lib/python3.10/statistics.py:376: statistics.StatisticsError: geometric mean requires a non-empty dataset containing positive numbers
+/usr/lib/python3.10/statistics.py:376: statistics.StatisticsError: geometric mean requires a non-empty dataset containing positive numbers
+/usr/lib/python3.10/statistics.py:376: statistics.StatisticsError: geometric mean requires a non-empty dataset containing positive numbers
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.geometric_mean/pbt_4.py:25: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/usr/lib/python3.10/statistics.py:376: statistics.StatisticsError: geometric mean requires a non-empty dataset containing positive numbers
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.geometric_mean/pbt_5.py:12: assert 0.12500000000000003 <= 0.125
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.geometric_mean/pbt_5.py:17: assert 62.99999999999999 >= 63.0
+/home/james/projects/cs6223/our_proptest_data/proptest/statistics.geometric_mean/pbt_5.py:22: assert 3.0000000000000004 == 3.0
+=========================== short test summary info ============================
+FAILED proptest/statistics.geometric_mean/pbt_1.py::test_output_less_than_or_equal_to_max_property
+FAILED proptest/statistics.geometric_mean/pbt_1.py::test_output_greater_than_or_equal_to_min_property
+FAILED proptest/statistics.geometric_mean/pbt_1.py::test_output_equals_single_value_property
+FAILED proptest/statistics.geometric_mean/pbt_2.py::test_geometric_mean_maximum_value_property
+FAILED proptest/statistics.geometric_mean/pbt_2.py::test_geometric_mean_minimum_value_property
+FAILED proptest/statistics.geometric_mean/pbt_2.py::test_geometric_mean_single_value_property
+FAILED proptest/statistics.geometric_mean/pbt_3.py::test_geometric_mean_maximum_value_property
+FAILED proptest/statistics.geometric_mean/pbt_3.py::test_geometric_mean_minimum_value_property
+FAILED proptest/statistics.geometric_mean/pbt_3.py::test_geometric_mean_single_value_property
+FAILED proptest/statistics.geometric_mean/pbt_4.py::test_output_is_positive_property
+FAILED proptest/statistics.geometric_mean/pbt_4.py::test_output_le_maximum_value_property
+FAILED proptest/statistics.geometric_mean/pbt_4.py::test_output_ge_minimum_value_property
+FAILED proptest/statistics.geometric_mean/pbt_4.py::test_output_equals_single_value_property
+FAILED proptest/statistics.geometric_mean/pbt_4.py::test_output_invariant_under_order_property
+FAILED proptest/statistics.geometric_mean/pbt_5.py::test_output_less_than_or_equal_to_max_property
+FAILED proptest/statistics.geometric_mean/pbt_5.py::test_output_greater_than_or_equal_to_min_property
+FAILED proptest/statistics.geometric_mean/pbt_5.py::test_output_equals_single_value_property
+========================= 17 failed, 8 passed in 1.38s =========================

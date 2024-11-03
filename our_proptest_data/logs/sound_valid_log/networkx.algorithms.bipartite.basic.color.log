@@ -1,0 +1,17 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 20 items / 1 error
+
+proptest/networkx.algorithms.bipartite.basic.color/pbt_2.py .....        [ 25%]
+proptest/networkx.algorithms.bipartite.basic.color/pbt_3.py .....        [ 50%]
+proptest/networkx.algorithms.bipartite.basic.color/pbt_4.py .....        [ 75%]
+proptest/networkx.algorithms.bipartite.basic.color/pbt_5.py .....        [100%]
+
+==================================== ERRORS ====================================
+_ ERROR collecting proptest/networkx.algorithms.bipartite.basic.color/pbt_1.py _
+E   TypeError: settings.__init__() got an unexpected keyword argument 'suppress_health_checks'
+=========================== short test summary info ============================
+ERROR proptest/networkx.algorithms.bipartite.basic.color/pbt_1.py - TypeError...
+========================= 20 passed, 1 error in 0.36s ==========================

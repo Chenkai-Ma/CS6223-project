@@ -1,0 +1,21 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+proptest/decimal.Decimal.as_integer_ratio/pbt_1.py .....                 [ 20%]
+proptest/decimal.Decimal.as_integer_ratio/pbt_2.py .....                 [ 40%]
+proptest/decimal.Decimal.as_integer_ratio/pbt_3.py .....                 [ 60%]
+proptest/decimal.Decimal.as_integer_ratio/pbt_4.py ...FF                 [ 80%]
+proptest/decimal.Decimal.as_integer_ratio/pbt_5.py ...F.                 [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/proptest/decimal.Decimal.as_integer_ratio/pbt_4.py:23: AssertionError: assert (Decimal('73206428081689605079729951381') / Decimal('100000000000000000000000000000000000000000000000000000000')) == Decimal('7.3206428081689605079729951381E-28')
+/home/james/projects/cs6223/our_proptest_data/proptest/decimal.Decimal.as_integer_ratio/pbt_4.py:29: NameError: name 'pytest' is not defined
+/home/james/projects/cs6223/our_proptest_data/proptest/decimal.Decimal.as_integer_ratio/pbt_5.py:23: AssertionError: assert (Decimal('51996290585239726302088981829') / Decimal('10000000000')) == Decimal('5199629058523972630.2088981829')
+=========================== short test summary info ============================
+FAILED proptest/decimal.Decimal.as_integer_ratio/pbt_4.py::test_exact_representation_property
+FAILED proptest/decimal.Decimal.as_integer_ratio/pbt_4.py::test_overflow_and_nan_cases_property
+FAILED proptest/decimal.Decimal.as_integer_ratio/pbt_5.py::test_fraction_exact_representation_property
+========================= 3 failed, 22 passed in 6.49s =========================

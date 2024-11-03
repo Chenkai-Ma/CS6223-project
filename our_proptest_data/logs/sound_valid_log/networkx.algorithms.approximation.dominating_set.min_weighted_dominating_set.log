@@ -1,0 +1,32 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+proptest/networkx.algorithms.approximation.dominating_set.min_weighted_dominating_set/pbt_1.py F [  4%]
+....                                                                     [ 20%]
+proptest/networkx.algorithms.approximation.dominating_set.min_weighted_dominating_set/pbt_2.py . [ 24%]
+.F..                                                                     [ 40%]
+proptest/networkx.algorithms.approximation.dominating_set.min_weighted_dominating_set/pbt_3.py . [ 44%]
+...F                                                                     [ 60%]
+proptest/networkx.algorithms.approximation.dominating_set.min_weighted_dominating_set/pbt_4.py . [ 64%]
+.F.F                                                                     [ 80%]
+proptest/networkx.algorithms.approximation.dominating_set.min_weighted_dominating_set/pbt_5.py . [ 84%]
+.F..                                                                     [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/proptest/networkx.algorithms.approximation.dominating_set.min_weighted_dominating_set/pbt_1.py:6: hypothesis.errors.FlakyFailure: Hypothesis test_output_is_subset_of_nodes_property(data=data(...)) produces unreliable results: Falsified on the first call but did not on a subsequent one (1 sub-exception)
+/home/james/projects/cs6223/our_proptest_data/proptest/networkx.algorithms.approximation.dominating_set.min_weighted_dominating_set/pbt_2.py:26: KeyError: 'weight'
+/home/james/projects/.venv/lib/python3.10/site-packages/networkx/utils/decorators.py:90: networkx.exception.NetworkXNotImplemented: not implemented for directed type
+/home/james/projects/cs6223/our_proptest_data/proptest/networkx.algorithms.approximation.dominating_set.min_weighted_dominating_set/pbt_4.py:30: NameError: name 'np' is not defined
+/home/james/projects/.venv/lib/python3.10/site-packages/networkx/utils/decorators.py:90: networkx.exception.NetworkXNotImplemented: not implemented for directed type
+/home/james/projects/cs6223/our_proptest_data/proptest/networkx.algorithms.approximation.dominating_set.min_weighted_dominating_set/pbt_5.py:25: KeyError: 0
+=========================== short test summary info ============================
+FAILED proptest/networkx.algorithms.approximation.dominating_set.min_weighted_dominating_set/pbt_1.py::test_output_is_subset_of_nodes_property
+FAILED proptest/networkx.algorithms.approximation.dominating_set.min_weighted_dominating_set/pbt_2.py::test_weight_bounds_property
+FAILED proptest/networkx.algorithms.approximation.dominating_set.min_weighted_dominating_set/pbt_3.py::test_raises_exception_for_directed_graph_property
+FAILED proptest/networkx.algorithms.approximation.dominating_set.min_weighted_dominating_set/pbt_4.py::test_weight_constraint_with_weights_property
+FAILED proptest/networkx.algorithms.approximation.dominating_set.min_weighted_dominating_set/pbt_4.py::test_directed_graph_raises_exception_property
+FAILED proptest/networkx.algorithms.approximation.dominating_set.min_weighted_dominating_set/pbt_5.py::test_weight_bound_property
+========================= 6 failed, 19 passed in 2.25s =========================

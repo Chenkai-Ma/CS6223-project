@@ -1,0 +1,57 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 20 items / 1 error
+
+proptest/decimal.Decimal.fma/pbt_1.py F.F..                              [ 25%]
+proptest/decimal.Decimal.fma/pbt_2.py ..F.F                              [ 50%]
+proptest/decimal.Decimal.fma/pbt_3.py F.FFF                              [ 75%]
+proptest/decimal.Decimal.fma/pbt_5.py ..F..                              [100%]
+
+==================================== ERRORS ====================================
+____________ ERROR collecting proptest/decimal.Decimal.fma/pbt_4.py ____________
+../../.venv/lib/python3.10/site-packages/_pytest/python.py:493: in importtestmodule
+    mod = import_path(
+../../.venv/lib/python3.10/site-packages/_pytest/pathlib.py:582: in import_path
+    importlib.import_module(module_name)
+/usr/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1050: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1027: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1006: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:688: in _load_unlocked
+    ???
+../../.venv/lib/python3.10/site-packages/_pytest/assertion/rewrite.py:175: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+../../.venv/lib/python3.10/site-packages/_pytest/assertion/rewrite.py:357: in _rewrite_test
+    co = compile(tree, strfn, "exec", dont_inherit=True)
+E     File "/home/james/projects/cs6223/our_proptest_data/proptest/decimal.Decimal.fma/pbt_4.py", line 22
+E       def test_zero_other_property(self, self, third):
+E                                          ^^^^
+E   SyntaxError: duplicate argument 'self' in function definition
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/proptest/decimal.Decimal.fma/pbt_1.py:9: AssertionError: assert Decimal('1.112536929253601185610762199912746208678400858452538280336466322768366642992641598602648849715007376E-308') == ((Decimal('0.5') * Decimal('2.22507385850720138309023271733240406421921598046233183055332741688720443481391819585428315901251102056406733...6988983175067838846926092773977972858659654941091369095406136467568702398678315290680984617210924625396728515625E-308')) + Decimal('4.94065645841246544176568792868221372365059802614324764425585682500675507270208751865299836361635992379796564...1451037862738167250955837389733598993664809941164205702637090279242767544565229087538682506419718265533447265625E-324'))
+/home/james/projects/cs6223/our_proptest_data/proptest/decimal.Decimal.fma/pbt_1.py:20: AssertionError: assert Decimal('5') == (Decimal('1') + Decimal('5'))
+/home/james/projects/cs6223/our_proptest_data/proptest/decimal.Decimal.fma/pbt_2.py:22: AssertionError: assert Decimal('5') == (Decimal('1') + Decimal('5'))
+/home/james/projects/cs6223/our_proptest_data/proptest/decimal.Decimal.fma/pbt_2.py:35: AssertionError: assert Decimal('1') == Decimal('2')
+/home/james/projects/cs6223/our_proptest_data/proptest/decimal.Decimal.fma/pbt_3.py:8: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/proptest/decimal.Decimal.fma/pbt_3.py:21: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/proptest/decimal.Decimal.fma/pbt_3.py:28: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/proptest/decimal.Decimal.fma/pbt_3.py:35: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/proptest/decimal.Decimal.fma/pbt_5.py:25: AssertionError: assert Decimal('5') == Decimal('6')
+=========================== short test summary info ============================
+FAILED proptest/decimal.Decimal.fma/pbt_1.py::test_fma_output_equivalence_property
+FAILED proptest/decimal.Decimal.fma/pbt_1.py::test_fma_with_zero_other_property
+FAILED proptest/decimal.Decimal.fma/pbt_2.py::test_fma_zero_other_property - ...
+FAILED proptest/decimal.Decimal.fma/pbt_2.py::test_fma_commutative_property
+FAILED proptest/decimal.Decimal.fma/pbt_3.py::test_fma_output_equivalence_property
+FAILED proptest/decimal.Decimal.fma/pbt_3.py::test_fma_zero_other_property - ...
+FAILED proptest/decimal.Decimal.fma/pbt_3.py::test_fma_zero_third_property - ...
+FAILED proptest/decimal.Decimal.fma/pbt_3.py::test_fma_commutative_property
+FAILED proptest/decimal.Decimal.fma/pbt_5.py::test_output_with_zero_other_property
+ERROR proptest/decimal.Decimal.fma/pbt_4.py
+==================== 9 failed, 11 passed, 1 error in 20.39s ====================
