@@ -2,8 +2,18 @@
 
 ## Reminders
 
-- Full-scale experiment: it takes two rounds. In the first round, zx generates PBTs and mck filter sound and valid PBTs; in the second round, zx generates mutated test functions from test functions in sound and valid PBTs and mck computes property coverage.
-- The code (artifact) of this project will also be graded.
+### Experiments
+
+- Experiment planning：
+
+|  | Our method: code + doc | Baseline: doc only (from original paper) | Baseline: code only |
+| ----------- | ----------- | ----------- | ----------- |
+| RQ1: Sound and Valid | alredy done? | 14 Nov? | 14 Nov? |
+| RQ2: Property Coverage | 14 Nov trial, 21 Nov full? | 21 Nov? | 21 Nov? |
+
+- Procedure for RQ1: zx generates PBTs, then mck filter sound and valid test functions.
+
+- Procedure for RQ2 (details below): mck select pairs of (sound and valid test function, property) according to last cell of [process_data.ipynb](our_proptest_data/process_data.ipynb); then zx generates mutated test functions; then mck computes property coverage.
 
 ### Property Coverage Workflow
 
@@ -14,17 +24,25 @@ For each API method:
 - [@mck] Test these property mutants, only aim for assertion errors (this means filtering invalid ones with run-time errors)
 - [@mck] Compute property mutation score and property coverage.
 
+### Other
+
+- The code (artifact) of this project will also be graded.
+- Project due: 2 Dec.
+
 ## Progress
 
 ### Sound and valid
 
-- 已经完成sound和valid的evaluation。`numpy.resize`好像有点问题（视为全部fail）。`pandas.DataFrame.sort_values`全部fail。
-- 我把`statistics.variance`的jsonl删了，因为我们不用这个API。（该API其他的文件也可以考虑删了）
-- 生成了所有API对应的jsonl文件。对于部分API，有的property没有sound&valid的test function，那么在生成jsonl的时候就property的数目、pbt的数目就会相应减少。
+- 已完成对于code+docs（**需要确认是该方法**）方法生成的30个API的test function的sound和valid的测试，结果在[google doc](https://docs.google.com/spreadsheets/d/1ho1ij9dSY98MuzCt7yKXHBuz76prcS5Z1I_kI3RQznE/edit?gid=2025599766#gid=2025599766)。**结论：比原论文(在它的40个API上)的结果更好**。
+- Jsonl: 生成了所有API对应的jsonl文件。对于部分API，有的property没有sound&valid的test function，那么在生成jsonl的时候就property的数目、pbt的数目就会相应减少。另外，我把`statistics.variance`的jsonl删了，因为我们不用这个API。（该API其他的文件也可以考虑删了）
 
 ## Feedback 
 
-### Property coverage
+### RQ1: Sound and Valid
+
+- For "code only" and "doc only", generate full PBTs before 14 Nov?
+
+### RQ2: Property coverage
 
 - 形式（格式以及命名）都没有问题，之后沿用就好了。
 - 内容似乎不对。mutant_*.py的每个test function还是正常的PBT（即检查API的输出是否满足给定的property）。这些test function主要对输入数据进行了变换，这其实相当于fuzzing，而hypothesis已经在构造example的时候已经自动做了这一步了。对于一个mutated test function，我们期望的是**沿用原来对应的test function（保持所有内容不变）**，除了**对API的输出做一次变换以违反对应的property，以期望原来的assertion会失败**。请参考以下的例子，它比较了原论文和我们的方法的异同：
@@ -77,14 +95,8 @@ def test_no_html_unsafe_characters_mutant(s):
 
 请注意，该mutated test function和原论文生成的mutated test function是等价的，二者和原本的test function的唯一区别就是对API调用的结果进行了一次变换以违反property。
 
-- 后续建议: 对于`html.escape`的[jsonl文件](our_proptest_data/sound_valid/html.escape.jsonl)，生成mutated test functions。(请参考上面的例子，如有疑问欢迎讨论)
-
-- tentative timeline：下次meet（约7 Nov）之前解决，再下次（约14 Nov）之前做完这一步的full-scale experiment。
-
-### RQ3: "docs + codes" vs. "codes only"
-
-- Details: 不单独列这个RQ，而是直接和前两个RQ合并，即"codes" vs. "codes + docs" vs. "docs" （沿用相同的实验设置）。
+- 后续建议: 在**14 Nov**之前对于`html.escape`的[jsonl文件](our_proptest_data/sound_valid/html.escape.jsonl)，生成mutated test functions。(请参考上面的例子，如有疑问欢迎讨论);在**21 Nov**之前做完RQ2的full-scale experiment.
 
 ### Writing
 
-- 在21 Nov之前完成draft（之后最多小改）大概ok。
+- I suggest finishing writing in 28 Nov. So we have time to check, revise (if any), and organize codes, etc.
