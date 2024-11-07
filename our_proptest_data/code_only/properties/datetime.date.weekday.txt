@@ -1,0 +1,5 @@
+1. The output of the `weekday` function should always be an integer between 0 and 6, inclusive.
+2. The output value should represent the correct day of the week, where 0 corresponds to Monday and 6 corresponds to Sunday.
+3. The result of the `weekday` function should be consistent for the same date input, meaning that calling the function multiple times with the same date should yield the same result.
+4. The output should change predictably when the input date changes, specifically advancing by 1 for each day increment in the input.
+5. The output should exhibit periodicity, such that the `weekday` function returns the same value for dates that are exactly one week apart.

@@ -1,0 +1,9 @@
+1. The output should always be a valid `Decimal` object, maintaining the same sign as the input `self`.
+
+2. If the `other` argument is zero, the output should be identical to the input `self`, as shifting by zero does not change the value.
+
+3. The output should have an exponent that is equal to the input's exponent, adjusted by the integer value of `other`, ensuring the overall scale of the number is preserved.
+
+4. The number of significant digits in the output should not exceed the precision defined in the context, meaning it should always be truncated or padded to fit within the allowed precision.
+
+5. If the input `self` is infinite, the output should also be an infinite `Decimal`, regardless of the value of `other`.

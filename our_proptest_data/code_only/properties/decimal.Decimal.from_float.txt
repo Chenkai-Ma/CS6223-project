@@ -1,0 +1,9 @@
+1. The output should be an instance of the `Decimal` class when the input is either an integer or a float.
+
+2. For any finite float input, the output should accurately represent the same numeric value as a `Decimal`, meaning `Decimal.from_float(f)` should equal `Decimal(f)`.
+
+3. If the input is positive, the sign of the output `Decimal` should be positive; if the input is negative, the sign of the output should be negative.
+
+4. The output should raise a `TypeError` if the input is neither an integer nor a float.
+
+5. For special float inputs like positive or negative infinity (`float('inf')` or `float('-inf')`) and NaN (`float('nan')`), the output should be the string representation of these values when converted to `Decimal`.

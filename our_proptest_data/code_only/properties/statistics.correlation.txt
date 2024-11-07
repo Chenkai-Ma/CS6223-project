@@ -1,0 +1,9 @@
+1. The correlation coefficient should always be between -1 and 1, inclusive, regardless of the input values provided.
+
+2. If both input lists are identical, the correlation should be 1, indicating perfect positive correlation.
+
+3. If one of the input lists is constant (all elements are the same), the function should raise a `StatisticsError` indicating that at least one of the inputs is constant.
+
+4. For two input lists where the second list is a linear transformation of the first (e.g., scaled or shifted), the correlation should remain 1 or -1, depending on the direction of the transformation.
+
+5. The correlation should be invariant under permutations of the input lists, meaning that changing the order of elements in either input list should not affect the calculated correlation coefficient.

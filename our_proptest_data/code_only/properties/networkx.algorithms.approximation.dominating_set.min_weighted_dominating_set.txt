@@ -1,0 +1,9 @@
+1. The output dominating set must cover all vertices in the graph, meaning every vertex should either be in the dominating set or adjacent to at least one vertex in the dominating set.
+
+2. The output dominating set should be a subset of the input graph's vertices, ensuring that all nodes in the dominating set are valid nodes from the input graph.
+
+3. The size of the output dominating set should be minimized, meaning that there should not exist a smaller dominating set that covers all vertices in the graph.
+
+4. If the input graph is empty, the output should also be an empty set, reflecting the fact that there are no vertices to dominate.
+
+5. The cost-effectiveness of nodes added to the dominating set should be non-increasing; that is, each subsequent node added should have a cost-effectiveness that is less than or equal to that of the previously added node, ensuring a greedy approach is maintained throughout the process.

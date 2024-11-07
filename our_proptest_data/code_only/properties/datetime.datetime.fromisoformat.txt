@@ -1,0 +1,5 @@
+1. The output should be an instance of the `datetime.datetime` class for valid ISO format strings.
+2. The year, month, and day components of the output should correspond to valid calendar dates, ensuring that the day does not exceed the number of days in the given month and year.
+3. If the input string represents a time of "24:00", the output should represent the next day at "00:00:00" (midnight) of the corresponding date.
+4. The output's hour, minute, second, and microsecond components should be within their valid ranges (0-23 for hours, 0-59 for minutes, 0-59 for seconds, and 0-999999 for microseconds).
+5. The output should raise a `ValueError` for any input string that does not conform to the ISO 8601 format or represents an invalid date or time.

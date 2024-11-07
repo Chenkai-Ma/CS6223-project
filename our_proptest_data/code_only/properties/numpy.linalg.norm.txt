@@ -1,0 +1,9 @@
+1. The norm of a vector (1D array) with order 2 should always be non-negative and equal to zero if and only if the vector itself contains only zeros.
+
+2. The norm of a matrix (2D array) with order 'fro' (Frobenius norm) should be equal to the square root of the sum of the absolute squares of its elements, and should also be non-negative.
+
+3. The norm with order 'inf' for a matrix should return the maximum absolute row sum and should be non-negative.
+
+4. The norm with order 0 for a vector should return the count of non-zero elements and should be a non-negative integer.
+
+5. The norm should be invariant under unitary transformations, meaning that applying a unitary transformation to the input should not change the value of the norm.

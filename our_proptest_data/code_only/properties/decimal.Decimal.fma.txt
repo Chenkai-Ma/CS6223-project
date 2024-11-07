@@ -1,0 +1,9 @@
+1. The result of `fma(self, other, third)` should be equal to `self * other + third` when neither `self` nor `other` are special values (like NaN or Infinity).
+
+2. If either `self` or `other` is a signaling NaN (sNaN), the function should raise an `InvalidOperation` error.
+
+3. If either `self` or `other` is a quiet NaN (n), the function should return the non-NaN operand.
+
+4. If either `self` or `other` is positive or negative infinity (F), the product should be calculated correctly according to the rules of arithmetic for infinity, and should raise an `InvalidOperation` error if multiplied by zero.
+
+5. The output of `fma(self, other, third)` should maintain the sign of the product of `self` and `other` when both are finite and non-zero, and should be correctly adjusted by the addition of `third`.

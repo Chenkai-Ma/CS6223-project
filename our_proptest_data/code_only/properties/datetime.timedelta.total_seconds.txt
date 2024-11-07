@@ -1,0 +1,5 @@
+1. The output of `total_seconds` should always be a non-negative float, as it represents a duration of time.
+2. The output of `total_seconds` should equal zero if both `days`, `seconds`, and `microseconds` are all zero.
+3. The output of `total_seconds` should be proportional to the input values, meaning that doubling the input values (for `days`, `seconds`, and `microseconds`) should double the output.
+4. The output of `total_seconds` should be consistent across multiple calls with the same input values, ensuring that it is deterministic.
+5. The output of `total_seconds` should correctly account for the conversion of days to seconds, meaning that the output should equal the sum of `days * 86400`, `seconds`, and `microseconds / 10**6`.

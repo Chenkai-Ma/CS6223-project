@@ -1,0 +1,9 @@
+1. If the input graph is undirected, the function should raise a `NetworkXError` indicating that "is_aperiodic not defined for undirected graphs."
+
+2. If the input graph has no nodes, the function should raise a `NetworkXPointlessConcept` indicating that "Graph has no nodes."
+
+3. If the input graph is a directed acyclic graph (DAG) with a single strongly connected component, the output should be `True` indicating that the graph is aperiodic.
+
+4. If the input graph is a directed graph with more than one strongly connected component, the output should be `False` if any of the components are periodic.
+
+5. For any directed graph that contains cycles, the output should be `False`, indicating that the graph is not aperiodic.

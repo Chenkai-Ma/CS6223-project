@@ -1,0 +1,9 @@
+1. The output cliques must be subsets of the input graph's nodes, ensuring that all nodes in each returned clique are present in the original graph.
+
+2. Each returned clique must be a complete subgraph, meaning that every pair of nodes within the clique must be directly connected by an edge in the graph.
+
+3. The function should yield all maximal cliques, meaning no additional nodes can be added to any returned clique without breaking its completeness.
+
+4. If the input graph is empty, the function should yield no cliques, returning an empty output.
+
+5. If specific nodes are provided as input, the function should only yield cliques that include those nodes, and it should raise an error if the provided nodes do not form a clique.

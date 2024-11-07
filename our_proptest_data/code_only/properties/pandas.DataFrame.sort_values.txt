@@ -1,0 +1,5 @@
+1. The output DataFrame should have the same number of rows as the input DataFrame, regardless of the sorting parameters.
+2. The output DataFrame should be sorted based on the specified column(s) in the order defined by the `ascending` parameter, ensuring that all values in the specified column(s) are in the correct order.
+3. If `inplace` is set to `True`, the original DataFrame should be modified, and the function should return `None`.
+4. When `ignore_index` is set to `True`, the resulting DataFrame should have a default integer index ranging from 0 to the number of rows minus one, regardless of the original index.
+5. If the `by` parameter is an empty list, the output should be identical to the input DataFrame, preserving the original order and structure.

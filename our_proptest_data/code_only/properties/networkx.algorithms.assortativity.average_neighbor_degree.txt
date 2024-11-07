@@ -1,0 +1,9 @@
+1. The average neighbor degree for any node should be non-negative, as it represents an average of degrees of neighboring nodes.
+
+2. If a node has a degree of zero, its average neighbor degree should be exactly zero, since it has no neighbors.
+
+3. The average neighbor degree for a node should be equal to the total degree of its neighbors divided by the node's degree, ensuring that the calculation correctly reflects the average.
+
+4. In an undirected graph, the average neighbor degree should be symmetric; that is, the average neighbor degree of node A should equal that of node B if A and B are neighbors.
+
+5. The average neighbor degree should be invariant under the addition of nodes with no edges, meaning that adding isolated nodes to the graph should not affect the average neighbor degrees of existing nodes.

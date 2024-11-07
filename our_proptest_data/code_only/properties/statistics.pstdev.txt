@@ -1,0 +1,9 @@
+1. The output of `pstdev` should always be non-negative, as standard deviation cannot be negative.
+
+2. If the input data set is empty, `pstdev` should raise a `StatisticsError`, indicating that at least one data point is required.
+
+3. If the input data contains only one data point, the output of `pstdev` should be zero, since there is no variation in a single value.
+
+4. The output of `pstdev` should be consistent with the output of `pstdev` when the input data is the same, regardless of the order of the data points.
+
+5. The output of `pstdev` should be equal to the square root of the variance of the input data, confirming the mathematical relationship between standard deviation and variance.

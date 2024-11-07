@@ -1,0 +1,9 @@
+1. The average clustering coefficient should be a non-negative value, as it represents a proportion of triangles formed among the neighbors of nodes in the graph.
+
+2. The average clustering coefficient should be less than or equal to 1, since the maximum possible clustering coefficient occurs when every pair of neighbors is connected, forming a complete subgraph.
+
+3. For an empty graph (with no nodes), the average clustering coefficient should return 0, as there are no triangles to count.
+
+4. The average clustering coefficient should be consistent across multiple trials with the same graph and seed, producing similar average values due to the random sampling process.
+
+5. The average clustering coefficient should be invariant to the order of nodes in the graph; that is, the result should remain the same regardless of how the nodes are arranged or labeled.

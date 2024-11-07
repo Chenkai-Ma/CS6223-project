@@ -1,0 +1,5 @@
+1. The output should be a non-negative integer, representing the size of the largest clique in the graph.
+2. The output should not exceed the total number of nodes in the graph, as a clique cannot be larger than the number of nodes present.
+3. If the graph is empty (contains no nodes), the output should be zero, indicating that there are no cliques.
+4. The output should be consistent with the maximum degree of any node in the graph; it cannot be larger than the maximum degree plus one, as cliques are formed by connected nodes.
+5. If the graph contains only isolated nodes (nodes with no edges), the output should also be zero, as there are no connections to form a clique.

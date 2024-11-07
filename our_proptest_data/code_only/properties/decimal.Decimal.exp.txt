@@ -1,0 +1,5 @@
+1. The exponential of NaN should always return NaN.
+2. The exponential of negative infinity should return zero.
+3. The exponential of zero should return one.
+4. The exponential of positive infinity should return positive infinity.
+5. The exponential function should be monotonically increasing for all real numbers.

@@ -1,0 +1,5 @@
+1. The output string should not contain any of the characters `&`, `<`, `>`, `"`, or `'` if `quote` is set to `True`.
+2. The output string should contain the same number of characters as the input string plus any necessary replacements for special characters.
+3. The output string should be a valid HTML-safe representation of the input string, meaning it should not introduce any additional characters outside of the specified replacements.
+4. If the input string is empty, the output should also be an empty string regardless of the value of the `quote` parameter.
+5. The output should maintain the order of characters from the input string, with only the specified characters being replaced.

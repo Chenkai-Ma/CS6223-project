@@ -1,0 +1,9 @@
+1. The output cycle must consist of edges that form a closed loop, meaning the last node in the cycle must connect back to the first node in the cycle.
+
+2. If the input graph is acyclic (i.e., it contains no cycles), the output should be an empty list.
+
+3. The length of the output cycle must be greater than or equal to 3 if a cycle is found, as a cycle requires at least three nodes to connect back to the starting node.
+
+4. The output cycle must only include edges that exist in the input graph, ensuring that all edges in the cycle are valid edges of the graph.
+
+5. If the orientation is set to "reverse", the output cycle must reflect the reversed direction of the edges compared to the original graph's edges.

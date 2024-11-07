@@ -1,0 +1,9 @@
+1. The output shape must match the specified `new_shape` argument, ensuring that the dimensions of the resized array are as intended.
+
+2. If the input array is empty, the output must also be an empty array with the specified `new_shape`, as resizing an empty array should still yield an empty result.
+
+3. If `new_shape` contains negative dimensions, a `ValueError` must be raised, ensuring that all dimensions are non-negative.
+
+4. The elements of the output array must be filled with the original elements of the input array, repeated as necessary to fit the new size, ensuring that the resizing behavior is consistent with the input data.
+
+5. The total number of elements in the output array must equal the product of the dimensions in `new_shape`, confirming that the output size corresponds accurately to the requested shape.

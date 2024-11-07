@@ -1,0 +1,9 @@
+1. The output datetime object should have the same year, month, and day as the provided date argument.
+
+2. The output datetime object should have the same hour, minute, second, and microsecond as the provided time argument.
+
+3. If the tzinfo argument is set to True, the output datetime object should have the same timezone information as the provided time argument.
+
+4. The output datetime object should raise a TypeError if the date argument is not an instance of a date class.
+
+5. The output datetime object should raise a TypeError if the time argument is not an instance of a time class.

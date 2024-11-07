@@ -1,0 +1,5 @@
+1. The mean of a list containing identical elements should equal the value of those elements.
+2. The mean of an empty list should raise a StatisticsError.
+3. The mean of a list with negative and positive numbers should be within the range of the minimum and maximum values of the list.
+4. The mean of a list should be invariant under the addition of zero (i.e., adding zero to the list should not change the mean).
+5. The mean of a concatenated list (combining two lists) should equal the weighted average of the means of the individual lists, weighted by their sizes.

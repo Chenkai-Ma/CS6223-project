@@ -1,0 +1,9 @@
+1. The output dictionary should contain exactly two distinct colors (0 and 1) for all nodes in a bipartite graph, ensuring that no two adjacent nodes share the same color.
+
+2. If the input graph is empty, the output should also be an empty dictionary, indicating that there are no nodes to color.
+
+3. For any isolated nodes in the input graph, the output should assign them the color 0, as they are not connected to any other nodes.
+
+4. The output should maintain a one-to-one mapping between nodes in the input graph and the keys in the output dictionary, meaning every node in the graph should have a corresponding entry in the color dictionary.
+
+5. If the input graph is not bipartite, the function should raise a `NetworkXError`, indicating that it cannot assign colors without violating the bipartite condition.

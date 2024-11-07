@@ -1,0 +1,9 @@
+1. The output of `as_integer_ratio` should always be a tuple containing exactly two elements: the numerator and the denominator.
+
+2. The numerator returned by `as_integer_ratio` should be an integer.
+
+3. The denominator returned by `as_integer_ratio` should be a positive integer.
+
+4. The fraction represented by the numerator and denominator should be equal to the original decimal value (i.e., `numerator / denominator` should equal the decimal value).
+
+5. The greatest common divisor (GCD) of the numerator and denominator should be 1, indicating that the fraction is in its simplest form.

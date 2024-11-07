@@ -1,0 +1,9 @@
+1. The slope of the linear regression output should be equal to zero when all input `y` values are constant (regardless of the `x` values provided).
+
+2. The intercept of the linear regression output should equal the mean of the `y` values when the `proportional` flag is set to `False` and the slope is zero.
+
+3. The output of the linear regression should produce a valid `LinearRegression` object containing numeric values for both slope and intercept.
+
+4. The slope of the linear regression output should change continuously as the input data points are varied, assuming the relationship between `x` and `y` is linear.
+
+5. When the number of data points `n` is less than 2, the function should raise a `StatisticsError`, ensuring that the function enforces the requirement for a minimum number of data points.

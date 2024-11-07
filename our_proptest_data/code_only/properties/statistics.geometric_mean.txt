@@ -1,0 +1,9 @@
+1. The geometric mean of a dataset containing only positive numbers should always be greater than zero.
+
+2. If the dataset contains a zero, the geometric mean should return zero.
+
+3. If the dataset is empty, the function should raise a `StatisticsError` indicating that a non-empty dataset is required.
+
+4. The geometric mean should return `NaN` if the dataset contains any `NaN` values.
+
+5. The geometric mean of a dataset containing negative numbers should raise a `StatisticsError`, indicating that negative inputs are not allowed.

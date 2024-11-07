@@ -1,0 +1,5 @@
+1. The median of an empty list raises a StatisticsError, indicating that there is no median for the provided data.
+2. The median of a single-element list is equal to that element itself.
+3. The median of a list with an odd number of elements is the middle element of the sorted list.
+4. The median of a list with an even number of elements is the average of the two middle elements of the sorted list.
+5. The median is invariant under the order of the input data; that is, sorting the data before finding the median should yield the same result as finding the median directly from the unsorted data.

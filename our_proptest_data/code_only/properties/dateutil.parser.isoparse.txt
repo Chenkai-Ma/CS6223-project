@@ -1,0 +1,9 @@
+1. The output should always be a valid `datetime` object representing the parsed ISO date and time from the input string.
+
+2. If the input string represents a date and time that is exactly "24:00", the output should represent the next day at "00:00".
+
+3. The output `datetime` object should have the same year, month, day, hour, minute, and second values as specified in the input string, barring any adjustments for the "24:00" case.
+
+4. The function should raise a `ValueError` if the input string contains unknown ISO components, ensuring that the output is only produced for valid ISO 8601 formats.
+
+5. The output should maintain the timezone information if the input string includes a timezone offset, ensuring that the `datetime` object accurately reflects the specified timezone.

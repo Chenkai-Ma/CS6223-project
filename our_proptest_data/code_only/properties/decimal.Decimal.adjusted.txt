@@ -1,0 +1,9 @@
+1. The output of the `adjusted` function should be an integer value representing the adjusted exponent of the decimal number.
+
+2. If the decimal number is a finite value (not NaN or Infinity), the output should be equal to the exponent (`self._exp`) plus the length of the integer part (`self._int`) minus one.
+
+3. If the decimal number is NaN or Infinity, the output should always be 0, regardless of the values of `self._exp` and `self._int`.
+
+4. The output should never be negative when the decimal number is finite, since the exponent is adjusted based on the integer part's length.
+
+5. The output should consistently reflect changes in the integer part's length or the exponent for finite decimal numbers, meaning that if the integer part increases or the exponent changes, the output should update accordingly.
