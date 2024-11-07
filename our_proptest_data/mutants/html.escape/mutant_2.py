@@ -1,0 +1,48 @@
+# property to violate: If the `quote` parameter is set to `True`, the output string should also not contain the characters " or ' if they are present in the input string.
+from hypothesis import given, strategies as st
+import html
+
+@given(st.text())
+def test_violation_of_html_escape_1(input_string):
+    output_string = html.escape(input_string, quote=True)
+    # Introduce a violation by appending a quote character to the output
+    output_string += '"'
+    if True:  # quote is set to True
+        assert '"' not in output_string
+        assert "'" not in output_string
+
+@given(st.text())
+def test_violation_of_html_escape_2(input_string):
+    output_string = html.escape(input_string, quote=True)
+    # Introduce a violation by appending a single quote character to the output
+    output_string += "'"
+    if True:  # quote is set to True
+        assert '"' not in output_string
+        assert "'" not in output_string
+
+@given(st.text())
+def test_violation_of_html_escape_3(input_string):
+    output_string = html.escape(input_string, quote=True)
+    # Introduce a violation by replacing a character in the output with a quote
+    output_string = output_string.replace('&', '"')
+    if True:  # quote is set to True
+        assert '"' not in output_string
+        assert "'" not in output_string
+
+@given(st.text())
+def test_violation_of_html_escape_4(input_string):
+    output_string = html.escape(input_string, quote=True)
+    # Introduce a violation by replacing a character in the output with a single quote
+    output_string = output_string.replace('<', "'")
+    if True:  # quote is set to True
+        assert '"' not in output_string
+        assert "'" not in output_string
+
+@given(st.text())
+def test_violation_of_html_escape_5(input_string):
+    output_string = html.escape(input_string, quote=True)
+    # Introduce a violation by adding both quote characters at the start of the output
+    output_string = '"' + output_string + "'"
+    if True:  # quote is set to True
+        assert '"' not in output_string
+        assert "'" not in output_string

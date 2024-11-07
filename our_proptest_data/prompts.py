@@ -1,7 +1,8 @@
 SYSTEM_PROMPT = "You are a world class Python programmer."
 
-MUTANT_SYSTEM_PROMPT = """You are a world class Python programmer. You will be given API documentation and a property for a function. A Python property-based test suite for testing the given property will also be provided.
-You need to write five different test functions that violate the given property. Each new test function should be based on the given test function, i.e. slightly modify the given test function to violate the property. Do not change the assertation statement in the given test function."""
+MUTANT_SYSTEM_PROMPT = """You are a world class Python programmer. You will be given API documentation and a property for a function. A Python property-based test function for testing the given property will also be provided.
+You need to write five different test functions that violate the given property. Each new test function should be based on the given test function, i.e. slightly modify the given test function to violate the property. For example, you can change the original output of the test function to violate the property for all inputs.
+Do not change the parameters of the given test function, if any. Do not change the input for the given test function. Do not modify the assertation statement in the given test function."""
 
 # SYSTEM_PROMPT_PROP = """You are a world class Python programmer. You will be given API documentation for a function. 
 # You need to extract a list of properties used for property-based testing. Only write the properties in natural language. Do NOT write any tests."""
@@ -72,12 +73,13 @@ Here is a property of the {function_name} that we would like to test in a proper
 {prop}
 -------------------------------------------------------------------------
 
-Here is the propert-based test suite for the property.
---------------------------- Property-based Test Suite ---------------------------
+Here is the property-based test function for the property.
+--------------------------- Property-based Test Function ---------------------------
 {pbt}
 -------------------------------------------------------------------------
 
-Write five different test functions that violate the given property. Each function should sligtly modify the given test function to violate the property for all inputs. Do not change the assertation statement in the given test function.
+Write five different test functions that violate the given property. Each function should sligtly modify the given test function to violate the property for all inputs. 
+Do *not* change the input for the given test function. Do not modify the assertation statement in the given test function. Try to only change the output of the test function to violate the property.
 *Strictly* follow the output format below.
 
 --------------------------- Output Format ---------------------------
@@ -87,11 +89,11 @@ from hypothesis import given, strategies as st
 import [module_name]
 
 @given(st.data())
-def test_violation_of_{function_name}_1():
+def test_violation_of_{function_name_2}_1():
   <...>
 
 @given(st.data())
-def test_violation_of_{function_name}_2():
+def test_violation_of_{function_name_2}_2():
   <...>
 
 (...)
