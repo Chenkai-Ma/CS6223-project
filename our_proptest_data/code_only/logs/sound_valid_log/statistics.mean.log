@@ -1,0 +1,45 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+code_only/proptest/statistics.mean/pbt_1.py ...FF                        [ 20%]
+code_only/proptest/statistics.mean/pbt_2.py .F.F.                        [ 40%]
+code_only/proptest/statistics.mean/pbt_3.py FF.FF                        [ 60%]
+code_only/proptest/statistics.mean/pbt_4.py FFFF.                        [ 80%]
+code_only/proptest/statistics.mean/pbt_5.py F..FF                        [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.mean/pbt_1.py:26: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.mean/pbt_1.py:39: NameError: name 'pytest' is not defined
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.mean/pbt_2.py:12: hypothesis.errors.InvalidArgument: given must be called with at least one argument
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.mean/pbt_2.py:24: assert 0.5 == 1.0
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.mean/pbt_3.py:8: assert nan == nan
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.mean/pbt_3.py:14: AttributeError: module 'hypothesis.strategies' has no attribute 'raises'
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.mean/pbt_3.py:27: assert 0.5 == 1.0
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.mean/pbt_3.py:36: assert nan == nan
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.mean/pbt_4.py:9: assert nan == nan
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.mean/pbt_4.py:13: hypothesis.errors.InvalidArgument: given must be called with at least one argument
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.mean/pbt_4.py:20: assert nan <= nan
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.mean/pbt_4.py:23: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.mean/pbt_5.py:8: assert nan == nan
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.mean/pbt_5.py:27: assert 0.5 == 1.0
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.mean/pbt_5.py:37: assert 2251799813685247.2 == 2251799813685247.0
+=========================== short test summary info ============================
+FAILED code_only/proptest/statistics.mean/pbt_1.py::test_mean_invariant_under_zero_property
+FAILED code_only/proptest/statistics.mean/pbt_1.py::test_mean_concatenated_lists_property
+FAILED code_only/proptest/statistics.mean/pbt_2.py::test_mean_empty_list_property
+FAILED code_only/proptest/statistics.mean/pbt_2.py::test_mean_zero_addition_property
+FAILED code_only/proptest/statistics.mean/pbt_3.py::test_mean_identical_elements_property
+FAILED code_only/proptest/statistics.mean/pbt_3.py::test_mean_empty_list_property
+FAILED code_only/proptest/statistics.mean/pbt_3.py::test_mean_invariance_under_zero_property
+FAILED code_only/proptest/statistics.mean/pbt_3.py::test_mean_concatenated_lists_property
+FAILED code_only/proptest/statistics.mean/pbt_4.py::test_mean_identical_elements_property
+FAILED code_only/proptest/statistics.mean/pbt_4.py::test_mean_empty_list_property
+FAILED code_only/proptest/statistics.mean/pbt_4.py::test_mean_range_property
+FAILED code_only/proptest/statistics.mean/pbt_4.py::test_mean_invariance_under_zero_property
+FAILED code_only/proptest/statistics.mean/pbt_5.py::test_mean_identical_elements_property
+FAILED code_only/proptest/statistics.mean/pbt_5.py::test_mean_invariant_zero_property
+FAILED code_only/proptest/statistics.mean/pbt_5.py::test_mean_concatenated_lists_property
+======================== 15 failed, 10 passed in 6.08s =========================

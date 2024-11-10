@@ -1,0 +1,75 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 20 items / 1 error
+
+code_only/proptest/statistics.linear_regression/pbt_1.py FFFFF           [ 25%]
+code_only/proptest/statistics.linear_regression/pbt_2.py FFFF.           [ 50%]
+code_only/proptest/statistics.linear_regression/pbt_3.py FFFF.           [ 75%]
+code_only/proptest/statistics.linear_regression/pbt_4.py FFFF.           [100%]
+
+==================================== ERRORS ====================================
+__ ERROR collecting code_only/proptest/statistics.linear_regression/pbt_5.py ___
+../../.venv/lib/python3.10/site-packages/_pytest/python.py:493: in importtestmodule
+    mod = import_path(
+../../.venv/lib/python3.10/site-packages/_pytest/pathlib.py:582: in import_path
+    importlib.import_module(module_name)
+/usr/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1050: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1027: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1006: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:688: in _load_unlocked
+    ???
+../../.venv/lib/python3.10/site-packages/_pytest/assertion/rewrite.py:175: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+../../.venv/lib/python3.10/site-packages/_pytest/assertion/rewrite.py:355: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+/usr/lib/python3.10/ast.py:50: in parse
+    return compile(source, filename, mode, flags,
+E     File "/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.linear_regression/pbt_5.py", line 20
+E       st.lists(st.floats(), min_size=2, max_size=100).filter(lambda lst: len(set(lst)) > 1)))
+E                                                                                             ^
+E   SyntaxError: unmatched ')'
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.linear_regression/pbt_1.py:5: exceptiongroup.ExceptionGroup: Hypothesis found 4 distinct failures. (4 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.linear_regression/pbt_1.py:15: TypeError: linear_regression() got an unexpected keyword argument 'proportional'
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.linear_regression/pbt_1.py:19: exceptiongroup.ExceptionGroup: Hypothesis found 7 distinct failures. (7 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.linear_regression/pbt_1.py:27: exceptiongroup.ExceptionGroup: Hypothesis found 8 distinct failures. (8 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.linear_regression/pbt_1.py:35: exceptiongroup.ExceptionGroup: Hypothesis found 5 distinct failures. (5 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.linear_regression/pbt_2.py:6: exceptiongroup.ExceptionGroup: Hypothesis found 4 distinct failures. (4 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.linear_regression/pbt_2.py:18: TypeError: linear_regression() got an unexpected keyword argument 'proportional'
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.linear_regression/pbt_2.py:22: exceptiongroup.ExceptionGroup: Hypothesis found 7 distinct failures. (7 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.linear_regression/pbt_2.py:30: exceptiongroup.ExceptionGroup: Hypothesis found 8 distinct failures. (8 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.linear_regression/pbt_3.py:6: exceptiongroup.ExceptionGroup: Hypothesis found 4 distinct failures. (4 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.linear_regression/pbt_3.py:18: TypeError: linear_regression() got an unexpected keyword argument 'proportional'
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.linear_regression/pbt_3.py:22: exceptiongroup.ExceptionGroup: Hypothesis found 6 distinct failures. (6 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.linear_regression/pbt_3.py:31: exceptiongroup.ExceptionGroup: Hypothesis found 8 distinct failures. (8 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.linear_regression/pbt_4.py:5: exceptiongroup.ExceptionGroup: Hypothesis found 5 distinct failures. (5 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.linear_regression/pbt_4.py:12: exceptiongroup.ExceptionGroup: Hypothesis found 6 distinct failures. (6 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.linear_regression/pbt_4.py:19: exceptiongroup.ExceptionGroup: Hypothesis found 9 distinct failures. (9 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.linear_regression/pbt_4.py:26: exceptiongroup.ExceptionGroup: Hypothesis found 9 distinct failures. (9 sub-exceptions)
+=========================== short test summary info ============================
+FAILED code_only/proptest/statistics.linear_regression/pbt_1.py::test_slope_zero_for_constant_y_property
+FAILED code_only/proptest/statistics.linear_regression/pbt_1.py::test_intercept_equals_mean_y_property
+FAILED code_only/proptest/statistics.linear_regression/pbt_1.py::test_output_valid_linear_regression_object_property
+FAILED code_only/proptest/statistics.linear_regression/pbt_1.py::test_slope_continuity_property
+FAILED code_only/proptest/statistics.linear_regression/pbt_1.py::test_minimum_data_points_property
+FAILED code_only/proptest/statistics.linear_regression/pbt_2.py::test_slope_zero_when_y_constant_property
+FAILED code_only/proptest/statistics.linear_regression/pbt_2.py::test_intercept_equals_mean_y_when_slope_zero_property
+FAILED code_only/proptest/statistics.linear_regression/pbt_2.py::test_output_is_linear_regression_object_property
+FAILED code_only/proptest/statistics.linear_regression/pbt_2.py::test_slope_changes_continuously_property
+FAILED code_only/proptest/statistics.linear_regression/pbt_3.py::test_slope_zero_when_y_constant_property
+FAILED code_only/proptest/statistics.linear_regression/pbt_3.py::test_intercept_equals_mean_when_proportional_zero_slope_property
+FAILED code_only/proptest/statistics.linear_regression/pbt_3.py::test_output_is_valid_LinearRegression_object_property
+FAILED code_only/proptest/statistics.linear_regression/pbt_3.py::test_slope_changes_continuously_property
+FAILED code_only/proptest/statistics.linear_regression/pbt_4.py::test_slope_zero_when_y_constant_property
+FAILED code_only/proptest/statistics.linear_regression/pbt_4.py::test_intercept_equals_mean_when_slope_zero_property
+FAILED code_only/proptest/statistics.linear_regression/pbt_4.py::test_output_is_linear_regression_object_property
+FAILED code_only/proptest/statistics.linear_regression/pbt_4.py::test_slope_changes_continuously_property
+ERROR code_only/proptest/statistics.linear_regression/pbt_5.py
+============== 17 failed, 3 passed, 1 error in 216.28s (0:03:36) ===============

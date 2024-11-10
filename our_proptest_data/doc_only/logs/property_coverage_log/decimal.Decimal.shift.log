@@ -1,0 +1,40 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 20 items
+
+doc_only/mutants/decimal.Decimal.shift/mutant_1.py FFFFF                 [ 25%]
+doc_only/mutants/decimal.Decimal.shift/mutant_2.py ..FF.                 [ 50%]
+doc_only/mutants/decimal.Decimal.shift/mutant_3.py F.FF.                 [ 75%]
+doc_only/mutants/decimal.Decimal.shift/mutant_4.py .F.FF                 [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/decimal.Decimal.shift/mutant_1.py:8: AssertionError: assert Decimal('0') >= Decimal('1')
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/decimal.Decimal.shift/mutant_1.py:13: AssertionError: assert Decimal('0.5') >= Decimal('1')
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/decimal.Decimal.shift/mutant_1.py:18: AssertionError: assert Decimal('-1') >= Decimal('1')
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/decimal.Decimal.shift/mutant_1.py:22: TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/decimal.Decimal.shift/mutant_1.py:28: AssertionError: assert Decimal('-1') >= Decimal('1')
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/decimal.Decimal.shift/mutant_2.py:19: AssertionError: assert Decimal('11') <= Decimal('10')
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/decimal.Decimal.shift/mutant_2.py:24: AssertionError: assert Decimal('10000000000') <= Decimal('1')
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/decimal.Decimal.shift/mutant_3.py:8: AssertionError: assert Decimal('0') <= Decimal('-1')
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/decimal.Decimal.shift/mutant_3.py:18: AssertionError: assert Decimal('0') <= Decimal('-1')
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/decimal.Decimal.shift/mutant_3.py:23: AssertionError: assert Decimal('99999') <= Decimal('-1')
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/decimal.Decimal.shift/mutant_4.py:13: AssertionError: assert Decimal('-10') >= Decimal('-1')
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/decimal.Decimal.shift/mutant_4.py:23: AssertionError: assert Decimal('-11') >= Decimal('-10')
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/decimal.Decimal.shift/mutant_4.py:27: TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+=========================== short test summary info ============================
+FAILED doc_only/mutants/decimal.Decimal.shift/mutant_1.py::test_violation_of_decimal_Decimal_shift_1
+FAILED doc_only/mutants/decimal.Decimal.shift/mutant_1.py::test_violation_of_decimal_Decimal_shift_2
+FAILED doc_only/mutants/decimal.Decimal.shift/mutant_1.py::test_violation_of_decimal_Decimal_shift_3
+FAILED doc_only/mutants/decimal.Decimal.shift/mutant_1.py::test_violation_of_decimal_Decimal_shift_4
+FAILED doc_only/mutants/decimal.Decimal.shift/mutant_1.py::test_violation_of_decimal_Decimal_shift_5
+FAILED doc_only/mutants/decimal.Decimal.shift/mutant_2.py::test_violation_of_decimal_Decimal_shift_3
+FAILED doc_only/mutants/decimal.Decimal.shift/mutant_2.py::test_violation_of_decimal_Decimal_shift_4
+FAILED doc_only/mutants/decimal.Decimal.shift/mutant_3.py::test_violation_of_decimal_Decimal_shift_1
+FAILED doc_only/mutants/decimal.Decimal.shift/mutant_3.py::test_violation_of_decimal_Decimal_shift_3
+FAILED doc_only/mutants/decimal.Decimal.shift/mutant_3.py::test_violation_of_decimal_Decimal_shift_4
+FAILED doc_only/mutants/decimal.Decimal.shift/mutant_4.py::test_violation_of_decimal_Decimal_shift_2
+FAILED doc_only/mutants/decimal.Decimal.shift/mutant_4.py::test_violation_of_decimal_Decimal_shift_4
+FAILED doc_only/mutants/decimal.Decimal.shift/mutant_4.py::test_violation_of_decimal_Decimal_shift_5
+========================= 13 failed, 7 passed in 6.98s =========================

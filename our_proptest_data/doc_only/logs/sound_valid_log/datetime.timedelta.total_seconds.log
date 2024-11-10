@@ -1,0 +1,23 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+doc_only/proptest/datetime.timedelta.total_seconds/pbt_1.py .....        [ 20%]
+doc_only/proptest/datetime.timedelta.total_seconds/pbt_2.py F....        [ 40%]
+doc_only/proptest/datetime.timedelta.total_seconds/pbt_3.py F.F..        [ 60%]
+doc_only/proptest/datetime.timedelta.total_seconds/pbt_4.py F....        [ 80%]
+doc_only/proptest/datetime.timedelta.total_seconds/pbt_5.py .....        [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/doc_only/proptest/datetime.timedelta.total_seconds/pbt_2.py:6: assert -86400.0 >= 0
+/home/james/projects/cs6223/our_proptest_data/doc_only/proptest/datetime.timedelta.total_seconds/pbt_3.py:6: assert -86400.0 >= 0
+/home/james/projects/cs6223/our_proptest_data/doc_only/proptest/datetime.timedelta.total_seconds/pbt_3.py:16: AttributeError: 'datetime.timedelta' object has no attribute 'weeks'
+/home/james/projects/cs6223/our_proptest_data/doc_only/proptest/datetime.timedelta.total_seconds/pbt_4.py:6: assert -86400.0 >= 0
+=========================== short test summary info ============================
+FAILED doc_only/proptest/datetime.timedelta.total_seconds/pbt_2.py::test_non_negative_seconds_property
+FAILED doc_only/proptest/datetime.timedelta.total_seconds/pbt_3.py::test_non_negative_output_property
+FAILED doc_only/proptest/datetime.timedelta.total_seconds/pbt_3.py::test_consistency_of_representation_property
+FAILED doc_only/proptest/datetime.timedelta.total_seconds/pbt_4.py::test_total_seconds_non_negative_property
+========================= 4 failed, 21 passed in 0.55s =========================

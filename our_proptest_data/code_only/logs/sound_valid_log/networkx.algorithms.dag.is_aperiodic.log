@@ -1,0 +1,61 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+code_only/proptest/networkx.algorithms.dag.is_aperiodic/pbt_1.py FFFFF   [ 20%]
+code_only/proptest/networkx.algorithms.dag.is_aperiodic/pbt_2.py FFFFF   [ 40%]
+code_only/proptest/networkx.algorithms.dag.is_aperiodic/pbt_3.py FFFFF   [ 60%]
+code_only/proptest/networkx.algorithms.dag.is_aperiodic/pbt_4.py FFFFF   [ 80%]
+code_only/proptest/networkx.algorithms.dag.is_aperiodic/pbt_5.py .F.FF   [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.dag.is_aperiodic/pbt_1.py:8: NameError: name 'pytest' is not defined
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.dag.is_aperiodic/pbt_1.py:14: NameError: name 'pytest' is not defined
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.dag.is_aperiodic/pbt_1.py:23: assert False == True
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.dag.is_aperiodic/pbt_1.py:33: assert True == False
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.dag.is_aperiodic/pbt_1.py:44: assert True == False
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.dag.is_aperiodic/pbt_2.py:9: NameError: name 'pytest' is not defined
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.dag.is_aperiodic/pbt_2.py:17: NameError: name 'pytest' is not defined
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.dag.is_aperiodic/pbt_2.py:25: AssertionError: assert False is True
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.dag.is_aperiodic/pbt_2.py:34: AssertionError: assert True is False
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.dag.is_aperiodic/pbt_2.py:41: AssertionError: assert True is False
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.dag.is_aperiodic/pbt_3.py:7: NameError: name 'pytest' is not defined
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.dag.is_aperiodic/pbt_3.py:15: NameError: name 'pytest' is not defined
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.dag.is_aperiodic/pbt_3.py:25: AssertionError: assert False == True
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.dag.is_aperiodic/pbt_3.py:35: AssertionError: assert True == False
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.dag.is_aperiodic/pbt_3.py:43: AssertionError: assert True == False
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.dag.is_aperiodic/pbt_4.py:6: hypothesis.errors.InvalidArgument: Too many positional arguments for test_is_aperiodic_raises_error_for_undirected_graph() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.dag.is_aperiodic/pbt_4.py:12: hypothesis.errors.InvalidArgument: Too many positional arguments for test_is_aperiodic_raises_error_for_empty_graph() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.dag.is_aperiodic/pbt_4.py:18: hypothesis.errors.InvalidArgument: Too many positional arguments for test_is_aperiodic_returns_true_for_single_scc_dag() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.dag.is_aperiodic/pbt_4.py:24: hypothesis.errors.InvalidArgument: Too many positional arguments for test_is_aperiodic_returns_false_for_multiple_scc_dag() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.dag.is_aperiodic/pbt_4.py:31: hypothesis.errors.InvalidArgument: Too many positional arguments for test_is_aperiodic_returns_false_for_graph_with_cycles() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/.venv/lib/python3.10/site-packages/_pytest/capture.py:880: RuntimeError: generator raised StopIteration
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.dag.is_aperiodic/pbt_5.py:43: AssertionError: assert not True
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.dag.is_aperiodic/pbt_5.py:54: AssertionError: assert not True
+=========================== short test summary info ============================
+FAILED code_only/proptest/networkx.algorithms.dag.is_aperiodic/pbt_1.py::test_is_aperiodic_undirected_graph_property
+FAILED code_only/proptest/networkx.algorithms.dag.is_aperiodic/pbt_1.py::test_is_aperiodic_empty_graph_property
+FAILED code_only/proptest/networkx.algorithms.dag.is_aperiodic/pbt_1.py::test_is_aperiodic_single_scc_property
+FAILED code_only/proptest/networkx.algorithms.dag.is_aperiodic/pbt_1.py::test_is_aperiodic_multiple_scc_property
+FAILED code_only/proptest/networkx.algorithms.dag.is_aperiodic/pbt_1.py::test_is_aperiodic_graph_with_cycles_property
+FAILED code_only/proptest/networkx.algorithms.dag.is_aperiodic/pbt_2.py::test_is_aperiodic_undirected_graph_property
+FAILED code_only/proptest/networkx.algorithms.dag.is_aperiodic/pbt_2.py::test_is_aperiodic_empty_graph_property
+FAILED code_only/proptest/networkx.algorithms.dag.is_aperiodic/pbt_2.py::test_is_aperiodic_single_scc_property
+FAILED code_only/proptest/networkx.algorithms.dag.is_aperiodic/pbt_2.py::test_is_aperiodic_multiple_scc_property
+FAILED code_only/proptest/networkx.algorithms.dag.is_aperiodic/pbt_2.py::test_is_aperiodic_with_cycles_property
+FAILED code_only/proptest/networkx.algorithms.dag.is_aperiodic/pbt_3.py::test_is_aperiodic_raises_for_undirected_graph_property
+FAILED code_only/proptest/networkx.algorithms.dag.is_aperiodic/pbt_3.py::test_is_aperiodic_raises_for_empty_graph_property
+FAILED code_only/proptest/networkx.algorithms.dag.is_aperiodic/pbt_3.py::test_is_aperiodic_returns_true_for_single_scc_property
+FAILED code_only/proptest/networkx.algorithms.dag.is_aperiodic/pbt_3.py::test_is_aperiodic_returns_false_for_multiple_scc_property
+FAILED code_only/proptest/networkx.algorithms.dag.is_aperiodic/pbt_3.py::test_is_aperiodic_returns_false_for_graph_with_cycles_property
+FAILED code_only/proptest/networkx.algorithms.dag.is_aperiodic/pbt_4.py::test_is_aperiodic_raises_error_for_undirected_graph
+FAILED code_only/proptest/networkx.algorithms.dag.is_aperiodic/pbt_4.py::test_is_aperiodic_raises_error_for_empty_graph
+FAILED code_only/proptest/networkx.algorithms.dag.is_aperiodic/pbt_4.py::test_is_aperiodic_returns_true_for_single_scc_dag
+FAILED code_only/proptest/networkx.algorithms.dag.is_aperiodic/pbt_4.py::test_is_aperiodic_returns_false_for_multiple_scc_dag
+FAILED code_only/proptest/networkx.algorithms.dag.is_aperiodic/pbt_4.py::test_is_aperiodic_returns_false_for_graph_with_cycles
+FAILED code_only/proptest/networkx.algorithms.dag.is_aperiodic/pbt_5.py::test_is_aperiodic_raises_for_empty_graph_property
+FAILED code_only/proptest/networkx.algorithms.dag.is_aperiodic/pbt_5.py::test_is_aperiodic_false_for_multiple_scc_property
+FAILED code_only/proptest/networkx.algorithms.dag.is_aperiodic/pbt_5.py::test_is_aperiodic_false_for_graph_with_cycles_property
+========================= 23 failed, 2 passed in 5.95s =========================

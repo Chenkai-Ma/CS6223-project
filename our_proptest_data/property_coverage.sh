@@ -1,8 +1,11 @@
-# Evaluate soundness and validity separately for each API.
-# this file has to be run from the root directory of the project
+# Evaluate property coverage for each API.
+# this file has to be run from the our_proptest_data directory
 
-log_dir="logs/property_coverage_log"
-api_dir="mutants"
+approach="doc_only"
+metric="property_coverage"
+
+log_dir="${approach}/logs/${metric}_log"
+api_dir="${approach}/mutants"
 
 mkdir -p $log_dir
 
@@ -11,7 +14,9 @@ skip_list=("cryptography.fernet.Fernet.encrypt"
 "decimal.Decimal.quantize"
 "numpy.add"
 "pandas.cut"
-"pandas.merge")
+"pandas.merge"
+"_old_statistics_variance"
+"statistics_variance")
 
 for API in "${APIs[@]}"
 do

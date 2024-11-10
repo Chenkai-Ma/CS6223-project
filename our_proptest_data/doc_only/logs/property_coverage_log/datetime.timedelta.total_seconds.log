@@ -1,0 +1,57 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+doc_only/mutants/datetime.timedelta.total_seconds/mutant_1.py FFFFF      [ 20%]
+doc_only/mutants/datetime.timedelta.total_seconds/mutant_2.py FFFFF      [ 40%]
+doc_only/mutants/datetime.timedelta.total_seconds/mutant_3.py F.FFF      [ 60%]
+doc_only/mutants/datetime.timedelta.total_seconds/mutant_4.py ..FF.      [ 80%]
+doc_only/mutants/datetime.timedelta.total_seconds/mutant_5.py FFFFF      [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/datetime.timedelta.total_seconds/mutant_1.py:7: assert 0.0 < 0
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/datetime.timedelta.total_seconds/mutant_1.py:11: assert 0.0 == -1.0
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/datetime.timedelta.total_seconds/mutant_1.py:15: AssertionError: assert 0.0 == -inf
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/datetime.timedelta.total_seconds/mutant_1.py:19: assert 0.0 <= -0.1
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/datetime.timedelta.total_seconds/mutant_1.py:23: AssertionError: assert 86400.0 == -0.0
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/datetime.timedelta.total_seconds/mutant_2.py:8: assert 0.0 != 0.0
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/datetime.timedelta.total_seconds/mutant_2.py:13: assert 0.0 == (0.0 + 1)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/datetime.timedelta.total_seconds/mutant_2.py:18: assert 86400.0 == (86400.0 * 2)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/datetime.timedelta.total_seconds/mutant_2.py:23: assert 0.0 == (0.0 - 1000)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/datetime.timedelta.total_seconds/mutant_2.py:28: assert 86400.0 == (86400.0 + (1 * 86400))
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/datetime.timedelta.total_seconds/mutant_3.py:8: assert 0.0 == 1e-06
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/datetime.timedelta.total_seconds/mutant_3.py:18: assert 0.0 == 86400.0
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/datetime.timedelta.total_seconds/mutant_3.py:23: assert 0.0 == 3600.0
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/datetime.timedelta.total_seconds/mutant_3.py:28: assert 0.0 == 1.0
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/datetime.timedelta.total_seconds/mutant_4.py:21: assert False
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/datetime.timedelta.total_seconds/mutant_4.py:27: assert False
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/datetime.timedelta.total_seconds/mutant_5.py:8: assert 0.0 != 0.0
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/datetime.timedelta.total_seconds/mutant_5.py:13: assert 0.0 == 1.0
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/datetime.timedelta.total_seconds/mutant_5.py:18: assert 0.0 == -1.0
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/datetime.timedelta.total_seconds/mutant_5.py:23: assert 0.0 == 100.0
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/datetime.timedelta.total_seconds/mutant_5.py:28: AssertionError: assert 0.0 == inf
+=========================== short test summary info ============================
+FAILED doc_only/mutants/datetime.timedelta.total_seconds/mutant_1.py::test_violation_of_datetime_timedelta_total_seconds_1
+FAILED doc_only/mutants/datetime.timedelta.total_seconds/mutant_1.py::test_violation_of_datetime_timedelta_total_seconds_2
+FAILED doc_only/mutants/datetime.timedelta.total_seconds/mutant_1.py::test_violation_of_datetime_timedelta_total_seconds_3
+FAILED doc_only/mutants/datetime.timedelta.total_seconds/mutant_1.py::test_violation_of_datetime_timedelta_total_seconds_4
+FAILED doc_only/mutants/datetime.timedelta.total_seconds/mutant_1.py::test_violation_of_datetime_timedelta_total_seconds_5
+FAILED doc_only/mutants/datetime.timedelta.total_seconds/mutant_2.py::test_violation_of_datetime_timedelta_total_seconds_1
+FAILED doc_only/mutants/datetime.timedelta.total_seconds/mutant_2.py::test_violation_of_datetime_timedelta_total_seconds_2
+FAILED doc_only/mutants/datetime.timedelta.total_seconds/mutant_2.py::test_violation_of_datetime_timedelta_total_seconds_3
+FAILED doc_only/mutants/datetime.timedelta.total_seconds/mutant_2.py::test_violation_of_datetime_timedelta_total_seconds_4
+FAILED doc_only/mutants/datetime.timedelta.total_seconds/mutant_2.py::test_violation_of_datetime_timedelta_total_seconds_5
+FAILED doc_only/mutants/datetime.timedelta.total_seconds/mutant_3.py::test_violation_of_datetime_timedelta_total_seconds_1
+FAILED doc_only/mutants/datetime.timedelta.total_seconds/mutant_3.py::test_violation_of_datetime_timedelta_total_seconds_3
+FAILED doc_only/mutants/datetime.timedelta.total_seconds/mutant_3.py::test_violation_of_datetime_timedelta_total_seconds_4
+FAILED doc_only/mutants/datetime.timedelta.total_seconds/mutant_3.py::test_violation_of_datetime_timedelta_total_seconds_5
+FAILED doc_only/mutants/datetime.timedelta.total_seconds/mutant_4.py::test_violation_of_datetime_timedelta_total_seconds_3
+FAILED doc_only/mutants/datetime.timedelta.total_seconds/mutant_4.py::test_violation_of_datetime_timedelta_total_seconds_4
+FAILED doc_only/mutants/datetime.timedelta.total_seconds/mutant_5.py::test_violation_of_datetime_timedelta_total_seconds_1
+FAILED doc_only/mutants/datetime.timedelta.total_seconds/mutant_5.py::test_violation_of_datetime_timedelta_total_seconds_2
+FAILED doc_only/mutants/datetime.timedelta.total_seconds/mutant_5.py::test_violation_of_datetime_timedelta_total_seconds_3
+FAILED doc_only/mutants/datetime.timedelta.total_seconds/mutant_5.py::test_violation_of_datetime_timedelta_total_seconds_4
+FAILED doc_only/mutants/datetime.timedelta.total_seconds/mutant_5.py::test_violation_of_datetime_timedelta_total_seconds_5
+========================= 21 failed, 4 passed in 4.16s =========================

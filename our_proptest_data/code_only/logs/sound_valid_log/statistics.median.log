@@ -1,0 +1,31 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+code_only/proptest/statistics.median/pbt_1.py F...F                      [ 20%]
+code_only/proptest/statistics.median/pbt_2.py F..FF                      [ 40%]
+code_only/proptest/statistics.median/pbt_3.py FF...                      [ 60%]
+code_only/proptest/statistics.median/pbt_4.py .....                      [ 80%]
+code_only/proptest/statistics.median/pbt_5.py F....                      [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.median/pbt_1.py:7: NameError: name 'pytest' is not defined
+/usr/lib/python3.10/statistics.py:452: statistics.StatisticsError: no median for empty data
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.median/pbt_2.py:7: NameError: name 'pytest' is not defined
+/usr/lib/python3.10/statistics.py:452: statistics.StatisticsError: no median for empty data
+/usr/lib/python3.10/statistics.py:452: statistics.StatisticsError: no median for empty data
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.median/pbt_3.py:7: AttributeError: module 'hypothesis.strategies' has no attribute 'raises'
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.median/pbt_3.py:12: assert 0.5 == 0
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.median/pbt_5.py:7: NameError: name 'pytest' is not defined
+=========================== short test summary info ============================
+FAILED code_only/proptest/statistics.median/pbt_1.py::test_median_of_empty_list_property
+FAILED code_only/proptest/statistics.median/pbt_1.py::test_invariance_under_order_property
+FAILED code_only/proptest/statistics.median/pbt_2.py::test_empty_list_property
+FAILED code_only/proptest/statistics.median/pbt_2.py::test_even_length_list_property
+FAILED code_only/proptest/statistics.median/pbt_2.py::test_order_invariance_property
+FAILED code_only/proptest/statistics.median/pbt_3.py::test_empty_list_property
+FAILED code_only/proptest/statistics.median/pbt_3.py::test_single_element_list_property
+FAILED code_only/proptest/statistics.median/pbt_5.py::test_median_empty_list_property
+========================= 8 failed, 17 passed in 0.76s =========================

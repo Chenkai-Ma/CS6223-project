@@ -1,0 +1,57 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+code_only/proptest/statistics.correlation/pbt_1.py FFFFF                 [ 20%]
+code_only/proptest/statistics.correlation/pbt_2.py FFFFF                 [ 40%]
+code_only/proptest/statistics.correlation/pbt_3.py .FFF.                 [ 60%]
+code_only/proptest/statistics.correlation/pbt_4.py .FFF.                 [ 80%]
+code_only/proptest/statistics.correlation/pbt_5.py FFFFF                 [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.correlation/pbt_1.py:5: exceptiongroup.ExceptionGroup: Hypothesis found 8 distinct failures. (8 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.correlation/pbt_1.py:12: exceptiongroup.ExceptionGroup: Hypothesis found 4 distinct failures. (4 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.correlation/pbt_1.py:18: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.correlation/pbt_1.py:29: exceptiongroup.ExceptionGroup: Hypothesis found 7 distinct failures. (7 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.correlation/pbt_1.py:37: exceptiongroup.ExceptionGroup: Hypothesis found 9 distinct failures. (9 sub-exceptions)
+/usr/lib/python3.10/statistics.py:919: statistics.StatisticsError: at least one of the inputs is constant
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.correlation/pbt_2.py:11: exceptiongroup.ExceptionGroup: Hypothesis found 4 distinct failures. (4 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.correlation/pbt_2.py:16: exceptiongroup.ExceptionGroup: Hypothesis found 6 distinct failures. (6 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.correlation/pbt_2.py:26: exceptiongroup.ExceptionGroup: Hypothesis found 7 distinct failures. (7 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.correlation/pbt_2.py:33: exceptiongroup.ExceptionGroup: Hypothesis found 5 distinct failures. (5 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.correlation/pbt_3.py:12: exceptiongroup.ExceptionGroup: Hypothesis found 4 distinct failures. (4 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.correlation/pbt_3.py:18: exceptiongroup.ExceptionGroup: Hypothesis found 7 distinct failures. (7 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.correlation/pbt_3.py:27: exceptiongroup.ExceptionGroup: Hypothesis found 9 distinct failures. (9 sub-exceptions)
+/usr/lib/python3.10/statistics.py:919: statistics.StatisticsError: at least one of the inputs is constant
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.correlation/pbt_4.py:20: AssertionError: Expected StatisticsError for constant input
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.correlation/pbt_4.py:25: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.correlation/pbt_5.py:6: exceptiongroup.ExceptionGroup: Hypothesis found 10 distinct failures. (10 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.correlation/pbt_5.py:11: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.correlation/pbt_5.py:18: AttributeError: module 'hypothesis.strategies' has no attribute 'raises'
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.correlation/pbt_5.py:22: exceptiongroup.ExceptionGroup: Hypothesis found 7 distinct failures. (7 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.correlation/pbt_5.py:28: exceptiongroup.ExceptionGroup: Hypothesis found 6 distinct failures. (6 sub-exceptions)
+=========================== short test summary info ============================
+FAILED code_only/proptest/statistics.correlation/pbt_1.py::test_correlation_coefficient_range_property
+FAILED code_only/proptest/statistics.correlation/pbt_1.py::test_identical_lists_property
+FAILED code_only/proptest/statistics.correlation/pbt_1.py::test_constant_input_property
+FAILED code_only/proptest/statistics.correlation/pbt_1.py::test_linear_transformation_property
+FAILED code_only/proptest/statistics.correlation/pbt_1.py::test_permutation_invariance_property
+FAILED code_only/proptest/statistics.correlation/pbt_2.py::test_correlation_between_neg1_and_1_property
+FAILED code_only/proptest/statistics.correlation/pbt_2.py::test_identical_lists_correlation_property
+FAILED code_only/proptest/statistics.correlation/pbt_2.py::test_constant_list_correlation_property
+FAILED code_only/proptest/statistics.correlation/pbt_2.py::test_linear_transformation_correlation_property
+FAILED code_only/proptest/statistics.correlation/pbt_2.py::test_permutation_invariance_property
+FAILED code_only/proptest/statistics.correlation/pbt_3.py::test_correlation_identical_lists_property
+FAILED code_only/proptest/statistics.correlation/pbt_3.py::test_correlation_constant_input_property
+FAILED code_only/proptest/statistics.correlation/pbt_3.py::test_correlation_linear_transformation_property
+FAILED code_only/proptest/statistics.correlation/pbt_4.py::test_identical_lists_property
+FAILED code_only/proptest/statistics.correlation/pbt_4.py::test_constant_input_property
+FAILED code_only/proptest/statistics.correlation/pbt_4.py::test_linear_transformation_property
+FAILED code_only/proptest/statistics.correlation/pbt_5.py::test_correlation_output_range_property
+FAILED code_only/proptest/statistics.correlation/pbt_5.py::test_identical_lists_property
+FAILED code_only/proptest/statistics.correlation/pbt_5.py::test_constant_input_property
+FAILED code_only/proptest/statistics.correlation/pbt_5.py::test_linear_transformation_property
+FAILED code_only/proptest/statistics.correlation/pbt_5.py::test_permutation_invariance_property
+=================== 21 failed, 4 passed in 132.72s (0:02:12) ===================

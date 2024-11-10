@@ -1,0 +1,42 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 20 items
+
+doc_only/mutants/html.escape/mutant_1.py FFF..                           [ 25%]
+doc_only/mutants/html.escape/mutant_2.py FFFFF                           [ 50%]
+doc_only/mutants/html.escape/mutant_3.py F....                           [ 75%]
+doc_only/mutants/html.escape/mutant_4.py FFFFF                           [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/html.escape/mutant_1.py:8: AssertionError: assert '&' not in '&'
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/html.escape/mutant_1.py:13: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/html.escape/mutant_1.py:20: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/html.escape/mutant_2.py:9: assert '"' not in '"'
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/html.escape/mutant_2.py:17: assert "'" not in "'"
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/html.escape/mutant_2.py:23: assert '"' not in '"'
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/html.escape/mutant_2.py:31: assert "'" not in "'"
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/html.escape/mutant_2.py:37: assert '"' not in '"'
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/html.escape/mutant_3.py:8: AssertionError: assert (0 >= 1 or (0 == 1))
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/html.escape/mutant_4.py:9: AssertionError: assert 'extra' == ''
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/html.escape/mutant_4.py:15: AssertionError: assert 'modified' == ''
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/html.escape/mutant_4.py:21: AssertionError: assert 'A' == 'a'
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/html.escape/mutant_4.py:27: AssertionError: assert 'changed_output' == ''
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/html.escape/mutant_4.py:33: AssertionError: assert '!!!!!!!!!!' == ''
+=========================== short test summary info ============================
+FAILED doc_only/mutants/html.escape/mutant_1.py::test_violation_of_html_escape_1
+FAILED doc_only/mutants/html.escape/mutant_1.py::test_violation_of_html_escape_2
+FAILED doc_only/mutants/html.escape/mutant_1.py::test_violation_of_html_escape_3
+FAILED doc_only/mutants/html.escape/mutant_2.py::test_violation_of_html_escape_1
+FAILED doc_only/mutants/html.escape/mutant_2.py::test_violation_of_html_escape_2
+FAILED doc_only/mutants/html.escape/mutant_2.py::test_violation_of_html_escape_3
+FAILED doc_only/mutants/html.escape/mutant_2.py::test_violation_of_html_escape_4
+FAILED doc_only/mutants/html.escape/mutant_2.py::test_violation_of_html_escape_5
+FAILED doc_only/mutants/html.escape/mutant_3.py::test_violation_of_html_escape_1
+FAILED doc_only/mutants/html.escape/mutant_4.py::test_violation_of_html_escape_1
+FAILED doc_only/mutants/html.escape/mutant_4.py::test_violation_of_html_escape_2
+FAILED doc_only/mutants/html.escape/mutant_4.py::test_violation_of_html_escape_3
+FAILED doc_only/mutants/html.escape/mutant_4.py::test_violation_of_html_escape_4
+FAILED doc_only/mutants/html.escape/mutant_4.py::test_violation_of_html_escape_5
+========================= 14 failed, 6 passed in 4.57s =========================

@@ -1,0 +1,63 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+code_only/proptest/pandas.DataFrame.sort_values/pbt_1.py FFFFF           [ 20%]
+code_only/proptest/pandas.DataFrame.sort_values/pbt_2.py FFFF.           [ 40%]
+code_only/proptest/pandas.DataFrame.sort_values/pbt_3.py FFFFF           [ 60%]
+code_only/proptest/pandas.DataFrame.sort_values/pbt_4.py FFFFF           [ 80%]
+code_only/proptest/pandas.DataFrame.sort_values/pbt_5.py FFFFF           [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/pandas.DataFrame.sort_values/pbt_1.py:6: AttributeError: module 'hypothesis.strategies' has no attribute 'data_frames'
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/pandas.DataFrame.sort_values/pbt_1.py:15: AttributeError: module 'hypothesis.strategies' has no attribute 'data_frames'
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/pandas.DataFrame.sort_values/pbt_1.py:24: AttributeError: module 'hypothesis.strategies' has no attribute 'data_frames'
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/pandas.DataFrame.sort_values/pbt_1.py:34: AttributeError: module 'hypothesis.strategies' has no attribute 'data_frames'
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/pandas.DataFrame.sort_values/pbt_1.py:43: AttributeError: module 'hypothesis.strategies' has no attribute 'data_frames'
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/pandas.DataFrame.sort_values/pbt_2.py:7: AttributeError: module 'hypothesis.strategies' has no attribute 'data_frames'
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/pandas.DataFrame.sort_values/pbt_2.py:14: AttributeError: module 'hypothesis.strategies' has no attribute 'data_frames'
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/pandas.DataFrame.sort_values/pbt_2.py:22: AttributeError: module 'hypothesis.strategies' has no attribute 'data_frames'
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/pandas.DataFrame.sort_values/pbt_2.py:30: AttributeError: module 'hypothesis.strategies' has no attribute 'data_frames'
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/pandas.DataFrame.sort_values/pbt_3.py:7: AttributeError: module 'hypothesis.strategies' has no attribute 'dataframes'
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/pandas.DataFrame.sort_values/pbt_3.py:18: AttributeError: module 'hypothesis.strategies' has no attribute 'dataframes'
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/pandas.DataFrame.sort_values/pbt_3.py:29: AttributeError: module 'hypothesis.strategies' has no attribute 'dataframes'
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/pandas.DataFrame.sort_values/pbt_3.py:41: AttributeError: module 'hypothesis.strategies' has no attribute 'dataframes'
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/pandas.DataFrame.sort_values/pbt_3.py:52: AttributeError: module 'hypothesis.strategies' has no attribute 'dataframes'
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/pandas.DataFrame.sort_values/pbt_4.py:6: AttributeError: module 'hypothesis.strategies' has no attribute 'data_frames'
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/pandas.DataFrame.sort_values/pbt_4.py:12: AttributeError: module 'hypothesis.strategies' has no attribute 'data_frames'
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/pandas.DataFrame.sort_values/pbt_4.py:18: AttributeError: module 'hypothesis.strategies' has no attribute 'data_frames'
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/pandas.DataFrame.sort_values/pbt_4.py:25: AttributeError: module 'hypothesis.strategies' has no attribute 'data_frames'
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/pandas.DataFrame.sort_values/pbt_4.py:31: AttributeError: module 'hypothesis.strategies' has no attribute 'data_frames'
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/pandas.DataFrame.sort_values/pbt_5.py:7: AttributeError: module 'hypothesis.strategies' has no attribute 'dataframes'
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/pandas.DataFrame.sort_values/pbt_5.py:19: AttributeError: module 'hypothesis.strategies' has no attribute 'dataframes'
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/pandas.DataFrame.sort_values/pbt_5.py:31: AttributeError: module 'hypothesis.strategies' has no attribute 'dataframes'
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/pandas.DataFrame.sort_values/pbt_5.py:44: AttributeError: module 'hypothesis.strategies' has no attribute 'dataframes'
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/pandas.DataFrame.sort_values/pbt_5.py:56: AttributeError: module 'hypothesis.strategies' has no attribute 'dataframes'
+=========================== short test summary info ============================
+FAILED code_only/proptest/pandas.DataFrame.sort_values/pbt_1.py::test_output_rows_count_property
+FAILED code_only/proptest/pandas.DataFrame.sort_values/pbt_1.py::test_sorted_output_property
+FAILED code_only/proptest/pandas.DataFrame.sort_values/pbt_1.py::test_inplace_modification_property
+FAILED code_only/proptest/pandas.DataFrame.sort_values/pbt_1.py::test_ignore_index_property
+FAILED code_only/proptest/pandas.DataFrame.sort_values/pbt_1.py::test_empty_by_property
+FAILED code_only/proptest/pandas.DataFrame.sort_values/pbt_2.py::test_output_row_count_property
+FAILED code_only/proptest/pandas.DataFrame.sort_values/pbt_2.py::test_sorted_output_property
+FAILED code_only/proptest/pandas.DataFrame.sort_values/pbt_2.py::test_inplace_modification_property
+FAILED code_only/proptest/pandas.DataFrame.sort_values/pbt_2.py::test_ignore_index_property
+FAILED code_only/proptest/pandas.DataFrame.sort_values/pbt_3.py::test_output_row_count_property
+FAILED code_only/proptest/pandas.DataFrame.sort_values/pbt_3.py::test_sorted_order_property
+FAILED code_only/proptest/pandas.DataFrame.sort_values/pbt_3.py::test_inplace_modification_property
+FAILED code_only/proptest/pandas.DataFrame.sort_values/pbt_3.py::test_ignore_index_property
+FAILED code_only/proptest/pandas.DataFrame.sort_values/pbt_3.py::test_empty_by_parameter_property
+FAILED code_only/proptest/pandas.DataFrame.sort_values/pbt_4.py::test_output_row_count_property
+FAILED code_only/proptest/pandas.DataFrame.sort_values/pbt_4.py::test_output_sort_order_property
+FAILED code_only/proptest/pandas.DataFrame.sort_values/pbt_4.py::test_inplace_modification_property
+FAILED code_only/proptest/pandas.DataFrame.sort_values/pbt_4.py::test_ignore_index_property
+FAILED code_only/proptest/pandas.DataFrame.sort_values/pbt_4.py::test_empty_by_parameter_property
+FAILED code_only/proptest/pandas.DataFrame.sort_values/pbt_5.py::test_output_has_same_number_of_rows_property
+FAILED code_only/proptest/pandas.DataFrame.sort_values/pbt_5.py::test_sorted_output_based_on_ascending_property
+FAILED code_only/proptest/pandas.DataFrame.sort_values/pbt_5.py::test_inplace_modification_property
+FAILED code_only/proptest/pandas.DataFrame.sort_values/pbt_5.py::test_ignore_index_property
+FAILED code_only/proptest/pandas.DataFrame.sort_values/pbt_5.py::test_empty_by_parameter_property
+========================= 24 failed, 1 passed in 1.07s =========================

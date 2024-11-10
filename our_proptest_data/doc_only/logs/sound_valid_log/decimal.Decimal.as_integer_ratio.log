@@ -1,0 +1,25 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+doc_only/proptest/decimal.Decimal.as_integer_ratio/pbt_1.py ....F        [ 20%]
+doc_only/proptest/decimal.Decimal.as_integer_ratio/pbt_2.py ...F.        [ 40%]
+doc_only/proptest/decimal.Decimal.as_integer_ratio/pbt_3.py .....        [ 60%]
+doc_only/proptest/decimal.Decimal.as_integer_ratio/pbt_4.py ...FF        [ 80%]
+doc_only/proptest/decimal.Decimal.as_integer_ratio/pbt_5.py ...F.        [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/doc_only/proptest/decimal.Decimal.as_integer_ratio/pbt_1.py:38: ValueError: cannot convert signaling NaN to float
+/home/james/projects/cs6223/our_proptest_data/doc_only/proptest/decimal.Decimal.as_integer_ratio/pbt_2.py:23: AssertionError: assert (Decimal('12979013933277098868758089773') / Decimal('100000')) == Decimal('129790139332770988687580.89773')
+/home/james/projects/cs6223/our_proptest_data/doc_only/proptest/decimal.Decimal.as_integer_ratio/pbt_4.py:23: AssertionError: assert (Decimal('73206428081689605645785575711') / Decimal('100000000000000000000000000000000000000000000000000000000')) == Decimal('7.3206428081689605645785575711E-28')
+/home/james/projects/cs6223/our_proptest_data/doc_only/proptest/decimal.Decimal.as_integer_ratio/pbt_4.py:29: NameError: name 'pytest' is not defined
+/home/james/projects/cs6223/our_proptest_data/doc_only/proptest/decimal.Decimal.as_integer_ratio/pbt_5.py:23: AssertionError: assert (Decimal('20168257723661202903193526761') / Decimal('100000')) == Decimal('201682577236612029031935.26761')
+=========================== short test summary info ============================
+FAILED doc_only/proptest/decimal.Decimal.as_integer_ratio/pbt_1.py::test_overflow_and_nan_property
+FAILED doc_only/proptest/decimal.Decimal.as_integer_ratio/pbt_2.py::test_fraction_exact_representation_property
+FAILED doc_only/proptest/decimal.Decimal.as_integer_ratio/pbt_4.py::test_exact_representation_property
+FAILED doc_only/proptest/decimal.Decimal.as_integer_ratio/pbt_4.py::test_overflow_and_nan_cases_property
+FAILED doc_only/proptest/decimal.Decimal.as_integer_ratio/pbt_5.py::test_fraction_exact_representation_property
+======================== 5 failed, 20 passed in 11.63s =========================

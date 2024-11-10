@@ -1,0 +1,28 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+doc_only/proptest/decimal.Decimal.shift/pbt_1.py ....F                   [ 20%]
+doc_only/proptest/decimal.Decimal.shift/pbt_2.py ....F                   [ 40%]
+doc_only/proptest/decimal.Decimal.shift/pbt_3.py FFFFF                   [ 60%]
+doc_only/proptest/decimal.Decimal.shift/pbt_4.py ....
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/doc_only/proptest/decimal.Decimal.shift/pbt_1.py:31: AssertionError: assert Decimal('10') == Decimal('1')
+/home/james/projects/cs6223/our_proptest_data/doc_only/proptest/decimal.Decimal.shift/pbt_2.py:31: AttributeError: 'decimal.Decimal' object has no attribute 'sign'
+/home/james/projects/cs6223/our_proptest_data/doc_only/proptest/decimal.Decimal.shift/pbt_3.py:8: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_only/proptest/decimal.Decimal.shift/pbt_3.py:15: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_only/proptest/decimal.Decimal.shift/pbt_3.py:20: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_only/proptest/decimal.Decimal.shift/pbt_3.py:28: decimal.InvalidOperation: [<class 'decimal.InvalidOperation'>]
+/home/james/projects/cs6223/our_proptest_data/doc_only/proptest/decimal.Decimal.shift/pbt_3.py:32: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+=========================== short test summary info ============================
+FAILED doc_only/proptest/decimal.Decimal.shift/pbt_1.py::test_sign_and_exponent_property
+FAILED doc_only/proptest/decimal.Decimal.shift/pbt_2.py::test_sign_and_exponent_property
+FAILED doc_only/proptest/decimal.Decimal.shift/pbt_3.py::test_positive_integer_shift_left_property
+FAILED doc_only/proptest/decimal.Decimal.shift/pbt_3.py::test_positive_integer_shift_right_property
+FAILED doc_only/proptest/decimal.Decimal.shift/pbt_3.py::test_negative_integer_shift_left_property
+FAILED doc_only/proptest/decimal.Decimal.shift/pbt_3.py::test_negative_integer_shift_right_property
+FAILED doc_only/proptest/decimal.Decimal.shift/pbt_3.py::test_sign_and_exponent_property
+========================= 7 failed, 12 passed in 7.53s =========================

@@ -1,0 +1,56 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+doc_only/mutants/networkx.algorithms.clique.find_cliques/mutant_1.py FFF [ 12%]
+FF                                                                       [ 20%]
+doc_only/mutants/networkx.algorithms.clique.find_cliques/mutant_2.py FF. [ 32%]
+.F                                                                       [ 40%]
+doc_only/mutants/networkx.algorithms.clique.find_cliques/mutant_3.py .F. [ 52%]
+FF                                                                       [ 60%]
+doc_only/mutants/networkx.algorithms.clique.find_cliques/mutant_4.py .FF [ 72%]
+F.                                                                       [ 80%]
+doc_only/mutants/networkx.algorithms.clique.find_cliques/mutant_5.py FF. [ 92%]
+FF                                                                       [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.clique.find_cliques/mutant_1.py:6: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.clique.find_cliques/mutant_1.py:16: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.clique.find_cliques/mutant_1.py:33: assert False
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.clique.find_cliques/mutant_1.py:43: assert False
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.clique.find_cliques/mutant_1.py:53: assert False
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.clique.find_cliques/mutant_2.py:13: assert False
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.clique.find_cliques/mutant_2.py:23: TypeError: object of type 'NoneType' has no len()
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.clique.find_cliques/mutant_2.py:53: assert False
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.clique.find_cliques/mutant_3.py:35: assert not True
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.clique.find_cliques/mutant_3.py:63: IndexError: list index out of range
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.clique.find_cliques/mutant_3.py:83: assert not True
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.clique.find_cliques/mutant_4.py:18: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/.venv/lib/python3.10/site-packages/networkx/algorithms/clique.py:256: ValueError: The given `nodes` [1] do not form a clique
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.clique.find_cliques/mutant_4.py:41: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.clique.find_cliques/mutant_5.py:9: UnboundLocalError: local variable 'cliques' referenced before assignment
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.clique.find_cliques/mutant_5.py:17: assert 2 == 1
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.clique.find_cliques/mutant_5.py:30: UnboundLocalError: local variable 'cliques' referenced before assignment
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.clique.find_cliques/mutant_5.py:37: UnboundLocalError: local variable 'cliques' referenced before assignment
+=========================== short test summary info ============================
+FAILED doc_only/mutants/networkx.algorithms.clique.find_cliques/mutant_1.py::test_violation_of_networkx_algorithms_clique_find_cliques_1
+FAILED doc_only/mutants/networkx.algorithms.clique.find_cliques/mutant_1.py::test_violation_of_networkx_algorithms_clique_find_cliques_2
+FAILED doc_only/mutants/networkx.algorithms.clique.find_cliques/mutant_1.py::test_violation_of_networkx_algorithms_clique_find_cliques_3
+FAILED doc_only/mutants/networkx.algorithms.clique.find_cliques/mutant_1.py::test_violation_of_networkx_algorithms_clique_find_cliques_4
+FAILED doc_only/mutants/networkx.algorithms.clique.find_cliques/mutant_1.py::test_violation_of_networkx_algorithms_clique_find_cliques_5
+FAILED doc_only/mutants/networkx.algorithms.clique.find_cliques/mutant_2.py::test_violation_of_networkx_algorithms_clique_find_cliques_1
+FAILED doc_only/mutants/networkx.algorithms.clique.find_cliques/mutant_2.py::test_violation_of_networkx_algorithms_clique_find_cliques_2
+FAILED doc_only/mutants/networkx.algorithms.clique.find_cliques/mutant_2.py::test_violation_of_networkx_algorithms_clique_find_cliques_5
+FAILED doc_only/mutants/networkx.algorithms.clique.find_cliques/mutant_3.py::test_violation_of_networkx_algorithms_clique_find_cliques_2
+FAILED doc_only/mutants/networkx.algorithms.clique.find_cliques/mutant_3.py::test_violation_of_networkx_algorithms_clique_find_cliques_4
+FAILED doc_only/mutants/networkx.algorithms.clique.find_cliques/mutant_3.py::test_violation_of_networkx_algorithms_clique_find_cliques_5
+FAILED doc_only/mutants/networkx.algorithms.clique.find_cliques/mutant_4.py::test_violation_of_networkx_algorithms_clique_find_cliques_2
+FAILED doc_only/mutants/networkx.algorithms.clique.find_cliques/mutant_4.py::test_violation_of_networkx_algorithms_clique_find_cliques_3
+FAILED doc_only/mutants/networkx.algorithms.clique.find_cliques/mutant_4.py::test_violation_of_networkx_algorithms_clique_find_cliques_4
+FAILED doc_only/mutants/networkx.algorithms.clique.find_cliques/mutant_5.py::test_violation_of_networkx_algorithms_clique_find_cliques_1
+FAILED doc_only/mutants/networkx.algorithms.clique.find_cliques/mutant_5.py::test_violation_of_networkx_algorithms_clique_find_cliques_2
+FAILED doc_only/mutants/networkx.algorithms.clique.find_cliques/mutant_5.py::test_violation_of_networkx_algorithms_clique_find_cliques_4
+FAILED doc_only/mutants/networkx.algorithms.clique.find_cliques/mutant_5.py::test_violation_of_networkx_algorithms_clique_find_cliques_5
+======================== 18 failed, 7 passed in 30.29s =========================

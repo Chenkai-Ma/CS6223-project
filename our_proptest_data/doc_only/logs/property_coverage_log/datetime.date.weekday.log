@@ -1,0 +1,51 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+doc_only/mutants/datetime.date.weekday/mutant_1.py FFFFF                 [ 20%]
+doc_only/mutants/datetime.date.weekday/mutant_2.py FFFFF                 [ 40%]
+doc_only/mutants/datetime.date.weekday/mutant_3.py F..F.                 [ 60%]
+doc_only/mutants/datetime.date.weekday/mutant_4.py FFFFF                 [ 80%]
+doc_only/mutants/datetime.date.weekday/mutant_5.py F....                 [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/datetime.date.weekday/mutant_1.py:7: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_datetime_date_weekday_1() were passed to @given - expected at most 0 arguments, but got 1 (dates(),)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/datetime.date.weekday/mutant_1.py:12: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_datetime_date_weekday_2() were passed to @given - expected at most 0 arguments, but got 1 (dates(),)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/datetime.date.weekday/mutant_1.py:17: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_datetime_date_weekday_3() were passed to @given - expected at most 0 arguments, but got 1 (dates(),)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/datetime.date.weekday/mutant_1.py:22: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_datetime_date_weekday_4() were passed to @given - expected at most 0 arguments, but got 1 (dates(),)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/datetime.date.weekday/mutant_1.py:27: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_datetime_date_weekday_5() were passed to @given - expected at most 0 arguments, but got 1 (dates(),)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/datetime.date.weekday/mutant_2.py:8: assert 0 == 1
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/datetime.date.weekday/mutant_2.py:13: assert 0 == 2
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/datetime.date.weekday/mutant_2.py:18: assert 0 == 3
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/datetime.date.weekday/mutant_2.py:23: assert 0 == 4
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/datetime.date.weekday/mutant_2.py:28: assert 0 == 5
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/datetime.date.weekday/mutant_3.py:8: assert 6 == 5
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/datetime.date.weekday/mutant_3.py:23: assert 6 == 2
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/datetime.date.weekday/mutant_4.py:9: assert 5 == ((5 + 1) % 7)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/datetime.date.weekday/mutant_4.py:15: assert 5 == ((5 - 1) % 7)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/datetime.date.weekday/mutant_4.py:21: assert 0 == 5
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/datetime.date.weekday/mutant_4.py:27: assert 5 == ((5 + 2) % 7)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/datetime.date.weekday/mutant_4.py:33: assert 5 is None
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/datetime.date.weekday/mutant_5.py:9: assert 5 != 5
+=========================== short test summary info ============================
+FAILED doc_only/mutants/datetime.date.weekday/mutant_1.py::test_violation_of_datetime_date_weekday_1
+FAILED doc_only/mutants/datetime.date.weekday/mutant_1.py::test_violation_of_datetime_date_weekday_2
+FAILED doc_only/mutants/datetime.date.weekday/mutant_1.py::test_violation_of_datetime_date_weekday_3
+FAILED doc_only/mutants/datetime.date.weekday/mutant_1.py::test_violation_of_datetime_date_weekday_4
+FAILED doc_only/mutants/datetime.date.weekday/mutant_1.py::test_violation_of_datetime_date_weekday_5
+FAILED doc_only/mutants/datetime.date.weekday/mutant_2.py::test_violation_of_datetime_date_weekday_1
+FAILED doc_only/mutants/datetime.date.weekday/mutant_2.py::test_violation_of_datetime_date_weekday_2
+FAILED doc_only/mutants/datetime.date.weekday/mutant_2.py::test_violation_of_datetime_date_weekday_3
+FAILED doc_only/mutants/datetime.date.weekday/mutant_2.py::test_violation_of_datetime_date_weekday_4
+FAILED doc_only/mutants/datetime.date.weekday/mutant_2.py::test_violation_of_datetime_date_weekday_5
+FAILED doc_only/mutants/datetime.date.weekday/mutant_3.py::test_violation_of_datetime_date_weekday_1
+FAILED doc_only/mutants/datetime.date.weekday/mutant_3.py::test_violation_of_datetime_date_weekday_4
+FAILED doc_only/mutants/datetime.date.weekday/mutant_4.py::test_violation_of_datetime_date_weekday_1
+FAILED doc_only/mutants/datetime.date.weekday/mutant_4.py::test_violation_of_datetime_date_weekday_2
+FAILED doc_only/mutants/datetime.date.weekday/mutant_4.py::test_violation_of_datetime_date_weekday_3
+FAILED doc_only/mutants/datetime.date.weekday/mutant_4.py::test_violation_of_datetime_date_weekday_4
+FAILED doc_only/mutants/datetime.date.weekday/mutant_4.py::test_violation_of_datetime_date_weekday_5
+FAILED doc_only/mutants/datetime.date.weekday/mutant_5.py::test_violation_of_datetime_date_weekday_1
+========================= 18 failed, 7 passed in 2.21s =========================

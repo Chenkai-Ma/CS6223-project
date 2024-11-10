@@ -1,0 +1,59 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+code_only/proptest/networkx.algorithms.cycles.find_cycle/pbt_1.py F.FFF  [ 20%]
+code_only/proptest/networkx.algorithms.cycles.find_cycle/pbt_2.py F.FFF  [ 40%]
+code_only/proptest/networkx.algorithms.cycles.find_cycle/pbt_3.py FFFFF  [ 60%]
+code_only/proptest/networkx.algorithms.cycles.find_cycle/pbt_4.py FFFFF  [ 80%]
+code_only/proptest/networkx.algorithms.cycles.find_cycle/pbt_5.py F.FFF  [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.cycles.find_cycle/pbt_1.py:5: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/.venv/lib/python3.10/site-packages/networkx/classes/graph.py:2027: networkx.exception.NetworkXError: nbunch is not a node or a sequence of nodes.
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.cycles.find_cycle/pbt_1.py:42: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.cycles.find_cycle/pbt_1.py:53: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/.venv/lib/python3.10/site-packages/hypothesis/strategies/_internal/strategies.py:1044: hypothesis.errors.InvalidArgument: Expected a SearchStrategy but got None (type=NoneType)
+/home/james/projects/.venv/lib/python3.10/site-packages/hypothesis/strategies/_internal/strategies.py:1044: hypothesis.errors.InvalidArgument: Expected a SearchStrategy but got None (type=NoneType)
+/home/james/projects/.venv/lib/python3.10/site-packages/hypothesis/strategies/_internal/strategies.py:1044: hypothesis.errors.InvalidArgument: Expected a SearchStrategy but got None (type=NoneType)
+/home/james/projects/.venv/lib/python3.10/site-packages/hypothesis/internal/conjecture/utils.py:72: hypothesis.errors.InvalidArgument: Cannot sample from NodeView(()), not an ordered collection. Hypothesis goes to some length to ensure that the sampled_from strategy has stable results between runs. To replay a saved example, the sampled values must have the same iteration order on every run - ruling out sets, dicts, etc due to hash randomization. Most cases can simply use `sorted(values)`, but mixed types or special values such as math.nan require careful handling - and note that when simplifying an example, Hypothesis treats earlier values as simpler.
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.cycles.find_cycle/pbt_3.py:5: exceptiongroup.ExceptionGroup: Hypothesis found 4 distinct failures. (4 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.cycles.find_cycle/pbt_3.py:20: exceptiongroup.ExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.cycles.find_cycle/pbt_3.py:31: exceptiongroup.ExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.cycles.find_cycle/pbt_3.py:42: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.cycles.find_cycle/pbt_3.py:54: exceptiongroup.ExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.cycles.find_cycle/pbt_4.py:6: AttributeError: module 'hypothesis.strategies' has no attribute 'graphs'
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.cycles.find_cycle/pbt_4.py:18: AttributeError: module 'hypothesis.strategies' has no attribute 'graphs'
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.cycles.find_cycle/pbt_4.py:27: AttributeError: module 'hypothesis.strategies' has no attribute 'random_graphs'
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.cycles.find_cycle/pbt_4.py:37: AttributeError: module 'hypothesis.strategies' has no attribute 'random_graphs'
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.cycles.find_cycle/pbt_4.py:47: AttributeError: module 'hypothesis.strategies' has no attribute 'random_graphs'
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.cycles.find_cycle/pbt_5.py:6: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.cycles.find_cycle/pbt_5.py:29: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.cycles.find_cycle/pbt_5.py:41: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.cycles.find_cycle/pbt_5.py:52: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+=========================== short test summary info ============================
+FAILED code_only/proptest/networkx.algorithms.cycles.find_cycle/pbt_1.py::test_cycle_is_closed_property
+FAILED code_only/proptest/networkx.algorithms.cycles.find_cycle/pbt_1.py::test_cycle_length_property
+FAILED code_only/proptest/networkx.algorithms.cycles.find_cycle/pbt_1.py::test_cycle_edges_exist_property
+FAILED code_only/proptest/networkx.algorithms.cycles.find_cycle/pbt_1.py::test_cycle_orientation_property
+FAILED code_only/proptest/networkx.algorithms.cycles.find_cycle/pbt_2.py::test_output_cycle_forms_closed_loop_property
+FAILED code_only/proptest/networkx.algorithms.cycles.find_cycle/pbt_2.py::test_cycle_length_greater_than_or_equal_to_three_property
+FAILED code_only/proptest/networkx.algorithms.cycles.find_cycle/pbt_2.py::test_output_cycle_edges_exist_in_input_graph_property
+FAILED code_only/proptest/networkx.algorithms.cycles.find_cycle/pbt_2.py::test_reverse_orientation_cycle_property
+FAILED code_only/proptest/networkx.algorithms.cycles.find_cycle/pbt_3.py::test_cycle_edges_form_closed_loop_property
+FAILED code_only/proptest/networkx.algorithms.cycles.find_cycle/pbt_3.py::test_no_cycle_in_acyclic_graph_property
+FAILED code_only/proptest/networkx.algorithms.cycles.find_cycle/pbt_3.py::test_cycle_length_property
+FAILED code_only/proptest/networkx.algorithms.cycles.find_cycle/pbt_3.py::test_cycle_edges_exist_in_graph_property
+FAILED code_only/proptest/networkx.algorithms.cycles.find_cycle/pbt_3.py::test_reverse_orientation_cycle_property
+FAILED code_only/proptest/networkx.algorithms.cycles.find_cycle/pbt_4.py::test_output_cycle_forms_closed_loop_property
+FAILED code_only/proptest/networkx.algorithms.cycles.find_cycle/pbt_4.py::test_acyclic_graph_returns_empty_list_property
+FAILED code_only/proptest/networkx.algorithms.cycles.find_cycle/pbt_4.py::test_found_cycle_has_minimum_length_property
+FAILED code_only/proptest/networkx.algorithms.cycles.find_cycle/pbt_4.py::test_cycle_edges_are_valid_edges_property
+FAILED code_only/proptest/networkx.algorithms.cycles.find_cycle/pbt_4.py::test_reverse_orientation_changes_cycle_direction_property
+FAILED code_only/proptest/networkx.algorithms.cycles.find_cycle/pbt_5.py::test_cycle_is_closed_property
+FAILED code_only/proptest/networkx.algorithms.cycles.find_cycle/pbt_5.py::test_cycle_length_property
+FAILED code_only/proptest/networkx.algorithms.cycles.find_cycle/pbt_5.py::test_edges_in_cycle_are_valid_property
+FAILED code_only/proptest/networkx.algorithms.cycles.find_cycle/pbt_5.py::test_reverse_orientation_property
+========================= 22 failed, 3 passed in 7.73s =========================

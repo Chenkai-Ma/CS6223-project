@@ -1,0 +1,35 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+code_only/proptest/datetime.datetime.combine/pbt_1.py ..FF.              [ 20%]
+code_only/proptest/datetime.datetime.combine/pbt_2.py ..FFF              [ 40%]
+code_only/proptest/datetime.datetime.combine/pbt_3.py ..F..              [ 60%]
+code_only/proptest/datetime.datetime.combine/pbt_4.py ..FFF              [ 80%]
+code_only/proptest/datetime.datetime.combine/pbt_5.py ..F..              [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/datetime.datetime.combine/pbt_1.py:30: TypeError: tzinfo argument must be None or of a tzinfo subclass, not type 'bool'
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/datetime.datetime.combine/pbt_1.py:37: AssertionError: Expected TypeError not raised
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/datetime.datetime.combine/pbt_2.py:39: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/.venv/lib/python3.10/site-packages/hypothesis/strategies/_internal/core.py:1022: ValueError: day is out of range for month
+/home/james/projects/.venv/lib/python3.10/site-packages/hypothesis/strategies/_internal/core.py:1022: ValueError: day is out of range for month
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/datetime.datetime.combine/pbt_3.py:31: TypeError: tzinfo argument must be None or of a tzinfo subclass, not type 'bool'
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/datetime.datetime.combine/pbt_4.py:36: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/.venv/lib/python3.10/site-packages/hypothesis/strategies/_internal/core.py:1022: ValueError: day is out of range for month
+/home/james/projects/.venv/lib/python3.10/site-packages/hypothesis/strategies/_internal/core.py:1022: ValueError: day is out of range for month
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/datetime.datetime.combine/pbt_5.py:23: TypeError: tzinfo argument must be None or of a tzinfo subclass, not type 'bool'
+=========================== short test summary info ============================
+FAILED code_only/proptest/datetime.datetime.combine/pbt_1.py::test_tzinfo_property_when_true
+FAILED code_only/proptest/datetime.datetime.combine/pbt_1.py::test_type_error_on_invalid_date_property
+FAILED code_only/proptest/datetime.datetime.combine/pbt_2.py::test_tzinfo_property
+FAILED code_only/proptest/datetime.datetime.combine/pbt_2.py::test_invalid_date_property
+FAILED code_only/proptest/datetime.datetime.combine/pbt_2.py::test_invalid_time_property
+FAILED code_only/proptest/datetime.datetime.combine/pbt_3.py::test_output_timezone_if_tzinfo_true
+FAILED code_only/proptest/datetime.datetime.combine/pbt_4.py::test_datetime_combine_tzinfo_property
+FAILED code_only/proptest/datetime.datetime.combine/pbt_4.py::test_datetime_combine_invalid_date_property
+FAILED code_only/proptest/datetime.datetime.combine/pbt_4.py::test_datetime_combine_invalid_time_property
+FAILED code_only/proptest/datetime.datetime.combine/pbt_5.py::test_datetime_tzinfo_true_property
+======================== 10 failed, 15 passed in 4.64s =========================

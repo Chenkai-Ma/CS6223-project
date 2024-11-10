@@ -1,8 +1,11 @@
 # Evaluate soundness and validity separately for each API.
-# this file has to be run from the root directory of the project
+# this file has to be run from the our_proptest_data directory
 
-log_dir="logs/sound_valid_log"
-api_dir="proptest"
+approach="code_only"
+metric="sound_valid"
+
+log_dir="${approach}/logs/${metric}_log"
+api_dir="${approach}/proptest"
 
 mkdir -p $log_dir
 

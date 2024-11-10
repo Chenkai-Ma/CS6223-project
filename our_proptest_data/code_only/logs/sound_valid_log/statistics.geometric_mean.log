@@ -1,0 +1,51 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+code_only/proptest/statistics.geometric_mean/pbt_1.py FFFFF              [ 20%]
+code_only/proptest/statistics.geometric_mean/pbt_2.py FFF.F              [ 40%]
+code_only/proptest/statistics.geometric_mean/pbt_3.py .F.F.              [ 60%]
+code_only/proptest/statistics.geometric_mean/pbt_4.py FF.F.              [ 80%]
+code_only/proptest/statistics.geometric_mean/pbt_5.py .FFFF              [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/.venv/lib/python3.10/site-packages/hypothesis/strategies/_internal/numbers.py:303: hypothesis.errors.InvalidArgument: Cannot have allow_nan=True, with min_value or max_value
+/usr/lib/python3.10/statistics.py:376: statistics.StatisticsError: geometric mean requires a non-empty dataset containing positive numbers
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.geometric_mean/pbt_1.py:19: exceptiongroup.ExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)
+/usr/lib/python3.10/statistics.py:376: statistics.StatisticsError: geometric mean requires a non-empty dataset containing positive numbers
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.geometric_mean/pbt_1.py:38: AssertionError: assert 'geometric me...itive numbers' == 'No negative inputs allowed'
+/home/james/projects/.venv/lib/python3.10/site-packages/hypothesis/strategies/_internal/numbers.py:303: hypothesis.errors.InvalidArgument: Cannot have allow_nan=True, with min_value or max_value
+/home/james/projects/.venv/lib/python3.10/site-packages/hypothesis/strategies/_internal/numbers.py:303: hypothesis.errors.InvalidArgument: Cannot have allow_nan=True, with min_value or max_value
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.geometric_mean/pbt_2.py:21: AttributeError: module 'hypothesis.strategies' has no attribute 'raises'
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.geometric_mean/pbt_2.py:34: AttributeError: module 'hypothesis.strategies' has no attribute 'raises'
+/usr/lib/python3.10/statistics.py:376: statistics.StatisticsError: geometric mean requires a non-empty dataset containing positive numbers
+/usr/lib/python3.10/statistics.py:376: statistics.StatisticsError: geometric mean requires a non-empty dataset containing positive numbers
+/usr/lib/python3.10/statistics.py:376: statistics.StatisticsError: geometric mean requires a non-empty dataset containing positive numbers
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.geometric_mean/pbt_4.py:10: exceptiongroup.ExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)
+/usr/lib/python3.10/statistics.py:376: statistics.StatisticsError: geometric mean requires a non-empty dataset containing positive numbers
+/usr/lib/python3.10/statistics.py:376: statistics.StatisticsError: geometric mean requires a non-empty dataset containing positive numbers
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.geometric_mean/pbt_5.py:19: NameError: name 'pytest' is not defined
+/home/james/projects/.venv/lib/python3.10/site-packages/hypothesis/strategies/_internal/numbers.py:303: hypothesis.errors.InvalidArgument: Cannot have allow_nan=True, with min_value or max_value
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.geometric_mean/pbt_5.py:30: NameError: name 'pytest' is not defined
+=========================== short test summary info ============================
+FAILED code_only/proptest/statistics.geometric_mean/pbt_1.py::test_geometric_mean_positive_numbers_property
+FAILED code_only/proptest/statistics.geometric_mean/pbt_1.py::test_geometric_mean_zero_property
+FAILED code_only/proptest/statistics.geometric_mean/pbt_1.py::test_geometric_mean_empty_dataset_property
+FAILED code_only/proptest/statistics.geometric_mean/pbt_1.py::test_geometric_mean_nan_in_dataset_property
+FAILED code_only/proptest/statistics.geometric_mean/pbt_1.py::test_geometric_mean_negative_numbers_property
+FAILED code_only/proptest/statistics.geometric_mean/pbt_2.py::test_geometric_mean_positive_numbers_property
+FAILED code_only/proptest/statistics.geometric_mean/pbt_2.py::test_geometric_mean_zero_in_data_property
+FAILED code_only/proptest/statistics.geometric_mean/pbt_2.py::test_geometric_mean_empty_data_property
+FAILED code_only/proptest/statistics.geometric_mean/pbt_2.py::test_geometric_mean_negative_numbers_property
+FAILED code_only/proptest/statistics.geometric_mean/pbt_3.py::test_geometric_mean_zero_property
+FAILED code_only/proptest/statistics.geometric_mean/pbt_3.py::test_geometric_mean_nan_values_property
+FAILED code_only/proptest/statistics.geometric_mean/pbt_4.py::test_geometric_mean_positive_property
+FAILED code_only/proptest/statistics.geometric_mean/pbt_4.py::test_geometric_mean_zero_property
+FAILED code_only/proptest/statistics.geometric_mean/pbt_4.py::test_geometric_mean_nan_property
+FAILED code_only/proptest/statistics.geometric_mean/pbt_5.py::test_geometric_mean_zero_included_property
+FAILED code_only/proptest/statistics.geometric_mean/pbt_5.py::test_geometric_mean_empty_dataset_property
+FAILED code_only/proptest/statistics.geometric_mean/pbt_5.py::test_geometric_mean_nan_included_property
+FAILED code_only/proptest/statistics.geometric_mean/pbt_5.py::test_geometric_mean_negative_numbers_property
+========================= 18 failed, 7 passed in 6.45s =========================

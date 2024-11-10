@@ -1,0 +1,58 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+code_only/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_1.py F [  4%]
+F.FF                                                                     [ 20%]
+code_only/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_2.py . [ 24%]
+F..F                                                                     [ 40%]
+code_only/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_3.py F [ 44%]
+FFFF                                                                     [ 60%]
+code_only/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_4.py F [ 64%]
+F.FF                                                                     [ 80%]
+code_only/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_5.py F [ 84%]
+F.FF                                                                     [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/.venv/lib/python3.10/site-packages/networkx/convert.py:174: networkx.exception.NetworkXError: Input is not a valid edge list
+/home/james/projects/.venv/lib/python3.10/site-packages/networkx/convert.py:174: networkx.exception.NetworkXError: Input is not a valid edge list
+/home/james/projects/.venv/lib/python3.10/site-packages/networkx/convert.py:174: networkx.exception.NetworkXError: Input is not a valid edge list
+/home/james/projects/.venv/lib/python3.10/site-packages/networkx/convert.py:174: networkx.exception.NetworkXError: Input is not a valid edge list
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_2.py:15: assert 2 <= 1
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_2.py:36: assert 1 == 0
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_3.py:6: hypothesis.errors.InvalidArgument: Too many positional arguments for test_large_clique_size_output_non_negative() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_3.py:12: hypothesis.errors.InvalidArgument: Too many positional arguments for test_large_clique_size_output_not_exceeding_node_count() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_3.py:18: hypothesis.errors.InvalidArgument: Too many positional arguments for test_large_clique_size_empty_graph() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_3.py:24: hypothesis.errors.InvalidArgument: Too many positional arguments for test_large_clique_size_output_bounded_by_max_degree() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_3.py:31: hypothesis.errors.InvalidArgument: Too many positional arguments for test_large_clique_size_isolated_nodes() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_4.py:6: AttributeError: module 'hypothesis.strategies' has no attribute 'graphs'
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_4.py:12: AttributeError: module 'hypothesis.strategies' has no attribute 'graphs'
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_4.py:24: AttributeError: module 'hypothesis.strategies' has no attribute 'graphs'
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_4.py:34: assert 1 == 0
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_5.py:7: AttributeError: module 'hypothesis.strategies' has no attribute 'shapes'. Did you mean: 'shared'?
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_5.py:13: AttributeError: module 'hypothesis.strategies' has no attribute 'shapes'. Did you mean: 'shared'?
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_5.py:25: AttributeError: module 'hypothesis.strategies' has no attribute 'shapes'. Did you mean: 'shared'?
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_5.py:35: assert 1 == 0
+=========================== short test summary info ============================
+FAILED code_only/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_1.py::test_output_is_non_negative_property
+FAILED code_only/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_1.py::test_output_does_not_exceed_node_count_property
+FAILED code_only/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_1.py::test_output_with_max_degree_property
+FAILED code_only/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_1.py::test_output_zero_for_isolated_nodes_property
+FAILED code_only/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_2.py::test_output_does_not_exceed_node_count_property
+FAILED code_only/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_2.py::test_output_zero_for_isolated_nodes_property
+FAILED code_only/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_3.py::test_large_clique_size_output_non_negative
+FAILED code_only/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_3.py::test_large_clique_size_output_not_exceeding_node_count
+FAILED code_only/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_3.py::test_large_clique_size_empty_graph
+FAILED code_only/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_3.py::test_large_clique_size_output_bounded_by_max_degree
+FAILED code_only/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_3.py::test_large_clique_size_isolated_nodes
+FAILED code_only/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_4.py::test_large_clique_size_non_negative_property
+FAILED code_only/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_4.py::test_large_clique_size_not_exceed_node_count_property
+FAILED code_only/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_4.py::test_large_clique_size_max_degree_property
+FAILED code_only/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_4.py::test_large_clique_size_isolated_nodes_property
+FAILED code_only/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_5.py::test_large_clique_size_non_negative_property
+FAILED code_only/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_5.py::test_large_clique_size_not_exceed_node_count_property
+FAILED code_only/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_5.py::test_large_clique_size_max_degree_property
+FAILED code_only/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_5.py::test_large_clique_size_isolated_nodes_property
+========================= 19 failed, 6 passed in 1.53s =========================

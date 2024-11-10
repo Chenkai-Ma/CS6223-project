@@ -1,0 +1,43 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+code_only/proptest/networkx.algorithms.clique.find_cliques/pbt_1.py .... [ 16%]
+F                                                                        [ 20%]
+code_only/proptest/networkx.algorithms.clique.find_cliques/pbt_2.py .... [ 36%]
+.                                                                        [ 40%]
+code_only/proptest/networkx.algorithms.clique.find_cliques/pbt_3.py .... [ 56%]
+F                                                                        [ 60%]
+code_only/proptest/networkx.algorithms.clique.find_cliques/pbt_4.py .... [ 76%]
+F                                                                        [ 80%]
+code_only/proptest/networkx.algorithms.clique.find_cliques/pbt_5.py FFF. [ 96%]
+F                                                                        [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.clique.find_cliques/pbt_1.py:37: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/.venv/lib/python3.10/site-packages/hypothesis/internal/conjecture/utils.py:72: hypothesis.errors.InvalidArgument: Cannot sample from NodeView((0,)), not an ordered collection. Hypothesis goes to some length to ensure that the sampled_from strategy has stable results between runs. To replay a saved example, the sampled values must have the same iteration order on every run - ruling out sets, dicts, etc due to hash randomization. Most cases can simply use `sorted(values)`, but mixed types or special values such as math.nan require careful handling - and note that when simplifying an example, Hypothesis treats earlier values as simpler.
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.clique.find_cliques/pbt_4.py:74: NameError: name 'pytest' is not defined
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.clique.find_cliques/pbt_5.py:15: TypeError: accept.<locals>.graphs() takes 0 positional arguments but 1 was given
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.clique.find_cliques/pbt_5.py:32: TypeError: accept.<locals>.graphs() takes 0 positional arguments but 1 was given
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.clique.find_cliques/pbt_5.py:51: TypeError: accept.<locals>.graphs() takes 0 positional arguments but 1 was given
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.clique.find_cliques/pbt_5.py:76: TypeError: accept.<locals>.graphs() takes 0 positional arguments but 1 was given
+=============================== warnings summary ===============================
+code_only/proptest/networkx.algorithms.clique.find_cliques/pbt_3.py::test_output_nodes_are_in_input_graph_property
+code_only/proptest/networkx.algorithms.clique.find_cliques/pbt_3.py::test_cliques_are_complete_subgraphs_property
+code_only/proptest/networkx.algorithms.clique.find_cliques/pbt_3.py::test_all_maximal_cliques_property
+code_only/proptest/networkx.algorithms.clique.find_cliques/pbt_3.py::test_given_nodes_form_clique_or_raise_property
+  /usr/lib/python3.10/contextlib.py:142: HypothesisDeprecationWarning: Do not use the `random` module inside strategies; instead consider  `st.randoms()`, `st.sampled_from()`, etc.  Draw 1: from builds(gnp_random_graph, n=integers(min_value=1, max_value=20), p=floats(min_value=0, max_value=1))
+    next(self.gen)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED code_only/proptest/networkx.algorithms.clique.find_cliques/pbt_1.py::test_given_nodes_form_clique_or_raise_property
+FAILED code_only/proptest/networkx.algorithms.clique.find_cliques/pbt_3.py::test_given_nodes_form_clique_or_raise_property
+FAILED code_only/proptest/networkx.algorithms.clique.find_cliques/pbt_4.py::test_specific_nodes_form_clique_or_raise_property
+FAILED code_only/proptest/networkx.algorithms.clique.find_cliques/pbt_5.py::test_output_nodes_subset_property
+FAILED code_only/proptest/networkx.algorithms.clique.find_cliques/pbt_5.py::test_cliques_complete_subgraph_property
+FAILED code_only/proptest/networkx.algorithms.clique.find_cliques/pbt_5.py::test_maximal_cliques_property
+FAILED code_only/proptest/networkx.algorithms.clique.find_cliques/pbt_5.py::test_specific_nodes_must_form_clique_property
+=================== 7 failed, 18 passed, 4 warnings in 1.29s ===================

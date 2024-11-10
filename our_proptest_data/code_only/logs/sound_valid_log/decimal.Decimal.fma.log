@@ -1,0 +1,47 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+code_only/proptest/decimal.Decimal.fma/pbt_1.py .FFFF                    [ 20%]
+code_only/proptest/decimal.Decimal.fma/pbt_2.py ....F                    [ 40%]
+code_only/proptest/decimal.Decimal.fma/pbt_3.py FFFFF                    [ 60%]
+code_only/proptest/decimal.Decimal.fma/pbt_4.py ...FF                    [ 80%]
+code_only/proptest/decimal.Decimal.fma/pbt_5.py .FFFF                    [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.fma/pbt_1.py:14: NameError: name 'pytest' is not defined
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.fma/pbt_1.py:22: AssertionError: assert Decimal('NaN') == (Decimal('1') + Decimal('1'))
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.fma/pbt_1.py:25: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.fma/pbt_1.py:39: AttributeError: 'decimal.Decimal' object has no attribute 'sign'
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.fma/pbt_2.py:67: AttributeError: 'decimal.Decimal' object has no attribute 'sign'
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.fma/pbt_3.py:10: AssertionError: assert Decimal('NaN') == Decimal('NaN')
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.fma/pbt_3.py:17: AttributeError: module 'hypothesis.strategies' has no attribute 'raises'
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.fma/pbt_3.py:22: decimal.InvalidOperation: [<class 'decimal.ConversionSyntax'>]
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.fma/pbt_3.py:27: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.fma/pbt_3.py:37: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.fma/pbt_4.py:37: AttributeError: module 'hypothesis.strategies' has no attribute 'raises'
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.fma/pbt_4.py:48: AttributeError: 'decimal.Decimal' object has no attribute 'sign'
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.fma/pbt_5.py:13: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.fma/pbt_5.py:21: exceptiongroup.ExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.fma/pbt_5.py:29: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.fma/pbt_5.py:43: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+=========================== short test summary info ============================
+FAILED code_only/proptest/decimal.Decimal.fma/pbt_1.py::test_fma_signaling_nan_property
+FAILED code_only/proptest/decimal.Decimal.fma/pbt_1.py::test_fma_quiet_nan_property
+FAILED code_only/proptest/decimal.Decimal.fma/pbt_1.py::test_fma_infinity_property
+FAILED code_only/proptest/decimal.Decimal.fma/pbt_1.py::test_fma_sign_property
+FAILED code_only/proptest/decimal.Decimal.fma/pbt_2.py::test_decimal_Decimal_fma_sign_property
+FAILED code_only/proptest/decimal.Decimal.fma/pbt_3.py::test_decimal_Decimal_fma_property_non_special_values
+FAILED code_only/proptest/decimal.Decimal.fma/pbt_3.py::test_decimal_Decimal_fma_property_signaling_nan
+FAILED code_only/proptest/decimal.Decimal.fma/pbt_3.py::test_decimal_Decimal_fma_property_quiet_nan
+FAILED code_only/proptest/decimal.Decimal.fma/pbt_3.py::test_decimal_Decimal_fma_property_infinity
+FAILED code_only/proptest/decimal.Decimal.fma/pbt_3.py::test_decimal_Decimal_fma_property_sign_adjustment
+FAILED code_only/proptest/decimal.Decimal.fma/pbt_4.py::test_decimal_Decimal_fma_infinity_property
+FAILED code_only/proptest/decimal.Decimal.fma/pbt_4.py::test_decimal_Decimal_fma_sign_property
+FAILED code_only/proptest/decimal.Decimal.fma/pbt_5.py::test_decimal_Decimal_fma_sNaN_property
+FAILED code_only/proptest/decimal.Decimal.fma/pbt_5.py::test_decimal_Decimal_fma_n_property
+FAILED code_only/proptest/decimal.Decimal.fma/pbt_5.py::test_decimal_Decimal_fma_infinity_property
+FAILED code_only/proptest/decimal.Decimal.fma/pbt_5.py::test_decimal_Decimal_fma_sign_property
+======================== 16 failed, 9 passed in 29.41s =========================

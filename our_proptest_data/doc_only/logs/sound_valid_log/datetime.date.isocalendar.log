@@ -1,0 +1,25 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+doc_only/proptest/datetime.date.isocalendar/pbt_1.py F..FF               [ 20%]
+doc_only/proptest/datetime.date.isocalendar/pbt_2.py .....               [ 40%]
+doc_only/proptest/datetime.date.isocalendar/pbt_3.py ....F               [ 60%]
+doc_only/proptest/datetime.date.isocalendar/pbt_4.py F....               [ 80%]
+doc_only/proptest/datetime.date.isocalendar/pbt_5.py .....               [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/doc_only/proptest/datetime.date.isocalendar/pbt_1.py:13: assert 1999 == 2000
+/home/james/projects/cs6223/our_proptest_data/doc_only/proptest/datetime.date.isocalendar/pbt_1.py:31: assert datetime.date(3233, 1, 1) <= datetime.date(3232, 12, 31)
+/home/james/projects/cs6223/our_proptest_data/doc_only/proptest/datetime.date.isocalendar/pbt_1.py:37: NameError: name 'timedelta' is not defined
+/home/james/projects/cs6223/our_proptest_data/doc_only/proptest/datetime.date.isocalendar/pbt_3.py:29: assert ((6 == 1) or (6 == 7))
+/home/james/projects/cs6223/our_proptest_data/doc_only/proptest/datetime.date.isocalendar/pbt_4.py:10: assert (1999 == 2000 or 1999 == (2000 + 1))
+=========================== short test summary info ============================
+FAILED doc_only/proptest/datetime.date.isocalendar/pbt_1.py::test_year_component_property
+FAILED doc_only/proptest/datetime.date.isocalendar/pbt_1.py::test_year_week_compatibility_property
+FAILED doc_only/proptest/datetime.date.isocalendar/pbt_1.py::test_valid_iso_calendar_date_property
+FAILED doc_only/proptest/datetime.date.isocalendar/pbt_3.py::test_valid_iso_calendar_date_property
+FAILED doc_only/proptest/datetime.date.isocalendar/pbt_4.py::test_year_component_property
+========================= 5 failed, 20 passed in 0.50s =========================

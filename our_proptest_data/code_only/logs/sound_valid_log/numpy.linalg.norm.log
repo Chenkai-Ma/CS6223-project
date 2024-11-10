@@ -1,0 +1,68 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 0 items / 5 errors
+
+==================================== ERRORS ====================================
+________ ERROR collecting code_only/proptest/numpy.linalg.norm/pbt_1.py ________
+../../.venv/lib/python3.10/site-packages/_pytest/python.py:493: in importtestmodule
+    mod = import_path(
+../../.venv/lib/python3.10/site-packages/_pytest/pathlib.py:582: in import_path
+    importlib.import_module(module_name)
+/usr/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1050: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1027: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1006: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:688: in _load_unlocked
+    ???
+../../.venv/lib/python3.10/site-packages/_pytest/assertion/rewrite.py:175: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+../../.venv/lib/python3.10/site-packages/_pytest/assertion/rewrite.py:357: in _rewrite_test
+    co = compile(tree, strfn, "exec", dont_inherit=True)
+E     File "/home/james/projects/cs6223/our_proptest_data/code_only/proptest/numpy.linalg.norm/pbt_1.py", line 11
+E       @given(st.lists(st.lists(st.floats()), max_size=100, min_size=10, max_size=100))  # Testing matrices with float values
+E                                                                         ^^^^^^^^^^^^
+E   SyntaxError: keyword argument repeated: max_size
+________ ERROR collecting code_only/proptest/numpy.linalg.norm/pbt_2.py ________
+E   TypeError: lists() got an unexpected keyword argument 'max_len'
+________ ERROR collecting code_only/proptest/numpy.linalg.norm/pbt_3.py ________
+E   TypeError: lists() got an unexpected keyword argument 'max_depth'
+________ ERROR collecting code_only/proptest/numpy.linalg.norm/pbt_4.py ________
+../../.venv/lib/python3.10/site-packages/_pytest/python.py:493: in importtestmodule
+    mod = import_path(
+../../.venv/lib/python3.10/site-packages/_pytest/pathlib.py:582: in import_path
+    importlib.import_module(module_name)
+/usr/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1050: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1027: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1006: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:688: in _load_unlocked
+    ???
+../../.venv/lib/python3.10/site-packages/_pytest/assertion/rewrite.py:175: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+../../.venv/lib/python3.10/site-packages/_pytest/assertion/rewrite.py:355: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+/usr/lib/python3.10/ast.py:50: in parse
+    return compile(source, filename, mode, flags,
+E     File "/home/james/projects/cs6223/our_proptest_data/code_only/proptest/numpy.linalg.norm/pbt_4.py", line 33
+E       st.lists(st.lists(st.floats()), min_size=1, max_size=100, max_length=100)))
+E                                                                                 ^
+E   SyntaxError: unmatched ')'
+________ ERROR collecting code_only/proptest/numpy.linalg.norm/pbt_5.py ________
+E   AttributeError: module 'hypothesis.strategies' has no attribute 'matrices'
+=========================== short test summary info ============================
+ERROR code_only/proptest/numpy.linalg.norm/pbt_1.py
+ERROR code_only/proptest/numpy.linalg.norm/pbt_2.py - TypeError: lists() got ...
+ERROR code_only/proptest/numpy.linalg.norm/pbt_3.py - TypeError: lists() got ...
+ERROR code_only/proptest/numpy.linalg.norm/pbt_4.py
+ERROR code_only/proptest/numpy.linalg.norm/pbt_5.py - AttributeError: module ...
+============================== 5 errors in 0.19s ===============================

@@ -1,0 +1,68 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+code_only/proptest/decimal.Decimal.exp/pbt_1.py ....E                    [ 20%]
+code_only/proptest/decimal.Decimal.exp/pbt_2.py F...E                    [ 40%]
+code_only/proptest/decimal.Decimal.exp/pbt_3.py .FFFE                    [ 60%]
+code_only/proptest/decimal.Decimal.exp/pbt_4.py ....E                    [ 80%]
+code_only/proptest/decimal.Decimal.exp/pbt_5.py F...F                    [100%]
+
+==================================== ERRORS ====================================
+_______ ERROR at setup of test_decimal_Decimal_exp_monotonicity_property _______
+file /home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.exp/pbt_1.py, line 31
+  @given(st.floats())
+  def test_decimal_Decimal_exp_monotonicity_property(x1, x2):
+E       fixture 'x1' not found
+>       available fixtures: cache, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.exp/pbt_1.py:31
+_________ ERROR at setup of test_exp_monotonically_increasing_property _________
+file /home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.exp/pbt_2.py, line 31
+  @given(st.floats())
+  def test_exp_monotonically_increasing_property(x, y):
+E       fixture 'x' not found
+>       available fixtures: cache, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.exp/pbt_2.py:31
+_______ ERROR at setup of test_decimal_Decimal_exp_monotonicity_property _______
+file /home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.exp/pbt_3.py, line 30
+  @given(st.floats(min_value=-1000, max_value=1000))
+  def test_decimal_Decimal_exp_monotonicity_property(x, y):
+E       fixture 'x' not found
+>       available fixtures: cache, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.exp/pbt_3.py:30
+_______ ERROR at setup of test_decimal_Decimal_exp_monotonicity_property _______
+file /home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.exp/pbt_4.py, line 32
+  @given(st.floats())
+  def test_decimal_Decimal_exp_monotonicity_property(value1, value2):
+E       fixture 'value1' not found
+>       available fixtures: cache, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.exp/pbt_4.py:32
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.exp/pbt_2.py:7: decimal.Overflow: [<class 'decimal.Overflow'>]
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.exp/pbt_3.py:14: hypothesis.errors.InvalidArgument: given must be called with at least one argument
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.exp/pbt_3.py:20: hypothesis.errors.InvalidArgument: given must be called with at least one argument
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.exp/pbt_3.py:26: hypothesis.errors.InvalidArgument: given must be called with at least one argument
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.exp/pbt_5.py:6: decimal.Overflow: [<class 'decimal.Overflow'>]
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.exp/pbt_5.py:26: exceptiongroup.ExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)
+=========================== short test summary info ============================
+FAILED code_only/proptest/decimal.Decimal.exp/pbt_2.py::test_exp_nan_property
+FAILED code_only/proptest/decimal.Decimal.exp/pbt_3.py::test_decimal_Decimal_exp_negative_infinity_property
+FAILED code_only/proptest/decimal.Decimal.exp/pbt_3.py::test_decimal_Decimal_exp_zero_property
+FAILED code_only/proptest/decimal.Decimal.exp/pbt_3.py::test_decimal_Decimal_exp_positive_infinity_property
+FAILED code_only/proptest/decimal.Decimal.exp/pbt_5.py::test_decimal_Decimal_exp_nan_property
+FAILED code_only/proptest/decimal.Decimal.exp/pbt_5.py::test_decimal_Decimal_exp_monotonicity_property
+ERROR code_only/proptest/decimal.Decimal.exp/pbt_1.py::test_decimal_Decimal_exp_monotonicity_property
+ERROR code_only/proptest/decimal.Decimal.exp/pbt_2.py::test_exp_monotonically_increasing_property
+ERROR code_only/proptest/decimal.Decimal.exp/pbt_3.py::test_decimal_Decimal_exp_monotonicity_property
+ERROR code_only/proptest/decimal.Decimal.exp/pbt_4.py::test_decimal_Decimal_exp_monotonicity_property
+==================== 6 failed, 15 passed, 4 errors in 1.34s ====================

@@ -1,0 +1,43 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+doc_only/mutants/networkx.algorithms.cycles.find_cycle/mutant_1.py F.... [ 20%]
+                                                                         [ 20%]
+doc_only/mutants/networkx.algorithms.cycles.find_cycle/mutant_2.py FFF.F [ 40%]
+                                                                         [ 40%]
+doc_only/mutants/networkx.algorithms.cycles.find_cycle/mutant_3.py ..FF. [ 60%]
+                                                                         [ 60%]
+doc_only/mutants/networkx.algorithms.cycles.find_cycle/mutant_4.py ..... [ 80%]
+                                                                         [ 80%]
+doc_only/mutants/networkx.algorithms.cycles.find_cycle/mutant_5.py FFFFF [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.cycles.find_cycle/mutant_1.py:13: assert 0 > 0
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.cycles.find_cycle/mutant_2.py:14: assert 0 == 1
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.cycles.find_cycle/mutant_2.py:26: assert 1 == 0
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.cycles.find_cycle/mutant_2.py:38: assert 0 == 1
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.cycles.find_cycle/mutant_2.py:61: ValueError: too many values to unpack (expected 2)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.cycles.find_cycle/mutant_3.py:36: IndexError: list index out of range
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.cycles.find_cycle/mutant_3.py:50: assert (999, 888) in OutEdgeView([(0, 0)])
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.cycles.find_cycle/mutant_5.py:14: ValueError: not enough values to unpack (expected 3, got 2)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.cycles.find_cycle/mutant_5.py:28: AssertionError: assert 'none' in ['forward', 'reverse']
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.cycles.find_cycle/mutant_5.py:41: AssertionError: assert 'invalid' in ['forward', 'reverse']
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.cycles.find_cycle/mutant_5.py:54: AssertionError: assert '' in ['forward', 'reverse']
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.cycles.find_cycle/mutant_5.py:67: AssertionError: assert 123 in ['forward', 'reverse']
+=========================== short test summary info ============================
+FAILED doc_only/mutants/networkx.algorithms.cycles.find_cycle/mutant_1.py::test_violation_of_networkx_algorithms_cycles_find_cycle_1
+FAILED doc_only/mutants/networkx.algorithms.cycles.find_cycle/mutant_2.py::test_violation_of_networkx_algorithms_cycles_find_cycle_1
+FAILED doc_only/mutants/networkx.algorithms.cycles.find_cycle/mutant_2.py::test_violation_of_networkx_algorithms_cycles_find_cycle_2
+FAILED doc_only/mutants/networkx.algorithms.cycles.find_cycle/mutant_2.py::test_violation_of_networkx_algorithms_cycles_find_cycle_3
+FAILED doc_only/mutants/networkx.algorithms.cycles.find_cycle/mutant_2.py::test_violation_of_networkx_algorithms_cycles_find_cycle_5
+FAILED doc_only/mutants/networkx.algorithms.cycles.find_cycle/mutant_3.py::test_violation_of_networkx_algorithms_cycles_find_cycle_3
+FAILED doc_only/mutants/networkx.algorithms.cycles.find_cycle/mutant_3.py::test_violation_of_networkx_algorithms_cycles_find_cycle_4
+FAILED doc_only/mutants/networkx.algorithms.cycles.find_cycle/mutant_5.py::test_violation_of_networkx_algorithms_cycles_find_cycle_1
+FAILED doc_only/mutants/networkx.algorithms.cycles.find_cycle/mutant_5.py::test_violation_of_networkx_algorithms_cycles_find_cycle_2
+FAILED doc_only/mutants/networkx.algorithms.cycles.find_cycle/mutant_5.py::test_violation_of_networkx_algorithms_cycles_find_cycle_3
+FAILED doc_only/mutants/networkx.algorithms.cycles.find_cycle/mutant_5.py::test_violation_of_networkx_algorithms_cycles_find_cycle_4
+FAILED doc_only/mutants/networkx.algorithms.cycles.find_cycle/mutant_5.py::test_violation_of_networkx_algorithms_cycles_find_cycle_5
+======================== 12 failed, 13 passed in 2.33s =========================

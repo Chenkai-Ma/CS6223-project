@@ -1,0 +1,48 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+code_only/proptest/networkx.algorithms.bipartite.basic.color/pbt_1.py .. [  8%]
+..F                                                                      [ 20%]
+code_only/proptest/networkx.algorithms.bipartite.basic.color/pbt_2.py F. [ 28%]
+.F.                                                                      [ 40%]
+code_only/proptest/networkx.algorithms.bipartite.basic.color/pbt_3.py F. [ 48%]
+.F.                                                                      [ 60%]
+code_only/proptest/networkx.algorithms.bipartite.basic.color/pbt_4.py F. [ 68%]
+.F.                                                                      [ 80%]
+code_only/proptest/networkx.algorithms.bipartite.basic.color/pbt_5.py F. [ 88%]
+FFF                                                                      [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/.venv/lib/python3.10/site-packages/hypothesis/strategies/_internal/strategies.py:1044: hypothesis.errors.InvalidArgument: Expected a SearchStrategy but got mapping['directed']=False (type=bool)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.bipartite.basic.color/pbt_2.py:7: TypeError: random_graph() missing 1 required positional argument: 'p'
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.bipartite.basic.color/pbt_2.py:29: TypeError: random_graph() missing 1 required positional argument: 'p'
+/home/james/projects/.venv/lib/python3.10/site-packages/hypothesis/strategies/_internal/core.py:1022: TypeError: random_graph() missing 1 required positional argument: 'p'
+/home/james/projects/.venv/lib/python3.10/site-packages/hypothesis/strategies/_internal/core.py:1022: TypeError: random_graph() missing 1 required positional argument: 'p'
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.bipartite.basic.color/pbt_4.py:8: TypeError: random_graph() missing 1 required positional argument: 'p'
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.bipartite.basic.color/pbt_4.py:31: TypeError: random_graph() missing 1 required positional argument: 'p'
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.bipartite.basic.color/pbt_5.py:6: AttributeError: module 'hypothesis.strategies' has no attribute 'graphs'
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.bipartite.basic.color/pbt_5.py:19: AttributeError: module 'hypothesis.strategies' has no attribute 'graphs'
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.bipartite.basic.color/pbt_5.py:26: AttributeError: module 'hypothesis.strategies' has no attribute 'graphs'
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.bipartite.basic.color/pbt_5.py:32: AttributeError: module 'hypothesis.strategies' has no attribute 'non_bipartite_graphs'
+=============================== warnings summary ===============================
+code_only/proptest/networkx.algorithms.bipartite.basic.color/pbt_3.py::test_not_bipartite_graph_raises_error_property
+  /usr/lib/python3.10/contextlib.py:142: HypothesisDeprecationWarning: Do not use the `random` module inside strategies; instead consider  `st.randoms()`, `st.sampled_from()`, etc.  Draw 1: from builds(gnp_random_graph, integers(min_value=1, max_value=100), floats(min_value=0, max_value=1))
+    next(self.gen)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED code_only/proptest/networkx.algorithms.bipartite.basic.color/pbt_1.py::test_non_bipartite_graph_error_property
+FAILED code_only/proptest/networkx.algorithms.bipartite.basic.color/pbt_2.py::test_color_distinct_colors_property
+FAILED code_only/proptest/networkx.algorithms.bipartite.basic.color/pbt_2.py::test_color_one_to_one_mapping_property
+FAILED code_only/proptest/networkx.algorithms.bipartite.basic.color/pbt_3.py::test_output_contains_two_colors_property
+FAILED code_only/proptest/networkx.algorithms.bipartite.basic.color/pbt_3.py::test_one_to_one_mapping_property
+FAILED code_only/proptest/networkx.algorithms.bipartite.basic.color/pbt_4.py::test_output_contains_two_colors_property
+FAILED code_only/proptest/networkx.algorithms.bipartite.basic.color/pbt_4.py::test_one_to_one_mapping_property
+FAILED code_only/proptest/networkx.algorithms.bipartite.basic.color/pbt_5.py::test_output_contains_exactly_two_colors_property
+FAILED code_only/proptest/networkx.algorithms.bipartite.basic.color/pbt_5.py::test_isolated_nodes_color_property
+FAILED code_only/proptest/networkx.algorithms.bipartite.basic.color/pbt_5.py::test_one_to_one_mapping_property
+FAILED code_only/proptest/networkx.algorithms.bipartite.basic.color/pbt_5.py::test_non_bipartite_graph_raises_error_property
+=================== 11 failed, 14 passed, 1 warning in 0.25s ===================

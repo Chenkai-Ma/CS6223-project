@@ -1,0 +1,35 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+code_only/proptest/datetime.timedelta.total_seconds/pbt_1.py FFFFF       [ 20%]
+code_only/proptest/datetime.timedelta.total_seconds/pbt_2.py FF...       [ 40%]
+code_only/proptest/datetime.timedelta.total_seconds/pbt_3.py F..FF       [ 60%]
+code_only/proptest/datetime.timedelta.total_seconds/pbt_4.py .....       [ 80%]
+code_only/proptest/datetime.timedelta.total_seconds/pbt_5.py .....       [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/datetime.timedelta.total_seconds/pbt_1.py:5: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/datetime.timedelta.total_seconds/pbt_1.py:10: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/datetime.timedelta.total_seconds/pbt_1.py:15: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/datetime.timedelta.total_seconds/pbt_1.py:22: OverflowError: days=-1000000000; must have magnitude <= 999999999
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/datetime.timedelta.total_seconds/pbt_1.py:29: OverflowError: days=1000000000; must have magnitude <= 999999999
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/datetime.timedelta.total_seconds/pbt_2.py:9: OverflowError: days=1000000000; must have magnitude <= 999999999
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/datetime.timedelta.total_seconds/pbt_2.py:16: OverflowError: days=1000000000; must have magnitude <= 999999999
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/datetime.timedelta.total_seconds/pbt_3.py:6: OverflowError: days=1000000000; must have magnitude <= 999999999
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/datetime.timedelta.total_seconds/pbt_3.py:21: OverflowError: days=-1000000000; must have magnitude <= 999999999
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/datetime.timedelta.total_seconds/pbt_3.py:26: OverflowError: days=1000000000; must have magnitude <= 999999999
+=========================== short test summary info ============================
+FAILED code_only/proptest/datetime.timedelta.total_seconds/pbt_1.py::test_total_seconds_non_negative_property
+FAILED code_only/proptest/datetime.timedelta.total_seconds/pbt_1.py::test_total_seconds_zero_input_property
+FAILED code_only/proptest/datetime.timedelta.total_seconds/pbt_1.py::test_total_seconds_proportionality_property
+FAILED code_only/proptest/datetime.timedelta.total_seconds/pbt_1.py::test_total_seconds_deterministic_property
+FAILED code_only/proptest/datetime.timedelta.total_seconds/pbt_1.py::test_total_seconds_correct_conversion_property
+FAILED code_only/proptest/datetime.timedelta.total_seconds/pbt_2.py::test_total_seconds_non_negative_property
+FAILED code_only/proptest/datetime.timedelta.total_seconds/pbt_2.py::test_total_seconds_zero_property
+FAILED code_only/proptest/datetime.timedelta.total_seconds/pbt_3.py::test_total_seconds_non_negative_property
+FAILED code_only/proptest/datetime.timedelta.total_seconds/pbt_3.py::test_total_seconds_deterministic_property
+FAILED code_only/proptest/datetime.timedelta.total_seconds/pbt_3.py::test_total_seconds_correct_conversion_property
+======================== 10 failed, 15 passed in 16.56s ========================

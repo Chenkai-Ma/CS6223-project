@@ -1,0 +1,51 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 20 items / 1 error
+
+doc_only/mutants/networkx.algorithms.dag.is_aperiodic/mutant_1.py FFFFF  [ 25%]
+doc_only/mutants/networkx.algorithms.dag.is_aperiodic/mutant_2.py .....  [ 50%]
+doc_only/mutants/networkx.algorithms.dag.is_aperiodic/mutant_3.py .....  [ 75%]
+doc_only/mutants/networkx.algorithms.dag.is_aperiodic/mutant_4.py .....  [100%]
+
+==================================== ERRORS ====================================
+_ ERROR collecting doc_only/mutants/networkx.algorithms.dag.is_aperiodic/mutant_5.py _
+../../.venv/lib/python3.10/site-packages/_pytest/python.py:493: in importtestmodule
+    mod = import_path(
+../../.venv/lib/python3.10/site-packages/_pytest/pathlib.py:582: in import_path
+    importlib.import_module(module_name)
+/usr/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1050: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1027: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1006: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:688: in _load_unlocked
+    ???
+../../.venv/lib/python3.10/site-packages/_pytest/assertion/rewrite.py:175: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+../../.venv/lib/python3.10/site-packages/_pytest/assertion/rewrite.py:355: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+/usr/lib/python3.10/ast.py:50: in parse
+    return compile(source, filename, mode, flags,
+E     File "/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.dag.is_aperiodic/mutant_5.py", line 18
+E       assert is_aperiodic(G1) == not is_aperiodic(G2)  # Violate property by negating the result
+E                                  ^^^
+E   SyntaxError: invalid syntax
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.dag.is_aperiodic/mutant_1.py:12: assert False is True
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.dag.is_aperiodic/mutant_1.py:20: assert False is None
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.dag.is_aperiodic/mutant_1.py:28: assert False is True
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.dag.is_aperiodic/mutant_1.py:36: AssertionError: assert False is 'False'
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.dag.is_aperiodic/mutant_1.py:44: assert False is not False
+=========================== short test summary info ============================
+FAILED doc_only/mutants/networkx.algorithms.dag.is_aperiodic/mutant_1.py::test_violation_of_networkx_algorithms_dag_is_aperiodic_1
+FAILED doc_only/mutants/networkx.algorithms.dag.is_aperiodic/mutant_1.py::test_violation_of_networkx_algorithms_dag_is_aperiodic_2
+FAILED doc_only/mutants/networkx.algorithms.dag.is_aperiodic/mutant_1.py::test_violation_of_networkx_algorithms_dag_is_aperiodic_3
+FAILED doc_only/mutants/networkx.algorithms.dag.is_aperiodic/mutant_1.py::test_violation_of_networkx_algorithms_dag_is_aperiodic_4
+FAILED doc_only/mutants/networkx.algorithms.dag.is_aperiodic/mutant_1.py::test_violation_of_networkx_algorithms_dag_is_aperiodic_5
+ERROR doc_only/mutants/networkx.algorithms.dag.is_aperiodic/mutant_5.py
+==================== 5 failed, 15 passed, 1 error in 1.23s =====================

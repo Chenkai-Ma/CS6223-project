@@ -1,0 +1,58 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+code_only/proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_1.py . [  4%]
+..FF                                                                     [ 20%]
+code_only/proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_2.py . [ 24%]
+....                                                                     [ 40%]
+code_only/proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_3.py . [ 44%]
+..FF                                                                     [ 60%]
+code_only/proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_4.py F [ 64%]
+FFFF                                                                     [ 80%]
+code_only/proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_5.py . [ 84%]
+F..F                                                                     [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_1.py:39: assert 2.0 == 1.5
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_1.py:48: assert {0: 0.0} == {0: 0.0, 1001: 0.0}
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_3.py:44: assert 2.0 == 1.5
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_3.py:56: AssertionError: assert {0: 0.0} == {0: 0.0, 'isolated_node': 0.0}
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_4.py:7: hypothesis.errors.InvalidArgument: Too many positional arguments for test_average_neighbor_degree_non_negative() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_4.py:16: hypothesis.errors.InvalidArgument: Too many positional arguments for test_average_neighbor_degree_zero_degree_nodes() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_4.py:25: hypothesis.errors.InvalidArgument: Too many positional arguments for test_average_neighbor_degree_correctness() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_4.py:36: hypothesis.errors.InvalidArgument: Too many positional arguments for test_average_neighbor_degree_symmetry() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_4.py:46: hypothesis.errors.InvalidArgument: Too many positional arguments for test_average_neighbor_degree_isolated_nodes_invariance() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_5.py:21: assert 1.0 == 0.0
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_5.py:59: KeyError: 0
+=============================== warnings summary ===============================
+code_only/proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_1.py::test_average_neighbor_degree_non_negative_property
+code_only/proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_1.py::test_average_neighbor_degree_correctness_property
+code_only/proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_1.py::test_average_neighbor_degree_symmetry_property
+code_only/proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_1.py::test_average_neighbor_degree_isolated_nodes_property
+  /usr/lib/python3.10/contextlib.py:142: HypothesisDeprecationWarning: Do not use the `random` module inside strategies; instead consider  `st.randoms()`, `st.sampled_from()`, etc.  Draw 1: from builds(gnp_random_graph, integers(min_value=1, max_value=100), floats(min_value=0, max_value=1))
+    next(self.gen)
+
+code_only/proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_3.py::test_average_neighbor_degree_non_negative_property
+code_only/proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_3.py::test_average_neighbor_degree_correctness_property
+code_only/proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_3.py::test_average_neighbor_degree_symmetric_property
+code_only/proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_3.py::test_average_neighbor_degree_isolated_nodes_property
+  /usr/lib/python3.10/contextlib.py:142: HypothesisDeprecationWarning: Do not use the `random` module inside strategies; instead consider  `st.randoms()`, `st.sampled_from()`, etc.  Draw 1: from builds(gnp_random_graph, n=integers(min_value=1, max_value=100), p=floats(min_value=0, max_value=1))
+    next(self.gen)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED code_only/proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_1.py::test_average_neighbor_degree_symmetry_property
+FAILED code_only/proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_1.py::test_average_neighbor_degree_isolated_nodes_property
+FAILED code_only/proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_3.py::test_average_neighbor_degree_symmetric_property
+FAILED code_only/proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_3.py::test_average_neighbor_degree_isolated_nodes_property
+FAILED code_only/proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_4.py::test_average_neighbor_degree_non_negative
+FAILED code_only/proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_4.py::test_average_neighbor_degree_zero_degree_nodes
+FAILED code_only/proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_4.py::test_average_neighbor_degree_correctness
+FAILED code_only/proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_4.py::test_average_neighbor_degree_symmetry
+FAILED code_only/proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_4.py::test_average_neighbor_degree_isolated_nodes_invariance
+FAILED code_only/proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_5.py::test_average_neighbor_degree_zero_degree_property
+FAILED code_only/proptest/networkx.algorithms.assortativity.average_neighbor_degree/pbt_5.py::test_average_neighbor_degree_invariance_property
+================== 11 failed, 14 passed, 8 warnings in 1.08s ===================

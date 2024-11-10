@@ -1,0 +1,39 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+code_only/proptest/decimal.Decimal.as_integer_ratio/pbt_1.py FFFFF       [ 20%]
+code_only/proptest/decimal.Decimal.as_integer_ratio/pbt_2.py ...F.       [ 40%]
+code_only/proptest/decimal.Decimal.as_integer_ratio/pbt_3.py .....       [ 60%]
+code_only/proptest/decimal.Decimal.as_integer_ratio/pbt_4.py FFFFF       [ 80%]
+code_only/proptest/decimal.Decimal.as_integer_ratio/pbt_5.py ...F.       [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.as_integer_ratio/pbt_1.py:6: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.as_integer_ratio/pbt_1.py:11: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.as_integer_ratio/pbt_1.py:18: ValueError: cannot convert NaN to integer ratio
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.as_integer_ratio/pbt_1.py:23: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.as_integer_ratio/pbt_1.py:29: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.as_integer_ratio/pbt_2.py:28: AssertionError: assert (Decimal('18940190569047283401943724201') / Decimal('50000000000000000000')) == Decimal('378803811.38094566803887448402')
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.as_integer_ratio/pbt_4.py:6: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.as_integer_ratio/pbt_4.py:11: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.as_integer_ratio/pbt_4.py:16: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.as_integer_ratio/pbt_4.py:21: exceptiongroup.ExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.as_integer_ratio/pbt_4.py:26: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.as_integer_ratio/pbt_5.py:26: AssertionError: assert (33 / 100) == Decimal('0.33')
+=========================== short test summary info ============================
+FAILED code_only/proptest/decimal.Decimal.as_integer_ratio/pbt_1.py::test_output_is_tuple_property
+FAILED code_only/proptest/decimal.Decimal.as_integer_ratio/pbt_1.py::test_numerator_is_integer_property
+FAILED code_only/proptest/decimal.Decimal.as_integer_ratio/pbt_1.py::test_denominator_is_positive_integer_property
+FAILED code_only/proptest/decimal.Decimal.as_integer_ratio/pbt_1.py::test_fraction_equals_original_decimal_property
+FAILED code_only/proptest/decimal.Decimal.as_integer_ratio/pbt_1.py::test_gcd_is_one_property
+FAILED code_only/proptest/decimal.Decimal.as_integer_ratio/pbt_2.py::test_as_integer_ratio_equivalence_property
+FAILED code_only/proptest/decimal.Decimal.as_integer_ratio/pbt_4.py::test_as_integer_ratio_output_is_tuple_property
+FAILED code_only/proptest/decimal.Decimal.as_integer_ratio/pbt_4.py::test_as_integer_ratio_numerator_is_integer_property
+FAILED code_only/proptest/decimal.Decimal.as_integer_ratio/pbt_4.py::test_as_integer_ratio_denominator_is_positive_property
+FAILED code_only/proptest/decimal.Decimal.as_integer_ratio/pbt_4.py::test_as_integer_ratio_fraction_equals_decimal_property
+FAILED code_only/proptest/decimal.Decimal.as_integer_ratio/pbt_4.py::test_as_integer_ratio_gcd_is_one_property
+FAILED code_only/proptest/decimal.Decimal.as_integer_ratio/pbt_5.py::test_as_integer_ratio_equivalence_property
+======================== 12 failed, 13 passed in 11.28s ========================

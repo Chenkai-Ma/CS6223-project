@@ -1,0 +1,70 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+doc_only/mutants/networkx.algorithms.bipartite.basic.color/mutant_1.py F [  4%]
+FFFF                                                                     [ 20%]
+doc_only/mutants/networkx.algorithms.bipartite.basic.color/mutant_2.py F [ 24%]
+FFFF                                                                     [ 40%]
+doc_only/mutants/networkx.algorithms.bipartite.basic.color/mutant_3.py F [ 44%]
+FFFF                                                                     [ 60%]
+doc_only/mutants/networkx.algorithms.bipartite.basic.color/mutant_4.py F [ 64%]
+FFFF                                                                     [ 80%]
+doc_only/mutants/networkx.algorithms.bipartite.basic.color/mutant_5.py F [ 84%]
+FFFF                                                                     [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.bipartite.basic.color/mutant_1.py:8: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_networkx_algorithms_bipartite_basic_color_1() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.bipartite.basic.color/mutant_1.py:17: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_networkx_algorithms_bipartite_basic_color_2() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.bipartite.basic.color/mutant_1.py:26: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_networkx_algorithms_bipartite_basic_color_3() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.bipartite.basic.color/mutant_1.py:35: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_networkx_algorithms_bipartite_basic_color_4() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.bipartite.basic.color/mutant_1.py:45: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_networkx_algorithms_bipartite_basic_color_5() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.bipartite.basic.color/mutant_2.py:8: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_networkx_algorithms_bipartite_basic_color_1() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.bipartite.basic.color/mutant_2.py:18: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_networkx_algorithms_bipartite_basic_color_2() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.bipartite.basic.color/mutant_2.py:28: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_networkx_algorithms_bipartite_basic_color_3() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.bipartite.basic.color/mutant_2.py:38: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_networkx_algorithms_bipartite_basic_color_4() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.bipartite.basic.color/mutant_2.py:48: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_networkx_algorithms_bipartite_basic_color_5() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.bipartite.basic.color/mutant_3.py:8: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_networkx_algorithms_bipartite_basic_color_1() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.bipartite.basic.color/mutant_3.py:19: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_networkx_algorithms_bipartite_basic_color_2() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.bipartite.basic.color/mutant_3.py:30: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_networkx_algorithms_bipartite_basic_color_3() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.bipartite.basic.color/mutant_3.py:41: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_networkx_algorithms_bipartite_basic_color_4() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.bipartite.basic.color/mutant_3.py:52: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_networkx_algorithms_bipartite_basic_color_5() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.bipartite.basic.color/mutant_4.py:8: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_networkx_algorithms_bipartite_basic_color_1() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.bipartite.basic.color/mutant_4.py:19: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_networkx_algorithms_bipartite_basic_color_2() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.bipartite.basic.color/mutant_4.py:30: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_networkx_algorithms_bipartite_basic_color_3() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.bipartite.basic.color/mutant_4.py:41: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_networkx_algorithms_bipartite_basic_color_4() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.bipartite.basic.color/mutant_4.py:52: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_networkx_algorithms_bipartite_basic_color_5() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.bipartite.basic.color/mutant_5.py:8: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_networkx_algorithms_bipartite_basic_color_1() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.bipartite.basic.color/mutant_5.py:15: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_networkx_algorithms_bipartite_basic_color_2() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.bipartite.basic.color/mutant_5.py:22: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_networkx_algorithms_bipartite_basic_color_3() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.bipartite.basic.color/mutant_5.py:29: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_networkx_algorithms_bipartite_basic_color_4() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants/networkx.algorithms.bipartite.basic.color/mutant_5.py:36: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_networkx_algorithms_bipartite_basic_color_5() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+=========================== short test summary info ============================
+FAILED doc_only/mutants/networkx.algorithms.bipartite.basic.color/mutant_1.py::test_violation_of_networkx_algorithms_bipartite_basic_color_1
+FAILED doc_only/mutants/networkx.algorithms.bipartite.basic.color/mutant_1.py::test_violation_of_networkx_algorithms_bipartite_basic_color_2
+FAILED doc_only/mutants/networkx.algorithms.bipartite.basic.color/mutant_1.py::test_violation_of_networkx_algorithms_bipartite_basic_color_3
+FAILED doc_only/mutants/networkx.algorithms.bipartite.basic.color/mutant_1.py::test_violation_of_networkx_algorithms_bipartite_basic_color_4
+FAILED doc_only/mutants/networkx.algorithms.bipartite.basic.color/mutant_1.py::test_violation_of_networkx_algorithms_bipartite_basic_color_5
+FAILED doc_only/mutants/networkx.algorithms.bipartite.basic.color/mutant_2.py::test_violation_of_networkx_algorithms_bipartite_basic_color_1
+FAILED doc_only/mutants/networkx.algorithms.bipartite.basic.color/mutant_2.py::test_violation_of_networkx_algorithms_bipartite_basic_color_2
+FAILED doc_only/mutants/networkx.algorithms.bipartite.basic.color/mutant_2.py::test_violation_of_networkx_algorithms_bipartite_basic_color_3
+FAILED doc_only/mutants/networkx.algorithms.bipartite.basic.color/mutant_2.py::test_violation_of_networkx_algorithms_bipartite_basic_color_4
+FAILED doc_only/mutants/networkx.algorithms.bipartite.basic.color/mutant_2.py::test_violation_of_networkx_algorithms_bipartite_basic_color_5
+FAILED doc_only/mutants/networkx.algorithms.bipartite.basic.color/mutant_3.py::test_violation_of_networkx_algorithms_bipartite_basic_color_1
+FAILED doc_only/mutants/networkx.algorithms.bipartite.basic.color/mutant_3.py::test_violation_of_networkx_algorithms_bipartite_basic_color_2
+FAILED doc_only/mutants/networkx.algorithms.bipartite.basic.color/mutant_3.py::test_violation_of_networkx_algorithms_bipartite_basic_color_3
+FAILED doc_only/mutants/networkx.algorithms.bipartite.basic.color/mutant_3.py::test_violation_of_networkx_algorithms_bipartite_basic_color_4
+FAILED doc_only/mutants/networkx.algorithms.bipartite.basic.color/mutant_3.py::test_violation_of_networkx_algorithms_bipartite_basic_color_5
+FAILED doc_only/mutants/networkx.algorithms.bipartite.basic.color/mutant_4.py::test_violation_of_networkx_algorithms_bipartite_basic_color_1
+FAILED doc_only/mutants/networkx.algorithms.bipartite.basic.color/mutant_4.py::test_violation_of_networkx_algorithms_bipartite_basic_color_2
+FAILED doc_only/mutants/networkx.algorithms.bipartite.basic.color/mutant_4.py::test_violation_of_networkx_algorithms_bipartite_basic_color_3
+FAILED doc_only/mutants/networkx.algorithms.bipartite.basic.color/mutant_4.py::test_violation_of_networkx_algorithms_bipartite_basic_color_4
+FAILED doc_only/mutants/networkx.algorithms.bipartite.basic.color/mutant_4.py::test_violation_of_networkx_algorithms_bipartite_basic_color_5
+FAILED doc_only/mutants/networkx.algorithms.bipartite.basic.color/mutant_5.py::test_violation_of_networkx_algorithms_bipartite_basic_color_1
+FAILED doc_only/mutants/networkx.algorithms.bipartite.basic.color/mutant_5.py::test_violation_of_networkx_algorithms_bipartite_basic_color_2
+FAILED doc_only/mutants/networkx.algorithms.bipartite.basic.color/mutant_5.py::test_violation_of_networkx_algorithms_bipartite_basic_color_3
+FAILED doc_only/mutants/networkx.algorithms.bipartite.basic.color/mutant_5.py::test_violation_of_networkx_algorithms_bipartite_basic_color_4
+FAILED doc_only/mutants/networkx.algorithms.bipartite.basic.color/mutant_5.py::test_violation_of_networkx_algorithms_bipartite_basic_color_5
+============================== 25 failed in 0.12s ==============================

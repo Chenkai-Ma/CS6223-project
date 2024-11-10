@@ -1,0 +1,63 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+code_only/proptest/statistics.pstdev/pbt_1.py FF.FF                      [ 20%]
+code_only/proptest/statistics.pstdev/pbt_2.py ....F                      [ 40%]
+code_only/proptest/statistics.pstdev/pbt_3.py FF.FF                      [ 60%]
+code_only/proptest/statistics.pstdev/pbt_4.py F.F.F                      [ 80%]
+code_only/proptest/statistics.pstdev/pbt_5.py FFFFF                      [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.pstdev/pbt_1.py:6: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.pstdev/pbt_1.py:12: AttributeError: module 'hypothesis.strategies' has no attribute 'raises'
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.pstdev/pbt_1.py:21: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.pstdev/pbt_1.py:27: exceptiongroup.ExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.pstdev/pbt_2.py:34: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.pstdev/pbt_3.py:5: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.pstdev/pbt_3.py:11: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/usr/lib/python3.10/numbers.py:291: OverflowError: integer division result too large for a float
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.pstdev/pbt_3.py:35: exceptiongroup.ExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)
+/usr/lib/python3.10/numbers.py:291: OverflowError: integer division result too large for a float
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.pstdev/pbt_4.py:20: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.pstdev/pbt_4.py:31: exceptiongroup.ExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.pstdev/pbt_5.py:6: exceptiongroup.ExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.pstdev/pbt_5.py:13: NameError: name 'pytest' is not defined
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.pstdev/pbt_5.py:17: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.pstdev/pbt_5.py:23: exceptiongroup.ExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/statistics.pstdev/pbt_5.py:29: exceptiongroup.ExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)
+=============================== warnings summary ===============================
+code_only/proptest/statistics.pstdev/pbt_5.py::test_statistics_pstdev_variance_relationship_property
+  /home/james/projects/.venv/lib/python3.10/site-packages/numpy/core/_methods.py:236: RuntimeWarning: invalid value encountered in subtract
+    x = asanyarray(arr - arrmean)
+
+code_only/proptest/statistics.pstdev/pbt_5.py::test_statistics_pstdev_variance_relationship_property
+  /home/james/projects/.venv/lib/python3.10/site-packages/numpy/core/_methods.py:239: RuntimeWarning: overflow encountered in multiply
+    x = um.multiply(x, x, out=x)
+
+code_only/proptest/statistics.pstdev/pbt_5.py::test_statistics_pstdev_variance_relationship_property
+  /home/james/projects/.venv/lib/python3.10/site-packages/numpy/core/_methods.py:250: RuntimeWarning: overflow encountered in reduce
+    ret = umr_sum(x, axis, dtype, out, keepdims=keepdims, where=where)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED code_only/proptest/statistics.pstdev/pbt_1.py::test_statistics_pstdev_non_negative_output
+FAILED code_only/proptest/statistics.pstdev/pbt_1.py::test_statistics_pstdev_empty_data_raises_error
+FAILED code_only/proptest/statistics.pstdev/pbt_1.py::test_statistics_pstdev_order_independence
+FAILED code_only/proptest/statistics.pstdev/pbt_1.py::test_statistics_pstdev_equivalence_to_sqrt_variance
+FAILED code_only/proptest/statistics.pstdev/pbt_2.py::test_statistics_pstdev_variance_relationship_property
+FAILED code_only/proptest/statistics.pstdev/pbt_3.py::test_statistics_pstdev_non_negative_property
+FAILED code_only/proptest/statistics.pstdev/pbt_3.py::test_statistics_pstdev_empty_data_property
+FAILED code_only/proptest/statistics.pstdev/pbt_3.py::test_statistics_pstdev_order_independence_property
+FAILED code_only/proptest/statistics.pstdev/pbt_3.py::test_statistics_pstdev_variance_relationship_property
+FAILED code_only/proptest/statistics.pstdev/pbt_4.py::test_statistics_pstdev_non_negative_property
+FAILED code_only/proptest/statistics.pstdev/pbt_4.py::test_statistics_pstdev_single_value_property
+FAILED code_only/proptest/statistics.pstdev/pbt_4.py::test_statistics_pstdev_variance_relationship_property
+FAILED code_only/proptest/statistics.pstdev/pbt_5.py::test_statistics_pstdev_non_negative_property
+FAILED code_only/proptest/statistics.pstdev/pbt_5.py::test_statistics_pstdev_requires_data_property
+FAILED code_only/proptest/statistics.pstdev/pbt_5.py::test_statistics_pstdev_single_value_property
+FAILED code_only/proptest/statistics.pstdev/pbt_5.py::test_statistics_pstdev_order_invariance_property
+FAILED code_only/proptest/statistics.pstdev/pbt_5.py::test_statistics_pstdev_variance_relationship_property
+================== 17 failed, 8 passed, 3 warnings in 13.76s ===================

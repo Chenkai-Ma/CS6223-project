@@ -1,0 +1,77 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 20 items / 1 error
+
+code_only/proptest/decimal.Decimal.shift/pbt_2.py FFFFF                  [ 25%]
+code_only/proptest/decimal.Decimal.shift/pbt_3.py FFF.F                  [ 50%]
+code_only/proptest/decimal.Decimal.shift/pbt_4.py FFFFF                  [ 75%]
+code_only/proptest/decimal.Decimal.shift/pbt_5.py FFFFF                  [100%]
+
+==================================== ERRORS ====================================
+______ ERROR collecting code_only/proptest/decimal.Decimal.shift/pbt_1.py ______
+../../.venv/lib/python3.10/site-packages/_pytest/python.py:493: in importtestmodule
+    mod = import_path(
+../../.venv/lib/python3.10/site-packages/_pytest/pathlib.py:582: in import_path
+    importlib.import_module(module_name)
+/usr/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1050: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1027: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1006: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:688: in _load_unlocked
+    ???
+../../.venv/lib/python3.10/site-packages/_pytest/assertion/rewrite.py:175: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+../../.venv/lib/python3.10/site-packages/_pytest/assertion/rewrite.py:357: in _rewrite_test
+    co = compile(tree, strfn, "exec", dont_inherit=True)
+E     File "/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.shift/pbt_1.py", line 10
+E       def test_output_equals_input_when_shifted_by_zero_property(self, self):
+E                                                                        ^^^^
+E   SyntaxError: duplicate argument 'self' in function definition
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.shift/pbt_2.py:6: decimal.InvalidOperation: [<class 'decimal.InvalidOperation'>]
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.shift/pbt_2.py:12: AssertionError: assert Decimal('NaN') == Decimal('NaN')
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.shift/pbt_2.py:17: AttributeError: 'decimal.Decimal' object has no attribute '_exp'. Did you mean: 'exp'?
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.shift/pbt_2.py:22: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.shift/pbt_2.py:31: AttributeError: 'decimal.Decimal' object has no attribute '_isinfinity'. Did you mean: 'is_infinite'?
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.shift/pbt_3.py:9: decimal.InvalidOperation: [<class 'decimal.InvalidOperation'>]
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.shift/pbt_3.py:16: AssertionError: assert Decimal('NaN') == Decimal('NaN')
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.shift/pbt_3.py:19: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.shift/pbt_3.py:33: decimal.InvalidOperation: [<class 'decimal.InvalidOperation'>]
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.shift/pbt_4.py:6: decimal.InvalidOperation: [<class 'decimal.InvalidOperation'>]
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.shift/pbt_4.py:11: hypothesis.errors.InvalidArgument: Too many positional arguments for test_shifting_by_zero_property() were passed to @given - expected at most 1 arguments, but got 2 (decimals(), just(0))
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.shift/pbt_4.py:16: AttributeError: 'decimal.Decimal' object has no attribute '_exp'. Did you mean: 'exp'?
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.shift/pbt_4.py:24: decimal.InvalidOperation: [<class 'decimal.InvalidOperation'>]
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.shift/pbt_4.py:29: AttributeError: 'decimal.Decimal' object has no attribute '_isinfinity'. Did you mean: 'is_infinite'?
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.shift/pbt_5.py:7: decimal.InvalidOperation: [<class 'decimal.InvalidOperation'>]
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.shift/pbt_5.py:11: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.shift/pbt_5.py:17: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.shift/pbt_5.py:28: decimal.InvalidOperation: [<class 'decimal.InvalidOperation'>]
+/home/james/projects/cs6223/our_proptest_data/code_only/proptest/decimal.Decimal.shift/pbt_5.py:36: decimal.InvalidOperation: [<class 'decimal.InvalidOperation'>]
+=========================== short test summary info ============================
+FAILED code_only/proptest/decimal.Decimal.shift/pbt_2.py::test_output_is_valid_Decimal_property
+FAILED code_only/proptest/decimal.Decimal.shift/pbt_2.py::test_shifting_by_zero_property
+FAILED code_only/proptest/decimal.Decimal.shift/pbt_2.py::test_exponent_adjustment_property
+FAILED code_only/proptest/decimal.Decimal.shift/pbt_2.py::test_significant_digits_within_precision_property
+FAILED code_only/proptest/decimal.Decimal.shift/pbt_2.py::test_infinity_preservation_property
+FAILED code_only/proptest/decimal.Decimal.shift/pbt_3.py::test_output_is_valid_decimal_property
+FAILED code_only/proptest/decimal.Decimal.shift/pbt_3.py::test_shifting_by_zero_property
+FAILED code_only/proptest/decimal.Decimal.shift/pbt_3.py::test_exponent_adjustment_property
+FAILED code_only/proptest/decimal.Decimal.shift/pbt_3.py::test_infinity_preservation_property
+FAILED code_only/proptest/decimal.Decimal.shift/pbt_4.py::test_output_is_valid_decimal_property
+FAILED code_only/proptest/decimal.Decimal.shift/pbt_4.py::test_shifting_by_zero_property
+FAILED code_only/proptest/decimal.Decimal.shift/pbt_4.py::test_exponent_adjustment_property
+FAILED code_only/proptest/decimal.Decimal.shift/pbt_4.py::test_precision_limit_property
+FAILED code_only/proptest/decimal.Decimal.shift/pbt_4.py::test_infinity_preserved_property
+FAILED code_only/proptest/decimal.Decimal.shift/pbt_5.py::test_output_is_valid_decimal_property
+FAILED code_only/proptest/decimal.Decimal.shift/pbt_5.py::test_shifting_by_zero_returns_same_value_property
+FAILED code_only/proptest/decimal.Decimal.shift/pbt_5.py::test_exponent_adjustment_property
+FAILED code_only/proptest/decimal.Decimal.shift/pbt_5.py::test_significant_digits_within_precision_property
+FAILED code_only/proptest/decimal.Decimal.shift/pbt_5.py::test_infinity_preserved_property
+ERROR code_only/proptest/decimal.Decimal.shift/pbt_1.py
+==================== 19 failed, 1 passed, 1 error in 18.12s ====================
