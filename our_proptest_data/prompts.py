@@ -145,7 +145,52 @@ def test_{function_name_2}_property():
 """
 
 MUTANT_SYSTEM_PROMPT_CODE = """
-"""
+You are a world class Python programmer. You will be given source code and a property for a function. A Python property-based test function for testing the given property will also be provided.
+You need to write five different test functions that violate the given property. Each new test function should be based on the given test function, i.e. slightly modify the given test function to violate the property. Only modify the original output of the test function to violate the property for all inputs.
+Do not change the parameters of the given test function, if any. Do not change the input for the given test function. Do not modify the assertation statement in the given test function.
+""".strip()
 
 MUTANTS_TEST_FUNCTION_PROMPT_CODE = """"
-"""
+You will be given source code, a property, and a property-based test function for a function. You need to write five different test functions that violate the given property.
+Please review the following source code for "{function_name}".
+--------------------------- Source Code ---------------------------
+{api_code}
+-------------------------------------------------------------------------
+
+Here is a property of the {function_name} that you need to violate for the test function.
+--------------------------- Property ---------------------------
+{prop}
+-------------------------------------------------------------------------
+
+Here is the property-based test function for the above property.
+--------------------------- Property-based Test Function ---------------------------
+{pbt}
+-------------------------------------------------------------------------
+
+Here are the details of the task:
+Write five different test functions that violate the given property. Each function should sligtly modify the given test function to violate the property for all inputs. Try to only change the output of the test function to violate the property.
+Keep the parameters of the given test function, if any, unchanged. Do *not* modify the assertation statement in the given test function. Strictly follow the output format below.
+
+--------------------------- Output Format ---------------------------
+```python
+# property to violate: {prop}
+from hypothesis import given, strategies as st
+import [module_name]
+
+@given(st.data())
+def test_violation_of_{function_name_2}_1():
+  <...>
+
+@given(st.data())
+def test_violation_of_{function_name_2}_2():
+  <...>
+
+(...)
+```
+""".strip()
+
+
+
+# ================================================ DOC AND CODE ================================================
+# start of 'DOC AND CODE' section -->
+

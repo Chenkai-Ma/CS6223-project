@@ -128,7 +128,6 @@ if __name__ == '__main__':
     parser.add_argument('--input_path', type=str, default='../our_proptest_data/doc_only/sound_valid')
     parser.add_argument('--output_dir', type=str, default='../our_proptest_data/doc_only/output_jsonl/mutants')
     parser.add_argument('--debug', action='store_true')
-    parser.add_argument('--mode', type=str, default='properties', help='properties, pbt or mutants')
     parser.add_argument('--model', type=str, default='gpt-4o-mini')
     parser.add_argument('--temperature', type=float, default=0.5)
     parser.add_argument('--seed', type=int, default=0)
