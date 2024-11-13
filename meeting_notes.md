@@ -35,7 +35,7 @@ For each API method:
 - [google doc](https://docs.google.com/spreadsheets/d/1ho1ij9dSY98MuzCt7yKXHBuz76prcS5Z1I_kI3RQznE/edit?gid=2025599766#gid=2025599766)
 - Doc only 的property coverage已完成：和原论文相比, property coverage高很多（说明我们的方法确实有作用？）。
 - Code only的sound & valid已完成。表现不如doc only，结果和原论文接近。
-- Code only的test function的jsonl文件都生成了，保存在`/our_proptest_data/sound_valid`。可以进行后续的mutant的生成了。（感觉结果不一定比doc only差）。
+- Code only的test function的jsonl文件都生成了，保存在`/our_proptest_data/sound_valid`。可以进行后续的mutant的生成了，根据结果再决定是否需要其他实验。（感觉结果不一定比doc only差）。
 
 ## Feedback 
 
