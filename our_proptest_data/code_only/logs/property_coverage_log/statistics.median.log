@@ -1,0 +1,61 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+code_only/mutants/statistics.median/mutant_1.py F.FFF                    [ 20%]
+code_only/mutants/statistics.median/mutant_2.py FFFFF                    [ 40%]
+code_only/mutants/statistics.median/mutant_3.py .FFFF                    [ 60%]
+code_only/mutants/statistics.median/mutant_4.py FFFFF                    [ 80%]
+code_only/mutants/statistics.median/mutant_5.py FFFFF                    [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/statistics.median/mutant_1.py:6: hypothesis.errors.FailedHealthCheck: Tests run under @given should return None, but test_violation_of_statistics_median_1 returned 0 instead.
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/statistics.median/mutant_1.py:18: hypothesis.errors.FailedHealthCheck: Tests run under @given should return None, but test_violation_of_statistics_median_3 returned 'No median' instead.
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/statistics.median/mutant_1.py:24: hypothesis.errors.FailedHealthCheck: Tests run under @given should return None, but test_violation_of_statistics_median_4 returned True instead.
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/statistics.median/mutant_1.py:30: hypothesis.errors.FailedHealthCheck: Tests run under @given should return None, but test_violation_of_statistics_median_5 returned [] instead.
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/statistics.median/mutant_2.py:7: assert 0 == (0 + 1)
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/statistics.median/mutant_2.py:11: assert 0 == (0 - 1)
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/statistics.median/mutant_2.py:15: assert 1 == 0
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/statistics.median/mutant_2.py:19: assert 0 == 100
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/statistics.median/mutant_2.py:23: AssertionError: assert 0 == nan
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/statistics.median/mutant_3.py:17: assert 0 == 1
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/statistics.median/mutant_3.py:24: assert 9007199254740993 == ((9007199254740993 + 9007199254740993) / 2)
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/statistics.median/mutant_3.py:27: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/statistics.median/mutant_3.py:38: assert 0 == 999
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/statistics.median/mutant_4.py:11: assert 0.0 == 1.0
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/statistics.median/mutant_4.py:19: assert 0.0 == -1.0
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/statistics.median/mutant_4.py:27: assert 0.5 == 1.0
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/statistics.median/mutant_4.py:35: assert 0.0 == 5.0
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/statistics.median/mutant_4.py:43: assert 0.5 == 0.25
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/statistics.median/mutant_5.py:8: NameError: name 'median' is not defined
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/statistics.median/mutant_5.py:13: NameError: name 'median' is not defined
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/statistics.median/mutant_5.py:18: NameError: name 'median' is not defined
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/statistics.median/mutant_5.py:23: NameError: name 'median' is not defined
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/statistics.median/mutant_5.py:28: NameError: name 'median' is not defined
+=========================== short test summary info ============================
+FAILED code_only/mutants/statistics.median/mutant_1.py::test_violation_of_statistics_median_1
+FAILED code_only/mutants/statistics.median/mutant_1.py::test_violation_of_statistics_median_3
+FAILED code_only/mutants/statistics.median/mutant_1.py::test_violation_of_statistics_median_4
+FAILED code_only/mutants/statistics.median/mutant_1.py::test_violation_of_statistics_median_5
+FAILED code_only/mutants/statistics.median/mutant_2.py::test_violation_of_statistics_median_1
+FAILED code_only/mutants/statistics.median/mutant_2.py::test_violation_of_statistics_median_2
+FAILED code_only/mutants/statistics.median/mutant_2.py::test_violation_of_statistics_median_3
+FAILED code_only/mutants/statistics.median/mutant_2.py::test_violation_of_statistics_median_4
+FAILED code_only/mutants/statistics.median/mutant_2.py::test_violation_of_statistics_median_5
+FAILED code_only/mutants/statistics.median/mutant_3.py::test_violation_of_statistics_median_2
+FAILED code_only/mutants/statistics.median/mutant_3.py::test_violation_of_statistics_median_3
+FAILED code_only/mutants/statistics.median/mutant_3.py::test_violation_of_statistics_median_4
+FAILED code_only/mutants/statistics.median/mutant_3.py::test_violation_of_statistics_median_5
+FAILED code_only/mutants/statistics.median/mutant_4.py::test_violation_of_statistics_median_1
+FAILED code_only/mutants/statistics.median/mutant_4.py::test_violation_of_statistics_median_2
+FAILED code_only/mutants/statistics.median/mutant_4.py::test_violation_of_statistics_median_3
+FAILED code_only/mutants/statistics.median/mutant_4.py::test_violation_of_statistics_median_4
+FAILED code_only/mutants/statistics.median/mutant_4.py::test_violation_of_statistics_median_5
+FAILED code_only/mutants/statistics.median/mutant_5.py::test_violation_of_statistics_median_1
+FAILED code_only/mutants/statistics.median/mutant_5.py::test_violation_of_statistics_median_2
+FAILED code_only/mutants/statistics.median/mutant_5.py::test_violation_of_statistics_median_3
+FAILED code_only/mutants/statistics.median/mutant_5.py::test_violation_of_statistics_median_4
+FAILED code_only/mutants/statistics.median/mutant_5.py::test_violation_of_statistics_median_5
+========================= 23 failed, 2 passed in 7.02s =========================

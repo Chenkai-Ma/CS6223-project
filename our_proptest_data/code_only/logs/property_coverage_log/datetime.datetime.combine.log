@@ -1,0 +1,54 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 20 items
+
+code_only/mutants/datetime.datetime.combine/mutant_1.py FFFFF            [ 25%]
+code_only/mutants/datetime.datetime.combine/mutant_2.py FFFFF            [ 50%]
+code_only/mutants/datetime.datetime.combine/mutant_3.py FFFFF            [ 75%]
+code_only/mutants/datetime.datetime.combine/mutant_4.py FFFFF            [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/datetime.datetime.combine/mutant_1.py:8: assert (2000 == 2000 and 1 == 1 and 2 == 1)
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/datetime.datetime.combine/mutant_1.py:13: assert (1999 == 2000)
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/datetime.datetime.combine/mutant_1.py:19: assert (2001 == 2000)
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/datetime.datetime.combine/mutant_1.py:22: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/datetime.datetime.combine/mutant_1.py:31: assert (2000 == 2000 and 1 == 1 and 2 == 1)
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/datetime.datetime.combine/mutant_2.py:7: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_datetime_datetime_combine_1() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/datetime.datetime.combine/mutant_2.py:19: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_datetime_datetime_combine_2() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/datetime.datetime.combine/mutant_2.py:31: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_datetime_datetime_combine_3() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/datetime.datetime.combine/mutant_2.py:43: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_datetime_datetime_combine_4() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/datetime.datetime.combine/mutant_2.py:55: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_datetime_datetime_combine_5() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/datetime.datetime.combine/mutant_3.py:14: AssertionError: Expected TypeError for invalid date
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/datetime.datetime.combine/mutant_3.py:25: AssertionError: Expected TypeError for invalid date
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/datetime.datetime.combine/mutant_3.py:36: AssertionError: Expected TypeError for invalid date
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/datetime.datetime.combine/mutant_3.py:47: AssertionError: Expected TypeError for invalid date
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/datetime.datetime.combine/mutant_3.py:58: AssertionError: Expected TypeError for invalid date
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/datetime.datetime.combine/mutant_4.py:14: AssertionError: Expected TypeError for invalid time
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/datetime.datetime.combine/mutant_4.py:25: AssertionError: Expected TypeError for invalid time
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/datetime.datetime.combine/mutant_4.py:36: AssertionError: Expected TypeError for invalid time
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/datetime.datetime.combine/mutant_4.py:47: AssertionError: Expected TypeError for invalid time
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/datetime.datetime.combine/mutant_4.py:58: AssertionError: Expected TypeError for invalid time
+=========================== short test summary info ============================
+FAILED code_only/mutants/datetime.datetime.combine/mutant_1.py::test_violation_of_datetime_datetime_combine_1
+FAILED code_only/mutants/datetime.datetime.combine/mutant_1.py::test_violation_of_datetime_datetime_combine_2
+FAILED code_only/mutants/datetime.datetime.combine/mutant_1.py::test_violation_of_datetime_datetime_combine_3
+FAILED code_only/mutants/datetime.datetime.combine/mutant_1.py::test_violation_of_datetime_datetime_combine_4
+FAILED code_only/mutants/datetime.datetime.combine/mutant_1.py::test_violation_of_datetime_datetime_combine_5
+FAILED code_only/mutants/datetime.datetime.combine/mutant_2.py::test_violation_of_datetime_datetime_combine_1
+FAILED code_only/mutants/datetime.datetime.combine/mutant_2.py::test_violation_of_datetime_datetime_combine_2
+FAILED code_only/mutants/datetime.datetime.combine/mutant_2.py::test_violation_of_datetime_datetime_combine_3
+FAILED code_only/mutants/datetime.datetime.combine/mutant_2.py::test_violation_of_datetime_datetime_combine_4
+FAILED code_only/mutants/datetime.datetime.combine/mutant_2.py::test_violation_of_datetime_datetime_combine_5
+FAILED code_only/mutants/datetime.datetime.combine/mutant_3.py::test_violation_of_datetime_datetime_combine_1
+FAILED code_only/mutants/datetime.datetime.combine/mutant_3.py::test_violation_of_datetime_datetime_combine_2
+FAILED code_only/mutants/datetime.datetime.combine/mutant_3.py::test_violation_of_datetime_datetime_combine_3
+FAILED code_only/mutants/datetime.datetime.combine/mutant_3.py::test_violation_of_datetime_datetime_combine_4
+FAILED code_only/mutants/datetime.datetime.combine/mutant_3.py::test_violation_of_datetime_datetime_combine_5
+FAILED code_only/mutants/datetime.datetime.combine/mutant_4.py::test_violation_of_datetime_datetime_combine_1
+FAILED code_only/mutants/datetime.datetime.combine/mutant_4.py::test_violation_of_datetime_datetime_combine_2
+FAILED code_only/mutants/datetime.datetime.combine/mutant_4.py::test_violation_of_datetime_datetime_combine_3
+FAILED code_only/mutants/datetime.datetime.combine/mutant_4.py::test_violation_of_datetime_datetime_combine_4
+FAILED code_only/mutants/datetime.datetime.combine/mutant_4.py::test_violation_of_datetime_datetime_combine_5
+============================== 20 failed in 7.33s ==============================

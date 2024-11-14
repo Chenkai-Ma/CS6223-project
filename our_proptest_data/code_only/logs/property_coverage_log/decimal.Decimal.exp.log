@@ -1,0 +1,48 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 20 items
+
+code_only/mutants/decimal.Decimal.exp/mutant_1.py FFF.F                  [ 25%]
+code_only/mutants/decimal.Decimal.exp/mutant_2.py F.FF.                  [ 50%]
+code_only/mutants/decimal.Decimal.exp/mutant_3.py FFFFF                  [ 75%]
+code_only/mutants/decimal.Decimal.exp/mutant_4.py FFFFF                  [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/decimal.Decimal.exp/mutant_1.py:9: AssertionError: assert Decimal('NaN') == Decimal('0')
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/decimal.Decimal.exp/mutant_1.py:15: AssertionError: assert Decimal('NaN') == Decimal('1')
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/decimal.Decimal.exp/mutant_1.py:21: AssertionError: assert Decimal('NaN') == Decimal('2.718281828459045')
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/decimal.Decimal.exp/mutant_1.py:33: AssertionError: assert Decimal('NaN') == Decimal('Infinity')
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/decimal.Decimal.exp/mutant_2.py:9: AssertionError: assert Decimal('0') == Decimal('1')
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/decimal.Decimal.exp/mutant_2.py:21: AssertionError: assert Decimal('0') == Decimal('NaN')
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/decimal.Decimal.exp/mutant_2.py:27: AssertionError: assert Decimal('0') == Decimal('Infinity')
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/decimal.Decimal.exp/mutant_3.py:7: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_decimal_Decimal_exp_1() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/decimal.Decimal.exp/mutant_3.py:12: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_decimal_Decimal_exp_2() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/decimal.Decimal.exp/mutant_3.py:17: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_decimal_Decimal_exp_3() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/decimal.Decimal.exp/mutant_3.py:22: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_decimal_Decimal_exp_4() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/decimal.Decimal.exp/mutant_3.py:27: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_decimal_Decimal_exp_5() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/decimal.Decimal.exp/mutant_4.py:9: AssertionError: assert Decimal('Infinity') == Decimal('0')
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/decimal.Decimal.exp/mutant_4.py:15: AssertionError: assert Decimal('Infinity') == Decimal('-1')
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/decimal.Decimal.exp/mutant_4.py:21: AssertionError: assert Decimal('Infinity') == Decimal('NaN')
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/decimal.Decimal.exp/mutant_4.py:27: AssertionError: assert Decimal('Infinity') == Decimal('1')
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/decimal.Decimal.exp/mutant_4.py:33: AssertionError: assert Decimal('Infinity') == Decimal('2')
+=========================== short test summary info ============================
+FAILED code_only/mutants/decimal.Decimal.exp/mutant_1.py::test_violation_of_decimal_Decimal_exp_1
+FAILED code_only/mutants/decimal.Decimal.exp/mutant_1.py::test_violation_of_decimal_Decimal_exp_2
+FAILED code_only/mutants/decimal.Decimal.exp/mutant_1.py::test_violation_of_decimal_Decimal_exp_3
+FAILED code_only/mutants/decimal.Decimal.exp/mutant_1.py::test_violation_of_decimal_Decimal_exp_5
+FAILED code_only/mutants/decimal.Decimal.exp/mutant_2.py::test_violation_of_decimal_Decimal_exp_1
+FAILED code_only/mutants/decimal.Decimal.exp/mutant_2.py::test_violation_of_decimal_Decimal_exp_3
+FAILED code_only/mutants/decimal.Decimal.exp/mutant_2.py::test_violation_of_decimal_Decimal_exp_4
+FAILED code_only/mutants/decimal.Decimal.exp/mutant_3.py::test_violation_of_decimal_Decimal_exp_1
+FAILED code_only/mutants/decimal.Decimal.exp/mutant_3.py::test_violation_of_decimal_Decimal_exp_2
+FAILED code_only/mutants/decimal.Decimal.exp/mutant_3.py::test_violation_of_decimal_Decimal_exp_3
+FAILED code_only/mutants/decimal.Decimal.exp/mutant_3.py::test_violation_of_decimal_Decimal_exp_4
+FAILED code_only/mutants/decimal.Decimal.exp/mutant_3.py::test_violation_of_decimal_Decimal_exp_5
+FAILED code_only/mutants/decimal.Decimal.exp/mutant_4.py::test_violation_of_decimal_Decimal_exp_1
+FAILED code_only/mutants/decimal.Decimal.exp/mutant_4.py::test_violation_of_decimal_Decimal_exp_2
+FAILED code_only/mutants/decimal.Decimal.exp/mutant_4.py::test_violation_of_decimal_Decimal_exp_3
+FAILED code_only/mutants/decimal.Decimal.exp/mutant_4.py::test_violation_of_decimal_Decimal_exp_4
+FAILED code_only/mutants/decimal.Decimal.exp/mutant_4.py::test_violation_of_decimal_Decimal_exp_5
+========================= 17 failed, 3 passed in 0.33s =========================

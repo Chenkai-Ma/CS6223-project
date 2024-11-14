@@ -1,0 +1,22 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 10 items
+
+code_only/mutants/statistics.correlation/mutant_1.py .....               [ 50%]
+code_only/mutants/statistics.correlation/mutant_2.py FFFFF               [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/statistics.correlation/mutant_2.py:6: exceptiongroup.ExceptionGroup: Hypothesis found 8 distinct failures. (8 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/statistics.correlation/mutant_2.py:13: exceptiongroup.ExceptionGroup: Hypothesis found 7 distinct failures. (7 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/statistics.correlation/mutant_2.py:20: exceptiongroup.ExceptionGroup: Hypothesis found 6 distinct failures. (6 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/statistics.correlation/mutant_2.py:27: exceptiongroup.ExceptionGroup: Hypothesis found 6 distinct failures. (6 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/statistics.correlation/mutant_2.py:34: exceptiongroup.ExceptionGroup: Hypothesis found 6 distinct failures. (6 sub-exceptions)
+=========================== short test summary info ============================
+FAILED code_only/mutants/statistics.correlation/mutant_2.py::test_violation_of_statistics_correlation_1
+FAILED code_only/mutants/statistics.correlation/mutant_2.py::test_violation_of_statistics_correlation_2
+FAILED code_only/mutants/statistics.correlation/mutant_2.py::test_violation_of_statistics_correlation_3
+FAILED code_only/mutants/statistics.correlation/mutant_2.py::test_violation_of_statistics_correlation_4
+FAILED code_only/mutants/statistics.correlation/mutant_2.py::test_violation_of_statistics_correlation_5
+========================= 5 failed, 5 passed in 31.55s =========================

@@ -1,0 +1,32 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 10 items
+
+code_only/mutants/decimal.Decimal.adjusted/mutant_1.py FFFFF             [ 50%]
+code_only/mutants/decimal.Decimal.adjusted/mutant_2.py FFFFF             [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/decimal.Decimal.adjusted/mutant_1.py:9: assert False
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/decimal.Decimal.adjusted/mutant_1.py:15: AssertionError: assert False
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/decimal.Decimal.adjusted/mutant_1.py:21: assert False
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/decimal.Decimal.adjusted/mutant_1.py:27: assert False
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/decimal.Decimal.adjusted/mutant_1.py:33: AssertionError: assert False
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/decimal.Decimal.adjusted/mutant_2.py:8: AssertionError: assert 0 != 0
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/decimal.Decimal.adjusted/mutant_2.py:13: AssertionError: assert 0 == 1
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/decimal.Decimal.adjusted/mutant_2.py:18: AssertionError: assert 0 == -1
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/decimal.Decimal.adjusted/mutant_2.py:23: AssertionError: assert 0 == 42
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants/decimal.Decimal.adjusted/mutant_2.py:28: AssertionError: assert 0 == 100
+=========================== short test summary info ============================
+FAILED code_only/mutants/decimal.Decimal.adjusted/mutant_1.py::test_violation_of_decimal_Decimal_adjusted_1
+FAILED code_only/mutants/decimal.Decimal.adjusted/mutant_1.py::test_violation_of_decimal_Decimal_adjusted_2
+FAILED code_only/mutants/decimal.Decimal.adjusted/mutant_1.py::test_violation_of_decimal_Decimal_adjusted_3
+FAILED code_only/mutants/decimal.Decimal.adjusted/mutant_1.py::test_violation_of_decimal_Decimal_adjusted_4
+FAILED code_only/mutants/decimal.Decimal.adjusted/mutant_1.py::test_violation_of_decimal_Decimal_adjusted_5
+FAILED code_only/mutants/decimal.Decimal.adjusted/mutant_2.py::test_violation_of_decimal_Decimal_adjusted_1
+FAILED code_only/mutants/decimal.Decimal.adjusted/mutant_2.py::test_violation_of_decimal_Decimal_adjusted_2
+FAILED code_only/mutants/decimal.Decimal.adjusted/mutant_2.py::test_violation_of_decimal_Decimal_adjusted_3
+FAILED code_only/mutants/decimal.Decimal.adjusted/mutant_2.py::test_violation_of_decimal_Decimal_adjusted_4
+FAILED code_only/mutants/decimal.Decimal.adjusted/mutant_2.py::test_violation_of_decimal_Decimal_adjusted_5
+============================== 10 failed in 5.02s ==============================
