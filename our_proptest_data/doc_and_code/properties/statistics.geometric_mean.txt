@@ -1,0 +1,9 @@
+1. The output should be a float representing the geometric mean of the input data, provided the data is valid (non-empty, contains no zeros, and no negative values).
+
+2. If the input data is empty, the function should raise a `StatisticsError`.
+
+3. If the input data contains a zero, the function should return `0.0` or `math.nan` based on the context of the total computed.
+
+4. If the input data contains any negative values, the function should raise a `StatisticsError`.
+
+5. The output should be consistent with the mathematical definition of the geometric mean, meaning that if all input values are positive, the geometric mean should always be less than or equal to the arithmetic mean of the same values.

@@ -1,0 +1,5 @@
+1. The output of `pstdev` should always be a non-negative number, as standard deviation cannot be negative.
+2. If the input data contains only one element, the output of `pstdev` should be zero, since there is no variability in a single data point.
+3. The output of `pstdev` should be equal to the square root of the population variance calculated from the same input data.
+4. If the input data is empty, `pstdev` should raise a `StatisticsError`, indicating that at least one data point is required.
+5. The output of `pstdev` should be consistent and repeatable for the same input data, meaning that calling the function multiple times with the same arguments should yield the same result.

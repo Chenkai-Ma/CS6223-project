@@ -1,0 +1,9 @@
+1. The year, month, and day of the output datetime object must match the year, month, and day of the input date object.
+
+2. The hour, minute, second, and microsecond of the output datetime object must match the corresponding time components of the input time object.
+
+3. If the tzinfo argument is provided, the tzinfo attribute of the output datetime object must match the provided tzinfo; otherwise, it must match the tzinfo attribute of the input time object.
+
+4. If the input date argument is a datetime object, the output datetime object must equal the input datetime object, ignoring its time components and tzinfo attributes.
+
+5. The output datetime object's fold attribute must match the fold attribute of the input time object.

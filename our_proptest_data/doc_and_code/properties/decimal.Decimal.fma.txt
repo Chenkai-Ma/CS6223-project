@@ -1,0 +1,9 @@
+1. The output of `fma` should be equal to the sum of the product of `self` and `other` and `third`, specifically `self * other + third`, without any intermediate rounding errors.
+
+2. If either `self` or `other` is a special value (like NaN or Infinity), the output should conform to the rules of arithmetic for those special values, returning appropriate results or raising errors as defined.
+
+3. The output should maintain the same sign as the product of `self` and `other`, unless one of the inputs is zero, in which case the output should equal `third`.
+
+4. The function should consistently handle edge cases, such as multiplying by zero, resulting in the output being equal to `third`, regardless of the values of `self` and `other`.
+
+5. The output should be a valid `Decimal` instance, preserving the precision and scale characteristics defined by the context, and should not introduce any unexpected rounding or overflow errors.

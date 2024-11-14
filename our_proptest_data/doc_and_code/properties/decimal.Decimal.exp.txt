@@ -1,0 +1,9 @@
+1. The output of the exponential function for any real number input should always be a positive Decimal value, except when the input is negative infinity or NaN.
+
+2. The exponential function should return 1 when the input is 0.
+
+3. The output of the exponential function should approach 0 as the input approaches negative infinity.
+
+4. The output of the exponential function should approach positive infinity as the input approaches positive infinity.
+
+5. The output of the exponential function for any input should be correctly rounded using the ROUND_HALF_EVEN rounding mode.

@@ -1,0 +1,9 @@
+1. The output cliques are maximal, meaning that no additional nodes can be added to any of the cliques without violating the completeness of the subgraph.
+
+2. If the `nodes` parameter is provided, every returned clique must contain all nodes specified in the `nodes` list, and if `nodes` is not a clique itself, a ValueError should be raised.
+
+3. The output should not include any duplicate cliques, ensuring that each maximal clique is unique within the iterator.
+
+4. The length of each returned clique should be at least 1, as a maximal clique must contain at least one node from the graph.
+
+5. The order of the cliques in the output is arbitrary, meaning that different invocations of the function should not guarantee the same order of cliques, but the same cliques should be present in any valid output for the same input graph.

@@ -1,0 +1,9 @@
+1. The output set of nodes is a subset of the input graph's nodes, meaning all nodes in the dominating set must be present in the original graph \( G \).
+
+2. The output set of nodes covers all vertices in the graph \( G \), ensuring that every vertex is either in the dominating set or is a neighbor of at least one node in the dominating set.
+
+3. The sum of the weights of the nodes in the output set does not exceed \( (\log w(V)) w(V^*) \), where \( w(V) \) is the sum of the weights of all nodes in the graph and \( w(V^*) \) is the weight of the minimum weight dominating set.
+
+4. If the input graph \( G \) is empty, the output should be an empty set, as there are no nodes to dominate.
+
+5. The output set should remain unchanged if the input graph \( G \) is modified in such a way that the dominating set still covers all vertices, ensuring the algorithm's robustness to certain structural changes in the graph.

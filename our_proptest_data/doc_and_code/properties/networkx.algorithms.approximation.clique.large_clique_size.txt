@@ -1,0 +1,9 @@
+1. The output size of the large clique must be a non-negative integer, as a clique cannot have negative size or be fractional.
+
+2. The size of the large clique returned should not exceed the total number of nodes in the graph, as it is not possible to have a clique larger than the number of available nodes.
+
+3. If the graph is empty (i.e., contains no nodes), the function should return a size of 0, indicating that there are no cliques in the graph.
+
+4. For any graph that contains at least one edge, the size of the large clique must be at least 1, since the smallest possible clique consists of a single node.
+
+5. The output should be consistent across multiple calls with the same input graph, meaning that calling the function multiple times with the same graph should yield the same size of the large clique, assuming the graph has not been modified.

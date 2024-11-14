@@ -1,0 +1,9 @@
+1. The output dictionary should contain an entry for every node in the input graph, with each node as a key.
+
+2. The average neighbor degree for any node should be a non-negative float value, as it represents an average degree.
+
+3. If a node has no neighbors (degree zero), its average neighbor degree should be zero.
+
+4. The average neighbor degree of a node should be equal to the total degree of its neighbors divided by the number of neighbors, adhering to the mathematical definition provided in the documentation.
+
+5. The average neighbor degree should remain consistent regardless of the order in which nodes are processed, ensuring that the output is stable across multiple invocations with the same graph and parameters.

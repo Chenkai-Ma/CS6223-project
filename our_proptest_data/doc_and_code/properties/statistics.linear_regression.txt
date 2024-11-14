@@ -1,0 +1,9 @@
+1. The slope of the linear regression line should be a float and represent the rate of change of the dependent variable with respect to the independent variable.
+
+2. The intercept of the linear regression line should be a float and represent the value of the dependent variable when the independent variable is zero (or zero when proportional is true).
+
+3. If both input lists have the same values (e.g., x = [1, 2, 3] and y = [1, 2, 3]), the slope should be equal to 1 and the intercept should be 0 (or undefined when proportional is true).
+
+4. If the input lists contain a constant value for the independent variable x (e.g., x = [5, 5, 5]), a StatisticsError should be raised, indicating that x cannot be constant.
+
+5. The output should handle input lists of varying lengths and should raise a StatisticsError if the lengths are not equal or if they contain fewer than two data points.

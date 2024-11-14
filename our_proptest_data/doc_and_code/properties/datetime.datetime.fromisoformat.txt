@@ -1,0 +1,9 @@
+1. The output datetime object should have a valid year, month, and day that corresponds to the input ISO 8601 date string, ensuring that the day is within the valid range for the specified month and year.
+
+2. If the input date string includes a time component, the output datetime object should reflect the correct hour, minute, second, and microsecond values as parsed from the input string.
+
+3. The output datetime object should properly handle and reflect any time zone information provided in the input string, including UTC and positive/negative offsets.
+
+4. The output datetime object should raise a ValueError for any input date strings that do not conform to the valid ISO 8601 formats specified in the documentation.
+
+5. The output datetime object should have a default time component of midnight (00:00:00) if the input date string does not include a time component.

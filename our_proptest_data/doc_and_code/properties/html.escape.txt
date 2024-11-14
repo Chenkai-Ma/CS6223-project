@@ -1,0 +1,9 @@
+1. The output string should not contain any of the characters &, <, >, ", or ' if the input string contains them and the `quote` argument is set to true.
+
+2. The output string should retain all characters from the input string that are not special HTML characters, ensuring that the length of the output is greater than or equal to the length of the input minus the number of characters replaced.
+
+3. If the input string is empty, the output should also be an empty string, regardless of the value of the `quote` argument.
+
+4. The output should be the same as the input string if the input does not contain any characters that need to be escaped, regardless of the value of the `quote` argument.
+
+5. If the `quote` argument is set to false, the output string should only escape the characters &, <, and >, while leaving " and ' unchanged in the output.

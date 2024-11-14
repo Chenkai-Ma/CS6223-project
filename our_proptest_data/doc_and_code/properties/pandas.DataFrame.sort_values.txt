@@ -1,0 +1,9 @@
+1. The output DataFrame should have the same number of rows as the input DataFrame when `inplace` is set to `False`.
+
+2. The output DataFrame should be sorted according to the specified `by` columns in the order defined by the `ascending` parameter.
+
+3. If the `na_position` is set to 'first', all NaN values in the sorted column(s) should appear at the beginning of the output DataFrame; if set to 'last', they should appear at the end.
+
+4. When multiple columns are specified in the `by` parameter, the output DataFrame should be sorted first by the first column, then by the second column, and so on, respecting the `ascending` order for each column.
+
+5. If `ignore_index` is set to `True`, the output DataFrame should have a default integer index (0, 1, 2, ...) regardless of the original index of the input DataFrame.

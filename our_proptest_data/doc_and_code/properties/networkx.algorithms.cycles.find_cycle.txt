@@ -1,0 +1,9 @@
+1. If a cycle is found, the output must contain at least one edge, indicating that a cyclic path exists in the graph.
+
+2. The edges in the output cycle must form a closed loop, meaning the head of the last edge must connect back to the tail of the first edge in the cycle.
+
+3. For directed graphs, the output edges must respect the specified orientation; if the orientation is 'original', 'reverse', or 'ignore', the traversal direction indicated in the output must align with the chosen orientation.
+
+4. If the input graph is acyclic (i.e., a Directed Acyclic Graph), the function must raise a `NetworkXNoCycle` exception, confirming that no cycle exists.
+
+5. The output must accurately represent the edges traversed during the depth-first search, including the correct order of edges as determined by the traversal process.

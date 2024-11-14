@@ -1,0 +1,5 @@
+1. The output of the `weekday()` function is always an integer between 0 and 6, inclusive.
+2. The output for any given date remains consistent across multiple calls to `weekday()` for the same date.
+3. If the input date corresponds to a Monday, the output of `weekday()` should be 0.
+4. If the input date corresponds to a Sunday, the output of `weekday()` should be 6.
+5. The output of `weekday()` should exhibit a cyclic pattern, where consecutive days differ by 1, and the transition from Sunday (6) to Monday (0) wraps around.

@@ -1,0 +1,9 @@
+1. The norm of a zero vector should always be zero, regardless of the specified order (`ord`).
+
+2. The norm should be non-negative for any input vector or matrix, and it should return zero only for the zero vector or matrix.
+
+3. For any vector `x`, the norm calculated with `ord=1` should be less than or equal to the norm calculated with `ord=2`, which in turn should be less than or equal to the norm calculated with `ord=np.inf`.
+
+4. The norm of a matrix computed with `ord='fro'` should be equal to the norm computed with `ord=2` when considering the singular values of the matrix.
+
+5. The result of the norm should maintain the same shape as the input array when the `keepdims` parameter is set to `True`.

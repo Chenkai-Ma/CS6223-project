@@ -1,0 +1,5 @@
+1. The mean of a non-empty dataset should always be a numeric type (int, float, Decimal, or Fraction), depending on the input data type.
+2. The mean of a dataset containing identical values should equal that value (e.g., mean([5, 5, 5]) should return 5).
+3. The mean of a dataset should be affected by outliers, meaning that adding a significantly larger or smaller value to the dataset should change the mean in the expected direction.
+4. The mean of an empty dataset should raise a StatisticsError, indicating that at least one data point is required to calculate the mean.
+5. The mean of a dataset should be invariant under the addition of zero (e.g., mean([1, 2, 3]) should equal mean([1, 2, 3, 0])).

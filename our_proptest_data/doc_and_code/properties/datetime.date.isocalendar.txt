@@ -1,0 +1,5 @@
+1. The output year must be equal to the input year or the input year ± 1, depending on the ISO week calculation rules.
+2. The output week must be in the range of 1 to 53, inclusive, as the ISO calendar can have up to 53 weeks in a year.
+3. The output weekday must be in the range of 1 to 7, representing Monday through Sunday, inclusive.
+4. For a given date, if it is the first day of the year (January 1), the returned week should be 1 if that day falls on a Thursday or later; otherwise, it should be in the last week of the previous year.
+5. The output should maintain consistency such that if the same date is input multiple times, the output remains the same across those invocations.

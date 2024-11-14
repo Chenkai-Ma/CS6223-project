@@ -1,0 +1,5 @@
+1. The output is the middle value of the sorted input data when the number of elements is odd.
+2. The output is the average of the two middle values of the sorted input data when the number of elements is even.
+3. The function raises a StatisticsError when the input data is empty.
+4. The output is unaffected by the presence of outliers compared to the mean of the dataset.
+5. The output remains consistent regardless of the order of the input data, as the function sorts the data before processing.

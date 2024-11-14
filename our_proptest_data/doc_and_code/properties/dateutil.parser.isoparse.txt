@@ -1,0 +1,9 @@
+1. The output of the function is always a valid `datetime.datetime` object, representing a point in time that corresponds to the input ISO-8601 string.
+
+2. If the input string represents a date without a time portion, the time components of the output `datetime` object default to midnight (00:00:00).
+
+3. If the input string includes a time portion that specifies midnight as "24:00", the output `datetime` object should represent the next day at midnight (00:00:00).
+
+4. The output `datetime` object should correctly reflect any provided time zone offset, converting the time to UTC if necessary.
+
+5. The function should handle incomplete date formats gracefully, returning the earliest possible valid date for the unspecified components (e.g., for "2023-01", the output should default the day to the first of the month).

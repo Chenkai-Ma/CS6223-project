@@ -1,0 +1,9 @@
+1. The output of the function must always be a float value between -1 and +1, inclusive, representing the Pearson’s or Spearman’s correlation coefficient.
+
+2. If both input lists are constant (i.e., all elements are the same), the function should raise a StatisticsError indicating that at least one of the inputs is constant.
+
+3. For any two input lists of the same length, if one list is a linear transformation of the other (e.g., scaled or shifted), the output should reflect a correlation of 1.0 or -1.0, depending on the direction of the transformation.
+
+4. If the method is set to 'ranked', the output should be consistent with the properties of Spearman’s rank correlation, indicating a value of 1.0 for perfectly monotonic relationships.
+
+5. The output should be symmetric; that is, the correlation of (x, y) should be equal to the correlation of (y, x) for any valid input lists x and y.

@@ -46,7 +46,10 @@ def main(args):
 
         if file_name.endswith(".jsonl"):
             eval_data = jsonlines_load(args.input_path + '/' + file_name)
-            system_prompt = MUTANT_SYSTEM_PROMPT_DOC
+            
+            # ================== Change 1 ==================
+            system_prompt = MUTANT_SYSTEM_PROMPT_DOC_2
+
             function_name = eval_data[0]['function_name']
             
             output_path = f'{args.output_dir}/{function_name}.jsonl'
@@ -67,8 +70,12 @@ def main(args):
                 # replace . with _ in function name
                 function_name_2 = function_name.replace('.', '_')
 
-                question = MUTANTS_TEST_FUNCTION_PROMPT_DOC.format(function_name=function_name, function_name_2=function_name_2,
-                                                            api_documentation=eval_data[0]['api_doc'], prop=prop, pbt=pbt)
+                # question = MUTANTS_TEST_FUNCTION_PROMPT_DOC.format(function_name=function_name, function_name_2=function_name_2,
+                #                                             api_documentation=eval_data[0]['api_doc'], prop=prop, pbt=pbt)
+
+                question = MUTANTS_TEST_FUNCTION_PROMPT_DOC_2.format(function_name=function_name, function_name_2=function_name_2,
+                                            api_documentation=eval_data[0]['api_doc'], prop=prop, pbt=pbt)
+
 
                 messages = [
                     {"role": "system", "content": system_prompt},
@@ -126,7 +133,7 @@ def main(args):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--input_path', type=str, default='../our_proptest_data/doc_only/sound_valid')
-    parser.add_argument('--output_dir', type=str, default='../our_proptest_data/doc_only/output_jsonl/mutants')
+    parser.add_argument('--output_dir', type=str, default='../our_proptest_data/doc_only/output_jsonl/mutants_2')
     parser.add_argument('--debug', action='store_true')
     parser.add_argument('--model', type=str, default='gpt-4o-mini')
     parser.add_argument('--temperature', type=float, default=0.5)

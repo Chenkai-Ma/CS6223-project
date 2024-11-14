@@ -1,0 +1,5 @@
+1. The output must be an instance of the `Decimal` class.
+2. The output must accurately represent the nearest decimal equivalent of the input float value, particularly for floating-point numbers that cannot be exactly represented (e.g., `0.1`).
+3. The output must correctly handle special float values, returning `Decimal('NaN')` for `float('nan')`, `Decimal('Infinity')` for `float('inf')`, and `Decimal('-Infinity')` for `float('-inf')`.
+4. For integer inputs, the output must be equivalent to `Decimal(str(abs(f)))` with the appropriate sign, confirming that the integer is correctly converted to a decimal representation.
+5. The output must maintain the same sign as the input float or integer, ensuring that positive inputs yield positive `Decimal` instances and negative inputs yield negative `Decimal` instances.

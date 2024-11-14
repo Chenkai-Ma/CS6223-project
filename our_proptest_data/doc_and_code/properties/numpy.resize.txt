@@ -1,0 +1,9 @@
+1. The output array's total number of elements must match the product of the dimensions specified in `new_shape`.
+
+2. If the input array `a` is empty, the output array must also be empty, regardless of the value of `new_shape`.
+
+3. When the `new_shape` is larger than the size of the input array `a`, the output array must contain repeated copies of the original array's elements, cycling through them if necessary.
+
+4. If the `new_shape` is smaller than the size of the input array `a`, the output array must contain only the first `new_size` elements of the input array, where `new_size` is the product of the dimensions in `new_shape`.
+
+5. The output array must maintain the same data type as the input array `a`.

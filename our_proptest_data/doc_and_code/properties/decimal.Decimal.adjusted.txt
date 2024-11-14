@@ -1,0 +1,9 @@
+1. The output of the adjusted() function should be an integer representing the adjusted exponent of the Decimal instance.
+
+2. For a Decimal instance with a coefficient of zero, the adjusted() function should return 0, regardless of the exponent.
+
+3. The output of the adjusted() function should be greater than or equal to the exponent of the Decimal instance when the coefficient is non-zero.
+
+4. If the Decimal instance represents a number in scientific notation, the adjusted() function should correctly account for the position of the most significant digit relative to the decimal point.
+
+5. The adjusted() function should return 0 for any Decimal instance that is NaN or Infinity, as indicated by the handling of TypeError in the source code.

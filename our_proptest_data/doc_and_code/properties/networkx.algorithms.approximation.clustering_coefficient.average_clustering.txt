@@ -1,0 +1,9 @@
+1. The output value must be between 0 and 1, inclusive, since the average clustering coefficient represents a fraction of triangles and cannot exceed this range.
+
+2. The output should be 0 if the graph has no edges or if all nodes have fewer than 2 neighbors, as there can be no triangles formed in such cases.
+
+3. The output should be consistent across multiple runs with the same input parameters (graph and trials) when a fixed random seed is provided, ensuring reproducibility.
+
+4. The output should be approximately equal to the average clustering coefficient calculated using a deterministic method for large graphs, as the approximation should converge to the true value with an adequate number of trials.
+
+5. If the graph is directed, the function should raise a `NetworkXNotImplemented` exception, indicating that the average clustering coefficient cannot be computed for directed graphs.
