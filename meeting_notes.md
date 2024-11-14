@@ -9,7 +9,7 @@
 |  | Our method: code + doc | Baseline: doc only (from original paper) | Baseline: code only |
 | ----------- | ----------- | ----------- | ----------- |
 | RQ1: Sound and Valid | if time permits | done | done |
-| RQ2: Property Coverage | if time permits | done | TBD (21 Nov?) |
+| RQ2: Property Coverage | if time permits | done | done |
 
 - Procedure for RQ1: zx generates PBTs, then mck filter sound and valid test functions.
 
