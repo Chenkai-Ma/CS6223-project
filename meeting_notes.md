@@ -4,12 +4,14 @@
 
 ### Experiments
 
+- Experiment result: [google doc](https://docs.google.com/spreadsheets/d/1ho1ij9dSY98MuzCt7yKXHBuz76prcS5Z1I_kI3RQznE/edit?gid=2025599766#gid=2025599766)
+
 - Experiment planning：
 
 |  | Our method: code + doc | Baseline: doc only (from original paper) | Baseline: code only |
 | ----------- | ----------- | ----------- | ----------- |
-| RQ1: Sound and Valid | if time permits | done | done |
-| RQ2: Property Coverage | if time permits | done | done |
+| RQ1: Sound and Valid | 21 Nov | done | done |
+| RQ2: Property Coverage | 21 Nov | done | done |
 
 - Procedure for RQ1: zx generates PBTs, then mck filter sound and valid test functions.
 
@@ -30,14 +32,5 @@ For each API method:
 - The code (artifact) of this project will also be graded.
 - Project due: 2 Dec.
 
-## Progress
-
-- [google doc](https://docs.google.com/spreadsheets/d/1ho1ij9dSY98MuzCt7yKXHBuz76prcS5Z1I_kI3RQznE/edit?gid=2025599766#gid=2025599766)
-- Doc only 的property coverage已完成：和原论文相比, property coverage高很多（说明我们的方法确实有作用？）。
-- Code only的sound & valid已完成。表现不如doc only，结果和原论文接近。
-- Code only的test function的jsonl文件都生成了，保存在`/our_proptest_data/sound_valid`。
-- Code only的property coverage已完成。表现不如doc only。另外缺少三个API的数据。
-
 ## Feedback 
 
-- 实验结果：code only的整体表现可能不如doc only。那么至少有两种思路：第一个是不做code+doc的实验，而是在report里面强调探究code only的效果（同时也可以说一下其他改进的效果，例如property mutant）；第二个是做code+doc方法的实验，然后期待其效果大于doc only。
