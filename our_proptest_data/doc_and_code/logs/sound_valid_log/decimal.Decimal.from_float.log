@@ -1,0 +1,45 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+doc_and_code/proptest/decimal.Decimal.from_float/pbt_1.py .FF.F          [ 20%]
+doc_and_code/proptest/decimal.Decimal.from_float/pbt_2.py .FFF.          [ 40%]
+doc_and_code/proptest/decimal.Decimal.from_float/pbt_3.py .FFFF          [ 60%]
+doc_and_code/proptest/decimal.Decimal.from_float/pbt_4.py .FF..          [ 80%]
+doc_and_code/proptest/decimal.Decimal.from_float/pbt_5.py .FFF.          [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.from_float/pbt_1.py:15: AssertionError: assert Decimal('72057594037927928') == Decimal('7.205759403792793E+16')
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.from_float/pbt_1.py:21: AssertionError: assert Decimal('NaN') == Decimal('NaN')
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.from_float/pbt_1.py:39: AssertionError: assert Decimal('NaN') == Decimal('0')
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.from_float/pbt_2.py:14: AssertionError: assert Decimal('18014398509482008') == Decimal('1.801439850948201E+16')
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.from_float/pbt_2.py:20: AssertionError: assert Decimal('NaN') == Decimal('NaN')
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.from_float/pbt_2.py:28: AssertionError: assert Decimal('9007199254740992') == Decimal('9007199254740993')
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.from_float/pbt_3.py:14: AssertionError: assert Decimal('52762722039725968') == Decimal('5.276272203972597E+16')
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.from_float/pbt_3.py:20: AssertionError: assert Decimal('NaN') == Decimal('NaN')
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.from_float/pbt_3.py:30: AssertionError: assert Decimal('-10000000000000000000000000001') == Decimal('-1.000000000000000000000000000E+28')
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.from_float/pbt_3.py:35: AssertionError: assert ((False) or (not False and nan >= 0))
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.from_float/pbt_4.py:14: AssertionError: assert Decimal('18014398509482008') == Decimal('1.801439850948201E+16')
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.from_float/pbt_4.py:20: AssertionError: assert Decimal('NaN') == Decimal('NaN')
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.from_float/pbt_5.py:14: AssertionError: assert Decimal('18014398509482008') == Decimal('1.801439850948201E+16')
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.from_float/pbt_5.py:19: AssertionError: assert Decimal('NaN') == Decimal('NaN')
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.from_float/pbt_5.py:27: AssertionError: assert Decimal('-1') == Decimal('1')
+=========================== short test summary info ============================
+FAILED doc_and_code/proptest/decimal.Decimal.from_float/pbt_1.py::test_output_represents_nearest_decimal_equivalent_property
+FAILED doc_and_code/proptest/decimal.Decimal.from_float/pbt_1.py::test_output_handles_special_float_values_property
+FAILED doc_and_code/proptest/decimal.Decimal.from_float/pbt_1.py::test_output_maintains_sign_of_input_property
+FAILED doc_and_code/proptest/decimal.Decimal.from_float/pbt_2.py::test_output_correctly_represents_float_property
+FAILED doc_and_code/proptest/decimal.Decimal.from_float/pbt_2.py::test_output_correctly_handles_special_float_values_property
+FAILED doc_and_code/proptest/decimal.Decimal.from_float/pbt_2.py::test_output_equivalent_to_decimal_of_integer_property
+FAILED doc_and_code/proptest/decimal.Decimal.from_float/pbt_3.py::test_decimal_from_float_nearest_decimal_property
+FAILED doc_and_code/proptest/decimal.Decimal.from_float/pbt_3.py::test_decimal_from_float_special_values_property
+FAILED doc_and_code/proptest/decimal.Decimal.from_float/pbt_3.py::test_decimal_from_float_integer_conversion_property
+FAILED doc_and_code/proptest/decimal.Decimal.from_float/pbt_3.py::test_decimal_from_float_sign_property
+FAILED doc_and_code/proptest/decimal.Decimal.from_float/pbt_4.py::test_output_represents_nearest_decimal_equivalent_property
+FAILED doc_and_code/proptest/decimal.Decimal.from_float/pbt_4.py::test_output_handles_special_float_values_property
+FAILED doc_and_code/proptest/decimal.Decimal.from_float/pbt_5.py::test_output_represents_nearest_decimal_equivalent_property
+FAILED doc_and_code/proptest/decimal.Decimal.from_float/pbt_5.py::test_special_float_values_property
+FAILED doc_and_code/proptest/decimal.Decimal.from_float/pbt_5.py::test_integer_conversion_property
+======================== 15 failed, 10 passed in 3.41s =========================

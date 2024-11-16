@@ -1,0 +1,39 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+doc_and_code/proptest/datetime.datetime.combine/pbt_1.py FFFF.           [ 20%]
+doc_and_code/proptest/datetime.datetime.combine/pbt_2.py ..F.F           [ 40%]
+doc_and_code/proptest/datetime.datetime.combine/pbt_3.py ..F..           [ 60%]
+doc_and_code/proptest/datetime.datetime.combine/pbt_4.py F..F.           [ 80%]
+doc_and_code/proptest/datetime.datetime.combine/pbt_5.py FFF..           [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/datetime.datetime.combine/pbt_1.py:6: TypeError: tzinfo argument must be None or of a tzinfo subclass, not type 'bool'
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/datetime.datetime.combine/pbt_1.py:13: TypeError: tzinfo argument must be None or of a tzinfo subclass, not type 'bool'
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/datetime.datetime.combine/pbt_1.py:21: TypeError: tzinfo argument must be None or of a tzinfo subclass, not type 'bool'
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/datetime.datetime.combine/pbt_1.py:27: TypeError: tzinfo argument must be None or of a tzinfo subclass, not type 'bool'
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/datetime.datetime.combine/pbt_2.py:27: TypeError: datetime.time() takes no keyword arguments
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/datetime.datetime.combine/pbt_2.py:39: TypeError: datetime.time() takes no keyword arguments
+/home/james/projects/.venv/lib/python3.10/site-packages/hypothesis/strategies/_internal/core.py:1022: TypeError: timezone() argument 1 must be datetime.timedelta, not int
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/datetime.datetime.combine/pbt_4.py:6: TypeError: tzinfo argument must be None or of a tzinfo subclass, not type 'datetime.time'
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/datetime.datetime.combine/pbt_4.py:29: TypeError: tzinfo argument must be None or of a tzinfo subclass, not type 'datetime.time'
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/datetime.datetime.combine/pbt_5.py:6: TypeError: tzinfo argument must be None or of a tzinfo subclass, not type 'datetime.timedelta'
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/datetime.datetime.combine/pbt_5.py:13: TypeError: tzinfo argument must be None or of a tzinfo subclass, not type 'datetime.timedelta'
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/datetime.datetime.combine/pbt_5.py:21: TypeError: tzinfo argument must be None or of a tzinfo subclass, not type 'datetime.timedelta'
+=========================== short test summary info ============================
+FAILED doc_and_code/proptest/datetime.datetime.combine/pbt_1.py::test_year_month_day_property
+FAILED doc_and_code/proptest/datetime.datetime.combine/pbt_1.py::test_hour_minute_second_microsecond_property
+FAILED doc_and_code/proptest/datetime.datetime.combine/pbt_1.py::test_tzinfo_property
+FAILED doc_and_code/proptest/datetime.datetime.combine/pbt_1.py::test_datetime_argument_property
+FAILED doc_and_code/proptest/datetime.datetime.combine/pbt_2.py::test_tzinfo_property
+FAILED doc_and_code/proptest/datetime.datetime.combine/pbt_2.py::test_fold_attribute_property
+FAILED doc_and_code/proptest/datetime.datetime.combine/pbt_3.py::test_datetime_tzinfo_property
+FAILED doc_and_code/proptest/datetime.datetime.combine/pbt_4.py::test_year_month_day_property
+FAILED doc_and_code/proptest/datetime.datetime.combine/pbt_4.py::test_datetime_object_property
+FAILED doc_and_code/proptest/datetime.datetime.combine/pbt_5.py::test_date_components_match_property
+FAILED doc_and_code/proptest/datetime.datetime.combine/pbt_5.py::test_time_components_match_property
+FAILED doc_and_code/proptest/datetime.datetime.combine/pbt_5.py::test_tzinfo_property
+======================== 12 failed, 13 passed in 18.02s ========================

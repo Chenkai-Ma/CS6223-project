@@ -1,0 +1,51 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+doc_and_code/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_1.py . [  4%]
+....                                                                     [ 20%]
+doc_and_code/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_2.py . [ 24%]
+....                                                                     [ 40%]
+doc_and_code/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_3.py F [ 44%]
+F.FF                                                                     [ 60%]
+doc_and_code/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_4.py . [ 64%]
+F...                                                                     [ 80%]
+doc_and_code/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_5.py F [ 84%]
+..FF                                                                     [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_3.py:6: TypeError: integers() got an unexpected keyword argument 'min_size'
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_3.py:12: TypeError: integers() got an unexpected keyword argument 'min_size'
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_3.py:24: TypeError: integers() got an unexpected keyword argument 'min_size'
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_3.py:31: TypeError: integers() got an unexpected keyword argument 'min_size'
+/home/james/projects/.venv/lib/python3.10/site-packages/hypothesis/strategies/_internal/strategies.py:319: hypothesis.errors.HypothesisException: Using example() inside a test function is a bad idea. Instead consider using hypothesis.strategies.data() to draw more examples during testing. See https://hypothesis.readthedocs.io/en/latest/data.html#drawing-interactively-in-tests for more details.
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_5.py:6: AttributeError: module 'networkx.generators.random_graphs' has no attribute 'random_graphs'. Did you mean: 'gnm_random_graph'?
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_5.py:27: AttributeError: module 'networkx.generators.random_graphs' has no attribute 'random_graphs'. Did you mean: 'gnm_random_graph'?
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_5.py:36: AttributeError: module 'networkx.generators.random_graphs' has no attribute 'random_graphs'. Did you mean: 'gnm_random_graph'?
+=============================== warnings summary ===============================
+doc_and_code/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_4.py::test_large_clique_size_non_negative_property
+doc_and_code/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_4.py::test_large_clique_size_consistency_property
+  /usr/lib/python3.10/contextlib.py:142: HypothesisDeprecationWarning: Do not use the `random` module inside strategies; instead consider  `st.randoms()`, `st.sampled_from()`, etc.  Draw 1: from builds(gnm_random_graph, integers(min_value=0, max_value=100), integers(min_value=0, max_value=100))
+    next(self.gen)
+
+doc_and_code/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_4.py::test_large_clique_size_not_exceed_node_count_property
+  /home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_4.py:12: NonInteractiveExampleWarning: The `.example()` method is good for exploring strategies, but should only be used interactively.  We recommend using `@given` for tests - it performs better, saves and replays failures to avoid flakiness, and reports minimal examples. (strategy: integers(min_value=0, max_value=100))
+    num_nodes = st.integers(min_value=0, max_value=100).example()
+
+doc_and_code/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_4.py::test_large_clique_size_at_least_one_for_non_empty_graph_property
+  /usr/lib/python3.10/contextlib.py:142: HypothesisDeprecationWarning: Do not use the `random` module inside strategies; instead consider  `st.randoms()`, `st.sampled_from()`, etc.  Draw 1: from builds(gnm_random_graph, integers(min_value=1, max_value=100), integers(min_value=1, max_value=100))
+    next(self.gen)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED doc_and_code/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_3.py::test_large_clique_size_non_negative_property
+FAILED doc_and_code/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_3.py::test_large_clique_size_does_not_exceed_node_count_property
+FAILED doc_and_code/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_3.py::test_large_clique_size_at_least_one_edge_property
+FAILED doc_and_code/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_3.py::test_large_clique_size_consistency_property
+FAILED doc_and_code/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_4.py::test_large_clique_size_not_exceed_node_count_property
+FAILED doc_and_code/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_5.py::test_large_clique_size_non_negative_property
+FAILED doc_and_code/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_5.py::test_large_clique_size_at_least_one_edge_property
+FAILED doc_and_code/proptest/networkx.algorithms.approximation.clique.large_clique_size/pbt_5.py::test_large_clique_size_consistency_property
+=================== 8 failed, 17 passed, 4 warnings in 0.59s ===================

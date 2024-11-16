@@ -1,7 +1,7 @@
 # Evaluate soundness and validity separately for each API.
 # this file has to be run from the our_proptest_data directory
 
-approach="code_only"
+approach="doc_and_code"
 metric="sound_valid"
 
 log_dir="${approach}/logs/${metric}_log"

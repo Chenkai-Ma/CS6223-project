@@ -1,0 +1,31 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 15 items / 1 error
+
+code_only/mutants_2/datetime.datetime.combine/mutant_1.py ....F          [ 33%]
+code_only/mutants_2/datetime.datetime.combine/mutant_3.py F....          [ 66%]
+code_only/mutants_2/datetime.datetime.combine/mutant_4.py FFFFF          [100%]
+
+==================================== ERRORS ====================================
+__ ERROR collecting code_only/mutants_2/datetime.datetime.combine/mutant_2.py __
+E   NameError: name 'date_time_pairs' is not defined
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/datetime.datetime.combine/mutant_1.py:32: ValueError: year -1 is out of range
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/datetime.datetime.combine/mutant_3.py:13: TypeError: combine() argument 1 must be datetime.date, not str
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/datetime.datetime.combine/mutant_4.py:13: TypeError: combine() argument 2 must be datetime.time, not int
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/datetime.datetime.combine/mutant_4.py:24: TypeError: combine() argument 2 must be datetime.time, not int
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/datetime.datetime.combine/mutant_4.py:35: TypeError: combine() argument 2 must be datetime.time, not int
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/datetime.datetime.combine/mutant_4.py:46: TypeError: combine() argument 2 must be datetime.time, not int
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/datetime.datetime.combine/mutant_4.py:57: TypeError: combine() argument 2 must be datetime.time, not int
+=========================== short test summary info ============================
+FAILED code_only/mutants_2/datetime.datetime.combine/mutant_1.py::test_violation_of_datetime_datetime_combine_5
+FAILED code_only/mutants_2/datetime.datetime.combine/mutant_3.py::test_violation_of_datetime_datetime_combine_1
+FAILED code_only/mutants_2/datetime.datetime.combine/mutant_4.py::test_violation_of_datetime_datetime_combine_1
+FAILED code_only/mutants_2/datetime.datetime.combine/mutant_4.py::test_violation_of_datetime_datetime_combine_2
+FAILED code_only/mutants_2/datetime.datetime.combine/mutant_4.py::test_violation_of_datetime_datetime_combine_3
+FAILED code_only/mutants_2/datetime.datetime.combine/mutant_4.py::test_violation_of_datetime_datetime_combine_4
+FAILED code_only/mutants_2/datetime.datetime.combine/mutant_4.py::test_violation_of_datetime_datetime_combine_5
+ERROR code_only/mutants_2/datetime.datetime.combine/mutant_2.py - NameError: ...
+===================== 7 failed, 8 passed, 1 error in 2.18s =====================

@@ -1,0 +1,31 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 20 items / 1 error
+
+doc_and_code/proptest/decimal.Decimal.as_integer_ratio/pbt_1.py ..F..    [ 25%]
+doc_and_code/proptest/decimal.Decimal.as_integer_ratio/pbt_2.py .....    [ 50%]
+doc_and_code/proptest/decimal.Decimal.as_integer_ratio/pbt_3.py ..F..    [ 75%]
+doc_and_code/proptest/decimal.Decimal.as_integer_ratio/pbt_5.py ..F..    [100%]
+
+==================================== ERRORS ====================================
+_ ERROR collecting doc_and_code/proptest/decimal.Decimal.as_integer_ratio/pbt_4.py _
+ImportError while importing test module '/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.as_integer_ratio/pbt_4.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+doc_and_code/proptest/decimal.Decimal.as_integer_ratio/pbt_4.py:2: in <module>
+    from decimal import Decimal, OverflowError, InvalidOperation
+E   ImportError: cannot import name 'OverflowError' from 'decimal' (/usr/lib/python3.10/decimal.py)
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.as_integer_ratio/pbt_1.py:18: AssertionError: assert (Decimal('64664164979041630916255614729') / Decimal('100000000000000000000000000000000000000000000000000000000')) == Decimal('6.4664164979041630916255614729E-28')
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.as_integer_ratio/pbt_3.py:19: assert (2 == 1 or 2 == -1 or (1 / 2) == 2.0)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.as_integer_ratio/pbt_5.py:18: AssertionError: assert (Decimal('0') / Decimal('1')) == 1
+=========================== short test summary info ============================
+FAILED doc_and_code/proptest/decimal.Decimal.as_integer_ratio/pbt_1.py::test_as_integer_ratio_accuracy_property
+FAILED doc_and_code/proptest/decimal.Decimal.as_integer_ratio/pbt_3.py::test_decimal_as_integer_ratio_equivalence_property
+FAILED doc_and_code/proptest/decimal.Decimal.as_integer_ratio/pbt_5.py::test_decimal_as_integer_ratio_accuracy_property
+ERROR doc_and_code/proptest/decimal.Decimal.as_integer_ratio/pbt_4.py
+==================== 3 failed, 17 passed, 1 error in 4.75s =====================

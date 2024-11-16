@@ -1,0 +1,38 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 5 items / 4 errors
+
+doc_and_code/proptest/numpy.linalg.norm/pbt_5.py ..F.F                   [100%]
+
+==================================== ERRORS ====================================
+______ ERROR collecting doc_and_code/proptest/numpy.linalg.norm/pbt_1.py _______
+E   AttributeError: module 'hypothesis.strategies' has no attribute 'matrices'
+______ ERROR collecting doc_and_code/proptest/numpy.linalg.norm/pbt_2.py _______
+E   TypeError: lists() got an unexpected keyword argument 'allow_nan'
+______ ERROR collecting doc_and_code/proptest/numpy.linalg.norm/pbt_3.py _______
+E   AttributeError: module 'hypothesis.strategies' has no attribute 'matrices'
+______ ERROR collecting doc_and_code/proptest/numpy.linalg.norm/pbt_4.py _______
+E   AttributeError: module 'hypothesis.strategies' has no attribute 'matrices'
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/numpy.linalg.norm/pbt_5.py:20: assert 2.0 <= 1.4142135623730951
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/numpy.linalg.norm/pbt_5.py:31: ValueError: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (2,) + inhomogeneous part.
+=============================== warnings summary ===============================
+doc_and_code/proptest/numpy.linalg.norm/pbt_5.py::test_norm_order_relationship_property
+  /home/james/projects/.venv/lib/python3.10/site-packages/numpy/linalg/linalg.py:2538: RuntimeWarning: overflow encountered in reduce
+    return add.reduce(abs(x), axis=axis, keepdims=keepdims)
+
+doc_and_code/proptest/numpy.linalg.norm/pbt_5.py::test_keepdims_property
+  /home/james/projects/.venv/lib/python3.10/site-packages/numpy/linalg/linalg.py:2541: RuntimeWarning: overflow encountered in multiply
+    s = (x.conj() * x).real
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED doc_and_code/proptest/numpy.linalg.norm/pbt_5.py::test_norm_order_relationship_property
+FAILED doc_and_code/proptest/numpy.linalg.norm/pbt_5.py::test_keepdims_property
+ERROR doc_and_code/proptest/numpy.linalg.norm/pbt_1.py - AttributeError: modu...
+ERROR doc_and_code/proptest/numpy.linalg.norm/pbt_2.py - TypeError: lists() g...
+ERROR doc_and_code/proptest/numpy.linalg.norm/pbt_3.py - AttributeError: modu...
+ERROR doc_and_code/proptest/numpy.linalg.norm/pbt_4.py - AttributeError: modu...
+============== 2 failed, 3 passed, 2 warnings, 4 errors in 0.65s ===============

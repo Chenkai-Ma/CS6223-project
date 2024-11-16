@@ -1,0 +1,34 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 15 items / 2 errors
+
+doc_and_code/proptest/datetime.timedelta.total_seconds/pbt_1.py F.F..    [ 33%]
+doc_and_code/proptest/datetime.timedelta.total_seconds/pbt_2.py F.F..    [ 66%]
+doc_and_code/proptest/datetime.timedelta.total_seconds/pbt_5.py F.FF.    [100%]
+
+==================================== ERRORS ====================================
+_ ERROR collecting doc_and_code/proptest/datetime.timedelta.total_seconds/pbt_3.py _
+E   AttributeError: module 'hypothesis.strategies' has no attribute 'timedelta'. Did you mean: 'timedeltas'?
+_ ERROR collecting doc_and_code/proptest/datetime.timedelta.total_seconds/pbt_4.py _
+E   OverflowError: days=-1000000000; must have magnitude <= 999999999
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/datetime.timedelta.total_seconds/pbt_1.py:6: assert -86400.0 >= 0
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/datetime.timedelta.total_seconds/pbt_1.py:15: hypothesis.errors.InvalidArgument: Too many positional arguments for test_zero_duration_property() were passed to @given - expected at most 0 arguments, but got 1 (timedeltas(),)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/datetime.timedelta.total_seconds/pbt_2.py:6: assert -86400.0 >= 0
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/datetime.timedelta.total_seconds/pbt_2.py:15: hypothesis.errors.InvalidArgument: Too many positional arguments for test_zero_duration_property() were passed to @given - expected at most 0 arguments, but got 1 (timedeltas(),)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/datetime.timedelta.total_seconds/pbt_5.py:6: assert -86400.0 >= 0
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/datetime.timedelta.total_seconds/pbt_5.py:15: hypothesis.errors.InvalidArgument: Too many positional arguments for test_zero_duration_property() were passed to @given - expected at most 0 arguments, but got 1 (timedeltas(),)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/datetime.timedelta.total_seconds/pbt_5.py:22: assert 1e-06 == 0.0
+=========================== short test summary info ============================
+FAILED doc_and_code/proptest/datetime.timedelta.total_seconds/pbt_1.py::test_non_negative_output_property
+FAILED doc_and_code/proptest/datetime.timedelta.total_seconds/pbt_1.py::test_zero_duration_property
+FAILED doc_and_code/proptest/datetime.timedelta.total_seconds/pbt_2.py::test_non_negative_output_property
+FAILED doc_and_code/proptest/datetime.timedelta.total_seconds/pbt_2.py::test_zero_duration_property
+FAILED doc_and_code/proptest/datetime.timedelta.total_seconds/pbt_5.py::test_non_negative_output_property
+FAILED doc_and_code/proptest/datetime.timedelta.total_seconds/pbt_5.py::test_zero_duration_property
+FAILED doc_and_code/proptest/datetime.timedelta.total_seconds/pbt_5.py::test_consistent_representation_property
+ERROR doc_and_code/proptest/datetime.timedelta.total_seconds/pbt_3.py - Attri...
+ERROR doc_and_code/proptest/datetime.timedelta.total_seconds/pbt_4.py - Overf...
+==================== 7 failed, 8 passed, 2 errors in 0.33s =====================

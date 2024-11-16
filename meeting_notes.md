@@ -10,7 +10,7 @@
 
 |  | Our method: code + doc | Baseline: doc only (from original paper) | Baseline: code only |
 | ----------- | ----------- | ----------- | ----------- |
-| RQ1: Sound and Valid | 21 Nov | done | done |
+| RQ1: Sound and Valid | Done | done | done |
 | RQ2: Property Coverage | 21 Nov | done | done |
 
 - Procedure for RQ1: zx generates PBTs, then mck filter sound and valid test functions.
@@ -31,6 +31,12 @@ For each API method:
 - Writing: (Try to) finish in 28 Nov. So we have time to check, revise (if any), and organize codes, etc.
 - The code (artifact) of this project will also be graded.
 - Project due: 2 Dec.
+
+## Progress
+
+- Code + doc: sound and valid evaluation complete: worst among three. Jsonl files are stored in `sound_valid`.
+
+- Mutant 2: for code only, mutant 2 performance > mutant. Doc only 的mutant 2没看到？
 
 ## Feedback 
 

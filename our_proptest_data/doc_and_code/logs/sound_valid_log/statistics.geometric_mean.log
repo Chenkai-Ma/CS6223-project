@@ -1,0 +1,55 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+doc_and_code/proptest/statistics.geometric_mean/pbt_1.py FFFFF           [ 20%]
+doc_and_code/proptest/statistics.geometric_mean/pbt_2.py F.F..           [ 40%]
+doc_and_code/proptest/statistics.geometric_mean/pbt_3.py FFFFF           [ 60%]
+doc_and_code/proptest/statistics.geometric_mean/pbt_4.py FFF.F           [ 80%]
+doc_and_code/proptest/statistics.geometric_mean/pbt_5.py .FFFF           [100%]
+
+=================================== FAILURES ===================================
+/usr/lib/python3.10/statistics.py:376: statistics.StatisticsError: geometric mean requires a non-empty dataset containing positive numbers
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/statistics.geometric_mean/pbt_1.py:13: AttributeError: module 'hypothesis.strategies' has no attribute 'raises'
+/usr/lib/python3.10/statistics.py:376: statistics.StatisticsError: geometric mean requires a non-empty dataset containing positive numbers
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/statistics.geometric_mean/pbt_1.py:25: AttributeError: module 'hypothesis.strategies' has no attribute 'raises'
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/statistics.geometric_mean/pbt_1.py:33: assert 0.12500000000000003 <= 0.125
+/usr/lib/python3.10/statistics.py:376: statistics.StatisticsError: geometric mean requires a non-empty dataset containing positive numbers
+/usr/lib/python3.10/statistics.py:376: statistics.StatisticsError: geometric mean requires a non-empty dataset containing positive numbers
+/usr/lib/python3.10/statistics.py:376: statistics.StatisticsError: geometric mean requires a non-empty dataset containing positive numbers
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/statistics.geometric_mean/pbt_3.py:12: AttributeError: module 'hypothesis.strategies' has no attribute 'raises'
+/usr/lib/python3.10/statistics.py:376: statistics.StatisticsError: geometric mean requires a non-empty dataset containing positive numbers
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/statistics.geometric_mean/pbt_3.py:23: AttributeError: module 'hypothesis.strategies' has no attribute 'raises'
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/statistics.geometric_mean/pbt_3.py:30: assert 34.00000000000001 <= 34.0
+/home/james/projects/.venv/lib/python3.10/site-packages/hypothesis/strategies/_internal/numbers.py:303: hypothesis.errors.InvalidArgument: Cannot have allow_nan=True, with min_value or max_value
+/home/james/projects/.venv/lib/python3.10/site-packages/hypothesis/strategies/_internal/numbers.py:303: hypothesis.errors.InvalidArgument: Cannot have allow_nan=True, with min_value or max_value
+/home/james/projects/.venv/lib/python3.10/site-packages/hypothesis/strategies/_internal/numbers.py:303: hypothesis.errors.InvalidArgument: Cannot have allow_nan=True, with min_value or max_value
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/statistics.geometric_mean/pbt_4.py:38: assert 9.000000000000002 <= 9.0
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/statistics.geometric_mean/pbt_5.py:14: AttributeError: module 'hypothesis.strategies' has no attribute 'raises'
+/usr/lib/python3.10/statistics.py:376: statistics.StatisticsError: geometric mean requires a non-empty dataset containing positive numbers
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/statistics.geometric_mean/pbt_5.py:25: AttributeError: module 'hypothesis.strategies' has no attribute 'raises'
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/statistics.geometric_mean/pbt_5.py:32: assert 29.000000000000004 <= 29.0
+=========================== short test summary info ============================
+FAILED doc_and_code/proptest/statistics.geometric_mean/pbt_1.py::test_output_is_float_property
+FAILED doc_and_code/proptest/statistics.geometric_mean/pbt_1.py::test_empty_input_raises_property
+FAILED doc_and_code/proptest/statistics.geometric_mean/pbt_1.py::test_zero_in_input_returns_zero_property
+FAILED doc_and_code/proptest/statistics.geometric_mean/pbt_1.py::test_negative_input_raises_property
+FAILED doc_and_code/proptest/statistics.geometric_mean/pbt_1.py::test_geometric_mean_less_than_arithmetic_mean_property
+FAILED doc_and_code/proptest/statistics.geometric_mean/pbt_2.py::test_geometric_mean_non_empty_property
+FAILED doc_and_code/proptest/statistics.geometric_mean/pbt_2.py::test_geometric_mean_zero_input_property
+FAILED doc_and_code/proptest/statistics.geometric_mean/pbt_3.py::test_non_empty_positive_inputs_property
+FAILED doc_and_code/proptest/statistics.geometric_mean/pbt_3.py::test_empty_input_property
+FAILED doc_and_code/proptest/statistics.geometric_mean/pbt_3.py::test_zero_input_property
+FAILED doc_and_code/proptest/statistics.geometric_mean/pbt_3.py::test_negative_input_property
+FAILED doc_and_code/proptest/statistics.geometric_mean/pbt_3.py::test_geometric_mean_less_than_arithmetic_mean_property
+FAILED doc_and_code/proptest/statistics.geometric_mean/pbt_4.py::test_geometric_mean_non_empty_property
+FAILED doc_and_code/proptest/statistics.geometric_mean/pbt_4.py::test_geometric_mean_empty_property
+FAILED doc_and_code/proptest/statistics.geometric_mean/pbt_4.py::test_geometric_mean_zero_property
+FAILED doc_and_code/proptest/statistics.geometric_mean/pbt_4.py::test_geometric_mean_arithmetic_mean_property
+FAILED doc_and_code/proptest/statistics.geometric_mean/pbt_5.py::test_geometric_mean_empty_input_property
+FAILED doc_and_code/proptest/statistics.geometric_mean/pbt_5.py::test_geometric_mean_zero_input_property
+FAILED doc_and_code/proptest/statistics.geometric_mean/pbt_5.py::test_geometric_mean_negative_input_property
+FAILED doc_and_code/proptest/statistics.geometric_mean/pbt_5.py::test_geometric_mean_arithmetic_vs_geometric_property
+========================= 20 failed, 5 passed in 5.75s =========================

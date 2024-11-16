@@ -1,0 +1,48 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 20 items / 1 error
+
+doc_and_code/proptest/networkx.algorithms.dag.is_aperiodic/pbt_1.py FF.. [ 20%]
+.                                                                        [ 25%]
+doc_and_code/proptest/networkx.algorithms.dag.is_aperiodic/pbt_2.py FFFF [ 45%]
+F                                                                        [ 50%]
+doc_and_code/proptest/networkx.algorithms.dag.is_aperiodic/pbt_3.py .FFF [ 70%]
+.                                                                        [ 75%]
+doc_and_code/proptest/networkx.algorithms.dag.is_aperiodic/pbt_5.py F.FF [ 95%]
+.                                                                        [100%]
+
+==================================== ERRORS ====================================
+_ ERROR collecting doc_and_code/proptest/networkx.algorithms.dag.is_aperiodic/pbt_4.py _
+E   AttributeError: type object 'settings' has no attribute 'set_profile'. Did you mean: 'get_profile'?
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/networkx.algorithms.dag.is_aperiodic/pbt_1.py:11: assert True is False
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/networkx.algorithms.dag.is_aperiodic/pbt_1.py:18: IndexError: list index out of range
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/networkx.algorithms.dag.is_aperiodic/pbt_2.py:7: hypothesis.errors.InvalidArgument: Too many positional arguments for test_is_aperiodic_property_acyclic_graph() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/networkx.algorithms.dag.is_aperiodic/pbt_2.py:15: hypothesis.errors.InvalidArgument: Too many positional arguments for test_is_aperiodic_property_single_cycle() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/networkx.algorithms.dag.is_aperiodic/pbt_2.py:24: hypothesis.errors.InvalidArgument: Too many positional arguments for test_is_aperiodic_property_coprime_cycles() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/networkx.algorithms.dag.is_aperiodic/pbt_2.py:37: hypothesis.errors.InvalidArgument: Too many positional arguments for test_is_aperiodic_property_empty_graph() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/networkx.algorithms.dag.is_aperiodic/pbt_2.py:47: hypothesis.errors.InvalidArgument: Too many positional arguments for test_is_aperiodic_property_directed_acyclic_graph() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/networkx.algorithms.dag.is_aperiodic/pbt_3.py:15: assert True is False
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/networkx.algorithms.dag.is_aperiodic/pbt_3.py:24: assert False is True
+/home/james/projects/.venv/lib/python3.10/site-packages/_pytest/capture.py:880: RuntimeError: generator raised StopIteration
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/networkx.algorithms.dag.is_aperiodic/pbt_5.py:7: hypothesis.errors.InvalidArgument: cannot mix positional and keyword arguments to @given
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/networkx.algorithms.dag.is_aperiodic/pbt_5.py:18: hypothesis.errors.InvalidArgument: cannot mix positional and keyword arguments to @given
+/home/james/projects/.venv/lib/python3.10/site-packages/_pytest/capture.py:880: RuntimeError: generator raised StopIteration
+=========================== short test summary info ============================
+FAILED doc_and_code/proptest/networkx.algorithms.dag.is_aperiodic/pbt_1.py::test_is_aperiodic_acylc_graph_property
+FAILED doc_and_code/proptest/networkx.algorithms.dag.is_aperiodic/pbt_1.py::test_is_aperiodic_single_cycle_property
+FAILED doc_and_code/proptest/networkx.algorithms.dag.is_aperiodic/pbt_2.py::test_is_aperiodic_property_acyclic_graph
+FAILED doc_and_code/proptest/networkx.algorithms.dag.is_aperiodic/pbt_2.py::test_is_aperiodic_property_single_cycle
+FAILED doc_and_code/proptest/networkx.algorithms.dag.is_aperiodic/pbt_2.py::test_is_aperiodic_property_coprime_cycles
+FAILED doc_and_code/proptest/networkx.algorithms.dag.is_aperiodic/pbt_2.py::test_is_aperiodic_property_empty_graph
+FAILED doc_and_code/proptest/networkx.algorithms.dag.is_aperiodic/pbt_2.py::test_is_aperiodic_property_directed_acyclic_graph
+FAILED doc_and_code/proptest/networkx.algorithms.dag.is_aperiodic/pbt_3.py::test_single_cycle_property
+FAILED doc_and_code/proptest/networkx.algorithms.dag.is_aperiodic/pbt_3.py::test_multiple_coprime_cycles_property
+FAILED doc_and_code/proptest/networkx.algorithms.dag.is_aperiodic/pbt_3.py::test_empty_graph_property
+FAILED doc_and_code/proptest/networkx.algorithms.dag.is_aperiodic/pbt_5.py::test_is_aperiodic_acylclic_property
+FAILED doc_and_code/proptest/networkx.algorithms.dag.is_aperiodic/pbt_5.py::test_is_aperiodic_coprime_cycles_property
+FAILED doc_and_code/proptest/networkx.algorithms.dag.is_aperiodic/pbt_5.py::test_is_aperiodic_empty_graph_property
+ERROR doc_and_code/proptest/networkx.algorithms.dag.is_aperiodic/pbt_4.py - A...
+==================== 13 failed, 7 passed, 1 error in 1.15s =====================

@@ -1,0 +1,35 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+code_only/mutants_2/datetime.datetime.fromisoformat/mutant_1.py .....    [ 20%]
+code_only/mutants_2/datetime.datetime.fromisoformat/mutant_2.py FFFFF    [ 40%]
+code_only/mutants_2/datetime.datetime.fromisoformat/mutant_3.py .....    [ 60%]
+code_only/mutants_2/datetime.datetime.fromisoformat/mutant_4.py .....    [ 80%]
+code_only/mutants_2/datetime.datetime.fromisoformat/mutant_5.py FFFFF    [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/datetime.datetime.fromisoformat/mutant_2.py:8: ValueError: Invalid isoformat string: '0000000'
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/datetime.datetime.fromisoformat/mutant_2.py:17: ValueError: Invalid isoformat string: '0000000'
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/datetime.datetime.fromisoformat/mutant_2.py:26: ValueError: Invalid isoformat string: '0000000'
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/datetime.datetime.fromisoformat/mutant_2.py:36: ValueError: Invalid isoformat string: '0000000'
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/datetime.datetime.fromisoformat/mutant_2.py:45: ValueError: Invalid isoformat string: '0000000'
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/datetime.datetime.fromisoformat/mutant_5.py:7: ValueError: Invalid isoformat string: ''
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/datetime.datetime.fromisoformat/mutant_5.py:12: ValueError: Invalid isoformat string: ''
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/datetime.datetime.fromisoformat/mutant_5.py:17: ValueError: Invalid isoformat string: ''
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/datetime.datetime.fromisoformat/mutant_5.py:22: ValueError: Invalid isoformat string: ''
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/datetime.datetime.fromisoformat/mutant_5.py:27: ValueError: Invalid isoformat string: ''
+=========================== short test summary info ============================
+FAILED code_only/mutants_2/datetime.datetime.fromisoformat/mutant_2.py::test_violation_of_datetime_datetime_fromisoformat_1
+FAILED code_only/mutants_2/datetime.datetime.fromisoformat/mutant_2.py::test_violation_of_datetime_datetime_fromisoformat_2
+FAILED code_only/mutants_2/datetime.datetime.fromisoformat/mutant_2.py::test_violation_of_datetime_datetime_fromisoformat_3
+FAILED code_only/mutants_2/datetime.datetime.fromisoformat/mutant_2.py::test_violation_of_datetime_datetime_fromisoformat_4
+FAILED code_only/mutants_2/datetime.datetime.fromisoformat/mutant_2.py::test_violation_of_datetime_datetime_fromisoformat_5
+FAILED code_only/mutants_2/datetime.datetime.fromisoformat/mutant_5.py::test_violation_of_datetime_datetime_fromisoformat_1
+FAILED code_only/mutants_2/datetime.datetime.fromisoformat/mutant_5.py::test_violation_of_datetime_datetime_fromisoformat_2
+FAILED code_only/mutants_2/datetime.datetime.fromisoformat/mutant_5.py::test_violation_of_datetime_datetime_fromisoformat_3
+FAILED code_only/mutants_2/datetime.datetime.fromisoformat/mutant_5.py::test_violation_of_datetime_datetime_fromisoformat_4
+FAILED code_only/mutants_2/datetime.datetime.fromisoformat/mutant_5.py::test_violation_of_datetime_datetime_fromisoformat_5
+======================== 10 failed, 15 passed in 5.45s =========================

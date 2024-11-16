@@ -1,0 +1,68 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+doc_and_code/proptest/networkx.algorithms.bipartite.basic.color/pbt_1.py F [  4%]
+FF.F                                                                     [ 20%]
+doc_and_code/proptest/networkx.algorithms.bipartite.basic.color/pbt_2.py F [ 24%]
+FFFF                                                                     [ 40%]
+doc_and_code/proptest/networkx.algorithms.bipartite.basic.color/pbt_3.py F [ 44%]
+FFFF                                                                     [ 60%]
+doc_and_code/proptest/networkx.algorithms.bipartite.basic.color/pbt_4.py F [ 64%]
+FF.F                                                                     [ 80%]
+doc_and_code/proptest/networkx.algorithms.bipartite.basic.color/pbt_5.py F [ 84%]
+....                                                                     [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/.venv/lib/python3.10/site-packages/hypothesis/strategies/_internal/core.py:1022: TypeError: random_graph() missing 1 required positional argument: 'p'
+/home/james/projects/.venv/lib/python3.10/site-packages/hypothesis/strategies/_internal/core.py:1022: TypeError: random_graph() missing 1 required positional argument: 'p'
+/home/james/projects/.venv/lib/python3.10/site-packages/hypothesis/strategies/_internal/core.py:1022: TypeError: random_graph() missing 1 required positional argument: 'p'
+/home/james/projects/.venv/lib/python3.10/site-packages/hypothesis/strategies/_internal/core.py:1022: TypeError: random_graph() missing 1 required positional argument: 'p'
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/networkx.algorithms.bipartite.basic.color/pbt_2.py:6: AttributeError: module 'hypothesis.strategies' has no attribute 'graphs'
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/networkx.algorithms.bipartite.basic.color/pbt_2.py:15: AttributeError: module 'hypothesis.strategies' has no attribute 'graphs'
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/networkx.algorithms.bipartite.basic.color/pbt_2.py:24: AttributeError: module 'hypothesis.strategies' has no attribute 'graphs'
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/networkx.algorithms.bipartite.basic.color/pbt_2.py:34: AttributeError: module 'hypothesis.strategies' has no attribute 'graphs'
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/networkx.algorithms.bipartite.basic.color/pbt_2.py:41: AttributeError: module 'hypothesis.strategies' has no attribute 'graphs'
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/networkx.algorithms.bipartite.basic.color/pbt_3.py:7: AttributeError: 'DataStrategy' object has no attribute 'draw'
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/networkx.algorithms.bipartite.basic.color/pbt_3.py:13: AttributeError: 'DataStrategy' object has no attribute 'draw'
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/networkx.algorithms.bipartite.basic.color/pbt_3.py:19: AttributeError: 'DataStrategy' object has no attribute 'draw'
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/networkx.algorithms.bipartite.basic.color/pbt_3.py:26: AttributeError: module 'hypothesis.strategies' has no attribute 'graphs'
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/networkx.algorithms.bipartite.basic.color/pbt_3.py:33: AttributeError: 'DataStrategy' object has no attribute 'draw'
+/home/james/projects/.venv/lib/python3.10/site-packages/hypothesis/strategies/_internal/core.py:1022: TypeError: random_graph() missing 1 required positional argument: 'p'
+/home/james/projects/.venv/lib/python3.10/site-packages/hypothesis/strategies/_internal/core.py:1022: TypeError: random_graph() missing 1 required positional argument: 'p'
+/home/james/projects/.venv/lib/python3.10/site-packages/hypothesis/strategies/_internal/core.py:1022: TypeError: random_graph() missing 1 required positional argument: 'p'
+/home/james/projects/.venv/lib/python3.10/site-packages/hypothesis/strategies/_internal/core.py:1022: TypeError: random_graph() missing 1 required positional argument: 'p'
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/networkx.algorithms.bipartite.basic.color/pbt_5.py:12: assert {0} == {0, 1}
+=============================== warnings summary ===============================
+doc_and_code/proptest/networkx.algorithms.bipartite.basic.color/pbt_5.py::test_color_output_contains_two_distinct_colors_property
+doc_and_code/proptest/networkx.algorithms.bipartite.basic.color/pbt_5.py::test_color_output_contains_all_nodes_property
+doc_and_code/proptest/networkx.algorithms.bipartite.basic.color/pbt_5.py::test_color_adjacent_nodes_have_different_colors_property
+doc_and_code/proptest/networkx.algorithms.bipartite.basic.color/pbt_5.py::test_color_raises_exception_on_non_bipartite_graph_property
+doc_and_code/proptest/networkx.algorithms.bipartite.basic.color/pbt_5.py::test_color_isolates_colored_zero_property
+  /usr/lib/python3.10/contextlib.py:142: HypothesisDeprecationWarning: Do not use the `random` module inside strategies; instead consider  `st.randoms()`, `st.sampled_from()`, etc.  Draw 1: from builds(gnp_random_graph, n=integers(min_value=1, max_value=100), p=floats(min_value=0, max_value=1))
+    next(self.gen)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED doc_and_code/proptest/networkx.algorithms.bipartite.basic.color/pbt_1.py::test_output_contains_two_distinct_keys_property
+FAILED doc_and_code/proptest/networkx.algorithms.bipartite.basic.color/pbt_1.py::test_output_contains_all_nodes_property
+FAILED doc_and_code/proptest/networkx.algorithms.bipartite.basic.color/pbt_1.py::test_adjacent_nodes_have_different_colors_property
+FAILED doc_and_code/proptest/networkx.algorithms.bipartite.basic.color/pbt_1.py::test_isolated_nodes_colored_zero_property
+FAILED doc_and_code/proptest/networkx.algorithms.bipartite.basic.color/pbt_2.py::test_two_distinct_colors_property
+FAILED doc_and_code/proptest/networkx.algorithms.bipartite.basic.color/pbt_2.py::test_all_nodes_colored_property
+FAILED doc_and_code/proptest/networkx.algorithms.bipartite.basic.color/pbt_2.py::test_adjacent_nodes_different_colors_property
+FAILED doc_and_code/proptest/networkx.algorithms.bipartite.basic.color/pbt_2.py::test_networkx_error_for_non_bipartite_property
+FAILED doc_and_code/proptest/networkx.algorithms.bipartite.basic.color/pbt_2.py::test_isolated_nodes_colored_zero_property
+FAILED doc_and_code/proptest/networkx.algorithms.bipartite.basic.color/pbt_3.py::test_output_contains_two_distinct_colors_property
+FAILED doc_and_code/proptest/networkx.algorithms.bipartite.basic.color/pbt_3.py::test_output_contains_all_nodes_property
+FAILED doc_and_code/proptest/networkx.algorithms.bipartite.basic.color/pbt_3.py::test_adjacent_nodes_have_different_colors_property
+FAILED doc_and_code/proptest/networkx.algorithms.bipartite.basic.color/pbt_3.py::test_non_bipartite_graph_raises_exception_property
+FAILED doc_and_code/proptest/networkx.algorithms.bipartite.basic.color/pbt_3.py::test_isolated_nodes_colored_zero_property
+FAILED doc_and_code/proptest/networkx.algorithms.bipartite.basic.color/pbt_4.py::test_output_contains_two_distinct_colors_property
+FAILED doc_and_code/proptest/networkx.algorithms.bipartite.basic.color/pbt_4.py::test_output_contains_all_nodes_property
+FAILED doc_and_code/proptest/networkx.algorithms.bipartite.basic.color/pbt_4.py::test_adjacent_nodes_have_different_colors_property
+FAILED doc_and_code/proptest/networkx.algorithms.bipartite.basic.color/pbt_4.py::test_isolated_nodes_colored_zero_property
+FAILED doc_and_code/proptest/networkx.algorithms.bipartite.basic.color/pbt_5.py::test_color_output_contains_two_distinct_colors_property
+=================== 19 failed, 6 passed, 5 warnings in 0.41s ===================

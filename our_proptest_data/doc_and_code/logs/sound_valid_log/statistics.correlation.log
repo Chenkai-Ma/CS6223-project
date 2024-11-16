@@ -1,0 +1,83 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 20 items / 1 error
+
+doc_and_code/proptest/statistics.correlation/pbt_1.py F.FFF              [ 25%]
+doc_and_code/proptest/statistics.correlation/pbt_3.py F.FFF              [ 50%]
+doc_and_code/proptest/statistics.correlation/pbt_4.py FFFFF              [ 75%]
+doc_and_code/proptest/statistics.correlation/pbt_5.py FFFFF              [100%]
+
+==================================== ERRORS ====================================
+____ ERROR collecting doc_and_code/proptest/statistics.correlation/pbt_2.py ____
+../../.venv/lib/python3.10/site-packages/_pytest/python.py:493: in importtestmodule
+    mod = import_path(
+../../.venv/lib/python3.10/site-packages/_pytest/pathlib.py:582: in import_path
+    importlib.import_module(module_name)
+/usr/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1050: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1027: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1006: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:688: in _load_unlocked
+    ???
+../../.venv/lib/python3.10/site-packages/_pytest/assertion/rewrite.py:175: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+../../.venv/lib/python3.10/site-packages/_pytest/assertion/rewrite.py:355: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+/usr/lib/python3.10/ast.py:50: in parse
+    return compile(source, filename, mode, flags,
+E     File "/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/statistics.correlation/pbt_2.py", line 7
+E       unique=True))
+E                   ^
+E   SyntaxError: unmatched ')'
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/statistics.correlation/pbt_1.py:7: hypothesis.errors.InvalidArgument: Too many positional arguments for test_correlation_output_range_property() were passed to @given - expected at most 1 arguments, but got 2 (lists(floats(), min_size=2, max_size=1000).filter(lambda lst: <unknown>), lists(floats(), min_size=2, max_size=1000).filter(lambda lst: len(set(lst)) > 1))
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/statistics.correlation/pbt_1.py:22: exceptiongroup.ExceptionGroup: Hypothesis found 11 distinct failures. (11 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/statistics.correlation/pbt_1.py:33: TypeError: correlation() got an unexpected keyword argument 'method'
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/statistics.correlation/pbt_1.py:36: exceptiongroup.ExceptionGroup: Hypothesis found 10 distinct failures. (10 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/statistics.correlation/pbt_3.py:5: exceptiongroup.ExceptionGroup: Hypothesis found 6 distinct failures. (6 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/statistics.correlation/pbt_3.py:20: exceptiongroup.ExceptionGroup: Hypothesis found 8 distinct failures. (8 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/statistics.correlation/pbt_3.py:29: TypeError: correlation() got an unexpected keyword argument 'method'
+/usr/lib/python3.10/statistics.py:919: statistics.StatisticsError: at least one of the inputs is constant
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/statistics.correlation/pbt_4.py:5: exceptiongroup.ExceptionGroup: Hypothesis found 9 distinct failures. (9 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/statistics.correlation/pbt_4.py:11: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/.venv/lib/python3.10/site-packages/hypothesis/strategies/_internal/strategies.py:319: hypothesis.errors.HypothesisException: Using example() inside a test function is a bad idea. Instead consider using hypothesis.strategies.data() to draw more examples during testing. See https://hypothesis.readthedocs.io/en/latest/data.html#drawing-interactively-in-tests for more details.
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/statistics.correlation/pbt_4.py:30: TypeError: correlation() got an unexpected keyword argument 'method'
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/statistics.correlation/pbt_4.py:34: exceptiongroup.ExceptionGroup: Hypothesis found 9 distinct failures. (9 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/statistics.correlation/pbt_5.py:6: exceptiongroup.ExceptionGroup: Hypothesis found 10 distinct failures. (10 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/statistics.correlation/pbt_5.py:13: AttributeError: module 'hypothesis.strategies' has no attribute 'raises'
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/statistics.correlation/pbt_5.py:17: exceptiongroup.ExceptionGroup: Hypothesis found 9 distinct failures. (9 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/statistics.correlation/pbt_5.py:27: TypeError: correlation() got an unexpected keyword argument 'method'
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/statistics.correlation/pbt_5.py:30: exceptiongroup.ExceptionGroup: Hypothesis found 10 distinct failures. (10 sub-exceptions)
+=============================== warnings summary ===============================
+doc_and_code/proptest/statistics.correlation/pbt_4.py::test_linear_transformation_property
+  /home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/statistics.correlation/pbt_4.py:22: NonInteractiveExampleWarning: The `.example()` method is good for exploring strategies, but should only be used interactively.  We recommend using `@given` for tests - it performs better, saves and replays failures to avoid flakiness, and reports minimal examples. (strategy: floats(min_value=0.1, max_value=10.0))
+    scale = st.floats(min_value=0.1, max_value=10.0).example()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED doc_and_code/proptest/statistics.correlation/pbt_1.py::test_correlation_output_range_property
+FAILED doc_and_code/proptest/statistics.correlation/pbt_1.py::test_correlation_linear_transformation_property
+FAILED doc_and_code/proptest/statistics.correlation/pbt_1.py::test_correlation_spearman_monotonic_property
+FAILED doc_and_code/proptest/statistics.correlation/pbt_1.py::test_correlation_symmetry_property
+FAILED doc_and_code/proptest/statistics.correlation/pbt_3.py::test_output_range_property
+FAILED doc_and_code/proptest/statistics.correlation/pbt_3.py::test_linear_transformation_property
+FAILED doc_and_code/proptest/statistics.correlation/pbt_3.py::test_spearman_monotonic_relationship_property
+FAILED doc_and_code/proptest/statistics.correlation/pbt_3.py::test_symmetric_property
+FAILED doc_and_code/proptest/statistics.correlation/pbt_4.py::test_output_range_property
+FAILED doc_and_code/proptest/statistics.correlation/pbt_4.py::test_constant_input_property
+FAILED doc_and_code/proptest/statistics.correlation/pbt_4.py::test_linear_transformation_property
+FAILED doc_and_code/proptest/statistics.correlation/pbt_4.py::test_ranked_monotonic_property
+FAILED doc_and_code/proptest/statistics.correlation/pbt_4.py::test_symmetric_property
+FAILED doc_and_code/proptest/statistics.correlation/pbt_5.py::test_output_range_property
+FAILED doc_and_code/proptest/statistics.correlation/pbt_5.py::test_constant_input_property
+FAILED doc_and_code/proptest/statistics.correlation/pbt_5.py::test_linear_transformation_property
+FAILED doc_and_code/proptest/statistics.correlation/pbt_5.py::test_spearman_monotonic_property
+FAILED doc_and_code/proptest/statistics.correlation/pbt_5.py::test_symmetry_property
+ERROR doc_and_code/proptest/statistics.correlation/pbt_2.py
+========= 18 failed, 2 passed, 1 warning, 1 error in 270.14s (0:04:30) =========

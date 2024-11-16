@@ -1,0 +1,21 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 5 items
+
+code_only/mutants_2/decimal.Decimal.shift/mutant_1.py FFFFF              [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/decimal.Decimal.shift/mutant_1.py:8: decimal.InvalidOperation: [<class 'decimal.InvalidOperation'>]
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/decimal.Decimal.shift/mutant_1.py:13: decimal.InvalidOperation: [<class 'decimal.InvalidOperation'>]
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/decimal.Decimal.shift/mutant_1.py:18: decimal.InvalidOperation: [<class 'decimal.InvalidOperation'>]
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/decimal.Decimal.shift/mutant_1.py:23: decimal.InvalidOperation: [<class 'decimal.InvalidOperation'>]
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/decimal.Decimal.shift/mutant_1.py:28: decimal.InvalidOperation: [<class 'decimal.InvalidOperation'>]
+=========================== short test summary info ============================
+FAILED code_only/mutants_2/decimal.Decimal.shift/mutant_1.py::test_violation_of_decimal_Decimal_shift_1
+FAILED code_only/mutants_2/decimal.Decimal.shift/mutant_1.py::test_violation_of_decimal_Decimal_shift_2
+FAILED code_only/mutants_2/decimal.Decimal.shift/mutant_1.py::test_violation_of_decimal_Decimal_shift_3
+FAILED code_only/mutants_2/decimal.Decimal.shift/mutant_1.py::test_violation_of_decimal_Decimal_shift_4
+FAILED code_only/mutants_2/decimal.Decimal.shift/mutant_1.py::test_violation_of_decimal_Decimal_shift_5
+============================== 5 failed in 2.30s ===============================

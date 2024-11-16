@@ -1,0 +1,33 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+doc_and_code/proptest/statistics.pstdev/pbt_1.py F.F..                   [ 20%]
+doc_and_code/proptest/statistics.pstdev/pbt_2.py F....                   [ 40%]
+doc_and_code/proptest/statistics.pstdev/pbt_3.py ..F..                   [ 60%]
+doc_and_code/proptest/statistics.pstdev/pbt_4.py F.F.F                   [ 80%]
+doc_and_code/proptest/statistics.pstdev/pbt_5.py F.F..                   [100%]
+
+=================================== FAILURES ===================================
+/usr/lib/python3.10/numbers.py:291: OverflowError: integer division result too large for a float
+/usr/lib/python3.10/numbers.py:291: OverflowError: integer division result too large for a float
+/usr/lib/python3.10/numbers.py:291: OverflowError: integer division result too large for a float
+/usr/lib/python3.10/numbers.py:291: OverflowError: integer division result too large for a float
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/statistics.pstdev/pbt_4.py:5: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/statistics.pstdev/pbt_4.py:16: exceptiongroup.ExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/statistics.pstdev/pbt_4.py:31: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/usr/lib/python3.10/numbers.py:291: OverflowError: integer division result too large for a float
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/statistics.pstdev/pbt_5.py:17: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+=========================== short test summary info ============================
+FAILED doc_and_code/proptest/statistics.pstdev/pbt_1.py::test_pstdev_non_negative_property
+FAILED doc_and_code/proptest/statistics.pstdev/pbt_1.py::test_pstdev_variance_property
+FAILED doc_and_code/proptest/statistics.pstdev/pbt_2.py::test_non_negative_output_property
+FAILED doc_and_code/proptest/statistics.pstdev/pbt_3.py::test_output_equals_sqrt_variance_property
+FAILED doc_and_code/proptest/statistics.pstdev/pbt_4.py::test_output_non_negative_property
+FAILED doc_and_code/proptest/statistics.pstdev/pbt_4.py::test_variance_relation_property
+FAILED doc_and_code/proptest/statistics.pstdev/pbt_4.py::test_repeatability_property
+FAILED doc_and_code/proptest/statistics.pstdev/pbt_5.py::test_output_non_negative_property
+FAILED doc_and_code/proptest/statistics.pstdev/pbt_5.py::test_output_equals_sqrt_variance_property
+========================= 9 failed, 16 passed in 3.87s =========================

@@ -1,0 +1,45 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+doc_and_code/proptest/decimal.Decimal.exp/pbt_1.py F..FF                 [ 20%]
+doc_and_code/proptest/decimal.Decimal.exp/pbt_2.py F..FF                 [ 40%]
+doc_and_code/proptest/decimal.Decimal.exp/pbt_3.py FFFFF                 [ 60%]
+doc_and_code/proptest/decimal.Decimal.exp/pbt_4.py F...F                 [ 80%]
+doc_and_code/proptest/decimal.Decimal.exp/pbt_5.py F...F                 [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.exp/pbt_1.py:5: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.exp/pbt_1.py:21: decimal.Overflow: [<class 'decimal.Overflow'>]
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.exp/pbt_1.py:25: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.exp/pbt_2.py:8: exceptiongroup.ExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.exp/pbt_2.py:29: decimal.Overflow: [<class 'decimal.Overflow'>]
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.exp/pbt_2.py:33: exceptiongroup.ExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.exp/pbt_3.py:5: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.exp/pbt_3.py:11: hypothesis.errors.InvalidArgument: Too many positional arguments for test_decimal_Decimal_exp_zero_property() were passed to @given - expected at most 0 arguments, but got 1 (just(0.0),)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.exp/pbt_3.py:17: AssertionError: assert Decimal('1') < 1
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.exp/pbt_3.py:20: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.exp/pbt_3.py:25: exceptiongroup.ExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.exp/pbt_4.py:5: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.exp/pbt_4.py:28: exceptiongroup.ExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.exp/pbt_5.py:5: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.exp/pbt_5.py:31: exceptiongroup.ExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)
+=========================== short test summary info ============================
+FAILED doc_and_code/proptest/decimal.Decimal.exp/pbt_1.py::test_decimal_Decimal_exp_positive_output_property
+FAILED doc_and_code/proptest/decimal.Decimal.exp/pbt_1.py::test_decimal_Decimal_exp_positive_infinity_property
+FAILED doc_and_code/proptest/decimal.Decimal.exp/pbt_1.py::test_decimal_Decimal_exp_rounding_mode_property
+FAILED doc_and_code/proptest/decimal.Decimal.exp/pbt_2.py::test_decimal_Decimal_exp_positive_output_property
+FAILED doc_and_code/proptest/decimal.Decimal.exp/pbt_2.py::test_decimal_Decimal_exp_positive_infinity_property
+FAILED doc_and_code/proptest/decimal.Decimal.exp/pbt_2.py::test_decimal_Decimal_exp_rounding_property
+FAILED doc_and_code/proptest/decimal.Decimal.exp/pbt_3.py::test_decimal_Decimal_exp_positive_output_property
+FAILED doc_and_code/proptest/decimal.Decimal.exp/pbt_3.py::test_decimal_Decimal_exp_zero_property
+FAILED doc_and_code/proptest/decimal.Decimal.exp/pbt_3.py::test_decimal_Decimal_exp_negative_infinity_property
+FAILED doc_and_code/proptest/decimal.Decimal.exp/pbt_3.py::test_decimal_Decimal_exp_positive_infinity_property
+FAILED doc_and_code/proptest/decimal.Decimal.exp/pbt_3.py::test_decimal_Decimal_exp_rounding_property
+FAILED doc_and_code/proptest/decimal.Decimal.exp/pbt_4.py::test_decimal_exp_positive_output_property
+FAILED doc_and_code/proptest/decimal.Decimal.exp/pbt_4.py::test_decimal_exp_rounding_property
+FAILED doc_and_code/proptest/decimal.Decimal.exp/pbt_5.py::test_decimal_Decimal_exp_positive_output_property
+FAILED doc_and_code/proptest/decimal.Decimal.exp/pbt_5.py::test_decimal_Decimal_exp_rounding_property
+======================== 15 failed, 10 passed in 4.71s =========================

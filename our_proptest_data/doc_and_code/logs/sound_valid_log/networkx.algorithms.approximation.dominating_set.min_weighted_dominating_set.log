@@ -1,0 +1,42 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+doc_and_code/proptest/networkx.algorithms.approximation.dominating_set.min_weighted_dominating_set/pbt_1.py . [  4%]
+.F.F                                                                     [ 20%]
+doc_and_code/proptest/networkx.algorithms.approximation.dominating_set.min_weighted_dominating_set/pbt_2.py F [ 24%]
+FF.F                                                                     [ 40%]
+doc_and_code/proptest/networkx.algorithms.approximation.dominating_set.min_weighted_dominating_set/pbt_3.py . [ 44%]
+.F..                                                                     [ 60%]
+doc_and_code/proptest/networkx.algorithms.approximation.dominating_set.min_weighted_dominating_set/pbt_4.py F [ 64%]
+FF.F                                                                     [ 80%]
+doc_and_code/proptest/networkx.algorithms.approximation.dominating_set.min_weighted_dominating_set/pbt_5.py . [ 84%]
+....                                                                     [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/networkx.algorithms.approximation.dominating_set.min_weighted_dominating_set/pbt_1.py:36: NameError: name 'log' is not defined
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/networkx.algorithms.approximation.dominating_set.min_weighted_dominating_set/pbt_1.py:54: ValueError: max() arg is an empty sequence
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/networkx.algorithms.approximation.dominating_set.min_weighted_dominating_set/pbt_2.py:7: AttributeError: module 'hypothesis.strategies' has no attribute 'graphs'
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/networkx.algorithms.approximation.dominating_set.min_weighted_dominating_set/pbt_2.py:13: AttributeError: module 'hypothesis.strategies' has no attribute 'graphs'
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/networkx.algorithms.approximation.dominating_set.min_weighted_dominating_set/pbt_2.py:21: AttributeError: module 'hypothesis.strategies' has no attribute 'graphs'
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/networkx.algorithms.approximation.dominating_set.min_weighted_dominating_set/pbt_2.py:37: AttributeError: module 'hypothesis.strategies' has no attribute 'graphs'
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/networkx.algorithms.approximation.dominating_set.min_weighted_dominating_set/pbt_3.py:35: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/networkx.algorithms.approximation.dominating_set.min_weighted_dominating_set/pbt_4.py:9: AttributeError: 'float' object has no attribute 'round'
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/networkx.algorithms.approximation.dominating_set.min_weighted_dominating_set/pbt_4.py:20: AttributeError: 'float' object has no attribute 'round'
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/networkx.algorithms.approximation.dominating_set.min_weighted_dominating_set/pbt_4.py:36: AttributeError: 'float' object has no attribute 'round'
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/networkx.algorithms.approximation.dominating_set.min_weighted_dominating_set/pbt_4.py:59: AttributeError: 'float' object has no attribute 'round'
+=========================== short test summary info ============================
+FAILED doc_and_code/proptest/networkx.algorithms.approximation.dominating_set.min_weighted_dominating_set/pbt_1.py::test_weight_constraint_property
+FAILED doc_and_code/proptest/networkx.algorithms.approximation.dominating_set.min_weighted_dominating_set/pbt_1.py::test_output_unchanged_with_graph_modification_property
+FAILED doc_and_code/proptest/networkx.algorithms.approximation.dominating_set.min_weighted_dominating_set/pbt_2.py::test_output_is_subset_of_input_property
+FAILED doc_and_code/proptest/networkx.algorithms.approximation.dominating_set.min_weighted_dominating_set/pbt_2.py::test_output_covers_all_vertices_property
+FAILED doc_and_code/proptest/networkx.algorithms.approximation.dominating_set.min_weighted_dominating_set/pbt_2.py::test_output_weight_bound_property
+FAILED doc_and_code/proptest/networkx.algorithms.approximation.dominating_set.min_weighted_dominating_set/pbt_2.py::test_output_remains_valid_with_structure_change_property
+FAILED doc_and_code/proptest/networkx.algorithms.approximation.dominating_set.min_weighted_dominating_set/pbt_3.py::test_output_weight_limit_property
+FAILED doc_and_code/proptest/networkx.algorithms.approximation.dominating_set.min_weighted_dominating_set/pbt_4.py::test_output_is_subset_of_input_property
+FAILED doc_and_code/proptest/networkx.algorithms.approximation.dominating_set.min_weighted_dominating_set/pbt_4.py::test_output_covers_all_vertices_property
+FAILED doc_and_code/proptest/networkx.algorithms.approximation.dominating_set.min_weighted_dominating_set/pbt_4.py::test_output_weight_limit_property
+FAILED doc_and_code/proptest/networkx.algorithms.approximation.dominating_set.min_weighted_dominating_set/pbt_4.py::test_output_stability_property
+======================== 11 failed, 14 passed in 1.99s =========================

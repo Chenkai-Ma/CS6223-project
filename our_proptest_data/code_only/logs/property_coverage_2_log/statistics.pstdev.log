@@ -1,0 +1,40 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 20 items
+
+code_only/mutants_2/statistics.pstdev/mutant_1.py FFFFF                  [ 25%]
+code_only/mutants_2/statistics.pstdev/mutant_2.py .F...                  [ 50%]
+code_only/mutants_2/statistics.pstdev/mutant_3.py FFFFF                  [ 75%]
+code_only/mutants_2/statistics.pstdev/mutant_4.py F.F..                  [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/statistics.pstdev/mutant_1.py:6: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/statistics.pstdev/mutant_1.py:12: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/statistics.pstdev/mutant_1.py:18: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/statistics.pstdev/mutant_1.py:24: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/statistics.pstdev/mutant_1.py:30: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/statistics.pstdev/mutant_2.py:17: AssertionError: Expected StatisticsError for empty input
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/statistics.pstdev/mutant_3.py:8: assert 0.0 != 0
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/statistics.pstdev/mutant_3.py:13: assert 0.0 > 0
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/statistics.pstdev/mutant_3.py:18: assert 0.0 == 1
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/statistics.pstdev/mutant_3.py:23: assert 0.0 == -1
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/statistics.pstdev/mutant_3.py:28: assert 0.0 > 10
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/statistics.pstdev/mutant_4.py:6: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/statistics.pstdev/mutant_4.py:18: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+=========================== short test summary info ============================
+FAILED code_only/mutants_2/statistics.pstdev/mutant_1.py::test_violation_of_statistics_pstdev_1
+FAILED code_only/mutants_2/statistics.pstdev/mutant_1.py::test_violation_of_statistics_pstdev_2
+FAILED code_only/mutants_2/statistics.pstdev/mutant_1.py::test_violation_of_statistics_pstdev_3
+FAILED code_only/mutants_2/statistics.pstdev/mutant_1.py::test_violation_of_statistics_pstdev_4
+FAILED code_only/mutants_2/statistics.pstdev/mutant_1.py::test_violation_of_statistics_pstdev_5
+FAILED code_only/mutants_2/statistics.pstdev/mutant_2.py::test_violation_of_statistics_pstdev_2
+FAILED code_only/mutants_2/statistics.pstdev/mutant_3.py::test_violation_of_statistics_pstdev_1
+FAILED code_only/mutants_2/statistics.pstdev/mutant_3.py::test_violation_of_statistics_pstdev_2
+FAILED code_only/mutants_2/statistics.pstdev/mutant_3.py::test_violation_of_statistics_pstdev_3
+FAILED code_only/mutants_2/statistics.pstdev/mutant_3.py::test_violation_of_statistics_pstdev_4
+FAILED code_only/mutants_2/statistics.pstdev/mutant_3.py::test_violation_of_statistics_pstdev_5
+FAILED code_only/mutants_2/statistics.pstdev/mutant_4.py::test_violation_of_statistics_pstdev_1
+FAILED code_only/mutants_2/statistics.pstdev/mutant_4.py::test_violation_of_statistics_pstdev_3
+========================= 13 failed, 7 passed in 9.42s =========================

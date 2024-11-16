@@ -1,0 +1,63 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 26 items
+
+doc_and_code/proptest/decimal.Decimal.shift/pbt_1.py FF.FF               [ 19%]
+doc_and_code/proptest/decimal.Decimal.shift/pbt_2.py FFFFF               [ 38%]
+doc_and_code/proptest/decimal.Decimal.shift/pbt_3.py FFFF.               [ 57%]
+doc_and_code/proptest/decimal.Decimal.shift/pbt_4.py FFFFFF              [ 80%]
+doc_and_code/proptest/decimal.Decimal.shift/pbt_5.py FFFFF               [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.shift/pbt_1.py:8: AttributeError: 'decimal.Decimal' object has no attribute 'sign'
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.shift/pbt_1.py:14: AttributeError: 'decimal.Decimal' object has no attribute '_exp'. Did you mean: 'exp'?
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.shift/pbt_1.py:22: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.shift/pbt_1.py:29: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.shift/pbt_2.py:5: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.shift/pbt_2.py:10: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.shift/pbt_2.py:15: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.shift/pbt_2.py:20: exceptiongroup.ExceptionGroup: Hypothesis found 4 distinct failures. (4 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.shift/pbt_2.py:29: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.shift/pbt_3.py:8: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.shift/pbt_3.py:13: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.shift/pbt_3.py:20: AssertionError: assert Decimal('NaN') == Decimal('NaN')
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.shift/pbt_3.py:24: decimal.InvalidOperation: [<class 'decimal.InvalidOperation'>]
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.shift/pbt_4.py:5: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.shift/pbt_4.py:10: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.shift/pbt_4.py:15: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.shift/pbt_4.py:20: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.shift/pbt_4.py:26: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.shift/pbt_4.py:32: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.shift/pbt_5.py:5: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.shift/pbt_5.py:10: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.shift/pbt_5.py:15: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.shift/pbt_5.py:20: exceptiongroup.ExceptionGroup: Hypothesis found 4 distinct failures. (4 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.shift/pbt_5.py:29: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+=========================== short test summary info ============================
+FAILED doc_and_code/proptest/decimal.Decimal.shift/pbt_1.py::test_output_sign_remains_unchanged_property
+FAILED doc_and_code/proptest/decimal.Decimal.shift/pbt_1.py::test_output_exponent_remains_unchanged_property
+FAILED doc_and_code/proptest/decimal.Decimal.shift/pbt_1.py::test_shifting_left_increases_coefficient_length_property
+FAILED doc_and_code/proptest/decimal.Decimal.shift/pbt_1.py::test_shifting_right_decreases_coefficient_length_property
+FAILED doc_and_code/proptest/decimal.Decimal.shift/pbt_2.py::test_shift_output_sign_property
+FAILED doc_and_code/proptest/decimal.Decimal.shift/pbt_2.py::test_shift_output_exponent_property
+FAILED doc_and_code/proptest/decimal.Decimal.shift/pbt_2.py::test_shift_zero_property
+FAILED doc_and_code/proptest/decimal.Decimal.shift/pbt_2.py::test_shift_left_right_property
+FAILED doc_and_code/proptest/decimal.Decimal.shift/pbt_2.py::test_shift_precision_property
+FAILED doc_and_code/proptest/decimal.Decimal.shift/pbt_3.py::test_shift_sign_property
+FAILED doc_and_code/proptest/decimal.Decimal.shift/pbt_3.py::test_shift_exponent_property
+FAILED doc_and_code/proptest/decimal.Decimal.shift/pbt_3.py::test_shift_zero_property
+FAILED doc_and_code/proptest/decimal.Decimal.shift/pbt_3.py::test_shift_left_right_property
+FAILED doc_and_code/proptest/decimal.Decimal.shift/pbt_4.py::test_output_sign_same_as_input_sign_property
+FAILED doc_and_code/proptest/decimal.Decimal.shift/pbt_4.py::test_exponent_unchanged_property
+FAILED doc_and_code/proptest/decimal.Decimal.shift/pbt_4.py::test_shift_by_zero_returns_original_property
+FAILED doc_and_code/proptest/decimal.Decimal.shift/pbt_4.py::test_shifting_left_increases_digits_property
+FAILED doc_and_code/proptest/decimal.Decimal.shift/pbt_4.py::test_shifting_right_decreases_digits_property
+FAILED doc_and_code/proptest/decimal.Decimal.shift/pbt_4.py::test_output_precision_property
+FAILED doc_and_code/proptest/decimal.Decimal.shift/pbt_5.py::test_sign_of_output_property
+FAILED doc_and_code/proptest/decimal.Decimal.shift/pbt_5.py::test_exponent_of_output_property
+FAILED doc_and_code/proptest/decimal.Decimal.shift/pbt_5.py::test_shift_by_zero_property
+FAILED doc_and_code/proptest/decimal.Decimal.shift/pbt_5.py::test_left_and_right_shift_property
+FAILED doc_and_code/proptest/decimal.Decimal.shift/pbt_5.py::test_precision_limit_property
+======================== 24 failed, 2 passed in 47.70s =========================

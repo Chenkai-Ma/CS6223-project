@@ -1,0 +1,38 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 20 items / 1 error
+
+doc_and_code/proptest/decimal.Decimal.adjusted/pbt_1.py ..FF.            [ 25%]
+doc_and_code/proptest/decimal.Decimal.adjusted/pbt_3.py ..FF.            [ 50%]
+doc_and_code/proptest/decimal.Decimal.adjusted/pbt_4.py ...F.            [ 75%]
+doc_and_code/proptest/decimal.Decimal.adjusted/pbt_5.py FFFFF            [100%]
+
+==================================== ERRORS ====================================
+___ ERROR collecting doc_and_code/proptest/decimal.Decimal.adjusted/pbt_2.py ___
+E   TypeError: decimals() got an unexpected keyword argument 'negative'
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.adjusted/pbt_1.py:18: AttributeError: 'decimal.Decimal' object has no attribute '_exp'. Did you mean: 'exp'?
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.adjusted/pbt_1.py:22: AttributeError: 'decimal.Decimal' object has no attribute '_int'
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.adjusted/pbt_3.py:18: AttributeError: 'decimal.Decimal' object has no attribute '_exp'. Did you mean: 'exp'?
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.adjusted/pbt_3.py:26: AttributeError: 'decimal.Decimal' object has no attribute '_exp'. Did you mean: 'exp'?
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.adjusted/pbt_4.py:26: AttributeError: 'decimal.Decimal' object has no attribute 'exponent'
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.adjusted/pbt_5.py:6: hypothesis.errors.InvalidArgument: Too many positional arguments for test_decimal_Decimal_adjusted_integer_output() were passed to @given - expected at most 0 arguments, but got 1 (decimals(),)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.adjusted/pbt_5.py:12: hypothesis.errors.InvalidArgument: Too many positional arguments for test_decimal_Decimal_adjusted_zero_coefficient() were passed to @given - expected at most 0 arguments, but got 1 (decimals(min_value=0, max_value=0),)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.adjusted/pbt_5.py:18: hypothesis.errors.InvalidArgument: Too many positional arguments for test_decimal_Decimal_adjusted_exponent_relation() were passed to @given - expected at most 0 arguments, but got 1 (decimals(),)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.adjusted/pbt_5.py:25: hypothesis.errors.InvalidArgument: Too many positional arguments for test_decimal_Decimal_adjusted_scientific_notation() were passed to @given - expected at most 0 arguments, but got 1 (decimals(),)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.adjusted/pbt_5.py:31: hypothesis.errors.InvalidArgument: Too many positional arguments for test_decimal_Decimal_adjusted_nan_infinity() were passed to @given - expected at most 0 arguments, but got 1 (one_of(decimals(allow_nan=True), decimals(allow_infinity=True)),)
+=========================== short test summary info ============================
+FAILED doc_and_code/proptest/decimal.Decimal.adjusted/pbt_1.py::test_decimal_Decimal_adjusted_exponent_non_zero_property
+FAILED doc_and_code/proptest/decimal.Decimal.adjusted/pbt_1.py::test_decimal_Decimal_adjusted_scientific_notation_property
+FAILED doc_and_code/proptest/decimal.Decimal.adjusted/pbt_3.py::test_decimal_adjusted_exponent_greater_than_equal_property
+FAILED doc_and_code/proptest/decimal.Decimal.adjusted/pbt_3.py::test_decimal_adjusted_correct_for_scientific_notation_property
+FAILED doc_and_code/proptest/decimal.Decimal.adjusted/pbt_4.py::test_adjusted_correctly_accounts_for_scientific_notation_property
+FAILED doc_and_code/proptest/decimal.Decimal.adjusted/pbt_5.py::test_decimal_Decimal_adjusted_integer_output
+FAILED doc_and_code/proptest/decimal.Decimal.adjusted/pbt_5.py::test_decimal_Decimal_adjusted_zero_coefficient
+FAILED doc_and_code/proptest/decimal.Decimal.adjusted/pbt_5.py::test_decimal_Decimal_adjusted_exponent_relation
+FAILED doc_and_code/proptest/decimal.Decimal.adjusted/pbt_5.py::test_decimal_Decimal_adjusted_scientific_notation
+FAILED doc_and_code/proptest/decimal.Decimal.adjusted/pbt_5.py::test_decimal_Decimal_adjusted_nan_infinity
+ERROR doc_and_code/proptest/decimal.Decimal.adjusted/pbt_2.py - TypeError: de...
+==================== 10 failed, 10 passed, 1 error in 1.86s ====================

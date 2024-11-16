@@ -1,0 +1,53 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+code_only/mutants_2/datetime.date.isocalendar/mutant_1.py .FFFF          [ 20%]
+code_only/mutants_2/datetime.date.isocalendar/mutant_2.py FFFFF          [ 40%]
+code_only/mutants_2/datetime.date.isocalendar/mutant_3.py FFFFF          [ 60%]
+code_only/mutants_2/datetime.date.isocalendar/mutant_4.py FFFFF          [ 80%]
+code_only/mutants_2/datetime.date.isocalendar/mutant_5.py .....          [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/datetime.date.isocalendar/mutant_1.py:17: assert 2001 == (2001 + 1)
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/datetime.date.isocalendar/mutant_1.py:24: assert 2001 == (2001 - 1)
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/datetime.date.isocalendar/mutant_1.py:31: assert 2001 == 2000
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/datetime.date.isocalendar/mutant_1.py:38: assert 2001 == (2001 + 2)
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/datetime.date.isocalendar/mutant_2.py:9: assert 54 <= 53
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/datetime.date.isocalendar/mutant_2.py:15: assert 1 <= 0
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/datetime.date.isocalendar/mutant_2.py:21: assert 100 <= 53
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/datetime.date.isocalendar/mutant_2.py:27: assert 1 <= -1
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/datetime.date.isocalendar/mutant_2.py:33: assert 60 <= 53
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/datetime.date.isocalendar/mutant_3.py:10: assert 1 <= 0
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/datetime.date.isocalendar/mutant_3.py:17: assert 8 <= 7
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/datetime.date.isocalendar/mutant_3.py:24: assert 1 <= -1
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/datetime.date.isocalendar/mutant_3.py:31: assert 10 <= 7
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/datetime.date.isocalendar/mutant_3.py:38: assert 15 <= 7
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/datetime.date.isocalendar/mutant_4.py:10: assert ((2001 - 2) == 2001 or (1 == 1 and 1 <= 7 and (2001 - 2) == (2001 - 1)))
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/datetime.date.isocalendar/mutant_4.py:17: assert (9999 == 2001 or (1 == 1 and 1 <= 7 and 9999 == (2001 - 1)))
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/datetime.date.isocalendar/mutant_4.py:24: assert ((2001 + 1) == 2001 or (1 == 1 and 1 <= 7 and (2001 + 1) == (2001 - 1)))
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/datetime.date.isocalendar/mutant_4.py:31: assert ((2001 - 3) == 2001 or (1 == 1 and 1 <= 7 and (2001 - 3) == (2001 - 1)))
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/datetime.date.isocalendar/mutant_4.py:38: assert ((2001 + 2) == 2001 or (1 == 1 and 1 <= 7 and (2001 + 2) == (2001 - 1)))
+=========================== short test summary info ============================
+FAILED code_only/mutants_2/datetime.date.isocalendar/mutant_1.py::test_violation_of_datetime_date_isocalendar_2
+FAILED code_only/mutants_2/datetime.date.isocalendar/mutant_1.py::test_violation_of_datetime_date_isocalendar_3
+FAILED code_only/mutants_2/datetime.date.isocalendar/mutant_1.py::test_violation_of_datetime_date_isocalendar_4
+FAILED code_only/mutants_2/datetime.date.isocalendar/mutant_1.py::test_violation_of_datetime_date_isocalendar_5
+FAILED code_only/mutants_2/datetime.date.isocalendar/mutant_2.py::test_violation_of_datetime_date_isocalendar_1
+FAILED code_only/mutants_2/datetime.date.isocalendar/mutant_2.py::test_violation_of_datetime_date_isocalendar_2
+FAILED code_only/mutants_2/datetime.date.isocalendar/mutant_2.py::test_violation_of_datetime_date_isocalendar_3
+FAILED code_only/mutants_2/datetime.date.isocalendar/mutant_2.py::test_violation_of_datetime_date_isocalendar_4
+FAILED code_only/mutants_2/datetime.date.isocalendar/mutant_2.py::test_violation_of_datetime_date_isocalendar_5
+FAILED code_only/mutants_2/datetime.date.isocalendar/mutant_3.py::test_violation_of_datetime_date_isocalendar_1
+FAILED code_only/mutants_2/datetime.date.isocalendar/mutant_3.py::test_violation_of_datetime_date_isocalendar_2
+FAILED code_only/mutants_2/datetime.date.isocalendar/mutant_3.py::test_violation_of_datetime_date_isocalendar_3
+FAILED code_only/mutants_2/datetime.date.isocalendar/mutant_3.py::test_violation_of_datetime_date_isocalendar_4
+FAILED code_only/mutants_2/datetime.date.isocalendar/mutant_3.py::test_violation_of_datetime_date_isocalendar_5
+FAILED code_only/mutants_2/datetime.date.isocalendar/mutant_4.py::test_violation_of_datetime_date_isocalendar_1
+FAILED code_only/mutants_2/datetime.date.isocalendar/mutant_4.py::test_violation_of_datetime_date_isocalendar_2
+FAILED code_only/mutants_2/datetime.date.isocalendar/mutant_4.py::test_violation_of_datetime_date_isocalendar_3
+FAILED code_only/mutants_2/datetime.date.isocalendar/mutant_4.py::test_violation_of_datetime_date_isocalendar_4
+FAILED code_only/mutants_2/datetime.date.isocalendar/mutant_4.py::test_violation_of_datetime_date_isocalendar_5
+========================= 19 failed, 6 passed in 3.51s =========================

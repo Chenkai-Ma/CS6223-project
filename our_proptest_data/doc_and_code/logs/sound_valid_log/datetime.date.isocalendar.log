@@ -1,0 +1,109 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+doc_and_code/proptest/datetime.date.isocalendar/pbt_1.py FFFFF           [ 20%]
+doc_and_code/proptest/datetime.date.isocalendar/pbt_2.py F.FFF           [ 40%]
+doc_and_code/proptest/datetime.date.isocalendar/pbt_3.py ...F.           [ 60%]
+doc_and_code/proptest/datetime.date.isocalendar/pbt_4.py FFFFF           [ 80%]
+doc_and_code/proptest/datetime.date.isocalendar/pbt_5.py ...F.           [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/datetime.date.isocalendar/pbt_1.py:9: ValueError: year 10000 is out of range
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/datetime.date.isocalendar/pbt_1.py:16: ValueError: year 10000 is out of range
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/datetime.date.isocalendar/pbt_1.py:23: ValueError: year 10000 is out of range
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/datetime.date.isocalendar/pbt_1.py:27: exceptiongroup.ExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/datetime.date.isocalendar/pbt_1.py:38: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/datetime.date.isocalendar/pbt_2.py:10: OverflowError: signed integer is greater than maximum
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/datetime.date.isocalendar/pbt_2.py:30: OverflowError: signed integer is greater than maximum
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/datetime.date.isocalendar/pbt_2.py:41: assert 1 == 53
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/datetime.date.isocalendar/pbt_2.py:48: OverflowError: signed integer is greater than maximum
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/datetime.date.isocalendar/pbt_3.py:30: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/.venv/lib/python3.10/site-packages/hypothesis/strategies/_internal/strategies.py:319: hypothesis.errors.HypothesisException: Using example() inside a test function is a bad idea. Instead consider using hypothesis.strategies.data() to draw more examples during testing. See https://hypothesis.readthedocs.io/en/latest/data.html#drawing-interactively-in-tests for more details.
+/home/james/projects/.venv/lib/python3.10/site-packages/hypothesis/strategies/_internal/strategies.py:319: hypothesis.errors.HypothesisException: Using example() inside a test function is a bad idea. Instead consider using hypothesis.strategies.data() to draw more examples during testing. See https://hypothesis.readthedocs.io/en/latest/data.html#drawing-interactively-in-tests for more details.
+/home/james/projects/.venv/lib/python3.10/site-packages/hypothesis/strategies/_internal/strategies.py:319: hypothesis.errors.HypothesisException: Using example() inside a test function is a bad idea. Instead consider using hypothesis.strategies.data() to draw more examples during testing. See https://hypothesis.readthedocs.io/en/latest/data.html#drawing-interactively-in-tests for more details.
+/home/james/projects/.venv/lib/python3.10/site-packages/hypothesis/strategies/_internal/strategies.py:319: hypothesis.errors.HypothesisException: Using example() inside a test function is a bad idea. Instead consider using hypothesis.strategies.data() to draw more examples during testing. See https://hypothesis.readthedocs.io/en/latest/data.html#drawing-interactively-in-tests for more details.
+/home/james/projects/.venv/lib/python3.10/site-packages/hypothesis/strategies/_internal/strategies.py:319: hypothesis.errors.HypothesisException: Using example() inside a test function is a bad idea. Instead consider using hypothesis.strategies.data() to draw more examples during testing. See https://hypothesis.readthedocs.io/en/latest/data.html#drawing-interactively-in-tests for more details.
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/datetime.date.isocalendar/pbt_5.py:20: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+=============================== warnings summary ===============================
+doc_and_code/proptest/datetime.date.isocalendar/pbt_4.py::test_isocalendar_year_property
+  /home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/datetime.date.isocalendar/pbt_4.py:9: NonInteractiveExampleWarning: The `.example()` method is good for exploring strategies, but should only be used interactively.  We recommend using `@given` for tests - it performs better, saves and replays failures to avoid flakiness, and reports minimal examples. (strategy: integers(min_value=1, max_value=31))
+    day = st.integers(min_value=1, max_value=31).example()
+
+doc_and_code/proptest/datetime.date.isocalendar/pbt_4.py::test_isocalendar_year_property
+  /home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/datetime.date.isocalendar/pbt_4.py:11: NonInteractiveExampleWarning: The `.example()` method is good for exploring strategies, but should only be used interactively.  We recommend using `@given` for tests - it performs better, saves and replays failures to avoid flakiness, and reports minimal examples. (strategy: integers(min_value=1, max_value=30))
+    day = st.integers(min_value=1, max_value=30).example()
+
+doc_and_code/proptest/datetime.date.isocalendar/pbt_4.py::test_isocalendar_year_property
+  /home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/datetime.date.isocalendar/pbt_4.py:13: NonInteractiveExampleWarning: The `.example()` method is good for exploring strategies, but should only be used interactively.  We recommend using `@given` for tests - it performs better, saves and replays failures to avoid flakiness, and reports minimal examples. (strategy: integers(min_value=1, max_value=29))
+    day = st.integers(min_value=1, max_value=29).example()  # Consider leap years later
+
+doc_and_code/proptest/datetime.date.isocalendar/pbt_4.py::test_isocalendar_week_property
+  /home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/datetime.date.isocalendar/pbt_4.py:23: NonInteractiveExampleWarning: The `.example()` method is good for exploring strategies, but should only be used interactively.  We recommend using `@given` for tests - it performs better, saves and replays failures to avoid flakiness, and reports minimal examples. (strategy: integers(min_value=1, max_value=31))
+    day = st.integers(min_value=1, max_value=31).example()
+
+doc_and_code/proptest/datetime.date.isocalendar/pbt_4.py::test_isocalendar_week_property
+  /home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/datetime.date.isocalendar/pbt_4.py:27: NonInteractiveExampleWarning: The `.example()` method is good for exploring strategies, but should only be used interactively.  We recommend using `@given` for tests - it performs better, saves and replays failures to avoid flakiness, and reports minimal examples. (strategy: integers(min_value=1, max_value=29))
+    day = st.integers(min_value=1, max_value=29).example()  # Consider leap years later
+
+doc_and_code/proptest/datetime.date.isocalendar/pbt_4.py::test_isocalendar_week_property
+  /home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/datetime.date.isocalendar/pbt_4.py:25: NonInteractiveExampleWarning: The `.example()` method is good for exploring strategies, but should only be used interactively.  We recommend using `@given` for tests - it performs better, saves and replays failures to avoid flakiness, and reports minimal examples. (strategy: integers(min_value=1, max_value=30))
+    day = st.integers(min_value=1, max_value=30).example()
+
+doc_and_code/proptest/datetime.date.isocalendar/pbt_4.py::test_isocalendar_weekday_property
+  /home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/datetime.date.isocalendar/pbt_4.py:37: NonInteractiveExampleWarning: The `.example()` method is good for exploring strategies, but should only be used interactively.  We recommend using `@given` for tests - it performs better, saves and replays failures to avoid flakiness, and reports minimal examples. (strategy: integers(min_value=1, max_value=31))
+    day = st.integers(min_value=1, max_value=31).example()
+
+doc_and_code/proptest/datetime.date.isocalendar/pbt_4.py::test_isocalendar_weekday_property
+  /home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/datetime.date.isocalendar/pbt_4.py:39: NonInteractiveExampleWarning: The `.example()` method is good for exploring strategies, but should only be used interactively.  We recommend using `@given` for tests - it performs better, saves and replays failures to avoid flakiness, and reports minimal examples. (strategy: integers(min_value=1, max_value=30))
+    day = st.integers(min_value=1, max_value=30).example()
+
+doc_and_code/proptest/datetime.date.isocalendar/pbt_4.py::test_isocalendar_weekday_property
+  /home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/datetime.date.isocalendar/pbt_4.py:41: NonInteractiveExampleWarning: The `.example()` method is good for exploring strategies, but should only be used interactively.  We recommend using `@given` for tests - it performs better, saves and replays failures to avoid flakiness, and reports minimal examples. (strategy: integers(min_value=1, max_value=29))
+    day = st.integers(min_value=1, max_value=29).example()  # Consider leap years later
+
+doc_and_code/proptest/datetime.date.isocalendar/pbt_4.py::test_isocalendar_first_of_year_property
+  /home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/datetime.date.isocalendar/pbt_4.py:51: NonInteractiveExampleWarning: The `.example()` method is good for exploring strategies, but should only be used interactively.  We recommend using `@given` for tests - it performs better, saves and replays failures to avoid flakiness, and reports minimal examples. (strategy: integers(min_value=1, max_value=31))
+    day = st.integers(min_value=1, max_value=31).example()
+
+doc_and_code/proptest/datetime.date.isocalendar/pbt_4.py::test_isocalendar_first_of_year_property
+  /home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/datetime.date.isocalendar/pbt_4.py:53: NonInteractiveExampleWarning: The `.example()` method is good for exploring strategies, but should only be used interactively.  We recommend using `@given` for tests - it performs better, saves and replays failures to avoid flakiness, and reports minimal examples. (strategy: integers(min_value=1, max_value=30))
+    day = st.integers(min_value=1, max_value=30).example()
+
+doc_and_code/proptest/datetime.date.isocalendar/pbt_4.py::test_isocalendar_first_of_year_property
+  /home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/datetime.date.isocalendar/pbt_4.py:55: NonInteractiveExampleWarning: The `.example()` method is good for exploring strategies, but should only be used interactively.  We recommend using `@given` for tests - it performs better, saves and replays failures to avoid flakiness, and reports minimal examples. (strategy: integers(min_value=1, max_value=29))
+    day = st.integers(min_value=1, max_value=29).example()  # Consider leap years later
+
+doc_and_code/proptest/datetime.date.isocalendar/pbt_4.py::test_isocalendar_consistency_property
+  /home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/datetime.date.isocalendar/pbt_4.py:66: NonInteractiveExampleWarning: The `.example()` method is good for exploring strategies, but should only be used interactively.  We recommend using `@given` for tests - it performs better, saves and replays failures to avoid flakiness, and reports minimal examples. (strategy: integers(min_value=1, max_value=31))
+    day = st.integers(min_value=1, max_value=31).example()
+
+doc_and_code/proptest/datetime.date.isocalendar/pbt_4.py::test_isocalendar_consistency_property
+  /home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/datetime.date.isocalendar/pbt_4.py:68: NonInteractiveExampleWarning: The `.example()` method is good for exploring strategies, but should only be used interactively.  We recommend using `@given` for tests - it performs better, saves and replays failures to avoid flakiness, and reports minimal examples. (strategy: integers(min_value=1, max_value=30))
+    day = st.integers(min_value=1, max_value=30).example()
+
+doc_and_code/proptest/datetime.date.isocalendar/pbt_4.py::test_isocalendar_consistency_property
+  /home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/datetime.date.isocalendar/pbt_4.py:70: NonInteractiveExampleWarning: The `.example()` method is good for exploring strategies, but should only be used interactively.  We recommend using `@given` for tests - it performs better, saves and replays failures to avoid flakiness, and reports minimal examples. (strategy: integers(min_value=1, max_value=29))
+    day = st.integers(min_value=1, max_value=29).example()  # Consider leap years later
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED doc_and_code/proptest/datetime.date.isocalendar/pbt_1.py::test_year_property
+FAILED doc_and_code/proptest/datetime.date.isocalendar/pbt_1.py::test_week_property
+FAILED doc_and_code/proptest/datetime.date.isocalendar/pbt_1.py::test_weekday_property
+FAILED doc_and_code/proptest/datetime.date.isocalendar/pbt_1.py::test_first_of_year_property
+FAILED doc_and_code/proptest/datetime.date.isocalendar/pbt_1.py::test_consistency_property
+FAILED doc_and_code/proptest/datetime.date.isocalendar/pbt_2.py::test_output_year_property
+FAILED doc_and_code/proptest/datetime.date.isocalendar/pbt_2.py::test_output_weekday_property
+FAILED doc_and_code/proptest/datetime.date.isocalendar/pbt_2.py::test_first_day_of_year_property
+FAILED doc_and_code/proptest/datetime.date.isocalendar/pbt_2.py::test_consistency_property
+FAILED doc_and_code/proptest/datetime.date.isocalendar/pbt_3.py::test_first_day_of_year_property
+FAILED doc_and_code/proptest/datetime.date.isocalendar/pbt_4.py::test_isocalendar_year_property
+FAILED doc_and_code/proptest/datetime.date.isocalendar/pbt_4.py::test_isocalendar_week_property
+FAILED doc_and_code/proptest/datetime.date.isocalendar/pbt_4.py::test_isocalendar_weekday_property
+FAILED doc_and_code/proptest/datetime.date.isocalendar/pbt_4.py::test_isocalendar_first_of_year_property
+FAILED doc_and_code/proptest/datetime.date.isocalendar/pbt_4.py::test_isocalendar_consistency_property
+FAILED doc_and_code/proptest/datetime.date.isocalendar/pbt_5.py::test_january_first_property
+================== 16 failed, 9 passed, 15 warnings in 10.52s ==================

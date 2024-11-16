@@ -4,8 +4,8 @@
 approach="code_only"
 metric="property_coverage"
 
-log_dir="${approach}/logs/${metric}_log"
-api_dir="${approach}/mutants"
+log_dir="${approach}/logs/${metric}_2_log"
+api_dir="${approach}/mutants_2"
 
 mkdir -p $log_dir
 

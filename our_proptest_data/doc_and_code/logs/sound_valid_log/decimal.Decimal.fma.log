@@ -1,0 +1,63 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+doc_and_code/proptest/decimal.Decimal.fma/pbt_1.py F.FFF                 [ 20%]
+doc_and_code/proptest/decimal.Decimal.fma/pbt_2.py FFFFF                 [ 40%]
+doc_and_code/proptest/decimal.Decimal.fma/pbt_3.py FFFFF                 [ 60%]
+doc_and_code/proptest/decimal.Decimal.fma/pbt_4.py FFFFF                 [ 80%]
+doc_and_code/proptest/decimal.Decimal.fma/pbt_5.py FFFFF                 [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.fma/pbt_1.py:5: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.fma/pbt_1.py:27: exceptiongroup.ExceptionGroup: Hypothesis found 4 distinct failures. (4 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.fma/pbt_1.py:37: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.fma/pbt_1.py:43: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.fma/pbt_2.py:5: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.fma/pbt_2.py:12: AttributeError: 'decimal.Decimal' object has no attribute '_is_special'
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.fma/pbt_2.py:22: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.fma/pbt_2.py:31: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.fma/pbt_2.py:37: decimal.InvalidOperation: [<class 'decimal.InvalidOperation'>]
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.fma/pbt_3.py:5: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.fma/pbt_3.py:16: NameError: name 'pytest' is not defined
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.fma/pbt_3.py:27: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.fma/pbt_3.py:41: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.fma/pbt_3.py:51: decimal.InvalidOperation: [<class 'decimal.InvalidOperation'>]
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.fma/pbt_4.py:5: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.fma/pbt_4.py:12: AttributeError: 'decimal.Decimal' object has no attribute '_is_special'
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.fma/pbt_4.py:28: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.fma/pbt_4.py:34: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.fma/pbt_4.py:40: decimal.InvalidOperation: [<class 'decimal.InvalidOperation'>]
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.fma/pbt_5.py:5: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.fma/pbt_5.py:11: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.fma/pbt_5.py:34: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.fma/pbt_5.py:44: AttributeError: 'decimal.Decimal' object has no attribute 'sign'
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/decimal.Decimal.fma/pbt_5.py:54: decimal.InvalidOperation: [<class 'decimal.InvalidOperation'>]
+=========================== short test summary info ============================
+FAILED doc_and_code/proptest/decimal.Decimal.fma/pbt_1.py::test_output_equals_product_plus_third_property
+FAILED doc_and_code/proptest/decimal.Decimal.fma/pbt_1.py::test_sign_property
+FAILED doc_and_code/proptest/decimal.Decimal.fma/pbt_1.py::test_zero_multiplication_property
+FAILED doc_and_code/proptest/decimal.Decimal.fma/pbt_1.py::test_valid_decimal_instance_property
+FAILED doc_and_code/proptest/decimal.Decimal.fma/pbt_2.py::test_fma_output_property
+FAILED doc_and_code/proptest/decimal.Decimal.fma/pbt_2.py::test_fma_special_values_property
+FAILED doc_and_code/proptest/decimal.Decimal.fma/pbt_2.py::test_fma_sign_property
+FAILED doc_and_code/proptest/decimal.Decimal.fma/pbt_2.py::test_fma_zero_multiplication_property
+FAILED doc_and_code/proptest/decimal.Decimal.fma/pbt_2.py::test_fma_decimal_instance_property
+FAILED doc_and_code/proptest/decimal.Decimal.fma/pbt_3.py::test_fma_output_equals_product_plus_third_property
+FAILED doc_and_code/proptest/decimal.Decimal.fma/pbt_3.py::test_fma_special_values_property
+FAILED doc_and_code/proptest/decimal.Decimal.fma/pbt_3.py::test_fma_sign_property
+FAILED doc_and_code/proptest/decimal.Decimal.fma/pbt_3.py::test_fma_zero_multiplication_property
+FAILED doc_and_code/proptest/decimal.Decimal.fma/pbt_3.py::test_fma_output_type_property
+FAILED doc_and_code/proptest/decimal.Decimal.fma/pbt_4.py::test_fma_output_equals_product_plus_third_property
+FAILED doc_and_code/proptest/decimal.Decimal.fma/pbt_4.py::test_fma_special_values_property
+FAILED doc_and_code/proptest/decimal.Decimal.fma/pbt_4.py::test_fma_sign_property
+FAILED doc_and_code/proptest/decimal.Decimal.fma/pbt_4.py::test_fma_zero_multiplication_property
+FAILED doc_and_code/proptest/decimal.Decimal.fma/pbt_4.py::test_fma_result_is_decimal_property
+FAILED doc_and_code/proptest/decimal.Decimal.fma/pbt_5.py::test_fma_output_equals_product_plus_third_property
+FAILED doc_and_code/proptest/decimal.Decimal.fma/pbt_5.py::test_fma_special_values_property
+FAILED doc_and_code/proptest/decimal.Decimal.fma/pbt_5.py::test_fma_zero_multiplication_property
+FAILED doc_and_code/proptest/decimal.Decimal.fma/pbt_5.py::test_fma_correct_sign_property
+FAILED doc_and_code/proptest/decimal.Decimal.fma/pbt_5.py::test_fma_valid_decimal_instance_property
+=================== 24 failed, 1 passed in 108.51s (0:01:48) ===================

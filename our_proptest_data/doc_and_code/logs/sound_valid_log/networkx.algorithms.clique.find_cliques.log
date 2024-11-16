@@ -1,0 +1,51 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 15 items / 2 errors
+
+doc_and_code/proptest/networkx.algorithms.clique.find_cliques/pbt_1.py F [  6%]
+F...                                                                     [ 33%]
+doc_and_code/proptest/networkx.algorithms.clique.find_cliques/pbt_2.py . [ 40%]
+F...                                                                     [ 66%]
+doc_and_code/proptest/networkx.algorithms.clique.find_cliques/pbt_5.py . [ 73%]
+....                                                                     [100%]
+
+==================================== ERRORS ====================================
+_ ERROR collecting doc_and_code/proptest/networkx.algorithms.clique.find_cliques/pbt_3.py _
+E   AttributeError: type object 'Graph' has no attribute 'from_edges'
+_ ERROR collecting doc_and_code/proptest/networkx.algorithms.clique.find_cliques/pbt_4.py _
+../../.venv/lib/python3.10/site-packages/_pytest/python.py:493: in importtestmodule
+    mod = import_path(
+../../.venv/lib/python3.10/site-packages/_pytest/pathlib.py:582: in import_path
+    importlib.import_module(module_name)
+/usr/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1050: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1027: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1006: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:688: in _load_unlocked
+    ???
+../../.venv/lib/python3.10/site-packages/_pytest/assertion/rewrite.py:175: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+../../.venv/lib/python3.10/site-packages/_pytest/assertion/rewrite.py:355: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+/usr/lib/python3.10/ast.py:50: in parse
+    return compile(source, filename, mode, flags,
+E     File "/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/networkx.algorithms.clique.find_cliques/pbt_4.py", line 20
+E       if len(G.nodes) > 0 else st.lists(st.integers()))
+E   IndentationError: unexpected indent
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/networkx.algorithms.clique.find_cliques/pbt_1.py:14: assert False
+/home/james/projects/.venv/lib/python3.10/site-packages/networkx/algorithms/clique.py:256: ValueError: The given `nodes` [0, 0] do not form a clique
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/networkx.algorithms.clique.find_cliques/pbt_2.py:34: TypeError: 'JustStrategy' object is not iterable
+=========================== short test summary info ============================
+FAILED doc_and_code/proptest/networkx.algorithms.clique.find_cliques/pbt_1.py::test_maximal_cliques_property
+FAILED doc_and_code/proptest/networkx.algorithms.clique.find_cliques/pbt_1.py::test_cliques_contain_given_nodes_property
+FAILED doc_and_code/proptest/networkx.algorithms.clique.find_cliques/pbt_2.py::test_nodes_in_cliques_property
+ERROR doc_and_code/proptest/networkx.algorithms.clique.find_cliques/pbt_3.py
+ERROR doc_and_code/proptest/networkx.algorithms.clique.find_cliques/pbt_4.py
+==================== 3 failed, 12 passed, 2 errors in 2.32s ====================

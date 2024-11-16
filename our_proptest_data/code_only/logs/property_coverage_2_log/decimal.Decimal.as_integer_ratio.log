@@ -1,0 +1,45 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+code_only/mutants_2/decimal.Decimal.as_integer_ratio/mutant_1.py FFFFF   [ 20%]
+code_only/mutants_2/decimal.Decimal.as_integer_ratio/mutant_2.py .....   [ 40%]
+code_only/mutants_2/decimal.Decimal.as_integer_ratio/mutant_3.py FFFFF   [ 60%]
+code_only/mutants_2/decimal.Decimal.as_integer_ratio/mutant_4.py FFFFF   [ 80%]
+code_only/mutants_2/decimal.Decimal.as_integer_ratio/mutant_5.py .....   [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/decimal.Decimal.as_integer_ratio/mutant_1.py:10: ValueError: not enough values to unpack (expected 2, got 1)
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/decimal.Decimal.as_integer_ratio/mutant_1.py:19: ValueError: too many values to unpack (expected 2)
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/decimal.Decimal.as_integer_ratio/mutant_1.py:28: TypeError: cannot unpack non-iterable int object
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/decimal.Decimal.as_integer_ratio/mutant_1.py:37: ValueError: not enough values to unpack (expected 2, got 0)
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/decimal.Decimal.as_integer_ratio/mutant_1.py:48: AssertionError: assert False
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/decimal.Decimal.as_integer_ratio/mutant_3.py:11: AssertionError: assert (Decimal('1') / Decimal('-1')) == Decimal('1')
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/decimal.Decimal.as_integer_ratio/mutant_3.py:14: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/decimal.Decimal.as_integer_ratio/mutant_3.py:25: AssertionError: assert (Decimal('1') / Decimal('-1')) == Decimal('1')
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/decimal.Decimal.as_integer_ratio/mutant_3.py:32: AssertionError: assert (Decimal('1') / Decimal('-1000000')) == Decimal('1')
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/decimal.Decimal.as_integer_ratio/mutant_3.py:39: AssertionError: assert (Decimal('1') / Decimal('-10')) == Decimal('1')
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/decimal.Decimal.as_integer_ratio/mutant_4.py:10: assert 2 == 1
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/decimal.Decimal.as_integer_ratio/mutant_4.py:17: assert 2 == 1
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/decimal.Decimal.as_integer_ratio/mutant_4.py:24: assert 2 == 1
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/decimal.Decimal.as_integer_ratio/mutant_4.py:31: assert 2 == 1
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/decimal.Decimal.as_integer_ratio/mutant_4.py:39: assert 3 == 1
+=========================== short test summary info ============================
+FAILED code_only/mutants_2/decimal.Decimal.as_integer_ratio/mutant_1.py::test_violation_of_decimal_Decimal_as_integer_ratio_1
+FAILED code_only/mutants_2/decimal.Decimal.as_integer_ratio/mutant_1.py::test_violation_of_decimal_Decimal_as_integer_ratio_2
+FAILED code_only/mutants_2/decimal.Decimal.as_integer_ratio/mutant_1.py::test_violation_of_decimal_Decimal_as_integer_ratio_3
+FAILED code_only/mutants_2/decimal.Decimal.as_integer_ratio/mutant_1.py::test_violation_of_decimal_Decimal_as_integer_ratio_4
+FAILED code_only/mutants_2/decimal.Decimal.as_integer_ratio/mutant_1.py::test_violation_of_decimal_Decimal_as_integer_ratio_5
+FAILED code_only/mutants_2/decimal.Decimal.as_integer_ratio/mutant_3.py::test_violation_of_decimal_Decimal_as_integer_ratio_1
+FAILED code_only/mutants_2/decimal.Decimal.as_integer_ratio/mutant_3.py::test_violation_of_decimal_Decimal_as_integer_ratio_2
+FAILED code_only/mutants_2/decimal.Decimal.as_integer_ratio/mutant_3.py::test_violation_of_decimal_Decimal_as_integer_ratio_3
+FAILED code_only/mutants_2/decimal.Decimal.as_integer_ratio/mutant_3.py::test_violation_of_decimal_Decimal_as_integer_ratio_4
+FAILED code_only/mutants_2/decimal.Decimal.as_integer_ratio/mutant_3.py::test_violation_of_decimal_Decimal_as_integer_ratio_5
+FAILED code_only/mutants_2/decimal.Decimal.as_integer_ratio/mutant_4.py::test_violation_of_decimal_Decimal_as_integer_ratio_1
+FAILED code_only/mutants_2/decimal.Decimal.as_integer_ratio/mutant_4.py::test_violation_of_decimal_Decimal_as_integer_ratio_2
+FAILED code_only/mutants_2/decimal.Decimal.as_integer_ratio/mutant_4.py::test_violation_of_decimal_Decimal_as_integer_ratio_3
+FAILED code_only/mutants_2/decimal.Decimal.as_integer_ratio/mutant_4.py::test_violation_of_decimal_Decimal_as_integer_ratio_4
+FAILED code_only/mutants_2/decimal.Decimal.as_integer_ratio/mutant_4.py::test_violation_of_decimal_Decimal_as_integer_ratio_5
+======================== 15 failed, 10 passed in 5.60s =========================

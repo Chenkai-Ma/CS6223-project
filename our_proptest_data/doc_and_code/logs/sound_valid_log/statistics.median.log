@@ -1,0 +1,41 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+doc_and_code/proptest/statistics.median/pbt_1.py ...FF                   [ 20%]
+doc_and_code/proptest/statistics.median/pbt_2.py ...FF                   [ 40%]
+doc_and_code/proptest/statistics.median/pbt_3.py .F.FF                   [ 60%]
+doc_and_code/proptest/statistics.median/pbt_4.py ...FF                   [ 80%]
+doc_and_code/proptest/statistics.median/pbt_5.py FF.FF                   [100%]
+
+=================================== FAILURES ===================================
+/usr/lib/python3.10/statistics.py:452: statistics.StatisticsError: no median for empty data
+/usr/lib/python3.10/statistics.py:452: statistics.StatisticsError: no median for empty data
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/statistics.median/pbt_2.py:28: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/usr/lib/python3.10/statistics.py:452: statistics.StatisticsError: no median for empty data
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/statistics.median/pbt_3.py:13: assert 1 == ((0 + 1) / 2)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/statistics.median/pbt_3.py:26: ValueError: max() arg is an empty sequence
+/usr/lib/python3.10/statistics.py:452: statistics.StatisticsError: no median for empty data
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/statistics.median/pbt_4.py:43: NameError: name 'mean' is not defined
+/usr/lib/python3.10/statistics.py:452: statistics.StatisticsError: no median for empty data
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/statistics.median/pbt_5.py:8: assert 0.5 == 1
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/statistics.median/pbt_5.py:15: assert 0 == ((-1 + 0) / 2)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/proptest/statistics.median/pbt_5.py:27: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/usr/lib/python3.10/statistics.py:452: statistics.StatisticsError: no median for empty data
+=========================== short test summary info ============================
+FAILED doc_and_code/proptest/statistics.median/pbt_1.py::test_median_is_robust_against_outliers_property
+FAILED doc_and_code/proptest/statistics.median/pbt_1.py::test_median_is_order_invariant_property
+FAILED doc_and_code/proptest/statistics.median/pbt_2.py::test_median_outlier_property
+FAILED doc_and_code/proptest/statistics.median/pbt_2.py::test_median_order_invariance_property
+FAILED doc_and_code/proptest/statistics.median/pbt_3.py::test_median_average_of_middle_values_property
+FAILED doc_and_code/proptest/statistics.median/pbt_3.py::test_median_robustness_against_outliers_property
+FAILED doc_and_code/proptest/statistics.median/pbt_3.py::test_median_order_independence_property
+FAILED doc_and_code/proptest/statistics.median/pbt_4.py::test_median_outlier_robustness_property
+FAILED doc_and_code/proptest/statistics.median/pbt_4.py::test_median_order_independence_property
+FAILED doc_and_code/proptest/statistics.median/pbt_5.py::test_median_odd_length_property
+FAILED doc_and_code/proptest/statistics.median/pbt_5.py::test_median_even_length_property
+FAILED doc_and_code/proptest/statistics.median/pbt_5.py::test_median_robustness_property
+FAILED doc_and_code/proptest/statistics.median/pbt_5.py::test_median_order_invariance_property
+======================== 13 failed, 12 passed in 2.00s =========================

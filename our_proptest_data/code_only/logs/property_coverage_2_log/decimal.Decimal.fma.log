@@ -1,0 +1,44 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 20 items
+
+code_only/mutants_2/decimal.Decimal.fma/mutant_1.py FFFFF                [ 25%]
+code_only/mutants_2/decimal.Decimal.fma/mutant_2.py .FF.F                [ 50%]
+code_only/mutants_2/decimal.Decimal.fma/mutant_3.py ...FF                [ 75%]
+code_only/mutants_2/decimal.Decimal.fma/mutant_4.py FFFFF                [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/decimal.Decimal.fma/mutant_1.py:14: AssertionError: assert Decimal('1') == Decimal('0')
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/decimal.Decimal.fma/mutant_1.py:25: AssertionError: assert Decimal('2') == Decimal('1')
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/decimal.Decimal.fma/mutant_1.py:36: AssertionError: assert Decimal('0') == Decimal('1')
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/decimal.Decimal.fma/mutant_1.py:47: AssertionError: assert Decimal('2') == Decimal('1')
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/decimal.Decimal.fma/mutant_1.py:58: AssertionError: assert Decimal('0.5') == Decimal('1')
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/decimal.Decimal.fma/mutant_2.py:27: AssertionError: Expected a result of 0
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/decimal.Decimal.fma/mutant_2.py:39: AssertionError: Expected a result of 1
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/decimal.Decimal.fma/mutant_2.py:63: AssertionError: Expected a result of infinity
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/decimal.Decimal.fma/mutant_3.py:47: AssertionError: assert Decimal('NaN') == Decimal('0')
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/decimal.Decimal.fma/mutant_3.py:58: AssertionError: assert Decimal('NaN') == Decimal('0')
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/decimal.Decimal.fma/mutant_4.py:16: AssertionError: Expected result to be zero for infinity multiplication
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/decimal.Decimal.fma/mutant_4.py:31: AssertionError: Expected result to be 1 for infinity multiplication
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/decimal.Decimal.fma/mutant_4.py:46: AssertionError: Expected result to be positive infinity for infinity multiplication
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/decimal.Decimal.fma/mutant_4.py:61: AssertionError: Expected result to be negative infinity for infinity multiplication
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/decimal.Decimal.fma/mutant_4.py:76: AssertionError: Expected result to be 42 for infinity multiplication
+=========================== short test summary info ============================
+FAILED code_only/mutants_2/decimal.Decimal.fma/mutant_1.py::test_violation_of_decimal_Decimal_fma_1
+FAILED code_only/mutants_2/decimal.Decimal.fma/mutant_1.py::test_violation_of_decimal_Decimal_fma_2
+FAILED code_only/mutants_2/decimal.Decimal.fma/mutant_1.py::test_violation_of_decimal_Decimal_fma_3
+FAILED code_only/mutants_2/decimal.Decimal.fma/mutant_1.py::test_violation_of_decimal_Decimal_fma_4
+FAILED code_only/mutants_2/decimal.Decimal.fma/mutant_1.py::test_violation_of_decimal_Decimal_fma_5
+FAILED code_only/mutants_2/decimal.Decimal.fma/mutant_2.py::test_violation_of_decimal_Decimal_fma_2
+FAILED code_only/mutants_2/decimal.Decimal.fma/mutant_2.py::test_violation_of_decimal_Decimal_fma_3
+FAILED code_only/mutants_2/decimal.Decimal.fma/mutant_2.py::test_violation_of_decimal_Decimal_fma_5
+FAILED code_only/mutants_2/decimal.Decimal.fma/mutant_3.py::test_violation_of_decimal_Decimal_fma_4
+FAILED code_only/mutants_2/decimal.Decimal.fma/mutant_3.py::test_violation_of_decimal_Decimal_fma_5
+FAILED code_only/mutants_2/decimal.Decimal.fma/mutant_4.py::test_violation_of_decimal_Decimal_fma_1
+FAILED code_only/mutants_2/decimal.Decimal.fma/mutant_4.py::test_violation_of_decimal_Decimal_fma_2
+FAILED code_only/mutants_2/decimal.Decimal.fma/mutant_4.py::test_violation_of_decimal_Decimal_fma_3
+FAILED code_only/mutants_2/decimal.Decimal.fma/mutant_4.py::test_violation_of_decimal_Decimal_fma_4
+FAILED code_only/mutants_2/decimal.Decimal.fma/mutant_4.py::test_violation_of_decimal_Decimal_fma_5
+======================== 15 failed, 5 passed in 18.80s =========================

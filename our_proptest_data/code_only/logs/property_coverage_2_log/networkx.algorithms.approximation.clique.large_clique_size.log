@@ -1,0 +1,46 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 15 items
+
+code_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_1.py F [  6%]
+FFFF                                                                     [ 33%]
+code_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_2.py F [ 40%]
+FFFF                                                                     [ 66%]
+code_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_3.py F [ 73%]
+FFFF                                                                     [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_1.py:8: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_networkx_algorithms_approximation_clique_large_clique_size_1() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_1.py:15: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_networkx_algorithms_approximation_clique_large_clique_size_2() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_1.py:22: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_networkx_algorithms_approximation_clique_large_clique_size_3() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_1.py:29: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_networkx_algorithms_approximation_clique_large_clique_size_4() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_1.py:36: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_networkx_algorithms_approximation_clique_large_clique_size_5() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_2.py:8: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_networkx_algorithms_approximation_clique_large_clique_size_1() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_2.py:14: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_networkx_algorithms_approximation_clique_large_clique_size_2() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_2.py:20: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_networkx_algorithms_approximation_clique_large_clique_size_3() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_2.py:26: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_networkx_algorithms_approximation_clique_large_clique_size_4() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_2.py:32: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_networkx_algorithms_approximation_clique_large_clique_size_5() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_3.py:8: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_networkx_algorithms_approximation_clique_large_clique_size_1() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_3.py:16: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_networkx_algorithms_approximation_clique_large_clique_size_2() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_3.py:24: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_networkx_algorithms_approximation_clique_large_clique_size_3() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_3.py:32: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_networkx_algorithms_approximation_clique_large_clique_size_4() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/code_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_3.py:40: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_networkx_algorithms_approximation_clique_large_clique_size_5() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+=========================== short test summary info ============================
+FAILED code_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_1.py::test_violation_of_networkx_algorithms_approximation_clique_large_clique_size_1
+FAILED code_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_1.py::test_violation_of_networkx_algorithms_approximation_clique_large_clique_size_2
+FAILED code_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_1.py::test_violation_of_networkx_algorithms_approximation_clique_large_clique_size_3
+FAILED code_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_1.py::test_violation_of_networkx_algorithms_approximation_clique_large_clique_size_4
+FAILED code_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_1.py::test_violation_of_networkx_algorithms_approximation_clique_large_clique_size_5
+FAILED code_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_2.py::test_violation_of_networkx_algorithms_approximation_clique_large_clique_size_1
+FAILED code_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_2.py::test_violation_of_networkx_algorithms_approximation_clique_large_clique_size_2
+FAILED code_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_2.py::test_violation_of_networkx_algorithms_approximation_clique_large_clique_size_3
+FAILED code_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_2.py::test_violation_of_networkx_algorithms_approximation_clique_large_clique_size_4
+FAILED code_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_2.py::test_violation_of_networkx_algorithms_approximation_clique_large_clique_size_5
+FAILED code_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_3.py::test_violation_of_networkx_algorithms_approximation_clique_large_clique_size_1
+FAILED code_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_3.py::test_violation_of_networkx_algorithms_approximation_clique_large_clique_size_2
+FAILED code_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_3.py::test_violation_of_networkx_algorithms_approximation_clique_large_clique_size_3
+FAILED code_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_3.py::test_violation_of_networkx_algorithms_approximation_clique_large_clique_size_4
+FAILED code_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_3.py::test_violation_of_networkx_algorithms_approximation_clique_large_clique_size_5
+============================== 15 failed in 0.23s ==============================
