@@ -40,12 +40,14 @@ def main(args):
     dt_string = datetime.now().strftime("%m-%d-%H-%M")
     
     no_sound_valid_data = []
-        
+    
+    i = 0
+
     for file_name in os.listdir(args.input_path):
 
         if file_name.endswith(".jsonl"):
             eval_data = jsonlines_load(args.input_path + '/' + file_name)
-            system_prompt = MUTANT_SYSTEM_PROMPT_DOC_CODE
+            system_prompt = MUTANT_SYSTEM_PROMPT_DOC_CODE_2
             function_name = eval_data[0]['function_name']
             
             output_path = f'{args.output_dir}/{function_name}.jsonl'
@@ -70,8 +72,7 @@ def main(args):
                 # question = MUTANTS_TEST_FUNCTION_PROMPT_CODE.format(function_name=function_name, function_name_2=function_name_2,
                 #                                             api_code=eval_data[0]['api_doc'], prop=prop, pbt=pbt)
 
-                question = MUTANTS_TEST_FUNCTION_PROMPT_DOC_CODE.format(function_name=function_name, function_name_2=function_name_2, 
-                                                                        api_documentation = eval_data[0]['api_doc'],
+                question = MUTANTS_TEST_FUNCTION_PROMPT_DOC_CODE_2.format(function_name=function_name, function_name_2=function_name_2, 
                                                                         prop=prop, pbt=pbt)
 
                 messages = [
@@ -90,7 +91,7 @@ def main(args):
                 for choice in response.choices:
                     response_text.append(choice.message.content)
 
-                if args.verbose:
+                if i == 0 or args.verbose:
                     print('messages:\n', messages)
                     print('\n\nresponse:\n', response)
                     print('model name: ', response.model)
@@ -109,6 +110,8 @@ def main(args):
 
                 if args.debug:
                     break
+
+                i += 1
         
         full_model_name = response.model
         system_fingerprint = response.system_fingerprint
@@ -130,7 +133,7 @@ def main(args):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--input_path', type=str, default='../our_proptest_data/doc_and_code/sound_valid')
-    parser.add_argument('--output_dir', type=str, default='../our_proptest_data/doc_and_code/output_jsonl/mutants')
+    parser.add_argument('--output_dir', type=str, default='../our_proptest_data/doc_and_code/output_jsonl/mutants_2')
     parser.add_argument('--debug', action='store_true')
     parser.add_argument('--model', type=str, default='gpt-4o-mini')
     parser.add_argument('--temperature', type=float, default=0.5)

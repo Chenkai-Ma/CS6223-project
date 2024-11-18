@@ -359,6 +359,7 @@ def test_violation_of_{function_name_2}_2():
 ```
 """.strip()
 
+# === The same as DOC_ONLY and CODE_ONLY ===
 MUTANT_SYSTEM_PROMPT_DOC_CODE_2 = """
 You are a world class Python programmer. You will be give a property and a property-based test function for testing the given property.
 You need to write five different test functions that violate the given property. Each new test function should be based on the given test function, i.e. slightly modify the given test function to violate the property. Only modify the original output of the test function to violate the property for all inputs.
