@@ -36,7 +36,14 @@ For each API method:
 
 - Code + doc: sound and valid evaluation complete: worst among three. Property coverage: mutant is normal; mutant 2 performs pretty well.
 
-- Mutant 2: mixed performance.
+- Mutant 2: Generally works, depend on the specific approach.
 
-## Feedback 
+## Feedback
+
+### Writing
+
+- Go through each section, identify what need to be discussed to make sure we are on the same page (so we can write smoothly).
+- What theme/argument should we have? Code distracts LLM to generate PBTs? May check abstract.
+- Do we need a separate research question for mutant 2?
+- I will try to finish my parts this week.
 
