@@ -1,0 +1,25 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+doc_and_code/mutants_2/dateutil.parser.isoparse/mutant_1.py FFFFF        [ 20%]
+doc_and_code/mutants_2/dateutil.parser.isoparse/mutant_2.py .....        [ 40%]
+doc_and_code/mutants_2/dateutil.parser.isoparse/mutant_3.py .....        [ 60%]
+doc_and_code/mutants_2/dateutil.parser.isoparse/mutant_4.py .....        [ 80%]
+doc_and_code/mutants_2/dateutil.parser.isoparse/mutant_5.py .....        [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/dateutil.parser.isoparse/mutant_1.py:7: exceptiongroup.ExceptionGroup: Hypothesis found 5 distinct failures. (5 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/dateutil.parser.isoparse/mutant_1.py:14: exceptiongroup.ExceptionGroup: Hypothesis found 5 distinct failures. (5 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/dateutil.parser.isoparse/mutant_1.py:21: exceptiongroup.ExceptionGroup: Hypothesis found 5 distinct failures. (5 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/dateutil.parser.isoparse/mutant_1.py:28: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/dateutil.parser.isoparse/mutant_1.py:35: exceptiongroup.ExceptionGroup: Hypothesis found 5 distinct failures. (5 sub-exceptions)
+=========================== short test summary info ============================
+FAILED doc_and_code/mutants_2/dateutil.parser.isoparse/mutant_1.py::test_violation_of_dateutil_parser_isoparse_1
+FAILED doc_and_code/mutants_2/dateutil.parser.isoparse/mutant_1.py::test_violation_of_dateutil_parser_isoparse_2
+FAILED doc_and_code/mutants_2/dateutil.parser.isoparse/mutant_1.py::test_violation_of_dateutil_parser_isoparse_3
+FAILED doc_and_code/mutants_2/dateutil.parser.isoparse/mutant_1.py::test_violation_of_dateutil_parser_isoparse_4
+FAILED doc_and_code/mutants_2/dateutil.parser.isoparse/mutant_1.py::test_violation_of_dateutil_parser_isoparse_5
+========================= 5 failed, 20 passed in 9.90s =========================

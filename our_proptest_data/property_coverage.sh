@@ -1,7 +1,7 @@
 # Evaluate property coverage for each API.
 # this file has to be run from the our_proptest_data directory
 
-approach="code_only"
+approach="doc_and_code"
 metric="property_coverage"
 
 log_dir="${approach}/logs/${metric}_2_log"

@@ -1,0 +1,21 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 5 items
+
+doc_and_code/mutants_2/statistics.linear_regression/mutant_1.py FFFFF    [100%]
+
+=================================== FAILURES ===================================
+/usr/lib/python3.10/statistics.py:962: statistics.StatisticsError: x is constant
+/usr/lib/python3.10/statistics.py:962: statistics.StatisticsError: x is constant
+/usr/lib/python3.10/statistics.py:962: statistics.StatisticsError: x is constant
+/usr/lib/python3.10/statistics.py:962: statistics.StatisticsError: x is constant
+/usr/lib/python3.10/statistics.py:962: statistics.StatisticsError: x is constant
+=========================== short test summary info ============================
+FAILED doc_and_code/mutants_2/statistics.linear_regression/mutant_1.py::test_violation_of_statistics_linear_regression_1
+FAILED doc_and_code/mutants_2/statistics.linear_regression/mutant_1.py::test_violation_of_statistics_linear_regression_2
+FAILED doc_and_code/mutants_2/statistics.linear_regression/mutant_1.py::test_violation_of_statistics_linear_regression_3
+FAILED doc_and_code/mutants_2/statistics.linear_regression/mutant_1.py::test_violation_of_statistics_linear_regression_4
+FAILED doc_and_code/mutants_2/statistics.linear_regression/mutant_1.py::test_violation_of_statistics_linear_regression_5
+============================== 5 failed in 21.61s ==============================

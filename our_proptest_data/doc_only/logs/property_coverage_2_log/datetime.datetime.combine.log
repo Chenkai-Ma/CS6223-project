@@ -1,0 +1,63 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+doc_only/mutants_2/datetime.datetime.combine/mutant_1.py FFFFF           [ 20%]
+doc_only/mutants_2/datetime.datetime.combine/mutant_2.py FFFFF           [ 40%]
+doc_only/mutants_2/datetime.datetime.combine/mutant_3.py F.FFF           [ 60%]
+doc_only/mutants_2/datetime.datetime.combine/mutant_4.py FFFFF           [ 80%]
+doc_only/mutants_2/datetime.datetime.combine/mutant_5.py FFFFF           [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/datetime.datetime.combine/mutant_1.py:9: assert 2000 == (2000 + 1)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/datetime.datetime.combine/mutant_1.py:18: assert 1 == (1 + 1)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/datetime.datetime.combine/mutant_1.py:27: assert 1 == (1 + 1)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/datetime.datetime.combine/mutant_1.py:33: assert 2001 == 2000
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/datetime.datetime.combine/mutant_1.py:42: assert 1 == 12
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/datetime.datetime.combine/mutant_2.py:10: assert 1 == 0
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/datetime.datetime.combine/mutant_2.py:21: assert 1 == 0
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/datetime.datetime.combine/mutant_2.py:32: assert 1 == 0
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/datetime.datetime.combine/mutant_2.py:43: assert 1 == 0
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/datetime.datetime.combine/mutant_2.py:50: assert 1 == 0
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/datetime.datetime.combine/mutant_3.py:14: assert datetime.timezone(datetime.timedelta(seconds=3600)) == None
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/datetime.datetime.combine/mutant_3.py:36: assert datetime.timezone(datetime.timedelta(days=-1, seconds=68400)) == None
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/datetime.datetime.combine/mutant_3.py:47: assert datetime.timezone(datetime.timedelta(seconds=7200)) == None
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/datetime.datetime.combine/mutant_3.py:58: assert datetime.timezone(datetime.timedelta(seconds=10800)) == None
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/datetime.datetime.combine/mutant_4.py:10: assert 2020 == 2000
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/datetime.datetime.combine/mutant_4.py:22: assert 12 == 1
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/datetime.datetime.combine/mutant_4.py:34: assert 15 == 1
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/datetime.datetime.combine/mutant_4.py:46: assert 6 == 0
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/datetime.datetime.combine/mutant_4.py:58: assert 30 == 0
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/datetime.datetime.combine/mutant_5.py:11: assert None is not None
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/datetime.datetime.combine/mutant_5.py:19: assert datetime.timezone.utc is None
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/datetime.datetime.combine/mutant_5.py:26: assert None is not None
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/datetime.datetime.combine/mutant_5.py:33: assert datetime.timezone.utc is None
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/datetime.datetime.combine/mutant_5.py:40: assert datetime.timezone.utc is None
+=========================== short test summary info ============================
+FAILED doc_only/mutants_2/datetime.datetime.combine/mutant_1.py::test_violation_of_datetime_datetime_combine_1
+FAILED doc_only/mutants_2/datetime.datetime.combine/mutant_1.py::test_violation_of_datetime_datetime_combine_2
+FAILED doc_only/mutants_2/datetime.datetime.combine/mutant_1.py::test_violation_of_datetime_datetime_combine_3
+FAILED doc_only/mutants_2/datetime.datetime.combine/mutant_1.py::test_violation_of_datetime_datetime_combine_4
+FAILED doc_only/mutants_2/datetime.datetime.combine/mutant_1.py::test_violation_of_datetime_datetime_combine_5
+FAILED doc_only/mutants_2/datetime.datetime.combine/mutant_2.py::test_violation_of_datetime_datetime_combine_1
+FAILED doc_only/mutants_2/datetime.datetime.combine/mutant_2.py::test_violation_of_datetime_datetime_combine_2
+FAILED doc_only/mutants_2/datetime.datetime.combine/mutant_2.py::test_violation_of_datetime_datetime_combine_3
+FAILED doc_only/mutants_2/datetime.datetime.combine/mutant_2.py::test_violation_of_datetime_datetime_combine_4
+FAILED doc_only/mutants_2/datetime.datetime.combine/mutant_2.py::test_violation_of_datetime_datetime_combine_5
+FAILED doc_only/mutants_2/datetime.datetime.combine/mutant_3.py::test_violation_of_datetime_datetime_combine_1
+FAILED doc_only/mutants_2/datetime.datetime.combine/mutant_3.py::test_violation_of_datetime_datetime_combine_3
+FAILED doc_only/mutants_2/datetime.datetime.combine/mutant_3.py::test_violation_of_datetime_datetime_combine_4
+FAILED doc_only/mutants_2/datetime.datetime.combine/mutant_3.py::test_violation_of_datetime_datetime_combine_5
+FAILED doc_only/mutants_2/datetime.datetime.combine/mutant_4.py::test_violation_of_datetime_datetime_combine_1
+FAILED doc_only/mutants_2/datetime.datetime.combine/mutant_4.py::test_violation_of_datetime_datetime_combine_2
+FAILED doc_only/mutants_2/datetime.datetime.combine/mutant_4.py::test_violation_of_datetime_datetime_combine_3
+FAILED doc_only/mutants_2/datetime.datetime.combine/mutant_4.py::test_violation_of_datetime_datetime_combine_4
+FAILED doc_only/mutants_2/datetime.datetime.combine/mutant_4.py::test_violation_of_datetime_datetime_combine_5
+FAILED doc_only/mutants_2/datetime.datetime.combine/mutant_5.py::test_violation_of_datetime_datetime_combine_1
+FAILED doc_only/mutants_2/datetime.datetime.combine/mutant_5.py::test_violation_of_datetime_datetime_combine_2
+FAILED doc_only/mutants_2/datetime.datetime.combine/mutant_5.py::test_violation_of_datetime_datetime_combine_3
+FAILED doc_only/mutants_2/datetime.datetime.combine/mutant_5.py::test_violation_of_datetime_datetime_combine_4
+FAILED doc_only/mutants_2/datetime.datetime.combine/mutant_5.py::test_violation_of_datetime_datetime_combine_5
+======================== 24 failed, 1 passed in 32.08s =========================

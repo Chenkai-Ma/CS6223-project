@@ -1,0 +1,55 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+doc_and_code/mutants/statistics.pstdev/mutant_1.py FFFFF                 [ 20%]
+doc_and_code/mutants/statistics.pstdev/mutant_2.py FFFFF                 [ 40%]
+doc_and_code/mutants/statistics.pstdev/mutant_3.py FFF..                 [ 60%]
+doc_and_code/mutants/statistics.pstdev/mutant_4.py FFFFF                 [ 80%]
+doc_and_code/mutants/statistics.pstdev/mutant_5.py F..F.                 [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/statistics.pstdev/mutant_1.py:6: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/statistics.pstdev/mutant_1.py:12: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/statistics.pstdev/mutant_1.py:18: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/statistics.pstdev/mutant_1.py:24: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/statistics.pstdev/mutant_1.py:30: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/statistics.pstdev/mutant_2.py:8: assert 0.0 != 0
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/statistics.pstdev/mutant_2.py:13: assert 0.0 > 0
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/statistics.pstdev/mutant_2.py:18: assert 0.0 == 1
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/statistics.pstdev/mutant_2.py:23: assert 0.0 == -1
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/statistics.pstdev/mutant_2.py:28: assert 0.0 > 100
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/statistics.pstdev/mutant_3.py:6: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/statistics.pstdev/mutant_3.py:12: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/statistics.pstdev/mutant_3.py:18: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/statistics.pstdev/mutant_4.py:10: AssertionError: Expected StatisticsError not raised
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/statistics.pstdev/mutant_4.py:17: AssertionError: Expected StatisticsError not raised
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/statistics.pstdev/mutant_4.py:24: AssertionError: Expected StatisticsError not raised
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/statistics.pstdev/mutant_4.py:31: AssertionError: Expected StatisticsError not raised
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/statistics.pstdev/mutant_4.py:38: AssertionError: Expected StatisticsError not raised
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/statistics.pstdev/mutant_5.py:6: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/statistics.pstdev/mutant_5.py:24: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+=========================== short test summary info ============================
+FAILED doc_and_code/mutants/statistics.pstdev/mutant_1.py::test_violation_of_statistics_pstdev_1
+FAILED doc_and_code/mutants/statistics.pstdev/mutant_1.py::test_violation_of_statistics_pstdev_2
+FAILED doc_and_code/mutants/statistics.pstdev/mutant_1.py::test_violation_of_statistics_pstdev_3
+FAILED doc_and_code/mutants/statistics.pstdev/mutant_1.py::test_violation_of_statistics_pstdev_4
+FAILED doc_and_code/mutants/statistics.pstdev/mutant_1.py::test_violation_of_statistics_pstdev_5
+FAILED doc_and_code/mutants/statistics.pstdev/mutant_2.py::test_violation_of_statistics_pstdev_1
+FAILED doc_and_code/mutants/statistics.pstdev/mutant_2.py::test_violation_of_statistics_pstdev_2
+FAILED doc_and_code/mutants/statistics.pstdev/mutant_2.py::test_violation_of_statistics_pstdev_3
+FAILED doc_and_code/mutants/statistics.pstdev/mutant_2.py::test_violation_of_statistics_pstdev_4
+FAILED doc_and_code/mutants/statistics.pstdev/mutant_2.py::test_violation_of_statistics_pstdev_5
+FAILED doc_and_code/mutants/statistics.pstdev/mutant_3.py::test_violation_of_statistics_pstdev_1
+FAILED doc_and_code/mutants/statistics.pstdev/mutant_3.py::test_violation_of_statistics_pstdev_2
+FAILED doc_and_code/mutants/statistics.pstdev/mutant_3.py::test_violation_of_statistics_pstdev_3
+FAILED doc_and_code/mutants/statistics.pstdev/mutant_4.py::test_violation_of_statistics_pstdev_1
+FAILED doc_and_code/mutants/statistics.pstdev/mutant_4.py::test_violation_of_statistics_pstdev_2
+FAILED doc_and_code/mutants/statistics.pstdev/mutant_4.py::test_violation_of_statistics_pstdev_3
+FAILED doc_and_code/mutants/statistics.pstdev/mutant_4.py::test_violation_of_statistics_pstdev_4
+FAILED doc_and_code/mutants/statistics.pstdev/mutant_4.py::test_violation_of_statistics_pstdev_5
+FAILED doc_and_code/mutants/statistics.pstdev/mutant_5.py::test_violation_of_statistics_pstdev_1
+FAILED doc_and_code/mutants/statistics.pstdev/mutant_5.py::test_violation_of_statistics_pstdev_4
+======================== 20 failed, 5 passed in 10.56s =========================

@@ -1,0 +1,41 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 15 items / 1 error
+
+doc_only/mutants_2/decimal.Decimal.adjusted/mutant_1.py FFFFF            [ 33%]
+doc_only/mutants_2/decimal.Decimal.adjusted/mutant_2.py FFFFF            [ 66%]
+doc_only/mutants_2/decimal.Decimal.adjusted/mutant_4.py F...F            [100%]
+
+==================================== ERRORS ====================================
+___ ERROR collecting doc_only/mutants_2/decimal.Decimal.adjusted/mutant_3.py ___
+E   TypeError: decimals() got an unexpected keyword argument 'allow_infinite'
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/decimal.Decimal.adjusted/mutant_1.py:8: AssertionError: assert -1 >= 0
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/decimal.Decimal.adjusted/mutant_1.py:13: AssertionError: assert -10 >= 0
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/decimal.Decimal.adjusted/mutant_1.py:18: AssertionError: assert -1000 >= 0
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/decimal.Decimal.adjusted/mutant_1.py:23: AssertionError: assert -10000 >= 0
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/decimal.Decimal.adjusted/mutant_1.py:28: AssertionError: assert -100000 >= 0
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/decimal.Decimal.adjusted/mutant_2.py:9: assert 1 < 0
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/decimal.Decimal.adjusted/mutant_2.py:15: assert 1 == 0
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/decimal.Decimal.adjusted/mutant_2.py:21: assert 1 < -1000000.0
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/decimal.Decimal.adjusted/mutant_2.py:27: assert 1 > 1000000.0
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/decimal.Decimal.adjusted/mutant_2.py:33: assert 1 < -1
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/decimal.Decimal.adjusted/mutant_4.py:9: AssertionError: assert 0 != 0
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/decimal.Decimal.adjusted/mutant_4.py:33: AssertionError: assert (0 + 3) != (0 + 3)
+=========================== short test summary info ============================
+FAILED doc_only/mutants_2/decimal.Decimal.adjusted/mutant_1.py::test_violation_of_decimal_Decimal_adjusted_1
+FAILED doc_only/mutants_2/decimal.Decimal.adjusted/mutant_1.py::test_violation_of_decimal_Decimal_adjusted_2
+FAILED doc_only/mutants_2/decimal.Decimal.adjusted/mutant_1.py::test_violation_of_decimal_Decimal_adjusted_3
+FAILED doc_only/mutants_2/decimal.Decimal.adjusted/mutant_1.py::test_violation_of_decimal_Decimal_adjusted_4
+FAILED doc_only/mutants_2/decimal.Decimal.adjusted/mutant_1.py::test_violation_of_decimal_Decimal_adjusted_5
+FAILED doc_only/mutants_2/decimal.Decimal.adjusted/mutant_2.py::test_violation_of_decimal_Decimal_adjusted_1
+FAILED doc_only/mutants_2/decimal.Decimal.adjusted/mutant_2.py::test_violation_of_decimal_Decimal_adjusted_2
+FAILED doc_only/mutants_2/decimal.Decimal.adjusted/mutant_2.py::test_violation_of_decimal_Decimal_adjusted_3
+FAILED doc_only/mutants_2/decimal.Decimal.adjusted/mutant_2.py::test_violation_of_decimal_Decimal_adjusted_4
+FAILED doc_only/mutants_2/decimal.Decimal.adjusted/mutant_2.py::test_violation_of_decimal_Decimal_adjusted_5
+FAILED doc_only/mutants_2/decimal.Decimal.adjusted/mutant_4.py::test_violation_of_decimal_Decimal_adjusted_1
+FAILED doc_only/mutants_2/decimal.Decimal.adjusted/mutant_4.py::test_violation_of_decimal_Decimal_adjusted_5
+ERROR doc_only/mutants_2/decimal.Decimal.adjusted/mutant_3.py - TypeError: de...
+==================== 12 failed, 3 passed, 1 error in 6.79s =====================

@@ -1,0 +1,55 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+doc_and_code/mutants_2/statistics.pstdev/mutant_1.py FF.F.               [ 20%]
+doc_and_code/mutants_2/statistics.pstdev/mutant_2.py FF.FF               [ 40%]
+doc_and_code/mutants_2/statistics.pstdev/mutant_3.py FFF.F               [ 60%]
+doc_and_code/mutants_2/statistics.pstdev/mutant_4.py FFFFF               [ 80%]
+doc_and_code/mutants_2/statistics.pstdev/mutant_5.py FF.FF               [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/statistics.pstdev/mutant_1.py:6: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/statistics.pstdev/mutant_1.py:12: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/statistics.pstdev/mutant_1.py:24: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/statistics.pstdev/mutant_2.py:8: assert 1.0 == 0
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/statistics.pstdev/mutant_2.py:13: assert 5.0 == 0
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/statistics.pstdev/mutant_2.py:23: assert -0.1 == 0
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/statistics.pstdev/mutant_2.py:28: assert 100.0 == 0
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/statistics.pstdev/mutant_3.py:6: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/statistics.pstdev/mutant_3.py:12: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/statistics.pstdev/mutant_3.py:18: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/statistics.pstdev/mutant_3.py:30: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/usr/lib/python3.10/statistics.py:811: statistics.StatisticsError: pvariance requires at least one data point
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/statistics.pstdev/mutant_4.py:12: hypothesis.errors.FailedHealthCheck: Tests run under @given should return None, but test_violation_of_statistics_pstdev_2 returned 0 instead.
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/statistics.pstdev/mutant_4.py:18: hypothesis.errors.FailedHealthCheck: Tests run under @given should return None, but test_violation_of_statistics_pstdev_3 returned 0.0 instead.
+/usr/lib/python3.10/statistics.py:811: statistics.StatisticsError: pvariance requires at least one data point
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/statistics.pstdev/mutant_4.py:32: hypothesis.errors.FailedHealthCheck: Tests run under @given should return None, but test_violation_of_statistics_pstdev_5 returned 'No data' instead.
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/statistics.pstdev/mutant_5.py:6: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/statistics.pstdev/mutant_5.py:13: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/statistics.pstdev/mutant_5.py:27: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/statistics.pstdev/mutant_5.py:34: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+=========================== short test summary info ============================
+FAILED doc_and_code/mutants_2/statistics.pstdev/mutant_1.py::test_violation_of_statistics_pstdev_1
+FAILED doc_and_code/mutants_2/statistics.pstdev/mutant_1.py::test_violation_of_statistics_pstdev_2
+FAILED doc_and_code/mutants_2/statistics.pstdev/mutant_1.py::test_violation_of_statistics_pstdev_4
+FAILED doc_and_code/mutants_2/statistics.pstdev/mutant_2.py::test_violation_of_statistics_pstdev_1
+FAILED doc_and_code/mutants_2/statistics.pstdev/mutant_2.py::test_violation_of_statistics_pstdev_2
+FAILED doc_and_code/mutants_2/statistics.pstdev/mutant_2.py::test_violation_of_statistics_pstdev_4
+FAILED doc_and_code/mutants_2/statistics.pstdev/mutant_2.py::test_violation_of_statistics_pstdev_5
+FAILED doc_and_code/mutants_2/statistics.pstdev/mutant_3.py::test_violation_of_statistics_pstdev_1
+FAILED doc_and_code/mutants_2/statistics.pstdev/mutant_3.py::test_violation_of_statistics_pstdev_2
+FAILED doc_and_code/mutants_2/statistics.pstdev/mutant_3.py::test_violation_of_statistics_pstdev_3
+FAILED doc_and_code/mutants_2/statistics.pstdev/mutant_3.py::test_violation_of_statistics_pstdev_5
+FAILED doc_and_code/mutants_2/statistics.pstdev/mutant_4.py::test_violation_of_statistics_pstdev_1
+FAILED doc_and_code/mutants_2/statistics.pstdev/mutant_4.py::test_violation_of_statistics_pstdev_2
+FAILED doc_and_code/mutants_2/statistics.pstdev/mutant_4.py::test_violation_of_statistics_pstdev_3
+FAILED doc_and_code/mutants_2/statistics.pstdev/mutant_4.py::test_violation_of_statistics_pstdev_4
+FAILED doc_and_code/mutants_2/statistics.pstdev/mutant_4.py::test_violation_of_statistics_pstdev_5
+FAILED doc_and_code/mutants_2/statistics.pstdev/mutant_5.py::test_violation_of_statistics_pstdev_1
+FAILED doc_and_code/mutants_2/statistics.pstdev/mutant_5.py::test_violation_of_statistics_pstdev_2
+FAILED doc_and_code/mutants_2/statistics.pstdev/mutant_5.py::test_violation_of_statistics_pstdev_4
+FAILED doc_and_code/mutants_2/statistics.pstdev/mutant_5.py::test_violation_of_statistics_pstdev_5
+======================== 20 failed, 5 passed in 10.14s =========================

@@ -1,0 +1,42 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 20 items
+
+doc_only/mutants_2/numpy.linalg.norm/mutant_1.py FFFFF                   [ 25%]
+doc_only/mutants_2/numpy.linalg.norm/mutant_2.py FFFFF                   [ 50%]
+doc_only/mutants_2/numpy.linalg.norm/mutant_3.py FF.FF                   [ 75%]
+doc_only/mutants_2/numpy.linalg.norm/mutant_4.py .....                   [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/numpy.linalg.norm/mutant_1.py:6: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/numpy.linalg.norm/mutant_1.py:13: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/numpy.linalg.norm/mutant_1.py:20: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/numpy.linalg.norm/mutant_1.py:27: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/numpy.linalg.norm/mutant_1.py:34: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/numpy.linalg.norm/mutant_2.py:6: exceptiongroup.ExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/numpy.linalg.norm/mutant_2.py:13: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/numpy.linalg.norm/mutant_2.py:20: exceptiongroup.ExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/numpy.linalg.norm/mutant_2.py:27: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/numpy.linalg.norm/mutant_2.py:34: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/numpy.linalg.norm/mutant_3.py:12: assert False
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/numpy.linalg.norm/mutant_3.py:15: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/numpy.linalg.norm/mutant_3.py:31: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/numpy.linalg.norm/mutant_3.py:39: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+=========================== short test summary info ============================
+FAILED doc_only/mutants_2/numpy.linalg.norm/mutant_1.py::test_violation_of_numpy_linalg_norm_1
+FAILED doc_only/mutants_2/numpy.linalg.norm/mutant_1.py::test_violation_of_numpy_linalg_norm_2
+FAILED doc_only/mutants_2/numpy.linalg.norm/mutant_1.py::test_violation_of_numpy_linalg_norm_3
+FAILED doc_only/mutants_2/numpy.linalg.norm/mutant_1.py::test_violation_of_numpy_linalg_norm_4
+FAILED doc_only/mutants_2/numpy.linalg.norm/mutant_1.py::test_violation_of_numpy_linalg_norm_5
+FAILED doc_only/mutants_2/numpy.linalg.norm/mutant_2.py::test_violation_of_numpy_linalg_norm_1
+FAILED doc_only/mutants_2/numpy.linalg.norm/mutant_2.py::test_violation_of_numpy_linalg_norm_2
+FAILED doc_only/mutants_2/numpy.linalg.norm/mutant_2.py::test_violation_of_numpy_linalg_norm_3
+FAILED doc_only/mutants_2/numpy.linalg.norm/mutant_2.py::test_violation_of_numpy_linalg_norm_4
+FAILED doc_only/mutants_2/numpy.linalg.norm/mutant_2.py::test_violation_of_numpy_linalg_norm_5
+FAILED doc_only/mutants_2/numpy.linalg.norm/mutant_3.py::test_violation_of_numpy_linalg_norm_1
+FAILED doc_only/mutants_2/numpy.linalg.norm/mutant_3.py::test_violation_of_numpy_linalg_norm_2
+FAILED doc_only/mutants_2/numpy.linalg.norm/mutant_3.py::test_violation_of_numpy_linalg_norm_4
+FAILED doc_only/mutants_2/numpy.linalg.norm/mutant_3.py::test_violation_of_numpy_linalg_norm_5
+========================= 14 failed, 6 passed in 6.30s =========================

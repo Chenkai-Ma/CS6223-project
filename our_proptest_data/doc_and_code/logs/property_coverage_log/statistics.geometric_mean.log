@@ -1,0 +1,47 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 15 items / 1 error
+
+doc_and_code/mutants/statistics.geometric_mean/mutant_1.py FFFFF         [ 33%]
+doc_and_code/mutants/statistics.geometric_mean/mutant_2.py FFFFF         [ 66%]
+doc_and_code/mutants/statistics.geometric_mean/mutant_4.py FFFFF         [100%]
+
+==================================== ERRORS ====================================
+_ ERROR collecting doc_and_code/mutants/statistics.geometric_mean/mutant_3.py __
+E   NameError: name 'math' is not defined
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/statistics.geometric_mean/mutant_1.py:7: NameError: name 'geometric_mean' is not defined
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/statistics.geometric_mean/mutant_1.py:14: NameError: name 'geometric_mean' is not defined
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/statistics.geometric_mean/mutant_1.py:21: NameError: name 'geometric_mean' is not defined
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/statistics.geometric_mean/mutant_1.py:28: NameError: name 'geometric_mean' is not defined
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/statistics.geometric_mean/mutant_1.py:35: NameError: name 'geometric_mean' is not defined
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/statistics.geometric_mean/mutant_2.py:9: NameError: name 'geometric_mean' is not defined
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/statistics.geometric_mean/mutant_2.py:16: NameError: name 'geometric_mean' is not defined
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/statistics.geometric_mean/mutant_2.py:23: NameError: name 'geometric_mean' is not defined
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/statistics.geometric_mean/mutant_2.py:30: NameError: name 'geometric_mean' is not defined
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/statistics.geometric_mean/mutant_2.py:37: NameError: name 'geometric_mean' is not defined
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/statistics.geometric_mean/mutant_4.py:8: NameError: name 'geometric_mean' is not defined
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/statistics.geometric_mean/mutant_4.py:14: NameError: name 'geometric_mean' is not defined
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/statistics.geometric_mean/mutant_4.py:20: NameError: name 'geometric_mean' is not defined
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/statistics.geometric_mean/mutant_4.py:26: NameError: name 'geometric_mean' is not defined
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/statistics.geometric_mean/mutant_4.py:32: NameError: name 'geometric_mean' is not defined
+=========================== short test summary info ============================
+FAILED doc_and_code/mutants/statistics.geometric_mean/mutant_1.py::test_violation_of_statistics_geometric_mean_1
+FAILED doc_and_code/mutants/statistics.geometric_mean/mutant_1.py::test_violation_of_statistics_geometric_mean_2
+FAILED doc_and_code/mutants/statistics.geometric_mean/mutant_1.py::test_violation_of_statistics_geometric_mean_3
+FAILED doc_and_code/mutants/statistics.geometric_mean/mutant_1.py::test_violation_of_statistics_geometric_mean_4
+FAILED doc_and_code/mutants/statistics.geometric_mean/mutant_1.py::test_violation_of_statistics_geometric_mean_5
+FAILED doc_and_code/mutants/statistics.geometric_mean/mutant_2.py::test_violation_of_statistics_geometric_mean_1
+FAILED doc_and_code/mutants/statistics.geometric_mean/mutant_2.py::test_violation_of_statistics_geometric_mean_2
+FAILED doc_and_code/mutants/statistics.geometric_mean/mutant_2.py::test_violation_of_statistics_geometric_mean_3
+FAILED doc_and_code/mutants/statistics.geometric_mean/mutant_2.py::test_violation_of_statistics_geometric_mean_4
+FAILED doc_and_code/mutants/statistics.geometric_mean/mutant_2.py::test_violation_of_statistics_geometric_mean_5
+FAILED doc_and_code/mutants/statistics.geometric_mean/mutant_4.py::test_violation_of_statistics_geometric_mean_1
+FAILED doc_and_code/mutants/statistics.geometric_mean/mutant_4.py::test_violation_of_statistics_geometric_mean_2
+FAILED doc_and_code/mutants/statistics.geometric_mean/mutant_4.py::test_violation_of_statistics_geometric_mean_3
+FAILED doc_and_code/mutants/statistics.geometric_mean/mutant_4.py::test_violation_of_statistics_geometric_mean_4
+FAILED doc_and_code/mutants/statistics.geometric_mean/mutant_4.py::test_violation_of_statistics_geometric_mean_5
+ERROR doc_and_code/mutants/statistics.geometric_mean/mutant_3.py - NameError:...
+========================= 15 failed, 1 error in 9.29s ==========================

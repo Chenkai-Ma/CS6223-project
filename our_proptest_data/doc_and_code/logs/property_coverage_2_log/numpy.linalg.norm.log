@@ -1,0 +1,39 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 15 items
+
+doc_and_code/mutants_2/numpy.linalg.norm/mutant_1.py FFFFF               [ 33%]
+doc_and_code/mutants_2/numpy.linalg.norm/mutant_2.py FF.F.               [ 66%]
+doc_and_code/mutants_2/numpy.linalg.norm/mutant_3.py FFFFF               [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/numpy.linalg.norm/mutant_1.py:9: assert 0.0 != 0.0
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/numpy.linalg.norm/mutant_1.py:14: assert 0.0 > 0.0
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/numpy.linalg.norm/mutant_1.py:19: assert 0.0 == 1.0
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/numpy.linalg.norm/mutant_1.py:24: assert 0.0 == -1.0
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/numpy.linalg.norm/mutant_1.py:29: AssertionError: assert 0.0 == inf
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/numpy.linalg.norm/mutant_2.py:8: assert -1.0 >= 0
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/numpy.linalg.norm/mutant_2.py:13: assert -1.0 >= 0
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/numpy.linalg.norm/mutant_2.py:23: assert -1 >= 0
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/numpy.linalg.norm/mutant_3.py:11: assert False
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/numpy.linalg.norm/mutant_3.py:18: assert False
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/numpy.linalg.norm/mutant_3.py:25: assert False
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/numpy.linalg.norm/mutant_3.py:32: assert False
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/numpy.linalg.norm/mutant_3.py:39: assert False
+=========================== short test summary info ============================
+FAILED doc_and_code/mutants_2/numpy.linalg.norm/mutant_1.py::test_violation_of_numpy_linalg_norm_1
+FAILED doc_and_code/mutants_2/numpy.linalg.norm/mutant_1.py::test_violation_of_numpy_linalg_norm_2
+FAILED doc_and_code/mutants_2/numpy.linalg.norm/mutant_1.py::test_violation_of_numpy_linalg_norm_3
+FAILED doc_and_code/mutants_2/numpy.linalg.norm/mutant_1.py::test_violation_of_numpy_linalg_norm_4
+FAILED doc_and_code/mutants_2/numpy.linalg.norm/mutant_1.py::test_violation_of_numpy_linalg_norm_5
+FAILED doc_and_code/mutants_2/numpy.linalg.norm/mutant_2.py::test_violation_of_numpy_linalg_norm_1
+FAILED doc_and_code/mutants_2/numpy.linalg.norm/mutant_2.py::test_violation_of_numpy_linalg_norm_2
+FAILED doc_and_code/mutants_2/numpy.linalg.norm/mutant_2.py::test_violation_of_numpy_linalg_norm_4
+FAILED doc_and_code/mutants_2/numpy.linalg.norm/mutant_3.py::test_violation_of_numpy_linalg_norm_1
+FAILED doc_and_code/mutants_2/numpy.linalg.norm/mutant_3.py::test_violation_of_numpy_linalg_norm_2
+FAILED doc_and_code/mutants_2/numpy.linalg.norm/mutant_3.py::test_violation_of_numpy_linalg_norm_3
+FAILED doc_and_code/mutants_2/numpy.linalg.norm/mutant_3.py::test_violation_of_numpy_linalg_norm_4
+FAILED doc_and_code/mutants_2/numpy.linalg.norm/mutant_3.py::test_violation_of_numpy_linalg_norm_5
+========================= 13 failed, 2 passed in 6.37s =========================

@@ -1,0 +1,43 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 15 items
+
+doc_and_code/mutants/decimal.Decimal.from_float/mutant_1.py FFFFF        [ 33%]
+doc_and_code/mutants/decimal.Decimal.from_float/mutant_2.py FFFFF        [ 66%]
+doc_and_code/mutants/decimal.Decimal.from_float/mutant_3.py FFFFF        [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/decimal.Decimal.from_float/mutant_1.py:7: NameError: name 'Decimal' is not defined
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/decimal.Decimal.from_float/mutant_1.py:12: NameError: name 'Decimal' is not defined
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/decimal.Decimal.from_float/mutant_1.py:17: NameError: name 'Decimal' is not defined
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/decimal.Decimal.from_float/mutant_1.py:23: NameError: name 'Decimal' is not defined
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/decimal.Decimal.from_float/mutant_1.py:28: NameError: name 'Decimal' is not defined
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/decimal.Decimal.from_float/mutant_2.py:9: AssertionError: assert Decimal('0') == Decimal('1')
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/decimal.Decimal.from_float/mutant_2.py:15: AssertionError: assert Decimal('1') == Decimal('2')
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/decimal.Decimal.from_float/mutant_2.py:21: AssertionError: assert Decimal('0') == Decimal('-1')
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/decimal.Decimal.from_float/mutant_2.py:27: AssertionError: assert Decimal('0') == Decimal('0.1')
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/decimal.Decimal.from_float/mutant_2.py:33: AssertionError: assert Decimal('1') == Decimal('0.5')
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/decimal.Decimal.from_float/mutant_3.py:11: AssertionError: assert ((False) or (not False and -1.0 >= 0))
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/decimal.Decimal.from_float/mutant_3.py:19: AssertionError: assert ((True and 1.0 < 0) or (not True))
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/decimal.Decimal.from_float/mutant_3.py:26: AssertionError: assert ((False) or (not False and -1.0 >= 0))
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/decimal.Decimal.from_float/mutant_3.py:33: AssertionError: assert ((True and 0.0 < 0) or (not True))
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/decimal.Decimal.from_float/mutant_3.py:40: AssertionError: assert ((True and 1.0 < 0) or (not True))
+=========================== short test summary info ============================
+FAILED doc_and_code/mutants/decimal.Decimal.from_float/mutant_1.py::test_violation_of_decimal_Decimal_from_float_1
+FAILED doc_and_code/mutants/decimal.Decimal.from_float/mutant_1.py::test_violation_of_decimal_Decimal_from_float_2
+FAILED doc_and_code/mutants/decimal.Decimal.from_float/mutant_1.py::test_violation_of_decimal_Decimal_from_float_3
+FAILED doc_and_code/mutants/decimal.Decimal.from_float/mutant_1.py::test_violation_of_decimal_Decimal_from_float_4
+FAILED doc_and_code/mutants/decimal.Decimal.from_float/mutant_1.py::test_violation_of_decimal_Decimal_from_float_5
+FAILED doc_and_code/mutants/decimal.Decimal.from_float/mutant_2.py::test_violation_of_decimal_Decimal_from_float_1
+FAILED doc_and_code/mutants/decimal.Decimal.from_float/mutant_2.py::test_violation_of_decimal_Decimal_from_float_2
+FAILED doc_and_code/mutants/decimal.Decimal.from_float/mutant_2.py::test_violation_of_decimal_Decimal_from_float_3
+FAILED doc_and_code/mutants/decimal.Decimal.from_float/mutant_2.py::test_violation_of_decimal_Decimal_from_float_4
+FAILED doc_and_code/mutants/decimal.Decimal.from_float/mutant_2.py::test_violation_of_decimal_Decimal_from_float_5
+FAILED doc_and_code/mutants/decimal.Decimal.from_float/mutant_3.py::test_violation_of_decimal_Decimal_from_float_1
+FAILED doc_and_code/mutants/decimal.Decimal.from_float/mutant_3.py::test_violation_of_decimal_Decimal_from_float_2
+FAILED doc_and_code/mutants/decimal.Decimal.from_float/mutant_3.py::test_violation_of_decimal_Decimal_from_float_3
+FAILED doc_and_code/mutants/decimal.Decimal.from_float/mutant_3.py::test_violation_of_decimal_Decimal_from_float_4
+FAILED doc_and_code/mutants/decimal.Decimal.from_float/mutant_3.py::test_violation_of_decimal_Decimal_from_float_5
+============================== 15 failed in 2.56s ==============================

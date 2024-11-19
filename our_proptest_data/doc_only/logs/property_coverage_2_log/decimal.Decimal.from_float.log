@@ -1,0 +1,42 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 20 items
+
+doc_only/mutants_2/decimal.Decimal.from_float/mutant_1.py FFFF.          [ 25%]
+doc_only/mutants_2/decimal.Decimal.from_float/mutant_2.py FFFFF          [ 50%]
+doc_only/mutants_2/decimal.Decimal.from_float/mutant_3.py .....          [ 75%]
+doc_only/mutants_2/decimal.Decimal.from_float/mutant_4.py FFFFF          [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/decimal.Decimal.from_float/mutant_1.py:8: AssertionError: assert False
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/decimal.Decimal.from_float/mutant_1.py:11: exceptiongroup.ExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/decimal.Decimal.from_float/mutant_1.py:17: TypeError: 'decimal.Decimal' object is not iterable
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/decimal.Decimal.from_float/mutant_1.py:23: AssertionError: assert False
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/decimal.Decimal.from_float/mutant_2.py:9: AssertionError: assert Decimal('0.1') == Decimal('0')
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/decimal.Decimal.from_float/mutant_2.py:15: AssertionError: assert Decimal('2') == Decimal('1')
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/decimal.Decimal.from_float/mutant_2.py:21: AssertionError: assert Decimal('-0.5') == Decimal('0')
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/decimal.Decimal.from_float/mutant_2.py:24: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/decimal.Decimal.from_float/mutant_2.py:33: AssertionError: assert Decimal('1E+1') == Decimal('1')
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/decimal.Decimal.from_float/mutant_4.py:9: TypeError: unsupported operand type(s) for +: 'decimal.Decimal' and 'float'
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/decimal.Decimal.from_float/mutant_4.py:16: AssertionError: assert Decimal('1') == Decimal('2')
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/decimal.Decimal.from_float/mutant_4.py:22: AssertionError: assert Decimal('0') == Decimal('1.0')
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/decimal.Decimal.from_float/mutant_4.py:25: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/decimal.Decimal.from_float/mutant_4.py:34: AssertionError: assert Decimal('0') == Decimal('-0.1')
+=========================== short test summary info ============================
+FAILED doc_only/mutants_2/decimal.Decimal.from_float/mutant_1.py::test_violation_of_decimal_Decimal_from_float_1
+FAILED doc_only/mutants_2/decimal.Decimal.from_float/mutant_1.py::test_violation_of_decimal_Decimal_from_float_2
+FAILED doc_only/mutants_2/decimal.Decimal.from_float/mutant_1.py::test_violation_of_decimal_Decimal_from_float_3
+FAILED doc_only/mutants_2/decimal.Decimal.from_float/mutant_1.py::test_violation_of_decimal_Decimal_from_float_4
+FAILED doc_only/mutants_2/decimal.Decimal.from_float/mutant_2.py::test_violation_of_decimal_Decimal_from_float_1
+FAILED doc_only/mutants_2/decimal.Decimal.from_float/mutant_2.py::test_violation_of_decimal_Decimal_from_float_2
+FAILED doc_only/mutants_2/decimal.Decimal.from_float/mutant_2.py::test_violation_of_decimal_Decimal_from_float_3
+FAILED doc_only/mutants_2/decimal.Decimal.from_float/mutant_2.py::test_violation_of_decimal_Decimal_from_float_4
+FAILED doc_only/mutants_2/decimal.Decimal.from_float/mutant_2.py::test_violation_of_decimal_Decimal_from_float_5
+FAILED doc_only/mutants_2/decimal.Decimal.from_float/mutant_4.py::test_violation_of_decimal_Decimal_from_float_1
+FAILED doc_only/mutants_2/decimal.Decimal.from_float/mutant_4.py::test_violation_of_decimal_Decimal_from_float_2
+FAILED doc_only/mutants_2/decimal.Decimal.from_float/mutant_4.py::test_violation_of_decimal_Decimal_from_float_3
+FAILED doc_only/mutants_2/decimal.Decimal.from_float/mutant_4.py::test_violation_of_decimal_Decimal_from_float_4
+FAILED doc_only/mutants_2/decimal.Decimal.from_float/mutant_4.py::test_violation_of_decimal_Decimal_from_float_5
+========================= 14 failed, 6 passed in 4.72s =========================

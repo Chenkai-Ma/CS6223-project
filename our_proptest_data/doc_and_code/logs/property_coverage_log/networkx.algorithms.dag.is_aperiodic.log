@@ -1,0 +1,40 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+doc_and_code/mutants/networkx.algorithms.dag.is_aperiodic/mutant_1.py FF [  8%]
+FFF                                                                      [ 20%]
+doc_and_code/mutants/networkx.algorithms.dag.is_aperiodic/mutant_2.py FF [ 28%]
+FFF                                                                      [ 40%]
+doc_and_code/mutants/networkx.algorithms.dag.is_aperiodic/mutant_3.py .. [ 48%]
+...                                                                      [ 60%]
+doc_and_code/mutants/networkx.algorithms.dag.is_aperiodic/mutant_4.py .. [ 68%]
+...                                                                      [ 80%]
+doc_and_code/mutants/networkx.algorithms.dag.is_aperiodic/mutant_5.py .. [ 88%]
+...                                                                      [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/networkx.algorithms.dag.is_aperiodic/mutant_1.py:9: assert False is True
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/networkx.algorithms.dag.is_aperiodic/mutant_1.py:15: assert False is True
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/networkx.algorithms.dag.is_aperiodic/mutant_1.py:21: assert False is True
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/networkx.algorithms.dag.is_aperiodic/mutant_1.py:27: assert False is True
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/networkx.algorithms.dag.is_aperiodic/mutant_1.py:33: assert False is True
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/networkx.algorithms.dag.is_aperiodic/mutant_2.py:8: assert False is True
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/networkx.algorithms.dag.is_aperiodic/mutant_2.py:13: assert False is True
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/networkx.algorithms.dag.is_aperiodic/mutant_2.py:18: assert False is True
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/networkx.algorithms.dag.is_aperiodic/mutant_2.py:23: assert False is True
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/networkx.algorithms.dag.is_aperiodic/mutant_2.py:28: assert False is True
+=========================== short test summary info ============================
+FAILED doc_and_code/mutants/networkx.algorithms.dag.is_aperiodic/mutant_1.py::test_violation_of_networkx_algorithms_dag_is_aperiodic_1
+FAILED doc_and_code/mutants/networkx.algorithms.dag.is_aperiodic/mutant_1.py::test_violation_of_networkx_algorithms_dag_is_aperiodic_2
+FAILED doc_and_code/mutants/networkx.algorithms.dag.is_aperiodic/mutant_1.py::test_violation_of_networkx_algorithms_dag_is_aperiodic_3
+FAILED doc_and_code/mutants/networkx.algorithms.dag.is_aperiodic/mutant_1.py::test_violation_of_networkx_algorithms_dag_is_aperiodic_4
+FAILED doc_and_code/mutants/networkx.algorithms.dag.is_aperiodic/mutant_1.py::test_violation_of_networkx_algorithms_dag_is_aperiodic_5
+FAILED doc_and_code/mutants/networkx.algorithms.dag.is_aperiodic/mutant_2.py::test_violation_of_networkx_algorithms_dag_is_aperiodic_1
+FAILED doc_and_code/mutants/networkx.algorithms.dag.is_aperiodic/mutant_2.py::test_violation_of_networkx_algorithms_dag_is_aperiodic_2
+FAILED doc_and_code/mutants/networkx.algorithms.dag.is_aperiodic/mutant_2.py::test_violation_of_networkx_algorithms_dag_is_aperiodic_3
+FAILED doc_and_code/mutants/networkx.algorithms.dag.is_aperiodic/mutant_2.py::test_violation_of_networkx_algorithms_dag_is_aperiodic_4
+FAILED doc_and_code/mutants/networkx.algorithms.dag.is_aperiodic/mutant_2.py::test_violation_of_networkx_algorithms_dag_is_aperiodic_5
+======================== 10 failed, 15 passed in 7.45s =========================

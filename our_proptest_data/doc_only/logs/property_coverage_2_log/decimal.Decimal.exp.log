@@ -1,0 +1,32 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 10 items
+
+doc_only/mutants_2/decimal.Decimal.exp/mutant_1.py FFFFF                 [ 50%]
+doc_only/mutants_2/decimal.Decimal.exp/mutant_2.py FFFFF                 [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/decimal.Decimal.exp/mutant_1.py:7: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_decimal_Decimal_exp_1() were passed to @given - expected at most 0 arguments, but got 1 (just(0),)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/decimal.Decimal.exp/mutant_1.py:12: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_decimal_Decimal_exp_2() were passed to @given - expected at most 0 arguments, but got 1 (just(0),)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/decimal.Decimal.exp/mutant_1.py:17: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_decimal_Decimal_exp_3() were passed to @given - expected at most 0 arguments, but got 1 (just(0),)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/decimal.Decimal.exp/mutant_1.py:22: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_decimal_Decimal_exp_4() were passed to @given - expected at most 0 arguments, but got 1 (just(0),)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/decimal.Decimal.exp/mutant_1.py:27: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_decimal_Decimal_exp_5() were passed to @given - expected at most 0 arguments, but got 1 (just(0),)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/decimal.Decimal.exp/mutant_2.py:6: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/decimal.Decimal.exp/mutant_2.py:12: decimal.Overflow: [<class 'decimal.Overflow'>]
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/decimal.Decimal.exp/mutant_2.py:17: decimal.Overflow: [<class 'decimal.Overflow'>]
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/decimal.Decimal.exp/mutant_2.py:21: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/decimal.Decimal.exp/mutant_2.py:26: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+=========================== short test summary info ============================
+FAILED doc_only/mutants_2/decimal.Decimal.exp/mutant_1.py::test_violation_of_decimal_Decimal_exp_1
+FAILED doc_only/mutants_2/decimal.Decimal.exp/mutant_1.py::test_violation_of_decimal_Decimal_exp_2
+FAILED doc_only/mutants_2/decimal.Decimal.exp/mutant_1.py::test_violation_of_decimal_Decimal_exp_3
+FAILED doc_only/mutants_2/decimal.Decimal.exp/mutant_1.py::test_violation_of_decimal_Decimal_exp_4
+FAILED doc_only/mutants_2/decimal.Decimal.exp/mutant_1.py::test_violation_of_decimal_Decimal_exp_5
+FAILED doc_only/mutants_2/decimal.Decimal.exp/mutant_2.py::test_violation_of_decimal_Decimal_exp_1
+FAILED doc_only/mutants_2/decimal.Decimal.exp/mutant_2.py::test_violation_of_decimal_Decimal_exp_2
+FAILED doc_only/mutants_2/decimal.Decimal.exp/mutant_2.py::test_violation_of_decimal_Decimal_exp_3
+FAILED doc_only/mutants_2/decimal.Decimal.exp/mutant_2.py::test_violation_of_decimal_Decimal_exp_4
+FAILED doc_only/mutants_2/decimal.Decimal.exp/mutant_2.py::test_violation_of_decimal_Decimal_exp_5
+============================== 10 failed in 9.86s ==============================

@@ -1,0 +1,21 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 5 items
+
+doc_and_code/mutants/decimal.Decimal.fma/mutant_1.py FFFFF               [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/decimal.Decimal.fma/mutant_1.py:6: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/decimal.Decimal.fma/mutant_1.py:14: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/decimal.Decimal.fma/mutant_1.py:22: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/decimal.Decimal.fma/mutant_1.py:30: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/decimal.Decimal.fma/mutant_1.py:38: exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+=========================== short test summary info ============================
+FAILED doc_and_code/mutants/decimal.Decimal.fma/mutant_1.py::test_violation_of_decimal_Decimal_fma_1
+FAILED doc_and_code/mutants/decimal.Decimal.fma/mutant_1.py::test_violation_of_decimal_Decimal_fma_2
+FAILED doc_and_code/mutants/decimal.Decimal.fma/mutant_1.py::test_violation_of_decimal_Decimal_fma_3
+FAILED doc_and_code/mutants/decimal.Decimal.fma/mutant_1.py::test_violation_of_decimal_Decimal_fma_4
+FAILED doc_and_code/mutants/decimal.Decimal.fma/mutant_1.py::test_violation_of_decimal_Decimal_fma_5
+============================== 5 failed in 25.79s ==============================

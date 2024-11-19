@@ -1,0 +1,50 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+doc_and_code/mutants/networkx.algorithms.clique.find_cliques/mutant_1.py F [  4%]
+F..F                                                                     [ 20%]
+doc_and_code/mutants/networkx.algorithms.clique.find_cliques/mutant_2.py F [ 24%]
+.F.F                                                                     [ 40%]
+doc_and_code/mutants/networkx.algorithms.clique.find_cliques/mutant_3.py F [ 44%]
+FFF.                                                                     [ 60%]
+doc_and_code/mutants/networkx.algorithms.clique.find_cliques/mutant_4.py F [ 64%]
+FFFF                                                                     [ 80%]
+doc_and_code/mutants/networkx.algorithms.clique.find_cliques/mutant_5.py . [ 84%]
+....                                                                     [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/networkx.algorithms.clique.find_cliques/mutant_1.py:19: TypeError: 'set' object is not subscriptable
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/networkx.algorithms.clique.find_cliques/mutant_1.py:41: TypeError: 'set' object is not subscriptable
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/networkx.algorithms.clique.find_cliques/mutant_1.py:107: TypeError: 'set' object is not subscriptable
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/networkx.algorithms.clique.find_cliques/mutant_2.py:25: assert 0 in [1]
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/networkx.algorithms.clique.find_cliques/mutant_2.py:67: assert 0 in [3, 1]
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/networkx.algorithms.clique.find_cliques/mutant_2.py:108: assert 0 in []
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/networkx.algorithms.clique.find_cliques/mutant_3.py:18: assert 2 == 1
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/networkx.algorithms.clique.find_cliques/mutant_3.py:32: assert 2 == 1
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/networkx.algorithms.clique.find_cliques/mutant_3.py:46: assert 2 == 1
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/networkx.algorithms.clique.find_cliques/mutant_3.py:60: assert 2 == 1
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/networkx.algorithms.clique.find_cliques/mutant_4.py:22: assert 0 >= 1
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/networkx.algorithms.clique.find_cliques/mutant_4.py:40: assert 0 >= 1
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/networkx.algorithms.clique.find_cliques/mutant_4.py:58: assert 0 >= 1
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/networkx.algorithms.clique.find_cliques/mutant_4.py:76: assert 0 >= 1
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/networkx.algorithms.clique.find_cliques/mutant_4.py:95: assert 0 >= 1
+=========================== short test summary info ============================
+FAILED doc_and_code/mutants/networkx.algorithms.clique.find_cliques/mutant_1.py::test_violation_of_networkx_algorithms_clique_find_cliques_1
+FAILED doc_and_code/mutants/networkx.algorithms.clique.find_cliques/mutant_1.py::test_violation_of_networkx_algorithms_clique_find_cliques_2
+FAILED doc_and_code/mutants/networkx.algorithms.clique.find_cliques/mutant_1.py::test_violation_of_networkx_algorithms_clique_find_cliques_5
+FAILED doc_and_code/mutants/networkx.algorithms.clique.find_cliques/mutant_2.py::test_violation_of_networkx_algorithms_clique_find_cliques_1
+FAILED doc_and_code/mutants/networkx.algorithms.clique.find_cliques/mutant_2.py::test_violation_of_networkx_algorithms_clique_find_cliques_3
+FAILED doc_and_code/mutants/networkx.algorithms.clique.find_cliques/mutant_2.py::test_violation_of_networkx_algorithms_clique_find_cliques_5
+FAILED doc_and_code/mutants/networkx.algorithms.clique.find_cliques/mutant_3.py::test_violation_of_networkx_algorithms_clique_find_cliques_1
+FAILED doc_and_code/mutants/networkx.algorithms.clique.find_cliques/mutant_3.py::test_violation_of_networkx_algorithms_clique_find_cliques_2
+FAILED doc_and_code/mutants/networkx.algorithms.clique.find_cliques/mutant_3.py::test_violation_of_networkx_algorithms_clique_find_cliques_3
+FAILED doc_and_code/mutants/networkx.algorithms.clique.find_cliques/mutant_3.py::test_violation_of_networkx_algorithms_clique_find_cliques_4
+FAILED doc_and_code/mutants/networkx.algorithms.clique.find_cliques/mutant_4.py::test_violation_of_networkx_algorithms_clique_find_cliques_1
+FAILED doc_and_code/mutants/networkx.algorithms.clique.find_cliques/mutant_4.py::test_violation_of_networkx_algorithms_clique_find_cliques_2
+FAILED doc_and_code/mutants/networkx.algorithms.clique.find_cliques/mutant_4.py::test_violation_of_networkx_algorithms_clique_find_cliques_3
+FAILED doc_and_code/mutants/networkx.algorithms.clique.find_cliques/mutant_4.py::test_violation_of_networkx_algorithms_clique_find_cliques_4
+FAILED doc_and_code/mutants/networkx.algorithms.clique.find_cliques/mutant_4.py::test_violation_of_networkx_algorithms_clique_find_cliques_5
+======================== 15 failed, 10 passed in 8.39s =========================

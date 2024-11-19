@@ -1,0 +1,43 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 15 items
+
+doc_and_code/mutants_2/statistics.mean/mutant_1.py FFFFF                 [ 33%]
+doc_and_code/mutants_2/statistics.mean/mutant_2.py FFFFF                 [ 66%]
+doc_and_code/mutants_2/statistics.mean/mutant_3.py FFFFF                 [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/statistics.mean/mutant_1.py:8: NameError: name 'Decimal' is not defined
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/statistics.mean/mutant_1.py:13: NameError: name 'Decimal' is not defined
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/statistics.mean/mutant_1.py:18: NameError: name 'Decimal' is not defined
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/statistics.mean/mutant_1.py:23: NameError: name 'Decimal' is not defined
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/statistics.mean/mutant_1.py:28: NameError: name 'Decimal' is not defined
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/statistics.mean/mutant_2.py:8: assert 6.0 == 5.0
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/statistics.mean/mutant_2.py:13: assert 10.0 == 5.0
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/statistics.mean/mutant_2.py:18: assert 0.0 == 5.0
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/statistics.mean/mutant_2.py:23: assert 2.5 == 5.0
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/statistics.mean/mutant_2.py:28: assert 10.0 == 5.0
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/statistics.mean/mutant_3.py:10: assert False
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/statistics.mean/mutant_3.py:19: assert False
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/statistics.mean/mutant_3.py:28: assert False
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/statistics.mean/mutant_3.py:37: assert False
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/statistics.mean/mutant_3.py:46: assert False
+=========================== short test summary info ============================
+FAILED doc_and_code/mutants_2/statistics.mean/mutant_1.py::test_violation_of_statistics_mean_1
+FAILED doc_and_code/mutants_2/statistics.mean/mutant_1.py::test_violation_of_statistics_mean_2
+FAILED doc_and_code/mutants_2/statistics.mean/mutant_1.py::test_violation_of_statistics_mean_3
+FAILED doc_and_code/mutants_2/statistics.mean/mutant_1.py::test_violation_of_statistics_mean_4
+FAILED doc_and_code/mutants_2/statistics.mean/mutant_1.py::test_violation_of_statistics_mean_5
+FAILED doc_and_code/mutants_2/statistics.mean/mutant_2.py::test_violation_of_statistics_mean_1
+FAILED doc_and_code/mutants_2/statistics.mean/mutant_2.py::test_violation_of_statistics_mean_2
+FAILED doc_and_code/mutants_2/statistics.mean/mutant_2.py::test_violation_of_statistics_mean_3
+FAILED doc_and_code/mutants_2/statistics.mean/mutant_2.py::test_violation_of_statistics_mean_4
+FAILED doc_and_code/mutants_2/statistics.mean/mutant_2.py::test_violation_of_statistics_mean_5
+FAILED doc_and_code/mutants_2/statistics.mean/mutant_3.py::test_violation_of_statistics_mean_1
+FAILED doc_and_code/mutants_2/statistics.mean/mutant_3.py::test_violation_of_statistics_mean_2
+FAILED doc_and_code/mutants_2/statistics.mean/mutant_3.py::test_violation_of_statistics_mean_3
+FAILED doc_and_code/mutants_2/statistics.mean/mutant_3.py::test_violation_of_statistics_mean_4
+FAILED doc_and_code/mutants_2/statistics.mean/mutant_3.py::test_violation_of_statistics_mean_5
+============================== 15 failed in 6.17s ==============================

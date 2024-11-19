@@ -11,7 +11,7 @@
 |  | Our method: code + doc | Baseline: doc only (from original paper) | Baseline: code only |
 | ----------- | ----------- | ----------- | ----------- |
 | RQ1: Sound and Valid | Done | done | done |
-| RQ2: Property Coverage | 21 Nov | done | done |
+| RQ2: Property Coverage | Done | done | done |
 
 - Procedure for RQ1: zx generates PBTs, then mck filter sound and valid test functions.
 
@@ -34,9 +34,9 @@ For each API method:
 
 ## Progress
 
-- Code + doc: sound and valid evaluation complete: worst among three. Jsonl files are stored in `sound_valid`.
+- Code + doc: sound and valid evaluation complete: worst among three. Property coverage: mutant is normal; mutant 2 performs pretty well.
 
-- Mutant 2: for code only, mutant 2 performance > mutant. Doc only 的mutant 2没看到？
+- Mutant 2: mixed performance.
 
 ## Feedback 
 

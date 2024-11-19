@@ -1,0 +1,30 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 10 items
+
+doc_only/mutants_2/statistics.geometric_mean/mutant_1.py FFF.F           [ 50%]
+doc_only/mutants_2/statistics.geometric_mean/mutant_2.py FFFFF           [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/statistics.geometric_mean/mutant_1.py:8: assert 0.0 > 0
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/statistics.geometric_mean/mutant_1.py:13: assert -1.0 > 0
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/statistics.geometric_mean/mutant_1.py:18: assert 0 > 0
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/statistics.geometric_mean/mutant_1.py:28: assert 0.0 > 0
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/statistics.geometric_mean/mutant_2.py:9: assert 1.0 == 2.0
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/statistics.geometric_mean/mutant_2.py:15: assert 1.0 == 2.0
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/statistics.geometric_mean/mutant_2.py:21: assert 1.0 == -4.0
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/statistics.geometric_mean/mutant_2.py:27: assert 2.0 == 4.0
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/statistics.geometric_mean/mutant_2.py:33: assert 1.0 == 0.5
+=========================== short test summary info ============================
+FAILED doc_only/mutants_2/statistics.geometric_mean/mutant_1.py::test_violation_of_statistics_geometric_mean_1
+FAILED doc_only/mutants_2/statistics.geometric_mean/mutant_1.py::test_violation_of_statistics_geometric_mean_2
+FAILED doc_only/mutants_2/statistics.geometric_mean/mutant_1.py::test_violation_of_statistics_geometric_mean_3
+FAILED doc_only/mutants_2/statistics.geometric_mean/mutant_1.py::test_violation_of_statistics_geometric_mean_5
+FAILED doc_only/mutants_2/statistics.geometric_mean/mutant_2.py::test_violation_of_statistics_geometric_mean_1
+FAILED doc_only/mutants_2/statistics.geometric_mean/mutant_2.py::test_violation_of_statistics_geometric_mean_2
+FAILED doc_only/mutants_2/statistics.geometric_mean/mutant_2.py::test_violation_of_statistics_geometric_mean_3
+FAILED doc_only/mutants_2/statistics.geometric_mean/mutant_2.py::test_violation_of_statistics_geometric_mean_4
+FAILED doc_only/mutants_2/statistics.geometric_mean/mutant_2.py::test_violation_of_statistics_geometric_mean_5
+========================= 9 failed, 1 passed in 4.25s ==========================

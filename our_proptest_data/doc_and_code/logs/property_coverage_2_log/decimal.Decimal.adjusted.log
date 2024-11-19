@@ -1,0 +1,40 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 20 items
+
+doc_and_code/mutants_2/decimal.Decimal.adjusted/mutant_1.py F.F..        [ 25%]
+doc_and_code/mutants_2/decimal.Decimal.adjusted/mutant_2.py FF..F        [ 50%]
+doc_and_code/mutants_2/decimal.Decimal.adjusted/mutant_3.py .FFF.        [ 75%]
+doc_and_code/mutants_2/decimal.Decimal.adjusted/mutant_4.py FFFFF        [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/decimal.Decimal.adjusted/mutant_1.py:8: assert False
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/decimal.Decimal.adjusted/mutant_1.py:18: AssertionError: assert False
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/decimal.Decimal.adjusted/mutant_2.py:9: assert 1 == 0
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/decimal.Decimal.adjusted/mutant_2.py:15: assert -1 == 0
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/decimal.Decimal.adjusted/mutant_2.py:33: assert 100 == 0
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/decimal.Decimal.adjusted/mutant_3.py:15: AssertionError: assert -10 >= 0
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/decimal.Decimal.adjusted/mutant_3.py:21: AssertionError: assert -100 >= 0
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/decimal.Decimal.adjusted/mutant_3.py:27: AssertionError: assert -1000 >= 0
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/decimal.Decimal.adjusted/mutant_4.py:9: assert 0 != 0
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/decimal.Decimal.adjusted/mutant_4.py:15: assert 0 == 1
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/decimal.Decimal.adjusted/mutant_4.py:21: assert 0 == -1
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/decimal.Decimal.adjusted/mutant_4.py:27: assert 0 == 42
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/decimal.Decimal.adjusted/mutant_4.py:33: assert 0 > 0
+=========================== short test summary info ============================
+FAILED doc_and_code/mutants_2/decimal.Decimal.adjusted/mutant_1.py::test_violation_of_decimal_Decimal_adjusted_1
+FAILED doc_and_code/mutants_2/decimal.Decimal.adjusted/mutant_1.py::test_violation_of_decimal_Decimal_adjusted_3
+FAILED doc_and_code/mutants_2/decimal.Decimal.adjusted/mutant_2.py::test_violation_of_decimal_Decimal_adjusted_1
+FAILED doc_and_code/mutants_2/decimal.Decimal.adjusted/mutant_2.py::test_violation_of_decimal_Decimal_adjusted_2
+FAILED doc_and_code/mutants_2/decimal.Decimal.adjusted/mutant_2.py::test_violation_of_decimal_Decimal_adjusted_5
+FAILED doc_and_code/mutants_2/decimal.Decimal.adjusted/mutant_3.py::test_violation_of_decimal_Decimal_adjusted_2
+FAILED doc_and_code/mutants_2/decimal.Decimal.adjusted/mutant_3.py::test_violation_of_decimal_Decimal_adjusted_3
+FAILED doc_and_code/mutants_2/decimal.Decimal.adjusted/mutant_3.py::test_violation_of_decimal_Decimal_adjusted_4
+FAILED doc_and_code/mutants_2/decimal.Decimal.adjusted/mutant_4.py::test_violation_of_decimal_Decimal_adjusted_1
+FAILED doc_and_code/mutants_2/decimal.Decimal.adjusted/mutant_4.py::test_violation_of_decimal_Decimal_adjusted_2
+FAILED doc_and_code/mutants_2/decimal.Decimal.adjusted/mutant_4.py::test_violation_of_decimal_Decimal_adjusted_3
+FAILED doc_and_code/mutants_2/decimal.Decimal.adjusted/mutant_4.py::test_violation_of_decimal_Decimal_adjusted_4
+FAILED doc_and_code/mutants_2/decimal.Decimal.adjusted/mutant_4.py::test_violation_of_decimal_Decimal_adjusted_5
+========================= 13 failed, 7 passed in 2.20s =========================

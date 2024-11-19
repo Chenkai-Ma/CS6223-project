@@ -1,0 +1,49 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 15 items
+
+doc_and_code/mutants/numpy.linalg.norm/mutant_1.py FFFFF                 [ 33%]
+doc_and_code/mutants/numpy.linalg.norm/mutant_2.py FFFFF                 [ 66%]
+doc_and_code/mutants/numpy.linalg.norm/mutant_3.py FFFFF                 [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/numpy.linalg.norm/mutant_1.py:9: assert 0.0 != 0.0
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/numpy.linalg.norm/mutant_1.py:14: assert 0.0 == -1.0
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/numpy.linalg.norm/mutant_1.py:19: assert 0.0 == 1.0
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/numpy.linalg.norm/mutant_1.py:24: assert 0.0 == 10.0
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/numpy.linalg.norm/mutant_1.py:29: assert 0.0 == 0.1
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/numpy.linalg.norm/mutant_2.py:11: assert -1.0 >= 0
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/numpy.linalg.norm/mutant_2.py:18: assert -1.0 >= 0
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/numpy.linalg.norm/mutant_2.py:25: assert -1 >= 0
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/numpy.linalg.norm/mutant_2.py:32: assert -1.0 >= 0
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/numpy.linalg.norm/mutant_2.py:39: assert -100.0 >= 0
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/numpy.linalg.norm/mutant_3.py:11: assert False
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/numpy.linalg.norm/mutant_3.py:18: assert False
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/numpy.linalg.norm/mutant_3.py:25: assert False
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/numpy.linalg.norm/mutant_3.py:32: assert False
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/numpy.linalg.norm/mutant_3.py:39: assert False
+=============================== warnings summary ===============================
+doc_and_code/mutants/numpy.linalg.norm/mutant_3.py::test_violation_of_numpy_linalg_norm_2
+  /home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/numpy.linalg.norm/mutant_3.py:17: RuntimeWarning: overflow encountered in scalar multiply
+    singular_value_norm = LA.norm(mat, ord=2) * 2  # Multiply by 2 to violate the property
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED doc_and_code/mutants/numpy.linalg.norm/mutant_1.py::test_violation_of_numpy_linalg_norm_1
+FAILED doc_and_code/mutants/numpy.linalg.norm/mutant_1.py::test_violation_of_numpy_linalg_norm_2
+FAILED doc_and_code/mutants/numpy.linalg.norm/mutant_1.py::test_violation_of_numpy_linalg_norm_3
+FAILED doc_and_code/mutants/numpy.linalg.norm/mutant_1.py::test_violation_of_numpy_linalg_norm_4
+FAILED doc_and_code/mutants/numpy.linalg.norm/mutant_1.py::test_violation_of_numpy_linalg_norm_5
+FAILED doc_and_code/mutants/numpy.linalg.norm/mutant_2.py::test_violation_of_numpy_linalg_norm_1
+FAILED doc_and_code/mutants/numpy.linalg.norm/mutant_2.py::test_violation_of_numpy_linalg_norm_2
+FAILED doc_and_code/mutants/numpy.linalg.norm/mutant_2.py::test_violation_of_numpy_linalg_norm_3
+FAILED doc_and_code/mutants/numpy.linalg.norm/mutant_2.py::test_violation_of_numpy_linalg_norm_4
+FAILED doc_and_code/mutants/numpy.linalg.norm/mutant_2.py::test_violation_of_numpy_linalg_norm_5
+FAILED doc_and_code/mutants/numpy.linalg.norm/mutant_3.py::test_violation_of_numpy_linalg_norm_1
+FAILED doc_and_code/mutants/numpy.linalg.norm/mutant_3.py::test_violation_of_numpy_linalg_norm_2
+FAILED doc_and_code/mutants/numpy.linalg.norm/mutant_3.py::test_violation_of_numpy_linalg_norm_3
+FAILED doc_and_code/mutants/numpy.linalg.norm/mutant_3.py::test_violation_of_numpy_linalg_norm_4
+FAILED doc_and_code/mutants/numpy.linalg.norm/mutant_3.py::test_violation_of_numpy_linalg_norm_5
+======================== 15 failed, 1 warning in 8.03s =========================

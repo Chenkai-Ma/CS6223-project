@@ -1,0 +1,66 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+doc_and_code/mutants_2/networkx.algorithms.assortativity.average_neighbor_degree/mutant_1.py F [  4%]
+FFFF                                                                     [ 20%]
+doc_and_code/mutants_2/networkx.algorithms.assortativity.average_neighbor_degree/mutant_2.py F [ 24%]
+FFFF                                                                     [ 40%]
+doc_and_code/mutants_2/networkx.algorithms.assortativity.average_neighbor_degree/mutant_3.py F [ 44%]
+FFFF                                                                     [ 60%]
+doc_and_code/mutants_2/networkx.algorithms.assortativity.average_neighbor_degree/mutant_4.py . [ 64%]
+....                                                                     [ 80%]
+doc_and_code/mutants_2/networkx.algorithms.assortativity.average_neighbor_degree/mutant_5.py F [ 84%]
+FFFF                                                                     [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/networkx.algorithms.assortativity.average_neighbor_degree/mutant_1.py:7: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_networkx_algorithms_assortativity_average_neighbor_degree_1() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/networkx.algorithms.assortativity.average_neighbor_degree/mutant_1.py:18: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_networkx_algorithms_assortativity_average_neighbor_degree_2() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/networkx.algorithms.assortativity.average_neighbor_degree/mutant_1.py:28: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_networkx_algorithms_assortativity_average_neighbor_degree_3() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/networkx.algorithms.assortativity.average_neighbor_degree/mutant_1.py:38: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_networkx_algorithms_assortativity_average_neighbor_degree_4() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/networkx.algorithms.assortativity.average_neighbor_degree/mutant_1.py:48: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_networkx_algorithms_assortativity_average_neighbor_degree_5() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/networkx.algorithms.assortativity.average_neighbor_degree/mutant_2.py:7: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_networkx_algorithms_assortativity_average_neighbor_degree_1() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/networkx.algorithms.assortativity.average_neighbor_degree/mutant_2.py:15: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_networkx_algorithms_assortativity_average_neighbor_degree_2() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/networkx.algorithms.assortativity.average_neighbor_degree/mutant_2.py:23: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_networkx_algorithms_assortativity_average_neighbor_degree_3() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/networkx.algorithms.assortativity.average_neighbor_degree/mutant_2.py:31: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_networkx_algorithms_assortativity_average_neighbor_degree_4() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/networkx.algorithms.assortativity.average_neighbor_degree/mutant_2.py:40: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_networkx_algorithms_assortativity_average_neighbor_degree_5() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/networkx.algorithms.assortativity.average_neighbor_degree/mutant_3.py:7: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_networkx_algorithms_assortativity_average_neighbor_degree_1() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/networkx.algorithms.assortativity.average_neighbor_degree/mutant_3.py:19: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_networkx_algorithms_assortativity_average_neighbor_degree_2() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/networkx.algorithms.assortativity.average_neighbor_degree/mutant_3.py:31: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_networkx_algorithms_assortativity_average_neighbor_degree_3() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/networkx.algorithms.assortativity.average_neighbor_degree/mutant_3.py:43: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_networkx_algorithms_assortativity_average_neighbor_degree_4() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/networkx.algorithms.assortativity.average_neighbor_degree/mutant_3.py:55: hypothesis.errors.InvalidArgument: Too many positional arguments for test_violation_of_networkx_algorithms_assortativity_average_neighbor_degree_5() were passed to @given - expected at most 0 arguments, but got 1 (data(),)
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/networkx.algorithms.assortativity.average_neighbor_degree/mutant_5.py:10: TypeError: unsupported operand type(s) for +: 'dict' and 'int'
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/networkx.algorithms.assortativity.average_neighbor_degree/mutant_5.py:19: TypeError: unsupported operand type(s) for *: 'dict' and 'int'
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/networkx.algorithms.assortativity.average_neighbor_degree/mutant_5.py:28: TypeError: unsupported operand type(s) for -: 'dict' and 'int'
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/networkx.algorithms.assortativity.average_neighbor_degree/mutant_5.py:39: assert {} == nan
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants_2/networkx.algorithms.assortativity.average_neighbor_degree/mutant_5.py:46: TypeError: bad operand type for unary -: 'dict'
+=============================== warnings summary ===============================
+doc_and_code/mutants_2/networkx.algorithms.assortativity.average_neighbor_degree/mutant_4.py::test_violation_of_networkx_algorithms_assortativity_average_neighbor_degree_1
+  /home/james/projects/.venv/lib/python3.10/site-packages/hypothesis/strategies/_internal/core.py:1217: SmallSearchSpaceWarning: from_type(thing=Graph) resolved to builds(Graph), because we could not find any (non-varargs) arguments. Use st.register_type_strategy() to resolve to a strategy which can generate more than one value, or silence this warning.
+    lambda thing: deferred(lambda: _from_type(thing)),
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED doc_and_code/mutants_2/networkx.algorithms.assortativity.average_neighbor_degree/mutant_1.py::test_violation_of_networkx_algorithms_assortativity_average_neighbor_degree_1
+FAILED doc_and_code/mutants_2/networkx.algorithms.assortativity.average_neighbor_degree/mutant_1.py::test_violation_of_networkx_algorithms_assortativity_average_neighbor_degree_2
+FAILED doc_and_code/mutants_2/networkx.algorithms.assortativity.average_neighbor_degree/mutant_1.py::test_violation_of_networkx_algorithms_assortativity_average_neighbor_degree_3
+FAILED doc_and_code/mutants_2/networkx.algorithms.assortativity.average_neighbor_degree/mutant_1.py::test_violation_of_networkx_algorithms_assortativity_average_neighbor_degree_4
+FAILED doc_and_code/mutants_2/networkx.algorithms.assortativity.average_neighbor_degree/mutant_1.py::test_violation_of_networkx_algorithms_assortativity_average_neighbor_degree_5
+FAILED doc_and_code/mutants_2/networkx.algorithms.assortativity.average_neighbor_degree/mutant_2.py::test_violation_of_networkx_algorithms_assortativity_average_neighbor_degree_1
+FAILED doc_and_code/mutants_2/networkx.algorithms.assortativity.average_neighbor_degree/mutant_2.py::test_violation_of_networkx_algorithms_assortativity_average_neighbor_degree_2
+FAILED doc_and_code/mutants_2/networkx.algorithms.assortativity.average_neighbor_degree/mutant_2.py::test_violation_of_networkx_algorithms_assortativity_average_neighbor_degree_3
+FAILED doc_and_code/mutants_2/networkx.algorithms.assortativity.average_neighbor_degree/mutant_2.py::test_violation_of_networkx_algorithms_assortativity_average_neighbor_degree_4
+FAILED doc_and_code/mutants_2/networkx.algorithms.assortativity.average_neighbor_degree/mutant_2.py::test_violation_of_networkx_algorithms_assortativity_average_neighbor_degree_5
+FAILED doc_and_code/mutants_2/networkx.algorithms.assortativity.average_neighbor_degree/mutant_3.py::test_violation_of_networkx_algorithms_assortativity_average_neighbor_degree_1
+FAILED doc_and_code/mutants_2/networkx.algorithms.assortativity.average_neighbor_degree/mutant_3.py::test_violation_of_networkx_algorithms_assortativity_average_neighbor_degree_2
+FAILED doc_and_code/mutants_2/networkx.algorithms.assortativity.average_neighbor_degree/mutant_3.py::test_violation_of_networkx_algorithms_assortativity_average_neighbor_degree_3
+FAILED doc_and_code/mutants_2/networkx.algorithms.assortativity.average_neighbor_degree/mutant_3.py::test_violation_of_networkx_algorithms_assortativity_average_neighbor_degree_4
+FAILED doc_and_code/mutants_2/networkx.algorithms.assortativity.average_neighbor_degree/mutant_3.py::test_violation_of_networkx_algorithms_assortativity_average_neighbor_degree_5
+FAILED doc_and_code/mutants_2/networkx.algorithms.assortativity.average_neighbor_degree/mutant_5.py::test_violation_of_networkx_algorithms_assortativity_average_neighbor_degree_1
+FAILED doc_and_code/mutants_2/networkx.algorithms.assortativity.average_neighbor_degree/mutant_5.py::test_violation_of_networkx_algorithms_assortativity_average_neighbor_degree_2
+FAILED doc_and_code/mutants_2/networkx.algorithms.assortativity.average_neighbor_degree/mutant_5.py::test_violation_of_networkx_algorithms_assortativity_average_neighbor_degree_3
+FAILED doc_and_code/mutants_2/networkx.algorithms.assortativity.average_neighbor_degree/mutant_5.py::test_violation_of_networkx_algorithms_assortativity_average_neighbor_degree_4
+FAILED doc_and_code/mutants_2/networkx.algorithms.assortativity.average_neighbor_degree/mutant_5.py::test_violation_of_networkx_algorithms_assortativity_average_neighbor_degree_5
+=================== 20 failed, 5 passed, 1 warning in 0.20s ====================

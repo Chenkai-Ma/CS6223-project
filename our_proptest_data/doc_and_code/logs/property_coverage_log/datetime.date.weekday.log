@@ -1,0 +1,65 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+doc_and_code/mutants/datetime.date.weekday/mutant_1.py FFFFF             [ 20%]
+doc_and_code/mutants/datetime.date.weekday/mutant_2.py FFFFF             [ 40%]
+doc_and_code/mutants/datetime.date.weekday/mutant_3.py FFFFF             [ 60%]
+doc_and_code/mutants/datetime.date.weekday/mutant_4.py FFFFF             [ 80%]
+doc_and_code/mutants/datetime.date.weekday/mutant_5.py FFFFF             [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/datetime.date.weekday/mutant_1.py:8: assert 15 <= 6
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/datetime.date.weekday/mutant_1.py:13: assert 0 <= -1
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/datetime.date.weekday/mutant_1.py:18: assert 12 <= 6
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/datetime.date.weekday/mutant_1.py:23: assert 10 <= 6
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/datetime.date.weekday/mutant_1.py:28: assert 105 <= 6
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/datetime.date.weekday/mutant_2.py:9: assert 5 == 6
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/datetime.date.weekday/mutant_2.py:15: assert 5 == 0
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/datetime.date.weekday/mutant_2.py:21: assert 5 == 1
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/datetime.date.weekday/mutant_2.py:27: assert 5 == 2
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/datetime.date.weekday/mutant_2.py:33: assert 5 == 3
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/datetime.date.weekday/mutant_3.py:8: assert 0 == 1
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/datetime.date.weekday/mutant_3.py:13: assert 0 == 2
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/datetime.date.weekday/mutant_3.py:18: assert 0 == 3
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/datetime.date.weekday/mutant_3.py:23: assert 0 == 4
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/datetime.date.weekday/mutant_3.py:28: assert 0 == 5
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/datetime.date.weekday/mutant_4.py:8: assert 6 == 5
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/datetime.date.weekday/mutant_4.py:13: assert 6 == 4
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/datetime.date.weekday/mutant_4.py:18: assert 6 == 3
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/datetime.date.weekday/mutant_4.py:23: assert 6 == 2
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/datetime.date.weekday/mutant_4.py:28: assert 6 == 1
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/datetime.date.weekday/mutant_5.py:8: assert ((5 + 2) % 7) == 6
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/datetime.date.weekday/mutant_5.py:13: assert ((5 + 3) % 7) == 6
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/datetime.date.weekday/mutant_5.py:18: assert ((5 + 4) % 7) == 6
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/datetime.date.weekday/mutant_5.py:23: assert ((5 + 5) % 7) == 6
+/home/james/projects/cs6223/our_proptest_data/doc_and_code/mutants/datetime.date.weekday/mutant_5.py:28: assert ((5 + 6) % 7) == 6
+=========================== short test summary info ============================
+FAILED doc_and_code/mutants/datetime.date.weekday/mutant_1.py::test_violation_of_datetime_date_weekday_1
+FAILED doc_and_code/mutants/datetime.date.weekday/mutant_1.py::test_violation_of_datetime_date_weekday_2
+FAILED doc_and_code/mutants/datetime.date.weekday/mutant_1.py::test_violation_of_datetime_date_weekday_3
+FAILED doc_and_code/mutants/datetime.date.weekday/mutant_1.py::test_violation_of_datetime_date_weekday_4
+FAILED doc_and_code/mutants/datetime.date.weekday/mutant_1.py::test_violation_of_datetime_date_weekday_5
+FAILED doc_and_code/mutants/datetime.date.weekday/mutant_2.py::test_violation_of_datetime_date_weekday_1
+FAILED doc_and_code/mutants/datetime.date.weekday/mutant_2.py::test_violation_of_datetime_date_weekday_2
+FAILED doc_and_code/mutants/datetime.date.weekday/mutant_2.py::test_violation_of_datetime_date_weekday_3
+FAILED doc_and_code/mutants/datetime.date.weekday/mutant_2.py::test_violation_of_datetime_date_weekday_4
+FAILED doc_and_code/mutants/datetime.date.weekday/mutant_2.py::test_violation_of_datetime_date_weekday_5
+FAILED doc_and_code/mutants/datetime.date.weekday/mutant_3.py::test_violation_of_datetime_date_weekday_1
+FAILED doc_and_code/mutants/datetime.date.weekday/mutant_3.py::test_violation_of_datetime_date_weekday_2
+FAILED doc_and_code/mutants/datetime.date.weekday/mutant_3.py::test_violation_of_datetime_date_weekday_3
+FAILED doc_and_code/mutants/datetime.date.weekday/mutant_3.py::test_violation_of_datetime_date_weekday_4
+FAILED doc_and_code/mutants/datetime.date.weekday/mutant_3.py::test_violation_of_datetime_date_weekday_5
+FAILED doc_and_code/mutants/datetime.date.weekday/mutant_4.py::test_violation_of_datetime_date_weekday_1
+FAILED doc_and_code/mutants/datetime.date.weekday/mutant_4.py::test_violation_of_datetime_date_weekday_2
+FAILED doc_and_code/mutants/datetime.date.weekday/mutant_4.py::test_violation_of_datetime_date_weekday_3
+FAILED doc_and_code/mutants/datetime.date.weekday/mutant_4.py::test_violation_of_datetime_date_weekday_4
+FAILED doc_and_code/mutants/datetime.date.weekday/mutant_4.py::test_violation_of_datetime_date_weekday_5
+FAILED doc_and_code/mutants/datetime.date.weekday/mutant_5.py::test_violation_of_datetime_date_weekday_1
+FAILED doc_and_code/mutants/datetime.date.weekday/mutant_5.py::test_violation_of_datetime_date_weekday_2
+FAILED doc_and_code/mutants/datetime.date.weekday/mutant_5.py::test_violation_of_datetime_date_weekday_3
+FAILED doc_and_code/mutants/datetime.date.weekday/mutant_5.py::test_violation_of_datetime_date_weekday_4
+FAILED doc_and_code/mutants/datetime.date.weekday/mutant_5.py::test_violation_of_datetime_date_weekday_5
+============================== 25 failed in 4.50s ==============================

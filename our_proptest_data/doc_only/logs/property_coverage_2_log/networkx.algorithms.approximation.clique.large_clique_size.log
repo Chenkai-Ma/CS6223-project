@@ -1,0 +1,62 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/james/projects/cs6223/our_proptest_data
+plugins: hypothesis-6.112.2, timeout-2.3.1
+collected 25 items
+
+doc_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_1.py F [  4%]
+FFFF                                                                     [ 20%]
+doc_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_2.py F [ 24%]
+FFFF                                                                     [ 40%]
+doc_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_3.py F [ 44%]
+FFFF                                                                     [ 60%]
+doc_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_4.py F [ 64%]
+FFFF                                                                     [ 80%]
+doc_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_5.py . [ 84%]
+..F.                                                                     [100%]
+
+=================================== FAILURES ===================================
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_1.py:11: assert -1 >= 0
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_1.py:18: assert -5 >= 0
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_1.py:25: assert -10 >= 0
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_1.py:32: assert -100 >= 0
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_1.py:39: assert -inf >= 0
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_2.py:11: assert 1 <= 0
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_2.py:18: assert 5 <= 0
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_2.py:25: assert 2 <= 1
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_2.py:32: assert 101 <= 0
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_2.py:39: assert 3 <= 2
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_3.py:11: assert 0 == 1
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_3.py:18: assert 0 == 10
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_3.py:25: assert 0 == -1
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_3.py:32: assert 0 == 5
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_3.py:39: assert 0 == 100
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_4.py:13: assert 3 <= (0 + 1)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_4.py:22: assert 4 <= (0 + 1)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_4.py:31: assert 2 <= (0 + 1)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_4.py:40: assert 2 <= (0 + 1)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_4.py:49: assert 6 <= (0 + 1)
+/home/james/projects/cs6223/our_proptest_data/doc_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_5.py:54: assert 11 <= 2
+=========================== short test summary info ============================
+FAILED doc_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_1.py::test_violation_of_networkx_algorithms_approximation_clique_large_clique_size_1
+FAILED doc_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_1.py::test_violation_of_networkx_algorithms_approximation_clique_large_clique_size_2
+FAILED doc_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_1.py::test_violation_of_networkx_algorithms_approximation_clique_large_clique_size_3
+FAILED doc_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_1.py::test_violation_of_networkx_algorithms_approximation_clique_large_clique_size_4
+FAILED doc_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_1.py::test_violation_of_networkx_algorithms_approximation_clique_large_clique_size_5
+FAILED doc_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_2.py::test_violation_of_networkx_algorithms_approximation_clique_large_clique_size_1
+FAILED doc_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_2.py::test_violation_of_networkx_algorithms_approximation_clique_large_clique_size_2
+FAILED doc_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_2.py::test_violation_of_networkx_algorithms_approximation_clique_large_clique_size_3
+FAILED doc_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_2.py::test_violation_of_networkx_algorithms_approximation_clique_large_clique_size_4
+FAILED doc_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_2.py::test_violation_of_networkx_algorithms_approximation_clique_large_clique_size_5
+FAILED doc_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_3.py::test_violation_of_networkx_algorithms_approximation_clique_large_clique_size_1
+FAILED doc_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_3.py::test_violation_of_networkx_algorithms_approximation_clique_large_clique_size_2
+FAILED doc_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_3.py::test_violation_of_networkx_algorithms_approximation_clique_large_clique_size_3
+FAILED doc_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_3.py::test_violation_of_networkx_algorithms_approximation_clique_large_clique_size_4
+FAILED doc_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_3.py::test_violation_of_networkx_algorithms_approximation_clique_large_clique_size_5
+FAILED doc_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_4.py::test_violation_of_networkx_algorithms_approximation_clique_large_clique_size_1
+FAILED doc_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_4.py::test_violation_of_networkx_algorithms_approximation_clique_large_clique_size_2
+FAILED doc_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_4.py::test_violation_of_networkx_algorithms_approximation_clique_large_clique_size_3
+FAILED doc_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_4.py::test_violation_of_networkx_algorithms_approximation_clique_large_clique_size_4
+FAILED doc_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_4.py::test_violation_of_networkx_algorithms_approximation_clique_large_clique_size_5
+FAILED doc_only/mutants_2/networkx.algorithms.approximation.clique.large_clique_size/mutant_5.py::test_violation_of_networkx_algorithms_approximation_clique_large_clique_size_4
+========================= 21 failed, 4 passed in 8.08s =========================
