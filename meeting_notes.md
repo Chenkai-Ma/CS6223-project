@@ -10,6 +10,7 @@
 ### Writing
 
 - (Tentative) DDL: **28 Nov**.
+- [@ZX] Two figures (flow chart): one for PBT generation, the other for property coverage.
 - Argument: Code distracts/harms LLM to generate PBTs, while doc helps.
 - Abstract: add more software testing stuff, e.g., evaluation metrics.
 - Introduction: One part for prompting, one part for evaluation metric.
