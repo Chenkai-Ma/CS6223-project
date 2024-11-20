@@ -49,9 +49,16 @@ Tentative page length: 5 or 6 pages.
 - **[17 Oct]** Source code for API: Finding fully self-contained codes is rather impractical, and it is reasonable to assume LLMs know how to call some basic python functions. So we may **prioritize "doc + code" (code is used to complement or enhance doc) over "code alone" (it may perform poorly), and compare "doc + code" mainly to "doc alone".** One practical advantage of "doc + code" is that API docs are often written in the API source codes as comments, which makes it easier to construct prompts.
 - **[11 Oct]** Use the same properties to generate original PBTs (e.g., in double-stage prompting) and property mutants to prevent mismatches.
 
-### Evaluating PTBs
+### Property Coverage
 
 - **[11 Oct]** Property coverage: Instead of generating property mutants from original API, then substitude original PTB to get mutated PTB, we may **directly prompt LLM to generate mutated test functions from original test functions (along with their properties).** This helps to solve some intricacies of constructing mutated PTB (see your notes), simplifies the workflow, and could also be **one contribution**. Mutated test functions should be filtered for soundness, and aim for assertion errors.
+
+- For each API method: 
+
+- [@mck] For each property, find one corresponding test function (entire PBTs are unnecessary) that are sound and valid. If multiple such test functions exist, choose one randomly.
+- [@zx] For each pair of (test function, property), prompt LLM to generate 5 mutated test functions ("property mutant"). Essentially, a property mutant is the original test function + few lines of codes that manipulate the output from API method to violate the corresponding property, while keeping other things, especially the invocation of API and assertion, intact.
+- [@mck] Test these property mutants, only aim for assertion errors (this means filtering invalid ones with run-time errors)
+- [@mck] Compute property mutation score and property coverage.
 
 ### Experiment Setup
 
