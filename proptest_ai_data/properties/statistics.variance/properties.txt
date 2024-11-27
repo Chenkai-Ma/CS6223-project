@@ -1,9 +1,0 @@
-1. The result of the variance function, given an iterable of at least two real-valued numbers, should always be a non-negative real number. This is because variance measures the spread or dispersion of data values from the mean, and as such, it cannot be a negative value.
-
-2. The output of the variance function, given a list with equal numbers, should be zero. This tests the property of variance that when there's no variability in the data (all numbers are the same), then the variance should be equal to zero.
-
-3. If the optional second argument xbar (the mean of the data) is given, it should not change the result of the variance calculation when compared to not providing it. This tests the property that the xbar argument, if correctly provided, should just save computation time but not affect the result.
-
-4. When the variance function is performed on an iterable whereby all items are multiplied by a constant, the output should be the square of that constant times the original output. This tests the property of variance that when all data points are scaled, variance is scaled by the square of that factor.
-
-5. The result of the variance function should be less than or equal to the sum of the squared input values divided by the number of input values. This tests the fact that variance, as a measure of the average squared deviation from the mean, should always be less than or equal to the average of the squared values.

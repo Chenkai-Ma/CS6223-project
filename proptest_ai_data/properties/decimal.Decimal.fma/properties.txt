@@ -1,5 +1,0 @@
-1. The type of output should always be a Decimal: This verifies the return type and ensures type-consistent performing operations.
-2. Invocation without the 'third' argument should result in a TypeError: The 'fma' method requires three arguments - 'self', 'other', and 'third'. Not providing all three should result in an error.
-3. Commutativity does not hold: The function should not give the same result when the 'other' and 'third' arguments are swapped. For instance, considering the formula 'self * other + third', changing 'other' and 'third' would change the result, which means the function is not commutative.
-4. The function is distributive: If third = 0, then fma(self, other, third) should be equivalent to self*other. This assures the distributive property of multiplication over addition.
-5. Non-integer inputs should not raise errors: The function should handle Decimal inputs and not throw any errors when dealing with floating decimal values.

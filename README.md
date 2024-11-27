@@ -1,22 +1,13 @@
-# CS6223-project
+# CS6223 project: Explore the Impact of API Source Code on LLM-Aided Property-Based Testing
 
-## Tentative Schedule
+## Contributions of Group Members
 
-### Tasks
+| Name | Code                                                            | Paper                                       |
+| ---- | --------------------------------------------------------------- | ------------------------------------------- |
+| Chenkai Ma  | Evaluation/post-processing                                      | code-related parts and common no-code parts |
+| Xu Zhao   | LLM prompting (in both methods and computing property coverage) | code-related parts and common no-code parts |
 
-| Name | Code                                                            | Paper                                       | Other |
-| ---- | --------------------------------------------------------------- | ------------------------------------------- | ----- |
-| Chenkai Ma  | Evaluation/post-processing                                      | code-related parts and common no-code parts |       |
-| Xu Zhao   | LLM prompting (in both methods and computing property coverage) | code-related parts and common no-code parts |       |
-
-## Related Material
-
-- [Paper: *Can Large Language Models Write Good Property-Based Tests?*](Vikram%20et%20al.%20-%202024%20-%20Can%20Large%20Language%20Models%20Write%20Good%20Property-Base.pdf))
-- [Project proposal](CS6223-Proposal-Property_Based_Testing_with_LLMs.pdf)
-- [Project planning](https://docs.google.com/document/d/1ly9GCxzbsbM736tBZ5D-mHyUhjS1L6Jd63JEcierU1o/edit#heading=h.r5acg7cz2fk7)
-- [Hypothesis](https://hypothesis.readthedocs.io/en/latest/)
-
-## (Re)implementation
+## Notes on (Re)implementation
 
 ### Method
 
@@ -54,3 +45,7 @@
 ### Experiment Setup
 
 - API to test [(Google doc)](https://docs.google.com/spreadsheets/d/1ho1ij9dSY98MuzCt7yKXHBuz76prcS5Z1I_kI3RQznE/edit?gid=0#gid=0): 30 in total (16 original + 14 new). The source code for each API should be at least moderately self-contained, i.e., have some basic logic, and should be rather simple/short. Docs are stored in folder "api_docs" as .txt files and named according to the url of the API, e.g. "[datetime.date.isocalendar](https://docs.python.org/3/library/datetime.html#datetime.date.isocalendar)" (this naming is a little different from the original paper), while the content are directly copied from the urls. Codes are stored in folder "api_codes" as .py files and named similarly, and the content are just the one function for the API (no other stuff like imports). Specifically, for each code, I removed the docstring because it is similar to the docs, and we want to separate codes from docs; I also slightly adjusted some identation; 
+
+## Experiment Result
+
+- [google doc](https://docs.google.com/spreadsheets/d/1ho1ij9dSY98MuzCt7yKXHBuz76prcS5Z1I_kI3RQznE/edit?gid=2025599766#gid=2025599766)

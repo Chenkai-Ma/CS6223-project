@@ -1,9 +1,0 @@
-1. The output DataFrame is a combination of the provided input DataFrames 'left' and 'right'.
-   
-2. If 'how' parameter in the function is set as 'inner', the output DataFrame should only contain rows with keys existing in both input DataFrames. If 'how' parameter is 'left', all the keys of the 'left' input DataFrame should exist in the output DataFrame, and similarly for 'right'. If 'how' is 'outer', all keys present in either input DataFrame should exist in output DataFrame. Cross creates the cartesian product.
-
-3. The column names in the output DataFrame should either come directly from the input DataFrames or be a modification based on the 'suffixes' input. Overlapping column names should have the specified suffixes appended.
-   
-4. Column values in the output DataFrame corresponding to a particular key will match the column values of the input DataFrame(s) for the corresponding key according to the join operation specified (i.e., left, right, outer, inner). 
-
-5. If 'validate' input is provided, the function must raise an exception if the merge operation doesn't satisfy the specified validation requirement (one_to_one, one_to_many, many_to_one, many_to_many).

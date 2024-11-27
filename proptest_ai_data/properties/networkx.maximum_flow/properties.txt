@@ -1,9 +1,0 @@
-1. The function should always return a tuple with two elements, with the first element being a number representing the maximum flow value and the second element a dictionary representing the flow through each edge.
-   
-2. The maximum flow value (the first element of the returned tuple) should always be a non-negative integer or float.
-
-3. The flow dictionary (the second element of returned tuple) should include every edge in the original graph as a key. Therefore, the number of keys in the dictionary should match the number of edges in the original graph.
-
-4. For each edge in the flow dictionary, the flow value should be equal to or less than the capacity of that edge in the original graph. This property should hold true regardless of the maximum flow algorithm used.
-
-5. If the graph contains a path of infinite capacity, the function should raise a NetworkXUnbounded exception. If the graph is a MultiGraph or MultiDiGraph, a NetworkXError should be raised. These properties can be tested by attempting to call maximum_flow on graphs with these characteristics and verifying that the expected exceptions are raised.

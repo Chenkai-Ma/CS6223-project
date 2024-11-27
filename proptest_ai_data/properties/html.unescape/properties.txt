@@ -1,9 +1,0 @@
-1. Property Idempotence: Applying html.unescape method multiple times on an already unescaped string should not change the string any further. Basically, the result of calling `html.unescape(html.unescape(s))` should be equal to `html.unescape(s)`.
-
-2. Property of Retained Length: The string length after unescaping should not be less than the original string length. Since the function changes multiple character sequences into a single one, the length of the unescaped string should be equal or less than the length of the original string.
-
-3. No Escaping Sequences: The resulting string after using `html.unescape(s)` should not contain any named or numeric character references. All character references should be converted to their corresponding Unicode characters.
-
-4. Property of Reversible Operation: If we have a function `html.escape(s)` which is opposite of `html.unescape(s)`, the output of `html.escape(html.unescape(s))` should be identical to the original input string `s`.
-
-5. Special Characters Handling: Characters that are not part of any escape sequence should remain untouched. For example, if we have a string `s = "abc&33;"`, after calling `html.unescape(s)`, the non-escaped characters 'a', 'b', 'c' should remain the same.

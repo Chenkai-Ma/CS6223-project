@@ -1,9 +1,0 @@
-1. The output of `quantize` must be a decimal, equal to the first operand after rounding and having the exponent of the second operand. This means that `Decimal('1.41421356').quantize(Decimal('1.000'))` should return `Decimal('1.414')`.
-
-2. An InvalidOperation should be signaled if the length of the coefficient after the quantize operation would be greater than precision.
-
-3. The `quantize` function never signals Underflow, even if the result is subnormal and inexact. This means that any input, regardless of its size, should never trigger an Underflow error.
-
-4. If the exponent of the second operand is larger than that of the first then rounding may be necessary. The rounding mode is determined by the rounding argument if given, else by the given context argument; if neither argument is given the rounding mode of the current thread’s context is used.
-
-5. An error should be returned whenever the resulting exponent is greater than Emax or less than Etiny(). This means that the function must check the resulting exponent against these bounds before returning a result.

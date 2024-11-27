@@ -1,9 +1,0 @@
-1. Length of Output: The function linear_regression should always return two values for its output. These two values represent the slope and the intercept of the linear regression model. This holds true irrespective of the inputs provided. Testing whether the length of output is exactly 2 can help ensure the function's accuracy.
-
-2. Type of Output: The output values of the function should always be numerical (either an integer or a float). This is because both slope and intercept in a linear regression model are numeric values. Checking the type of both output values can help ensure accuracy.
-
-3. Input Lengths: The input vectors (x and y) should have the same length for the function to properly compute the regression parameters. Our testing protocol can include a check to make sure that if input vectors of differing lengths are passed in, the function raises an appropriate error.
-
-4. StatisticsError on Constant Independent Variable: If the independent variable x is constant, the function should raise a StatisticsError. As part of our testing, we can include a property check to ensure that this error is thrown when a constant x is provided.
-
-5. Intercept Value with Proportional Parameter: If the 'proportional' parameter is set to True, the function's second return value (intercept) should be very close to or exactly 0. This is because in a directly proportional relationship, the line passes through the origin (0,0), making the y-intercept 0. Therefore, testing that the intercept is 0 with proportional=True is a useful property check.

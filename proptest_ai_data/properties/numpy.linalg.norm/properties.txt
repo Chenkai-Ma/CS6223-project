@@ -1,9 +1,0 @@
-1. **Output Type:** The output of the function `numpy.linalg.norm` should be either a float (for a single vector or matrix norm) or numpy ndarray (for norms of multiple vectors or matrices specified through the axis argument).
-
-2. **Non-Negative Output:** The norm of a vector or matrix is always a non-negative number. So, the output of the `numpy.linalg.norm` function should always be greater than or equal to 0.
-
-3. **Zero Vector Norm:** If the input array `x` is a zero vector or matrix (i.e., all elements are 0), the output of the function should be 0, irrespective of the value of `ord`.
-
-4. **Scaling Property:** For any scalar `a` and any non-zero vector or matrix `x`, the norm of `a*x` should be `|a|` times the norm of `x`. This means that `numpy.linalg.norm(a*x)` should be equal to `abs(a) * numpy.linalg.norm(x)`. 
-
-5. **Triangle Inequality (For 2-norm specifically):** For any two vectors or matrices `x` and `y`, the 2-norm of their sum should be less than or equal to the sum of their 2-norms. In other words, `numpy.linalg.norm(x+y, ord=2)` should be less than or equal to `numpy.linalg.norm(x, ord=2) + numpy.linalg.norm(y, ord=2)`. This property may fail for `ord` other than 2 due to the peculiarities of each norm, but it should hold for 2-norm.

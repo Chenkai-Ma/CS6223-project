@@ -1,5 +1,0 @@
-1. The datatype of the returned array should be the same as specified in the dtype parameter. If dtype is not specified, it should default to the dtype of array a or the default platform integer if a has an integer dtype with lower precision.
-2. If an 'out' ndarray is specified, the output should be the reference to this 'out' ndarray, after getting filled with cumulative sum. If not specified, a new array should be created for the output.
-3. The size of the output array should be the same as that of the input array i.e., the length of the input list equals the length of the output list.
-4. If an axis is specified, the output array should have the same shape as the input array. If not, the output array will take the shape of a flattened input array. 
-5. If the input array elements are of floating point type, cumsum(a)[-1] (the last value of the cumsum array) may not equal sum(a) because of possible rounding errors in floating point arithmetic. In other words, the commutativity of floating-point addition is not guaranteed.

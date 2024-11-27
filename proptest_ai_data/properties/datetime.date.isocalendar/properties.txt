@@ -1,9 +1,0 @@
-1. The output of the function should be an instance of the IsoCalendarDate named tuple. This can be tested using isinstance to ensure type safety.
-
-2. The year component of the output tuple should fall within a realistic range (e.g., 1 to 9999 which are the valid years in Python's datetime module). 
-
-3. The week component of the return value should always be an integer between 1 and 53, inclusive.
-
-4. The weekday component of the return value should always be an integer in the range 1 to 7, inclusive. 
-
-5. The relationships between the year, week and weekday components should be consistent with the ISO calendar logic. For example, if the date is January 1st but the weekday is 5 (Friday), the year should be the next calendar year if January 1st is part of Week 1 of the next year according to ISO calendar rules.

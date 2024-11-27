@@ -1,9 +1,0 @@
-1. Date and time accuracy: The datetime object returned by datetime.fromtimestamp should correspond to the correct local date and time for the provided POSIX timestamp. Compare this against an alternative reliable source.
-
-2. Timezone handling: When a tz (time zone) argument is provided, the datetime object should correspond to the date and time in that time zone. This can be tested by changing the tz argument and verifying if the datetime object adjusts accordingly.
-
-3. Error handling: The function should raise an OverflowError when the timestamp provided is out of the range supported by the platform's C localtime() or gmtime() functions. Test this by feeding in timestamps both within and outside of the range and checking for the appropriate error message.
-
-4. Handling of naive datetime objects: If tz is not specified or None, the returned datetime object should be naive. This can be tested by ensuring that the tzinfo attribute of the returned object is None when no tz is given.
-
-5. Fold attribute: In version 3.6 and later, datetime.fromtimestamp() may return instances with fold set to 1. Verify that this attribute is set correctly under conditions that would cause it to change.

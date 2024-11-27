@@ -1,9 +1,0 @@
-1. The output node is an ancestor to both input nodes: Check that, in the directed graph, there exists a directed path from the output node to each of the input nodes. This can be verified by checking if the output node is inside the ancestors of each input nodes.
-
-2. Liveness property: The function always responds with a node or default if there is no common ancestor between the two input nodes - no deadlock or infinite waiting.
-
-3. Output should be the lowest common ancestor: There should not be any other common ancestor of the input nodes that could be reached by a directed path from the output node.
-
-4. Default property: If no common ancestor exists, the function should return the 'default' value. If no default is provided, Python's None should be returned.
-
-5. Consistent output: For any repeated function calls with the same graph and the same pair of nodes, the output must be consistent - the same lowest common ancestor should be returned.

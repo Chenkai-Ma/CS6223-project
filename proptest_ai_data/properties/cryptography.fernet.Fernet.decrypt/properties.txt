@@ -1,9 +1,0 @@
-1. The output of the decrypt() function should be of byte data type. Based on the input 'token' and 'ttl' parameter, the returned output should always be a byte.
-
-2. The output of the decrypt() function should be equal to the original plaintext message that was encrypted. This should hold true for any 'token' input derived from encrypting a data.
-
-3. The output of the decrypt() function should raise 'cryptography.fernet.InvalidToken' exception if a token is invalid. If the token is malformed, older than the ttl, or does not have a valid signature, the function should raise this exception.
-
-4. The output of the decrypt() function should raise TypeError if the 'token' parameter is not bytes or str. This should be checked for every invocation of the function.
-
-5. The output of the decrypt() function with ttl parameter should depend on the input parameter 'ttl'. If the message is older than ttl seconds (from the time it was originally created), an exception should be raised.

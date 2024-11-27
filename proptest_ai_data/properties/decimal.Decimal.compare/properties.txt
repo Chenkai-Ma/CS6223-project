@@ -1,5 +1,0 @@
-1. If either of the two Decimal instances is NaN, the compare() function should always return Decimal('NaN'), regardless of the value of the other operand.
-2. If the first Decimal instance is less than the second, compare() should always return Decimal('-1'). This property should hold irrespective of the specific values of the two operands, as long as they are not NaN.
-3. If the two Decimal instances are equal, compare() should always return Decimal('0'). This property should hold for all possible pairs of equal Decimal instances.
-4. If the first Decimal instance is greater than the second, compare() should always return Decimal('1'). This property should hold irrespective of the specific values of the two operands, as long as they are not NaN.
-5. The compare() function should be commutative in effect. That is, compare(a, b) should return the negative of compare(b, a) for all valid pairs of Decimal instances a and b (again, excluding NaN).

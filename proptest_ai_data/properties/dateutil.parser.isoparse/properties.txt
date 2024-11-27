@@ -1,9 +1,0 @@
-1. **Datatype of the output:** The function is expected to return a datetime.datetime object, thus this can be verified as a property after making each call to isoparse(). Whether the input string is in a valid format or not, the function should either return a datetime.datetime object or else raise an exception.
-
-2. **Time Zone Offset:** If the input ISO-8601 string includes a timezone offset, that should reflect in the resulting datetime object. This can be verified by checking if the tzinfo attribute of the datetime object represents the correct timezone offset.
-
-3. **ISO Week and Day Numbering:** If the input string includes ISO week and day, the resulting datetime object should reflect the same. This property can be tested by comparing the output of the datetime object's isocalendar() method with the week and day from the input string.
-
-4. **Unspecified Components:** Any unspecified components in the input string should default to their lowest value in the resulting datetime object - year should default to 1, month and day to 1, and time components to 0, if they are not specified in the input.
-
-5. **Fractional Seconds Support:** If the input string contains fractional seconds, the resulting datetime object should include them, up to 6 decimal places. This can be verified by checking the microsecond attribute of the datetime object.

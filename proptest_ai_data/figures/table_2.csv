@@ -1,7 +1,0 @@
-model,approach,total,valid,both
-gemini-1.5-pro-latest-final,single,220,39,25
-gemini-1.5-pro-latest-final,two,799,209,124
-gpt-4-final,single,212,97,54
-gpt-4-final,two,733,400,306
-claude-3-opus-20240229,single,215,53,16
-claude-3-opus-20240229,two,931,423,289

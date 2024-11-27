@@ -1,5 +1,0 @@
-fma(other, third, context=None)
-Fused multiply-add. Return self*other+third with no rounding of the intermediate product self*other.
-
->>> Decimal(2).fma(3, 5)
-Decimal('11')

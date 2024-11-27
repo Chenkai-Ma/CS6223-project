@@ -1,9 +1,0 @@
-1. Sum Invariance: The sum of an array does not change when the order of the elements is shuffled. For instance, numpy.sum should return the same output for both [1, 2, 3, 4, 5] and its shuffled version [3, 1, 2, 5, 4].
-
-2. Identity Property: When the 'initial' parameter is set to 0, numpy.sum should return the same sum of the elements in the input array. Specifically, numpy.sum([1, 2, 3, 4, 5], initial=0) should return 15, the sum of the array elements.
-
-3. Property of 'out' Parameter: When the 'out' parameter is provided as an already initialized numpy array of the same shape as the input array, the sum of the elements in the input array should be stored in the output array.
-
-4. Behavior with Different Data Types: When given an array of numbers of different types (floats, integers), numpy.sum should return a sum that faithfully represents the behavior of the given number types. E.g., if integer elements were summed, an integer result would be expected, while if floating point numbers were provided, the result would be expected to be a float too.
-
-5. Sum of Empty Array: When given an empty array as an input, numpy.sum should return 0. Specifically, numpy.sum([]) should return 0.0 as per the API documentation.

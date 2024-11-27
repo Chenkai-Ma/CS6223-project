@@ -1,9 +1,0 @@
-1. The output of as_integer_ratio() should always be a tuple with two elements. 
-
-2. Both elements in the tuple should be integers.
-
-3. If the Decimal instance is a positive number, then both the numerator (n) and the denominator (d) of the returned fraction should be positive. If the Decimal instance is a negative number, then the numerator should be negative, and the denominator should be positive.
-
-4. The result should represent the original Decimal instance in lowest terms, meaning that the greatest common divisor (gcd) of the numerator and denominator should be 1.
-
-5. If the Decimal instance represents a regular finite decimal, as_integer_ratio() should not throw an error. If the instance represents an infinity, then an OverflowError should be thrown. If it represents an NaN, then ValueError should be thrown.

@@ -1,5 +1,0 @@
-1. Output type: The result of executing the geometric_mean function should always return a float, no matter the input list's individual number.
-2. Input list with the same values: When all values in the input list are same, the geometric mean should be equal to the same number. For instance, geometric_mean([5, 5, 5, 5, 5]) = 5.0.
-3. Non-positive values: When any non-positive integer (e.g., 0 or a negative integer) is in the array, the function should raise a StatisticsError.
-4. Multiplication property: The geometric mean of a list will not change if all values in the list are multiplied by a constant. For example, geometric_mean([1, 2, 3]) * k should be equal to geometric_mean([1 * k, 2 * k, 3 * k]).
-5. Empty list: If the input dataset is empty, the function should raise a StatisticsError.

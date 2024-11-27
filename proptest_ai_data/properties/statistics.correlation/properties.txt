@@ -1,5 +1,0 @@
-1. The output of the function should always be a float.
-2. The return value should be in the range -1 to 1 inclusive, as this is the value range for correlation coefficients. 
-3. If two identical lists are passed as parameters, the function should return 1.0 regardless of the values in the lists, as identical datasets should have a perfect correlation. 
-4. If two lists are passed such that one is the exact reverse of the other, the function should return -1.0, implying a perfect inverse correlation. 
-5. If the method is set to 'linear', the result should not be the same as when the method is set to 'ranked', unless the input data meets the linear proportion requirement for Pearson’s correlation coefficient, in which case the outputs can be identical.

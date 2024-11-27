@@ -1,9 +1,0 @@
-1. When the 'timestr' parameter is provided, the parse function should always return a valid datetime.datetime object or a tuple when fuzzy_with_tokens option is True. This output property should hold true regardless of the other parameters provided.
-
-2. If 'ignoretz' is set to True, the output datetime object should always be a naive datetime, i.e., it must not contain any timezone information. If 'ignoretz' is set to False or not provided, and the input 'timestr' contains timezone information, the output datetime should contain corresponding timezone information.
-
-3. If the 'default' parameter is set to a datetime object, the output datetime object should replace the components of the default datetime with the corresponding components available in 'timestr'. If 'timestr' does not provide some components of a datetime (e.g. day, month, year), these should remain the same as in the default.
-
-4. The 'dayfirst' and 'yearfirst' parameters control the parsing of ambiguous dates. When 'dayfirst' is set to True, ambiguous dates should be interpreted as Day/Month/Year, and when 'yearfirst' is set to True, as Year/Day/Month. Consequently, the output datetime object should reflect this parsing preference.
-
-5. When 'fuzzy_with_tokens' is set to True, the function should return a tuple where the second element is a sequence of strings ignored during parsing. Regardless of other parameters, this output property should always hold when 'fuzzy_with_tokens' is set. On the other hand, if 'fuzzy_with_tokens' is False or not set, the function should not return a tuple.
