@@ -2,27 +2,8 @@ from openai import OpenAI
 import argparse
 import os
 import logging
-import json
-from typing import Union
+from tools import *
 from prompts import *
-from datetime import datetime
-
-def jsonlines_dump(fname: str, data: Union[dict, list]):
-    try:
-        with open(fname, 'a+') as f:
-            if isinstance(data, dict):
-                f.write(json.dumps(data)+'\n')
-            elif isinstance(data, list):
-                for d in data:
-                    f.write(json.dumps(d)+'\n')
-
-    except (FileNotFoundError, FileExistsError) as e:
-        print(f'Error: {e}')
-        print(f'Could not write to {fname}')
-
-def jsonlines_load(fname: str):
-    with open(fname, 'r') as f:
-        return [json.loads(line) for line in f]
 
 def main(args):
     if args.key == 'None':
@@ -37,7 +18,6 @@ def main(args):
         key = args.key
 
     client = OpenAI(api_key=key)
-    dt_string = datetime.now().strftime("%m-%d-%H-%M")
     
     no_sound_valid_data = []
         
@@ -127,8 +107,8 @@ def main(args):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--input_path', type=str, default='../our_proptest_data/code_only/sound_valid')
-    parser.add_argument('--output_dir', type=str, default='../our_proptest_data/code_only/output_jsonl/mutants_2')
+    parser.add_argument('--input_path', type=str, default='../code_only/sound_valid')
+    parser.add_argument('--output_dir', type=str, default='../code_only/output_jsonl/mutants_2')
     parser.add_argument('--debug', action='store_true')
     parser.add_argument('--model', type=str, default='gpt-4o-mini')
     parser.add_argument('--temperature', type=float, default=0.5)
