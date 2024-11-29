@@ -5,11 +5,20 @@ In this project, we investigate the role of API source code in LLM-aided PBT gen
 ## File Structure
 
 - `prompt.py`: The prompts used to generate properties, PBTs and property mutants.
+
 - `dataset`: The dataset used in the experiment, including 30 API methods, their docs, and codes.
+
 - `code_only`, `doc_only`, `doc_and_code`: All the generated properties, PBTs and property mutants for each API method. Each folder correponds to each method. For example, `code_only` contains all the generated data with `code_only` prompt method.
+
 - `script_llm`: The script to prompt LLM to generate data. We use `code_only` as an example. Users can replace the file path in the script to generate data with other prompt methods.
-- `sound_valid.sh`: 
-- `property_coverage.sh`: 
+
+- `sound_valid.sh`:  The script to evaluate soundness and validity. "approach" can be "code_only", "doc_only", or "doc_and_code".
+
+- `property_coverage.sh`: The script to evaluate property coverage and property mutation score. "api_dir" refers to the directory of mutants, and can be "\${approach}/mutants" or "\${approach}/mutants_2".
+
+- `setup.sh`: The script to initialize evaluation configuration.
+
+  
 
 
 ## Contributions of Group Members
